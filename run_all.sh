@@ -12,7 +12,7 @@
 env_files=(.env_*) 
 is_debug=True
 batch_size=20
-max_tokens=512
+max_tokens=256
 temperature=0.01
 
 echo "Found the following .env files:"
