@@ -11,21 +11,13 @@ from dotenv import load_dotenv
 from datasets import Dataset, load_dataset
 
 from prompts import TYPE_1, TYPE_2, TYPE_3, TYPE_4, TYPE_MMLU_FEW_SHOT
-from langchain_openai import AzureChatOpenAI, ChatOpenAI
-from langchain_huggingface import HuggingFaceEndpoint
-from langchain.schema.output_parser import StrOutputParser
-from langchain_core.prompts import (
-    PromptTemplate,
-    ChatPromptTemplate,
-    HumanMessagePromptTemplate,
-    SystemMessagePromptTemplate,
+from util.common_helper import (
+    str2bool,
+    format_timespan,
+    get_prompt_template,
+    get_llm_client,
 )
-from langchain_openai import AzureChatOpenAI
-from langchain_community.llms.azureml_endpoint import AzureMLOnlineEndpoint
-from util.phi3_formatter import CustomPhi3ContentFormatter
-from util.common_helper import str2bool, format_timespan
 from logger import logger
-from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
 from util.custom_parser import MultipleChoicesFourParser
 
 
@@ -72,45 +64,12 @@ def convert_to_pascal_case(category):
     return "-".join(word.capitalize() for word in category.split("_"))
 
 
-def get_prompt_template(template_type):
-
-    if template_type == "basic":
-        prompt = PromptTemplate.from_template("{question}")
-    elif template_type == "chat":
-        system_prompt = """You are an AI assistant who reads a given question and solves multiple choice questions.
-        You don't need to write a detailed explanation of your answer in sentences. Just answer in one word like.
-        
-        ## Constraints
-        - Just answer in one word like 'A', 'B', 'C', 'D', or 'E'.
-        - Please do not answer with a sentence like 'The answer is A'.
-        - Don't give multiple answers like 'A, B'.
-        - Just say one choice in one word.
-        """
-        system_message_template = SystemMessagePromptTemplate.from_template(
-            system_prompt
-        )
-        human_prompt = [
-            {"type": "text", "text": "{question}"},
-        ]
-        human_message_template = HumanMessagePromptTemplate.from_template(human_prompt)
-
-        prompt = ChatPromptTemplate.from_messages(
-            [system_message_template, human_message_template]
-        )
-    else:
-        raise Exception(
-            "Invalid 'template_type' value. Please choose from ['basic', 'chat']"
-        )
-    return prompt
-
-
 def benchmark(args):
 
-    IS_DEBUG = args.is_debug
-    MAX_RETRIES = args.max_retries
-    DELAY_INCREMENT = 30
-    MODEL_VERSION = None
-    FEW_SHOTS = "5shot" if args.use_few_shots else "0shot"
+    is_debug = args.is_debug
+    max_retries = args.max_retries
+    delay_increment = 30
+    few_shots = "5shot" if args.use_few_shots else "0shot"
 
     num_debug_samples = args.num_debug_samples
     batch_size = args.batch_size
@@ -219,69 +178,14 @@ def benchmark(args):
             "Telecommunications-and-Wireless-Technology",
         ]
 
-    if args.model_provider == "azureopenai":
-        logger.info("Using Azure OpenAI model provider.")
-        MODEL_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
-        API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION")
-        MODEL_VERSION = os.getenv("OPENAI_MODEL_VERSION")
-        llm = AzureChatOpenAI(
-            azure_deployment=MODEL_NAME,
-            openai_api_version=API_VERSION,
-            temperature=temperature,
-            max_tokens=max_tokens,
-            max_retries=MAX_RETRIES,
-        )
-    elif args.model_provider == "openai":
-        logger.info("Using OpenAI model provider.")
-        MODEL_NAME = os.getenv("OPENAI_DEPLOYMENT_NAME")
-        llm = ChatOpenAI(
-            model=MODEL_NAME,
-            temperature=temperature,
-            max_tokens=max_tokens,
-            max_retries=MAX_RETRIES,
-        )
-    elif args.model_provider == "huggingface":
-        if (
-            temperature == 0.0
-        ):  # in case of not supporting 0.0 for some SLM, set to 0.01
-            temperature = 0.01
-        MODEL_NAME = args.hf_model_id.split("/")[-1]
-        logger.info("Using Hugging Face model provider.")
-        llm = HuggingFaceEndpoint(
-            repo_id=args.hf_model_id,
-            temperature=temperature,
-            max_new_tokens=max_tokens,
-            huggingfacehub_api_token=os.getenv("HF_API_TOKEN"),
-        )
-
-    elif args.model_provider == "azureml":
-        logger.info("Using Azure ML endpoint as model provider.")
-        MODEL_NAME = os.getenv("AZURE_ML_DEPLOYMENT_NAME")
-        AZURE_ML_ENDPOINT_URL = os.getenv("AZURE_ML_ENDPOINT_URL")
-        AZURE_ML_ENDPOINT_TYPE = os.getenv(
-            "AZURE_ML_ENDPOINT_TYPE"
-        )  # https://python.langchain.com/v0.2/api_reference/community/llms/langchain_community.llms.azureml_endpoint.AzureMLEndpointApiType.html#langchain_community.llms.azureml_endpoint.AzureMLEndpointApiType
-        AZURE_ML_API_KEY = os.getenv("AZURE_ML_API_KEY")
-
-        llm = AzureMLOnlineEndpoint(
-            endpoint_url=AZURE_ML_ENDPOINT_URL,
-            endpoint_api_type=AZURE_ML_ENDPOINT_TYPE,
-            endpoint_api_key=AZURE_ML_API_KEY,
-            content_formatter=CustomPhi3ContentFormatter(),
-            model_kwargs={"temperature": temperature, "max_new_tokens": max_tokens},
-        )
-
-    elif args.model_provider == "azureai":
-        logger.info("Using Azure AI Foundry endpoint as model provider.")
-        MODEL_NAME = os.getenv("AZURE_AI_DEPLOYMENT_NAME")
-        AZURE_AI_INFERENCE_KEY = os.getenv("AZURE_AI_INFERENCE_KEY")
-        AZURE_AI_INFERENCE_ENDPOINT = os.getenv("AZURE_AI_INFERENCE_ENDPOINT")
-
-        llm = AzureAIChatCompletionsModel(
-            endpoint=AZURE_AI_INFERENCE_ENDPOINT,
-            credential=AZURE_AI_INFERENCE_KEY,
-            model_name=MODEL_NAME,
-        )
+    llm, model_name = get_llm_client(
+        args.model_provider, args.hf_model_id, temperature, max_tokens, max_retries
+    )
+    model_version = (
+        os.getenv("OPENAI_MODEL_VERSION")
+        if args.model_provider == "azureopenai"
+        else None
+    )
 
     logger.info(f"====== [START] Generate answers to questions given by LLM. =====")
     if args.use_few_shots:
@@ -289,7 +193,7 @@ def benchmark(args):
     else:
         logger.info(f"===== Use Zero-shot Prompt.")
     logger.info(
-        f"====== deployment name: {MODEL_NAME}, model version: {MODEL_VERSION} ====="
+        f"====== deployment name: {model_name}, model version: {model_version} ====="
     )
     responses = []
 
@@ -315,7 +219,7 @@ def benchmark(args):
         else:
             ds = ds.rename_column("Category", "category")
 
-        if IS_DEBUG:
+        if is_debug:
             ds = ds.select(range(num_debug_samples))
 
         if args.use_few_shots:
@@ -344,7 +248,7 @@ def benchmark(args):
                 mini_batch = all_batch[i : i + batch_size]
                 retries = 0
 
-                while retries <= MAX_RETRIES:
+                while retries <= max_retries:
                     try:
                         preds = chain.batch(mini_batch, {"max_concurrency": batch_size})
                         # If no exception, add questions and answers to all_answers
@@ -359,14 +263,14 @@ def benchmark(args):
                             )
                         break  # Exit the retry loop once successful
                     except RateLimitError as rate_limit_error:
-                        delay = (retries + 1) * DELAY_INCREMENT
+                        delay = (retries + 1) * delay_increment
                         logger.warning(
                             f"{rate_limit_error}. Retrying in {delay} seconds..."
                         )
                         time.sleep(delay)
                         retries += 1
 
-                        if retries > MAX_RETRIES:
+                        if retries > max_retries:
                             logger.error(
                                 f"Max retries reached this batch. Skipping to next batch."
                             )
@@ -397,7 +301,7 @@ def benchmark(args):
     )
     df = pd.DataFrame(responses)
     os.makedirs("results", exist_ok=True)
-    csv_path = f"results/[{dataset_name}] {MODEL_NAME}-{MODEL_VERSION}-{FEW_SHOTS}.csv"
+    csv_path = f"results/[{dataset_name}] {model_name}-{model_version}-{few_shots}.csv"
     logger.info(f"====== Generated CSV file - CSV_PATH: {csv_path} =====")
     df.to_csv(csv_path, index=False)
 
