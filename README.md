@@ -59,30 +59,29 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 ### CLIcK
 
 #### Open-Source models
-
 - Accuracy by supercategory
 
-| supercategory   |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Culture         |   57.84 |                  58.44 |                   43.77 |                           29.74 |                   51.15 |
-| Language        |   61.85 |                  52.31 |                   41.38 |                           27.85 |                   40.92 |
-| **Overall**     |   59.15 |                  56.44 |                   42.99 |                           29.12 |                   47.82 |
+| supercategory   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|----------------------:|--------:|------------------------:|-----------------------:|--------------------------------:|------------------------:|
+| Culture         |                 43.05 |   57.84 |                   43.77 |                  58.44 |                           29.74 |                   51.15 |
+| Language        |                 42.31 |   61.85 |                   41.38 |                  52.31 |                           27.85 |                   40.92 |
+| **Overall**     |                 42.81 |   59.15 |                   42.99 |                  56.44 |                           29.12 |                   47.82 |
 
 - Accuracy by category
 
-| supercategory   | category    |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|:------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Culture         | Economy     |   76.27 |                  77.97 |                   61.02 |                           28.81 |                   66.1  |
-| Culture         | Geography   |   55.73 |                  60.31 |                   45.8  |                           29.01 |                   54.2  |
-| Culture         | History     |   27.5  |                  33.93 |                   26.15 |                           30    |                   29.64 |
-| Culture         | Law         |   50.23 |                  52.51 |                   32.42 |                           22.83 |                   44.29 |
-| Culture         | Politics    |   76.19 |                  70.24 |                   54.76 |                           33.33 |                   59.52 |
-| Culture         | Pop Culture |   70.73 |                  80.49 |                   60.98 |                           34.15 |                   60.98 |
-| Culture         | Society     |   75.08 |                  74.43 |                   54.37 |                           31.72 |                   65.05 |
-| Culture         | Tradition   |   66.67 |                  58.11 |                   47.75 |                           31.98 |                   54.95 |
-| Language        | Functional  |   66.4  |                  48    |                   37.6  |                           24    |                   32.8  |
-| Language        | Grammar     |   40    |                  29.58 |                   27.5  |                           23.33 |                   22.92 |
-| Language        | Textual     |   78.25 |                  73.33 |                   54.74 |                           33.33 |                   59.65 |
+| supercategory   | category    |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|:------------|----------------------:|--------:|------------------------:|-----------------------:|--------------------------------:|------------------------:|
+| Culture         | Economy     |                 59.32 |   76.27 |                   61.02 |                  77.97 |                           28.81 |                   66.1  |
+| Culture         | Geography   |                 39.69 |   55.73 |                   45.8  |                  60.31 |                           29.01 |                   54.2  |
+| Culture         | History     |                 27.5  |   27.5  |                   26.15 |                  33.93 |                           30    |                   29.64 |
+| Culture         | Law         |                 36.99 |   50.23 |                   32.42 |                  52.51 |                           22.83 |                   44.29 |
+| Culture         | Politics    |                 52.38 |   76.19 |                   54.76 |                  70.24 |                           33.33 |                   59.52 |
+| Culture         | Pop Culture |                 63.41 |   70.73 |                   60.98 |                  80.49 |                           34.15 |                   60.98 |
+| Culture         | Society     |                 52.75 |   75.08 |                   54.37 |                  74.43 |                           31.72 |                   65.05 |
+| Culture         | Tradition   |                 45.5  |   66.67 |                   47.75 |                  58.11 |                           31.98 |                   54.95 |
+| Language        | Functional  |                 42.4  |   66.4  |                   37.6  |                  48    |                           24    |                   32.8  |
+| Language        | Grammar     |                 28.33 |   40    |                   27.5  |                  29.58 |                           23.33 |                   22.92 |
+| Language        | Textual     |                 54.04 |   78.25 |                   54.74 |                  73.33 |                           33.33 |                   59.65 |
 
 #### Proprietary models
 
@@ -114,15 +113,15 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Open-Source models
 
-| category              |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| General Knowledge     |   38.07 |                  39.77 |                   31.25 |                           28.41 |                   34.66 |
-| History               |   37.77 |                  60.64 |                   32.45 |                           22.34 |                   44.15 |
-| Loan Words            |   61.54 |                  70.41 |                   47.93 |                           35.5  |                   63.31 |
-| Rare Words            |   62.72 |                  63.95 |                   55.06 |                           42.96 |                   63.21 |
-| Reading Comprehension |   71.14 |                  64.43 |                   42.95 |                           41.16 |                   51.9  |
-| Standard Nomenclature |   63.4  |                  66.01 |                   44.44 |                           32.68 |                   58.82 |
-| **Overall**           |   59.23 |                  61.83 |                   44.21 |                           36.41 |                   53.9  |
+| category              |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------------|----------------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
+| General Knowledge     |                 28.41 |   38.07 |                  39.77 |                   31.25 |                           28.41 |                   34.66 |
+| History               |                 31.38 |   37.77 |                  60.64 |                   32.45 |                           22.34 |                   44.15 |
+| Loan Words            |                 52.66 |   61.54 |                  70.41 |                   47.93 |                           35.5  |                   63.31 |
+| Rare Words            |                 51.6  |   62.72 |                  63.95 |                   55.06 |                           42.96 |                   63.21 |
+| Reading Comprehension |                 43.18 |   71.14 |                  64.43 |                   42.95 |                           41.16 |                   51.9  |
+| Standard Nomenclature |                 54.9  |   63.4  |                  66.01 |                   44.44 |                           32.68 |                   58.82 |
+| **Overall**           |                 44.47 |   59.23 |                  61.83 |                   44.21 |                           36.41 |                   53.9  |
 
 #### Proprietary models
 
@@ -140,13 +139,13 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Open-Source models
 
-| supercategory   |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Applied Science |   47.97 |                  45.15 |                   35.8  |                           31.68 |                   37.03 |
-| HUMSS           |   54.27 |                  49.75 |                   31.56 |                           26.47 |                   37.29 |
-| Other           |   49.07 |                  47.24 |                   35.45 |                           31.01 |                   39.15 |
-| STEM            |   52    |                  49.08 |                   38.54 |                           31.9  |                   40.42 |
-| **Overall**     |   50.3  |                  47.43 |                   35.87 |                           30.82 |                   38.54 |
+| supercategory   |   Phi-4-mini |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|-------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
+| Applied Science |        36.46 |   47.97 |                  45.15 |                   35.8  |                           31.68 |                   37.03 |
+| HUMSS           |        35.52 |   54.27 |                  49.75 |                   31.56 |                           26.47 |                   37.29 |
+| Other           |        36.26 |   49.07 |                  47.24 |                   35.45 |                           31.01 |                   39.15 |
+| STEM            |        39.31 |   52    |                  49.08 |                   38.54 |                           31.9  |                   40.42 |
+| **Overall**     |        37.08 |   50.3  |                  47.43 |                   35.87 |                           30.82 |                   38.54 |
 
 #### Proprietary models
 
@@ -164,11 +163,11 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 | supercategory   |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
 |:----------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Applied Science |   48.44 |                  45.9  |                   37.42 |                           29.98 |                   19.24 |
-| HUMSS           |   54.46 |                  49.18 |                   34.72 |                           27.27 |                   22.5  |
-| Other           |   49.2  |                  48.43 |                   37.04 |                           30.76 |                   20.95 |
-| STEM            |   53.31 |                  49.21 |                   38.9  |                           30.73 |                   19.55 |
-| **Overall**     |   50.88 |                  47.92 |                   37.35 |                           29.98 |                   20.21 |
+| Applied Science |   33.9  |                  45.9  |                   37.42 |                           29.98 |                   19.24 |
+| HUMSS           |   34.19 |                  49.18 |                   34.72 |                           27.27 |                   22.5  |
+| Other           |   34.83 |                  48.43 |                   37.04 |                           30.76 |                   20.95 |
+| STEM            |   36.48 |                  49.21 |                   38.9  |                           30.73 |                   19.55 |
+| **Overall**     |   34.9  |                  47.92 |                   37.35 |                           29.98 |                   20.21 |
 
 #### Proprietary models
 
@@ -184,13 +183,13 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Open-Source models
 
-| supercategory   |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Applied Science |   24    |                  25.83 |                   27.08 |                           26.17 |                   26.25 |
-| HUMSS           |   22.88 |                  21.52 |                   20.21 |                           24.38 |                   20.21 |
-| Other           |   22.73 |                  24.82 |                   23.05 |                           24.82 |                   23.88 |
-| STEM            |   24.25 |                  28.18 |                   24.36 |                           26.91 |                   24.64 |
-| **Overall**     |   24.24 |                  25.34 |                   24    |                           25.68 |                   24.03 |
+| supercategory   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|----------------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
+| Applied Science |                 26.02    |   24    |                  25.83 |                   27.08 |                           26.17 |                   26.25 |
+| HUMSS           |                 23.09 |   22.88 |                  21.52 |                   20.21 |                           24.38 |                   20.21 |
+| Other           |                 23.19 |   22.73 |                  24.82 |                   23.05 |                           24.82 |                   23.88 |
+| STEM            |                 22.25 |   24.25 |                  28.18 |                   24.36 |                           26.91 |                   24.64 |
+| **Overall**     |                 25.27 |   24.24 |                  25.34 |                   24    |                           25.68 |                   24.03 |
 
 #### Proprietary models
 
@@ -206,13 +205,13 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Open-Source models
 
-| supercategory   |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Applied Science |   19    |                  21    |                   25    |                           29    |                   12    |
-| HUMSS           |   23.47 |                  22.88 |                   21.89 |                           19.92 |                   14    |
-| Other           |   22.73 |                  25.13 |                   23.26 |                           27.27 |                   12.83 |
-| STEM            |   22.5  |                  21.75 |                   20.5  |                           25.25 |                   12.75 |
-| **Overall**     |   24.32 |                  25.66 |                   24.76 |                           25.73 |                   15.81 |
+| supercategory   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|----------------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
+| Applied Science |                 29.17    |   19    |                  21    |                   25    |                           29    |                   12    |
+| HUMSS           |                 24.26 |   23.47 |                  22.88 |                   21.89 |                           19.92 |                   14    |
+| Other           |                 24.09 |   22.73 |                  25.13 |                   23.26 |                           27.27 |                   12.83 |
+| STEM            |                 25.82    |   22.5  |                  21.75 |                   20.5  |                           25.25 |                   12.75 |
+| **Overall**     |                 26.07 |   24.32 |                  25.66 |                   24.76 |                           25.73 |                   15.81 |
 
 #### Proprietary models
 
