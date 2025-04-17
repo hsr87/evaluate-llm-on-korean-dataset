@@ -95,6 +95,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 #### Proprietary models
 
 - Accuracy by supercategory
+
 | supercategory   |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | Culture         |     81.65 |          72.81 |          62.47 |    81.89 |         70.95 |         73.61 |           53.38 |
@@ -102,6 +103,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | **Overall**     |     80.55 |          72.09 |          61.21 |    80.46 |         68.5  |         72.82 |           50.98 |
 
 - Accuracy by category
+
 | supercategory   | category    |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------|:------------|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | Culture         | Economy     |     94.92 |          84.75 |          86.44 |    94.92 |         83.05 |         89.83 |           64.41 |
