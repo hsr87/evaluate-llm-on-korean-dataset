@@ -8,7 +8,7 @@
 
 ### CLIcK
 python click_main.py \
-    --is_debug True \
+    --is_debug False \
     --model_provider azureopenai \
     --batch_size 10 \
     --max_tokens 256 \
@@ -17,7 +17,7 @@ python click_main.py \
 
 ### HAERAE 1.0
 python haerae_main.py \
-    --is_debug True \
+    --is_debug False \
     --model_provider azureopenai \
     --batch_size 10 \
     --max_tokens 256 \
@@ -26,7 +26,7 @@ python haerae_main.py \
 
 ## KMMLU
 python kmmlu_main.py \
-    --is_debug True \
+    --is_debug False \
     --model_provider azureopenai \
     --batch_size 10 \
     --max_tokens 256 \

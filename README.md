@@ -32,7 +32,11 @@ The code skeleton is based on https://github.com/corca-ai/evaluating-gpt-4o-on-C
 In particular, we modified the code to run on Azure OpenAI & Hugging Face and added logic for parallel processing, content filtering (400 error), and max request error (429 error) exception handling. 
 
 ## Results
-🔥 Feb 2, 2025: Added **Phi-4** benchmark datasets / Added Azure AI Foundry deployment options. Phi-4 outperforms Phi-3.5-MoE in some metrics, such as CLIcK and KMMLU.
+🔥 Apr 17, 2025: Added **GPT-4.1** family benchmark results. GPT-4.1-mini is an improvement over GPT-4o-mini and is closer to GPT-4o. GPT-4.1 outperforms GPT-4o.
+
+🔥 Feb 28, 2025: Added **Phi-4-mini-instruct** benchmark results.
+
+🔥 Feb 2, 2025: Added **Phi-4** benchmark results / Added Azure AI Foundry deployment options. Phi-4 outperforms Phi-3.5-MoE in some metrics, such as CLIcK and KMMLU.
 
 🔥 Aug 29, 2024: Added 5-shot experiments for **KMMLU** and **KMMLU-HARD** benchmark datasets. For Llama-3.1-8B-Instruct, adding an example with 5-shot does not give a proper answer based on Korean language. The results may vary depending on the experimental environment, but it seems that an appropriate system prompt is needed. (Please note that we did not use any system prompt.)
 
@@ -51,10 +55,15 @@ The prompt is the same as the CLIcK paper prompt. The experimental results may v
 
 Since most of them are ChatCompletion or instruction fine-tuned models, the variation may be large compared to the results of other group's experiments. However, our experimental results show that the trend follows similarly under the same experimental conditions. (e.g., GPT-4o: 70.57/GPT-4o-mini: 60.31 in Experimental Condition 1; GPT-4o: 67.76/GPT-4o-mini: 57.53 in Experimental Condition 2).
 
-- GPT-4o: 2024-05-13 version
-- GPT-4o-mini: 2024-07-18 version
-- GPT-4-turbo: 2024-04-09 version
-- GPT-3.5-turbo: 2023-06-13 version
+
+- GPT-4.1: 2025-04-14 model version
+- GPT-4.1-mini: 2025-04-14 model version
+- GPT-4.1-nano: 2025-04-14 model version
+- GPT-4o: 2024-05-13 model version
+- GPT-4o-mini: 2024-07-18 model version
+- GPT-4-turbo: 2024-04-09 model version
+- GPT-3.5-turbo: 2023-06-13 model version
+
 
 ### CLIcK
 
@@ -86,28 +95,26 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 #### Proprietary models
 
 - Accuracy by supercategory
-
-| supercategory   |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
-|:----------------|---------:|--------------:|--------------:|----------------:|
-| Culture         |    81.89 |         70.95 |         73.61 |           53.38 |
-| Language        |    77.54 |         63.54 |         71.23 |           46    |
-| **Overall**     |    80.46 |         68.5  |         72.82 |           50.98 |
+| supercategory   |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
+|:----------------|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
+| Culture         |     81.65 |          72.81 |          62.47 |    81.89 |         70.95 |         73.61 |           53.38 |
+| Language        |     78.31 |          70.62 |          58.62 |    77.54 |         63.54 |         71.23 |           46    |
+| **Overall**     |     80.55 |          72.09 |          61.21 |    80.46 |         68.5  |         72.82 |           50.98 |
 
 - Accuracy by category
-
-| supercategory   | category    |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
-|:----------------|:------------|---------:|--------------:|--------------:|----------------:|
-| Culture         | Economy     |    94.92 |         83.05 |         89.83 |           64.41 |
-| Culture         | Geography   |    80.15 |         77.86 |         82.44 |           53.44 |
-| Culture         | History     |    66.92 |         48.4  |         46.4  |           31.79 |
-| Culture         | Law         |    70.78 |         57.53 |         61.19 |           41.55 |
-| Culture         | Politics    |    88.1  |         83.33 |         89.29 |           65.48 |
-| Culture         | Pop Culture |    97.56 |         85.37 |         92.68 |           75.61 |
-| Culture         | Society     |    92.88 |         85.44 |         86.73 |           71.2  |
-| Culture         | Tradition   |    87.39 |         74.77 |         79.28 |           55.86 |
-| Language        | Functional  |    84.8  |         64.8  |         80    |           40    |
-| Language        | Grammar     |    57.08 |         42.5  |         47.5  |           30    |
-| Language        | Textual     |    91.58 |         80.7  |         87.37 |           62.11 |
+| supercategory   | category    |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
+|:----------------|:------------|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
+| Culture         | Economy     |     94.92 |          84.75 |          86.44 |    94.92 |         83.05 |         89.83 |           64.41 |
+| Culture         | Geography   |     80.92 |          78.63 |          64.89 |    80.15 |         77.86 |         82.44 |           53.44 |
+| Culture         | History     |     68.52 |          51.11 |          38.89 |    66.92 |         48.4  |         46.4  |           31.79 |
+| Culture         | Law         |     71.23 |          58.45 |          48.4  |    70.78 |         57.53 |         61.19 |           41.55 |
+| Culture         | Politics    |     89.29 |          82.14 |          75    |    88.1  |         83.33 |         89.29 |           65.48 |
+| Culture         | Pop Culture |    100    |          87.8  |          85.37 |    97.56 |         85.37 |         92.68 |           75.61 |
+| Culture         | Society     |     91.26 |          86.73 |          77.67 |    92.88 |         85.44 |         86.73 |           71.2  |
+| Culture         | Tradition   |     85.14 |          81.08 |          67.12 |    87.39 |         74.77 |         79.28 |           55.86 |
+| Language        | Functional  |     87.2  |          73.6  |          53.6  |    84.8  |         64.8  |         80    |           40    |
+| Language        | Grammar     |     60    |          50    |          40.42 |    57.08 |         42.5  |         47.5  |           30    |
+| Language        | Textual     |     89.82 |          86.67 |          76.14 |    91.58 |         80.7  |         87.37 |           62.11 |
 
 ### HAE_RAE_BENCH 1.0
 
@@ -125,15 +132,15 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Proprietary models
 
-| category              |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
-|:----------------------|---------:|--------------:|--------------:|----------------:|
-| General Knowledge     |    77.27 |         53.41 |         66.48 |           40.91 |
-| History               |    92.02 |         84.57 |         78.72 |           30.32 |
-| Loan Words            |    79.88 |         76.33 |         78.11 |           59.17 |
-| Rare Words            |    87.9  |         81.98 |         79.01 |           61.23 |
-| Reading Comprehension |    85.46 |         77.18 |         80.09 |           56.15 |
-| Standard Nomenclature |    88.89 |         75.82 |         79.08 |           53.59 |
-| **Overall**           |    85.7  |         76.4  |         77.76 |           52.67 |
+| category              |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
+|:----------------------|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
+| General Knowledge     |     75.57 |          52.27 |          43.18 |    77.27 |         53.41 |         66.48 |           40.91 |
+| History               |     93.62 |          89.89 |          64.89 |    92.02 |         84.57 |         78.72 |           30.32 |
+| Loan Words            |     79.29 |          73.96 |          73.37 |    79.88 |         76.33 |         78.11 |           59.17 |
+| Rare Words            |     88.15 |          83.7  |          76.54 |    87.9  |         81.98 |         79.01 |           61.23 |
+| Reading Comprehension |     86.35 |          82.55 |          67.11 |    85.46 |         77.18 |         80.09 |           56.15 |
+| Standard Nomenclature |     87.58 |          78.43 |          73.86 |    88.89 |         75.82 |         79.08 |           53.59 |
+| **Overall**           |     85.83 |          78.93 |          67.95 |    85.7  |         76.4  |         77.76 |           52.67 |
 
 ### KMMLU (0-shot)
 
@@ -157,29 +164,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | STEM            |    65.16 |         54.74 |         60.84 |           42.24 |
 | **Overall**     |    64.26 |         52.63 |         58.75 |           40.3  |
 
-### KMMLU (5-shot)
-
-#### Open-Source models
-
-| supercategory   |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Applied Science |   33.9  |                  45.9  |                   37.42 |                           29.98 |                   19.24 |
-| HUMSS           |   34.19 |                  49.18 |                   34.72 |                           27.27 |                   22.5  |
-| Other           |   34.83 |                  48.43 |                   37.04 |                           30.76 |                   20.95 |
-| STEM            |   36.48 |                  49.21 |                   38.9  |                           30.73 |                   19.55 |
-| **Overall**     |   34.9  |                  47.92 |                   37.35 |                           29.98 |                   20.21 |
-
-#### Proprietary models
-
-| supercategory   |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
-|:----------------|---------:|--------------:|--------------:|----------------:|
-| Applied Science |    61.47 |         48.66 |         56.85 |           40.22 |
-| HUMSS           |    68.79 |         55.95 |         63.68 |           43.35 |
-| Other           |    64.21 |         51.1  |         57.85 |           41.92 |
-| STEM            |    65.28 |         53.29 |         61.08 |           44.43 |
-| **Overall**     |    64.28 |         51.62 |         59.29 |           42.28 |
-
-### KMMLU-HARD
+### KMMLU-HARD (0-shot)
 
 #### Open-Source models
 
@@ -193,35 +178,14 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Proprietary models
 
-| supercategory   |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
-|:----------------|---------:|--------------:|--------------:|----------------:|
-| Applied Science |    37.12 |         22.25 |         29.17 |           21.07 |
-| HUMSS           |    41.97 |         23.31 |         31.51 |           19.44 |
-| Other           |    40.39 |         26.48 |         29.59 |           22.22 |
-| STEM            |    39.82 |         26.36 |         32.18 |           20.91 |
-| **Overall**     |    39.62 |         24.56 |         30.56 |           20.97 |
+| supercategory   |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
+|:----------------|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
+| Applied Science |     38    |          33.71 |          23.43 |    34    |         22    |         24    |           22    |
+| HUMSS           |     42.48 |          38.22 |          23.17 |    41.62 |         22.68 |         29.39 |           16.36 |
+| Other           |     43.34 |          33.84 |          24.45 |    40.91 |         29.68 |         30.48 |           25.94 |
+| STEM            |     44.45 |          36.55 |          25.64 |    39.5  |         28.5  |         29.5  |           20.25 |
+| **Overall**     |     42.79 |          35.6  |          24.34 |    39.62 |         24.56 |         30.56 |           20.97 |
 
-### KMMLU-HARD (5-shots)
-
-#### Open-Source models
-
-| supercategory   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|----------------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| Applied Science |                 29.17    |   19    |                  21    |                   25    |                           29    |                   12    |
-| HUMSS           |                 24.26 |   23.47 |                  22.88 |                   21.89 |                           19.92 |                   14    |
-| Other           |                 24.09 |   22.73 |                  25.13 |                   23.26 |                           27.27 |                   12.83 |
-| STEM            |                 25.82    |   22.5  |                  21.75 |                   20.5  |                           25.25 |                   12.75 |
-| **Overall**     |                 26.07 |   24.32 |                  25.66 |                   24.76 |                           25.73 |                   15.81 |
-
-#### Proprietary models
-
-| supercategory   |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
-|:----------------|---------:|--------------:|--------------:|----------------:|
-| Applied Science |    31    |         21    |         25    |           20    |
-| HUMSS           |    43.98 |         23.47 |         33.53 |           19.53 |
-| Other           |    39.84 |         28.34 |         29.68 |           23.22 |
-| STEM            |    40.25 |         23.25 |         27.25 |           19.75 |
-| **Overall**     |    40.94 |         24.63 |         31.12 |           21.19 |
 
 ### [Detailed results for each category](DETAILED_RESULTS.md)
 
