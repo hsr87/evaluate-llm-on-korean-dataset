@@ -197,10 +197,10 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 Please start a new project by connecting to Codespace Project. The environment required for hands-on is automatically configured through devcontainer, so you only need to run a Jupyter notebook.
 
 ### Your Local PC
-Please start by installing the required packages on your local PC with
+Please start by installing the required packages on your local PC through uv.
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 Please do not forget to modify the .env file to match your account. Rename `.env.sample` to `.env` or copy and use it
@@ -254,7 +254,7 @@ Below is an example.
 model_provider="azureopenai"
 
 # CLIcK
-python3 click_main.py \
+uv run python click_main.py \
       --model_provider "$model_provider" \
       --batch_size 20 \
       --max_tokens 512 \
@@ -262,7 +262,7 @@ python3 click_main.py \
       --template_type basic
 
 # HAERAE
-python3 haerae_main.py \
+uv run python haerae_main.py \
       --model_provider "$model_provider" \
       --batch_size 20 \
       --max_tokens 512 \
@@ -270,7 +270,7 @@ python3 haerae_main.py \
       --template_type basic
 
 # KMMLU
-python3 kmmlu_main.py \
+uv run python kmmlu_main.py \
       --model_provider "$model_provider" \
       --batch_size 20 \
       --max_tokens 512 \

@@ -1,0 +1,25 @@
+[project]
+name = "evaluate-llm-on-korean-dataset"
+version = "0.1.0"
+description = "Korean language proficiency evaluation for LLM/SLM models using Korean evaluation datasets"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "azure-ai-inference>=1.0.0b9",
+    "datasets>=3.6.0",
+    "huggingface-hub>=0.31.2",
+    "langchain>=0.3.25",
+    "langchain-azure-ai>=0.1.0",
+    "langchain-community>=0.3.24",
+    "langchain-huggingface>=0.2.0",
+    "langchain-openai>=0.3.17",
+    "numpy>=2.2.5",
+    "openai>=1.79.0",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.1.0",
+    "regex>=2024.11.6",
+    "requests>=2.32.3",
+    "safetensors>=0.5.3",
+    "tqdm>=4.67.1",
+    "transformers>=4.51.3",
+]
