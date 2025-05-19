@@ -63,9 +63,12 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
     elif dataset in ["KMMLU", "KMMLU-HARD"]:
         with open("kmmlu_category.json", "r") as json_file:
             category_to_supercategory = json.load(json_file)
+            category_to_supercategory = {k.lower(): v for k, v in category_to_supercategory.items()}
+        
         result["category"] = result["category"].map(convert_to_pascal_case)
-        result["supercategory"] = result["category"].map(category_to_supercategory)
-
+        # Convert all uppercase letters to lowercase. This is to make dictionary keys and dataframe values ​​the same format.
+        result["supercategory"] = result["category"].str.lower().map(category_to_supercategory)
+        
     result["correct"] = result["answer"] == result["pred"]
     overall_acc = round(result["correct"].mean() * 100, 2)
 

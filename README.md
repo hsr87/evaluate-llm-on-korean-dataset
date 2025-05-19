@@ -203,7 +203,14 @@ Please start by installing the required packages on your local PC through uv.
 uv sync
 ```
 
-Please do not forget to modify the .env file to match your account. Rename `.env.sample` to `.env` or copy and use it
+To use Jupyter Notebook in VS Code or Cursor, choose one of the two methods below:
+1. Click **Select Kernel** - **Python Environments**, and then select **.venv**.
+<img src="./imgs/quick-start-01.png" width="100%"/>
+<img src="./imgs/quick-start-02.png" width="50%"/>
+2. Click **Python: Select Interpreter** with the shortcut **Ctrl + Shift + P (Windows/Linux)**, **Cmd + Shift + P (macOS)**, and then select **.venv**.
+<img src="./imgs/quick-start-03.png" width="100%"/>
+
+Please do not forget to modify the `.env` file to match your account. Rename `.env.sample` to `.env` or copy and use it
 
 ### Modify your `.env`
 
