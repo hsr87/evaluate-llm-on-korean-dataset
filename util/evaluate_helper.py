@@ -34,30 +34,38 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
     ), f"Invalid 'dataset' value. Please choose from {valid_datasets}."
 
     result = pd.read_csv(csv_path)
+    
+    # FAILED 응답 필터링 및 로깅
+    original_count = len(result)
+    failed_count = len(result[result["pred"] == "FAILED"])
+    if failed_count > 0:
+        print(f"Warning: Found {failed_count} FAILED responses out of {original_count} total responses")
+        print(f"Excluding FAILED responses from accuracy calculation")
+        result = result[result["pred"] != "FAILED"]
+        print(f"Evaluating on {len(result)} valid responses")
 
     if dataset == "CLIcK":
         with open("id_to_category.json", "r") as json_file:
             id_to_category = json.load(json_file)
 
         result["category"] = result["id"].map(id_to_category)
+        
+        # 매핑되지 않은 ID들 확인 및 제거
+        missing_ids = result[result["category"].isna()]["id"].unique()
+        if len(missing_ids) > 0:
+            print(f"Warning: Found IDs without category mapping: {missing_ids[:10]}...")  # 처음 10개만 출력
+            print(f"Total missing IDs: {len(missing_ids)}")
+            # NaN 값이 있는 행들을 제거
+            result = result.dropna(subset=["category"])
+        
         result["supercategory"] = result["category"].apply(
             lambda x: (
                 "Culture"
-                if x
-                in [
-                    "Economy",
-                    "Geography",
-                    "History",
-                    "Law",
-                    "Politics",
-                    "Popular",
-                    "Society",
-                    "Tradition",
-                    "Pop Culture",
+                if x in [
+                    "Economy", "Geography", "History", "Law", "Politics", 
+                    "Society", "Tradition", "Pop Culture",  # "Popular" → "Pop Culture"로 수정
                 ]
-                else (
-                    "Language" if x in ["Functional", "Textual", "Grammar"] else "Other"
-                )
+                else "Language" if x in ["Functional", "Textual", "Grammar"] else "Other"
             )
         )
     elif dataset in ["KMMLU", "KMMLU-HARD"]:

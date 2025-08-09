@@ -124,15 +124,45 @@ def benchmark(args):
 
                     if retries > max_retries:
                         logger.error(
-                            f"Max retries reached this batch. Skipping to next batch."
+                            f"Max retries reached this batch. Adding failed responses for this batch."
                         )
+                        # 실패한 질문들에 대해 기본값으로 추가
+                        for qna in mini_batch:
+                            responses.append(
+                                {
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": "FAILED",
+                                    "response": "RATE_LIMIT_ERROR",
+                                }
+                            )
                         break
                 except openai.BadRequestError as e:
-                    logger.error(f"BadRequestError: {e}. Skipping this batch.")
-                    logger.info(f"Question: {qna['question']}")
+                    logger.error(f"BadRequestError: {e}. Adding failed responses for this batch.")
+                    logger.info(f"Question sample: {mini_batch[0]['question'][:100]}...")
+                    # 실패한 질문들에 대해 기본값으로 추가
+                    for qna in mini_batch:
+                        responses.append(
+                            {
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FAILED",
+                                "response": "BAD_REQUEST_ERROR",
+                            }
+                        )
                     break
                 except Exception as e:
-                    logger.error(f"Error in process_inputs: {e}")
+                    logger.error(f"Error in process_inputs: {e}. Adding failed responses for this batch.")
+                    # 실패한 질문들에 대해 기본값으로 추가
+                    for qna in mini_batch:
+                        responses.append(
+                            {
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FAILED",
+                                "response": f"ERROR: {str(e)}",
+                            }
+                        )
                     break
 
             pbar.set_postfix(
@@ -146,6 +176,10 @@ def benchmark(args):
     timespan = format_timespan(t1 - t0)
     logger.info(f"===== [DONE] Generating Answer dataset took {timespan}")
 
+    if not responses:
+        logger.error("No successful responses were generated. Skipping evaluation.")
+        return
+
     df = pd.DataFrame(responses)
     os.makedirs("results", exist_ok=True)
     csv_path = f"results/[HAERAE] {model_name}-{model_version}.csv"
@@ -158,8 +192,33 @@ def benchmark(args):
 
 
 def evaluate(csv_path):
-
-    result = pd.read_csv(csv_path)
+    # Check if file exists and has content
+    if not os.path.exists(csv_path):
+        logger.error(f"CSV file does not exist: {csv_path}")
+        return
+    
+    if os.path.getsize(csv_path) == 0:
+        logger.error(f"CSV file is empty: {csv_path}")
+        return
+    
+    try:
+        result = pd.read_csv(csv_path)
+        if result.empty:
+            logger.error(f"CSV file contains no data: {csv_path}")
+            return
+    except pd.errors.EmptyDataError:
+        logger.error(f"CSV file has no columns to parse: {csv_path}")
+        return
+    
+    # FAILED 응답 필터링 및 로깅
+    original_count = len(result)
+    failed_count = len(result[result["pred"] == "FAILED"])
+    if failed_count > 0:
+        logger.warning(f"Found {failed_count} FAILED responses out of {original_count} total responses")
+        logger.info(f"Excluding FAILED responses from accuracy calculation")
+        result = result[result["pred"] != "FAILED"]
+        logger.info(f"Evaluating on {len(result)} valid responses")
+    
     result["correct"] = result["answer"] == result["pred"]
 
     category_avg = (
@@ -177,7 +236,8 @@ def evaluate(csv_path):
 
 
 if __name__ == "__main__":
-    load_dotenv()
+    dotenv_path = os.getenv('DOTENV_PATH', '.env')
+    load_dotenv(dotenv_path)
     parser = argparse.ArgumentParser(description="Options")
 
     parser.add_argument("--is_debug", type=str2bool, default=True)
@@ -187,10 +247,10 @@ if __name__ == "__main__":
         "--hf_model_id", type=str, default="microsoft/Phi-3.5-mini-instruct"
     )
     parser.add_argument("--batch_size", type=int, default=10)
-    parser.add_argument("--max_retries", type=int, default=3)
+    parser.add_argument("--max_retries", type=int, default=1)
     parser.add_argument("--max_tokens", type=int, default=256)
     parser.add_argument("--temperature", type=float, default=0.01)
-    parser.add_argument("--template_type", type=str, default="basic")
+    parser.add_argument("--template_type", type=str, default="chat")
 
     args = parser.parse_args()
     valid_providers = ["azureopenai", "openai", "azureml", "azureai", "huggingface"]
