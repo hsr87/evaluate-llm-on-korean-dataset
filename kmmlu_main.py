@@ -202,7 +202,7 @@ def benchmark(args):
     successful_categories = []
     
     # 문제가 되는 카테고리들을 임시로 건너뛰기
-    problematic_categories = ["Gas-Technology-and-Engineering"]  # 필요시 추가
+    problematic_categories = []  # 필요시 추가
     
     for c in kmmlu_category:
         if c in problematic_categories:
