@@ -237,7 +237,7 @@ def evaluate(csv_path):
 
 if __name__ == "__main__":
     dotenv_path = os.getenv('DOTENV_PATH', '.env')
-    load_dotenv(dotenv_path)
+    load_dotenv(dotenv_path, override=True)
     parser = argparse.ArgumentParser(description="Options")
 
     parser.add_argument("--is_debug", type=str2bool, default=True)

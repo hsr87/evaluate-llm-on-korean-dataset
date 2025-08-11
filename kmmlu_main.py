@@ -69,7 +69,7 @@ def benchmark(args):
     is_debug = args.is_debug
     max_retries = args.max_retries
     delay_increment = 30
-    few_shots_label = "5shot" if args.use_few_shots else "0shot"
+    few_shots = "5shot" if args.use_few_shots else "0shot"
 
     num_debug_samples = args.num_debug_samples
     batch_size = args.batch_size
@@ -198,182 +198,110 @@ def benchmark(args):
     responses = []
 
     # Load the datasets and append to the list with their respective categories
-    failed_categories = []
-    successful_categories = []
-    
-    # 문제가 되는 카테고리들을 임시로 건너뛰기
-    problematic_categories = []  # 필요시 추가
-    
     for c in kmmlu_category:
-        if c in problematic_categories:
-            logger.warning(f"##### Category [{c}] SKIPPED (in problematic_categories list)")
-            continue
-            
-        try:
-            logger.info(f"##### Category [{c}] Processing...")
-            ds_dict = load_dataset(hf_dataset_id, c)
+        logger.info(f"##### Category [{c}] Processing...")
+        ds_dict = load_dataset(hf_dataset_id, c)
 
-            # For few-shot prompts, we need to generate a prompt with examples
-            ds_dev = ds_dict["dev"]
-            ds_dev = ds_dev.map(lambda x: {"answer": map_answer(x["answer"])})
-            if args.is_hard:
-                ds_dev = ds_dev.map(
-                    lambda x: {"category": convert_to_pascal_case(x["category"])}
-                )
-            else:
-                ds_dev = ds_dev.rename_column("Category", "category")
+        # For few-shot prompts, we need to generate a prompt with examples
+        ds_dev = ds_dict["dev"]
+        ds_dev = ds_dev.map(lambda x: {"answer": map_answer(x["answer"])})
+        if args.is_hard:
+            ds_dev = ds_dev.map(
+                lambda x: {"category": convert_to_pascal_case(x["category"])}
+            )
+        else:
+            ds_dev = ds_dev.rename_column("Category", "category")
 
-            ds = ds_dict["test"]
-            ds = ds.map(lambda x: {"answer": map_answer(x["answer"])})
-            if args.is_hard:
-                ds = ds.map(lambda x: {"category": convert_to_pascal_case(x["category"])})
-            else:
-                ds = ds.rename_column("Category", "category")
+        ds = ds_dict["test"]
+        ds = ds.map(lambda x: {"answer": map_answer(x["answer"])})
+        if args.is_hard:
+            ds = ds.map(lambda x: {"category": convert_to_pascal_case(x["category"])})
+        else:
+            ds = ds.rename_column("Category", "category")
 
-            if is_debug:
-                ds = ds.select(range(num_debug_samples))
+        if is_debug:
+            ds = ds.select(range(num_debug_samples))
 
-            if args.use_few_shots:
-                few_shots_prompt = generate_few_shots_prompt(ds_dev)
-            else:
-                few_shots_prompt = None
+        if args.use_few_shots:
+            few_shots = generate_few_shots_prompt(ds_dev)
+        else:
+            few_shots = None
 
-            all_batch = [
-                {
-                    "category": c,
-                    "question": get_prompt(x, few_shots_prompt),
-                    "answer": get_answer(x),
-                }
-                for x in tqdm(ds, desc=f"Preparing {c}")
-            ]
+        # all_batch = [{"category": x["category"], "question": get_prompt(x, few_shots), "answer": get_answer(x)} for x in tqdm(ds)]
+        all_batch = [
+            {
+                "category": c,
+                "question": get_prompt(x, few_shots),
+                "answer": get_answer(x),
+            }
+            for x in tqdm(ds)
+        ]
 
-            prompt_template = get_prompt_template(args.template_type)
-            chain = prompt_template | llm | MultipleChoicesFourParser()
+        prompt_template = get_prompt_template(args.template_type)
+        chain = prompt_template | llm | MultipleChoicesFourParser()
 
-            t0 = time.time()
-            category_responses = []
-            category_success = True
+        t0 = time.time()
 
-            with tqdm(total=len(all_batch), desc=f"Processing {c}") as pbar:
-                for i in range(0, len(all_batch), batch_size):
-                    mini_batch = all_batch[i : i + batch_size]
-                    retries = 0
-                    batch_success = False
+        with tqdm(total=len(all_batch), desc="Processing Answers") as pbar:
 
-                    while retries <= max_retries:
-                        try:
-                            preds = chain.batch(mini_batch, {"max_concurrency": batch_size})
-                            # If no exception, add questions and answers to all_answers
-                            for qna, pred in zip(mini_batch, preds):
-                                category_responses.append(
-                                    {
-                                        "category": qna["category"],
-                                        "answer": qna["answer"],
-                                        "pred": pred[0],
-                                        "response": pred[1],
-                                    }
-                                )
-                            batch_success = True
-                            break  # Exit the retry loop once successful
-                        except RateLimitError as rate_limit_error:
-                            delay = (retries + 1) * delay_increment
-                            logger.warning(
-                                f"[{c}] {rate_limit_error}. Retrying in {delay} seconds..."
+            for i in range(0, len(all_batch), batch_size):
+                mini_batch = all_batch[i : i + batch_size]
+                retries = 0
+
+                while retries <= max_retries:
+                    try:
+                        preds = chain.batch(mini_batch, {"max_concurrency": batch_size})
+                        # If no exception, add questions and answers to all_answers
+                        for qna, pred in zip(mini_batch, preds):
+                            responses.append(
+                                {
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": pred[0],
+                                    "response": pred[1],
+                                }
                             )
-                            time.sleep(delay)
-                            retries += 1
+                        break  # Exit the retry loop once successful
+                    except RateLimitError as rate_limit_error:
+                        delay = (retries + 1) * delay_increment
+                        logger.warning(
+                            f"{rate_limit_error}. Retrying in {delay} seconds..."
+                        )
+                        time.sleep(delay)
+                        retries += 1
 
-                            if retries > max_retries:
-                                logger.error(
-                                    f"[{c}] Max retries reached this batch. Adding failed responses."
-                                )
-                                # 실패한 질문들에 대해 기본값으로 추가
-                                for qna in mini_batch:
-                                    category_responses.append(
-                                        {
-                                            "category": qna["category"],
-                                            "answer": qna["answer"],
-                                            "pred": "FAILED",
-                                            "response": "RATE_LIMIT_ERROR",
-                                        }
-                                    )
-                                batch_success = True  # 실패해도 계속 진행
-                                break
-                        except openai.BadRequestError as e:
-                            logger.error(f"[{c}] BadRequestError: {e}. Adding failed responses for this batch.")
-                            logger.info(f"[{c}] Question sample: {mini_batch[0]['question'][:100]}...")
-                            # 실패한 질문들에 대해 기본값으로 추가
-                            for qna in mini_batch:
-                                category_responses.append(
-                                    {
-                                        "category": qna["category"],
-                                        "answer": qna["answer"],
-                                        "pred": "FAILED",
-                                        "response": "BAD_REQUEST_ERROR",
-                                    }
-                                )
-                            batch_success = True  # 실패해도 계속 진행
+                        if retries > max_retries:
+                            logger.error(
+                                f"Max retries reached this batch. Skipping to next batch."
+                            )
                             break
-                        except Exception as e:
-                            logger.error(f"[{c}] Error in process_inputs: {e}. Adding failed responses for this batch.")
-                            # 실패한 질문들에 대해 기본값으로 추가
-                            for qna in mini_batch:
-                                category_responses.append(
-                                    {
-                                        "category": qna["category"],
-                                        "answer": qna["answer"],
-                                        "pred": "FAILED",
-                                        "response": f"ERROR: {str(e)}",
-                                    }
-                                )
-                            batch_success = True  # 실패해도 계속 진행
-                            break
+                    except openai.BadRequestError as e:
+                        logger.error(f"BadRequestError: {e}. Skipping this batch.")
+                        logger.info(f"Question: {qna['question']}")
+                        break
+                    except Exception as e:
+                        logger.error(f"Error in process_inputs: {e}")
+                        break
 
-                    if not batch_success:
-                        logger.error(f"[{c}] Failed to process batch {i//batch_size + 1}, but continuing...")
+                pbar.set_postfix(
+                    {
+                        "current_batch": f"{i//batch_size + 1}/{(len(all_batch) + (batch_size-1))//batch_size}"
+                    }
+                )
+                pbar.update(len(mini_batch))
 
-                    pbar.set_postfix(
-                        {
-                            "current_batch": f"{i//batch_size + 1}/{(len(all_batch) + (batch_size-1))//batch_size}",
-                            "success": "✓" if batch_success else "✗"
-                        }
-                    )
-                    pbar.update(len(mini_batch))
+        t1 = time.time()
+        acc = evaluate_each_category(responses, c)
+        timespan = format_timespan(t1 - t0)
+        logger.info(f"##### Category [{c}] accuracy: {acc}")
+        logger.info(f"##### Generating Answers for Category [{c}] took {timespan}")
 
-            # 카테고리별 결과를 전체 응답에 추가
-            responses.extend(category_responses)
-            
-            t1 = time.time()
-            acc = evaluate_each_category(category_responses, c)
-            timespan = format_timespan(t1 - t0)
-            logger.info(f"##### Category [{c}] accuracy: {acc}% ({len(category_responses)} responses)")
-            logger.info(f"##### Generating Answers for Category [{c}] took {timespan}")
-            successful_categories.append(c)
-            
-        except Exception as category_error:
-            logger.error(f"##### CRITICAL ERROR in Category [{c}]: {category_error}")
-            logger.error(f"##### Skipping category [{c}] and continuing with next category...")
-            failed_categories.append(c)
-            continue
-
-    # 최종 요약
-    logger.info(f"====== PROCESSING SUMMARY =====")
-    logger.info(f"Successfully processed: {len(successful_categories)}/{len(kmmlu_category)} categories")
-    logger.info(f"Successful categories: {successful_categories}")
-    if failed_categories:
-        logger.warning(f"Failed categories: {failed_categories}")
-    
     logger.info(
         "====== [DONE] Completed Generating Answers to Questions given by LLM. ====="
     )
-    
-    if not responses:
-        logger.error("No successful responses were generated. Skipping evaluation.")
-        return
-
     df = pd.DataFrame(responses)
     os.makedirs("results", exist_ok=True)
-    csv_path = f"results/[{dataset_name}] {model_name}-{model_version}-{few_shots_label}.csv"
+    csv_path = f"results/[{dataset_name}] {model_name}-{model_version}-{few_shots}.csv"
     logger.info(f"====== Generated CSV file - CSV_PATH: {csv_path} =====")
     df.to_csv(csv_path, index=False)
 
@@ -384,64 +312,15 @@ def benchmark(args):
 
 def evaluate_each_category(responses, category):
     df = pd.DataFrame(responses)
-    
-    # Check if DataFrame is empty or missing required columns
-    if df.empty or "category" not in df.columns:
-        logger.warning(f"No valid responses found for category {category}. Returning 0% accuracy.")
-        return 0.0
-    
     df = df[df["category"] == category]
-    
-    # Check if any rows match the category
-    if df.empty:
-        logger.warning(f"No responses found for category {category}. Returning 0% accuracy.")
-        return 0.0
-    
-    # FAILED 응답 제외
-    original_count = len(df)
-    failed_count = len(df[df["pred"] == "FAILED"])
-    if failed_count > 0:
-        logger.info(f"Category [{category}]: Excluding {failed_count} FAILED responses from {original_count} total")
-        df = df[df["pred"] != "FAILED"]
-    
-    if df.empty:
-        logger.warning(f"No valid responses found for category {category} after filtering. Returning 0% accuracy.")
-        return 0.0
-    
     df["correct"] = df["answer"] == df["pred"]
     acc = round(df["correct"].mean() * 100, 2)
-    logger.info(f"Category [{category}]: {len(df)} valid responses, accuracy: {acc}%")
     return acc
 
 
 def evaluate(csv_path):
-    # Check if file exists and has content
-    if not os.path.exists(csv_path):
-        logger.error(f"CSV file does not exist: {csv_path}")
-        return
-    
-    if os.path.getsize(csv_path) == 0:
-        logger.error(f"CSV file is empty: {csv_path}")
-        return
-    
-    try:
-        result = pd.read_csv(csv_path)
-        if result.empty:
-            logger.error(f"CSV file contains no data: {csv_path}")
-            return
-    except pd.errors.EmptyDataError:
-        logger.error(f"CSV file has no columns to parse: {csv_path}")
-        return
 
-    # FAILED 응답 필터링 및 로깅
-    original_count = len(result)
-    failed_count = len(result[result["pred"] == "FAILED"])
-    if failed_count > 0:
-        logger.warning(f"Found {failed_count} FAILED responses out of {original_count} total responses")
-        logger.info(f"Excluding FAILED responses from accuracy calculation")
-        result = result[result["pred"] != "FAILED"]
-        logger.info(f"Evaluating on {len(result)} valid responses")
-
+    result = pd.read_csv(csv_path)
     result["correct"] = result["answer"] == result["pred"]
 
     category_avg = (
@@ -460,7 +339,8 @@ def evaluate(csv_path):
 
 if __name__ == "__main__":
     dotenv_path = os.getenv('DOTENV_PATH', '.env')
-    load_dotenv(dotenv_path)
+    load_dotenv(dotenv_path, override=True)
+   
     parser = argparse.ArgumentParser(description="Options")
 
     parser.add_argument("--is_debug", type=str2bool, default=False)
@@ -470,10 +350,10 @@ if __name__ == "__main__":
         "--hf_model_id", type=str, default="microsoft/Phi-3.5-mini-instruct"
     )
     parser.add_argument("--batch_size", type=int, default=20)
-    parser.add_argument("--max_retries", type=int, default=2)
+    parser.add_argument("--max_retries", type=int, default=3)
     parser.add_argument("--max_tokens", type=int, default=1024)
     parser.add_argument("--temperature", type=float, default=0.01)
-    parser.add_argument("--template_type", type=str, default="chat")
+    parser.add_argument("--template_type", type=str, default="basic")
     parser.add_argument("--is_hard", type=str2bool, default=True)
     parser.add_argument("--use_few_shots", type=str2bool, default=True)
 
