@@ -214,16 +214,57 @@ def process_batch_streaming(batch_data, model_config, few_shots_prompt, template
                             })
                         break
                         
+                except KeyError as e:
+                    # 핵심 'choices' KeyError 처리
+                    if "'choices'" in str(e):
+                        logger.warning(f"OpenAI API response missing 'choices' field - processing individually")
+                        # 개별 처리로 fallback
+                        for qna in mini_batch:
+                            try:
+                                pred = chain.invoke(qna["question"])
+                                results.append({
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": pred[0],
+                                    "response": pred[1],
+                                })
+                            except Exception as individual_error:
+                                logger.error(f"Individual processing failed: {individual_error}")
+                                results.append({
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": "FAILED",
+                                    "response": f"ERROR: {str(individual_error)}",
+                                })
+                        break
+                    else:
+                        # 다른 KeyError는 일반 처리
+                        logger.error(f"KeyError in batch processing: {e}")
+                        retries += 1
+                        if retries > max_retries:
+                            for qna in mini_batch:
+                                results.append({
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": "FAILED",
+                                    "response": f"KEYERROR: {str(e)}",
+                                })
+                            break
+                        time.sleep(2 ** retries)
+                        
                 except Exception as e:
                     logger.error(f"Error processing batch: {e}")
-                    for qna in mini_batch:
-                        results.append({
-                            "category": qna["category"],
-                            "answer": qna["answer"],
-                            "pred": "FAILED",
-                            "response": f"ERROR: {str(e)}",
-                        })
-                    break
+                    retries += 1
+                    if retries > max_retries:
+                        for qna in mini_batch:
+                            results.append({
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FAILED",
+                                "response": f"ERROR: {str(e)}",
+                            })
+                        break
+                    time.sleep(2 ** retries)
         
         return results
         
@@ -370,8 +411,6 @@ def benchmark_multiprocess(args):
     
     # CSV 파일 경로 설정
     os.makedirs("results", exist_ok=True)
-    model_name = os.getenv("OPENAI_MODEL_NAME", "gpt-5-mini")
-    model_version = os.getenv("OPENAI_MODEL_VERSION", "2025-08-08")
     
     # 파일명 생성
     if args.use_few_shots:
