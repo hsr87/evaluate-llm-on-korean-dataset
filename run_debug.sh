@@ -1,36 +1,101 @@
-# Please make sure to set the correct environment variables in the .env file before running this script
-#
-# If you are using Azure AI Foundry, you can set the following environment variables in the .env file:
-# AZURE_AI_INFERENCE_KEY=<your-ai-inference-key>
-# AZURE_AI_INFERENCE_ENDPOINT=https://<your-endpoint-name>.services.ai.azure.com/models
-# AZURE_AI_DEPLOYMENT_NAME=Phi-4
+#!/bin/bash
 
+### Parallel execution version of run_all.sh with resume capability
+env_files=(.env_gpt5-*) 
+is_debug=False
+batch_size=100
+max_tokens=256
+temperature=0.01
+max_parallel_jobs=3
+start_category=""  # 중단된 카테고리부터 시작하려면 여기에 카테고리명 입력
 
-### CLIcK
-python click_main.py \
-    --is_debug True \
-    --model_provider azureopenai \
-    --batch_size 10 \
-    --max_tokens 256 \
-    --temperature 0.01 \
-    --template_type chat 
+echo "Found the following .env files:"
+for env_file in "${env_files[@]}"; do
+    echo "$env_file"
+done
 
-### HAERAE 1.0
-python haerae_main.py \
-    --is_debug True \
-    --model_provider azureopenai \
-    --batch_size 10 \
-    --max_tokens 256 \
-    --temperature 0.01 \
-    --template_type chat 
+# 함수: 단일 모델의 모든 벤치마크 실행
+run_model() {
+    local env_file=$1
+    local model_provider=$2
+    
+    echo "Starting evaluation for $env_file"
+    
+    # CLIcK
+    # DOTENV_PATH="$env_file" python click_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type chat \
+    #       --start_category "$start_category" &
+    
+    # HAERAE 1.0
+    DOTENV_PATH="$env_file" python haerae_main.py \
+        --is_debug "$is_debug" \
+        --model_provider "$model_provider" \
+        --batch_size "$batch_size" \
+        --max_tokens "$max_tokens" \
+        --temperature "$temperature" \
+        --template_type chat \
+          --start_category "$start_category" &
+    
+    # KMMLU - 재시작 지원
+    # DOTENV_PATH="$env_file" python kmmlu_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type chat \
+    #     --is_hard False \
+    #     --use_few_shot False \
+    #     --start_category "$start_category" &
+    
+    # KMMLU (HARD) - 재시작 지원
+    # DOTENV_PATH="$env_file" python kmmlu_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type chat \
+    #     --is_hard True \
+    #     --use_few_shot False \
+    #     --start_category "$start_category" &
+    
+    wait  # 해당 모델의 모든 작업이 완료될 때까지 대기
+    echo "Completed evaluation for $env_file"
+}
 
-## KMMLU
-python kmmlu_main.py \
-    --is_debug True \
-    --model_provider azureopenai \
-    --batch_size 10 \
-    --max_tokens 256 \
-    --temperature 0.01 \
-    --template_type chat \
-    --is_hard False \
-    --use_few_shot False
+# 재시작 기능 안내
+if [[ -n "$start_category" ]]; then
+    echo "Resuming from category: $start_category"
+else
+    echo "Starting from the beginning (or skipping completed categories)"
+fi
+
+# 병렬 실행 관리
+job_count=0
+for env_file in "${env_files[@]}"; do
+    if [[ "$env_file" == .env_gpt* ]]; then
+        model_provider="azureopenai"
+    else
+        model_provider="azureml"
+    fi
+    
+    # 백그라운드에서 실행
+    run_model "$env_file" "$model_provider" &
+    
+    ((job_count++))
+    
+    # 최대 병렬 작업 수에 도달하면 일부 작업이 완료될 때까지 대기
+    if (( job_count >= max_parallel_jobs )); then
+        wait -n  # 하나의 작업이 완료될 때까지 대기
+        ((job_count--))
+    fi
+done
+
+wait  # 모든 작업 완료 대기
+echo "All evaluations completed!"

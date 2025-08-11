@@ -78,13 +78,22 @@ def get_llm_client(
     if model_provider == "azureopenai":
         print("Using Azure OpenAI model provider.")
         model_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
-        llm = AzureChatOpenAI(
-            azure_deployment=model_name,
-            openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-            temperature=temperature,
-            max_tokens=max_tokens,
-            max_retries=max_retries,
-        )
+        
+        # GPT-5 계열 모델들 (gpt-5-chat 추가)
+        if model_name in ["gpt-5-mini", "gpt-5-nano", "gpt-5-chat"]:
+            llm = AzureChatOpenAI(
+                azure_deployment=model_name,
+                openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                max_retries=max_retries,
+            )
+        else:
+            llm = AzureChatOpenAI(
+                azure_deployment=model_name,
+                openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                temperature=temperature,
+                max_tokens=max_tokens,
+                max_retries=max_retries,
+            )
     elif model_provider == "openai":
         print("Using OpenAI model provider.")
         model_name = os.getenv("OPENAI_DEPLOYMENT_NAME")
