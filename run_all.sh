@@ -3,7 +3,7 @@
 ### Parallel execution version of run_all.sh
 env_files=(.env_*) 
 is_debug=False
-batch_size=100
+batch_size=20
 max_tokens=256
 temperature=0.01
 max_parallel_jobs=3
@@ -20,23 +20,23 @@ run_model() {
     
     echo "Starting evaluation for $env_file"
     
-    # #CLIcK
-    # DOTENV_PATH="$env_file" python click_main.py \
-    #     --is_debug "$is_debug" \
-    #     --model_provider "$model_provider" \
-    #     --batch_size "$batch_size" \
-    #     --max_tokens "$max_tokens" \
-    #     --temperature "$temperature" \
-    #     --template_type chat &
+    #CLIcK
+    DOTENV_PATH="$env_file" python click_main.py \
+        --is_debug "$is_debug" \
+        --model_provider "$model_provider" \
+        --batch_size "$batch_size" \
+        --max_tokens "$max_tokens" \
+        --temperature "$temperature" \
+        --template_type chat &
     
-    # # HAERAE 1.0
-    # DOTENV_PATH="$env_file" python haerae_main.py \
-    #     --is_debug "$is_debug" \
-    #     --model_provider "$model_provider" \
-    #     --batch_size "$batch_size" \
-    #     --max_tokens "$max_tokens" \
-    #     --temperature "$temperature" \
-    #     --template_type chat &
+    # HAERAE 1.0
+    DOTENV_PATH="$env_file" python haerae_main.py \
+        --is_debug "$is_debug" \
+        --model_provider "$model_provider" \
+        --batch_size "$batch_size" \
+        --max_tokens "$max_tokens" \
+        --temperature "$temperature" \
+        --template_type chat &
     
     # KMMLU
     DOTENV_PATH="$env_file" python kmmlu_main.py \
@@ -50,15 +50,15 @@ run_model() {
         --use_few_shot False &
     
     # KMMLU (HARD)
-    DOTENV_PATH="$env_file" python kmmlu_main.py \
-        --is_debug "$is_debug" \
-        --model_provider "$model_provider" \
-        --batch_size "$batch_size" \
-        --max_tokens "$max_tokens" \
-        --temperature "$temperature" \
-        --template_type chat \
-        --is_hard True \
-        --use_few_shot False &
+    # DOTENV_PATH="$env_file" python kmmlu_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type chat \
+    #     --is_hard True \
+    #     --use_few_shot False &
     
     wait  # 해당 모델의 모든 작업이 완료될 때까지 대기
     echo "Completed evaluation for $env_file"

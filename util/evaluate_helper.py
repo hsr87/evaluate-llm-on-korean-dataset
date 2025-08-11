@@ -9,6 +9,9 @@ import pandas as pd
 
 
 def convert_to_pascal_case(category):
+    # KMMLU 카테고리는 이미 올바른 형식이므로 변환하지 않음
+    if "-" in category:
+        return category
     return "-".join(word.capitalize() for word in category.split("_"))
 
 
@@ -71,11 +74,9 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
     elif dataset in ["KMMLU", "KMMLU-HARD"]:
         with open("kmmlu_category.json", "r") as json_file:
             category_to_supercategory = json.load(json_file)
-            category_to_supercategory = {k.lower(): v for k, v in category_to_supercategory.items()}
         
         result["category"] = result["category"].map(convert_to_pascal_case)
-        # Convert all uppercase letters to lowercase. This is to make dictionary keys and dataframe values ​​the same format.
-        result["supercategory"] = result["category"].str.lower().map(category_to_supercategory)
+        result["supercategory"] = result["category"].map(category_to_supercategory)
         
     result["correct"] = result["answer"] == result["pred"]
     overall_acc = round(result["correct"].mean() * 100, 2)
@@ -121,13 +122,71 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
 
 def get_markdown_accuracy(exp_group, *dfs):
     exp_group = exp_group[: len(dfs)]
+    
+    # 모든 DataFrame에서 가능한 모든 카테고리와 supercategory 조합 수집
+    all_combinations = set()
+    
+    for df in dfs:
+        if 'supercategory' in df.columns:
+            # supercategory가 있는 경우 (KMMLU, CLIcK)
+            all_combinations.update(zip(df['supercategory'], df['category']))
+        else:
+            # supercategory가 없는 경우 (HAERAE)
+            all_combinations.update([(None, cat) for cat in df['category'].tolist()])
+    
+    # 각 DataFrame을 전체 카테고리 리스트에 맞춰 보완
+    filled_dfs = []
+    for i, df in enumerate(dfs):
+        if 'supercategory' in df.columns:
+            # supercategory가 있는 경우 (KMMLU, CLIcK)
+            current_combinations = set(zip(df['supercategory'], df['category']))
+            missing_combinations = all_combinations - current_combinations
+            missing_rows = []
+            for supercat, cat in missing_combinations:
+                missing_rows.append({
+                    'supercategory': supercat,
+                    'category': cat,
+                    'accuracy': None  # 누락된 카테고리는 None으로 표시 (0이 아닌)
+                })
+            
+            if missing_rows:
+                missing_df = pd.DataFrame(missing_rows)
+                df_filled = pd.concat([df, missing_df], ignore_index=True)
+                df_filled = df_filled.sort_values(['supercategory', 'category'])
+            else:
+                df_filled = df.copy()
+        else:
+            # supercategory가 없는 경우 (HAERAE)
+            current_categories = set(df['category'].tolist())
+            all_categories = set([cat for _, cat in all_combinations])
+            missing_categories = all_categories - current_categories
+            missing_rows = []
+            for cat in missing_categories:
+                missing_rows.append({
+                    'category': cat,
+                    'accuracy': None  # 누락된 카테고리는 None으로 표시
+                })
+            
+            if missing_rows:
+                missing_df = pd.DataFrame(missing_rows)
+                df_filled = pd.concat([df, missing_df], ignore_index=True)
+                df_filled = df_filled.sort_values(['category'])
+            else:
+                df_filled = df.copy()
+        
+        filled_dfs.append(df_filled)
+    
+    # 기존 로직으로 병합
     renamed_dfs = [
-        df.rename(columns={"accuracy": exp_group[i]}) for i, df in enumerate(dfs)
+        df.rename(columns={"accuracy": exp_group[i]}) for i, df in enumerate(filled_dfs)
     ]
 
     merged_df = renamed_dfs[0]
     for df in renamed_dfs[1:]:
         merged_df = pd.concat([merged_df, df[[df.columns[-1]]]], axis=1)
+
+    # NaN 값을 '-' 또는 'N/A'로 대체하여 명시적으로 표시
+    merged_df = merged_df.fillna('-')
 
     md = merged_df.to_markdown(index=False)
     return md
@@ -136,13 +195,18 @@ def get_markdown_accuracy(exp_group, *dfs):
 def get_markdown_accuracy_with_overall(exp_group, *dfs, overall_acc):
     exp_group = exp_group[: len(dfs)]
 
-    renamed_dfs = [
-        df.rename(columns={"accuracy": exp_group[i]}) for i, df in enumerate(dfs)
-    ]
+    # 각 DataFrame에서 누락된 카테고리를 None으로 처리한 후 병합
+    renamed_dfs = []
+    for i, df in enumerate(dfs):
+        renamed_df = df.rename(columns={"accuracy": exp_group[i]})
+        renamed_dfs.append(renamed_df)
 
     merged_df = renamed_dfs[0]
     for df in renamed_dfs[1:]:
         merged_df = pd.concat([merged_df, df[[df.columns[-1]]]], axis=1)
+
+    # NaN 값을 '-'로 대체
+    merged_df = merged_df.fillna('-')
 
     overall_row = pd.DataFrame(
         [["**Overall**"] + overall_acc], columns=merged_df.columns
