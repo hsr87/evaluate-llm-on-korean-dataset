@@ -98,27 +98,27 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 #### Open-Source models
 - Accuracy by supercategory
 
-| supercategory   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|----------------------:|--------:|------------------------:|-----------------------:|--------------------------------:|------------------------:|
-| Culture         |                 43.05 |   57.84 |                   43.77 |                  58.44 |                           29.74 |                   51.15 |
-| Language        |                 42.31 |   61.85 |                   41.38 |                  52.31 |                           27.85 |                   40.92 |
-| **Overall**     |                 42.81 |   59.15 |                   42.99 |                  56.44 |                           29.12 |                   47.82 |
+| supercategory   |   gpt-oss-120b |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|---------------:|----------------------:|--------:|------------------------:|-----------------------:|--------------------------------:|------------------------:|
+| Culture         |          60.28 |                 43.05 |   57.84 |                   43.77 |                  58.44 |                           29.74 |                   51.15 |
+| Language        |          39.17 |                 42.31 |   61.85 |                   41.38 |                  52.31 |                           27.85 |                   40.92 |
+| **Overall**     |          53.26 |                 42.81 |   59.15 |                   42.99 |                  56.44 |                           29.12 |                   47.82 |
 
 - Accuracy by category
 
-| supercategory   | category    |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------|:------------|----------------------:|--------:|------------------------:|-----------------------:|--------------------------------:|------------------------:|
-| Culture         | Economy     |                 59.32 |   76.27 |                   61.02 |                  77.97 |                           28.81 |                   66.1  |
-| Culture         | Geography   |                 39.69 |   55.73 |                   45.8  |                  60.31 |                           29.01 |                   54.2  |
-| Culture         | History     |                 27.5  |   27.5  |                   26.15 |                  33.93 |                           30    |                   29.64 |
-| Culture         | Law         |                 36.99 |   50.23 |                   32.42 |                  52.51 |                           22.83 |                   44.29 |
-| Culture         | Politics    |                 52.38 |   76.19 |                   54.76 |                  70.24 |                           33.33 |                   59.52 |
-| Culture         | Pop Culture |                 63.41 |   70.73 |                   60.98 |                  80.49 |                           34.15 |                   60.98 |
-| Culture         | Society     |                 52.75 |   75.08 |                   54.37 |                  74.43 |                           31.72 |                   65.05 |
-| Culture         | Tradition   |                 45.5  |   66.67 |                   47.75 |                  58.11 |                           31.98 |                   54.95 |
-| Language        | Functional  |                 42.4  |   66.4  |                   37.6  |                  48    |                           24    |                   32.8  |
-| Language        | Grammar     |                 28.33 |   40    |                   27.5  |                  29.58 |                           23.33 |                   22.92 |
-| Language        | Textual     |                 54.04 |   78.25 |                   54.74 |                  73.33 |                           33.33 |                   59.65 |
+| supercategory   | category    | gpt-oss-120b   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------|:------------|:---------------|----------------------:|--------:|------------------------:|-----------------------:|--------------------------------:|------------------------:|
+| Culture         | Economy     | 91.53          |                 59.32 |   76.27 |                   61.02 |                  77.97 |                           28.81 |                   66.1  |
+| Culture         | Geography   | -              |                 39.69 |   55.73 |                   45.8  |                  60.31 |                           29.01 |                   54.2  |
+| Culture         | History     | 20.09          |                 27.5  |   27.5  |                   26.15 |                  33.93 |                           30    |                   29.64 |
+| Culture         | Law         | 72.62          |                 36.99 |   50.23 |                   32.42 |                  52.51 |                           22.83 |                   44.29 |
+| Culture         | Politics    | 80.49          |                 52.38 |   76.19 |                   54.76 |                  70.24 |                           33.33 |                   59.52 |
+| Culture         | Pop Culture | 78.96          |                 63.41 |   70.73 |                   60.98 |                  80.49 |                           34.15 |                   60.98 |
+| Culture         | Society     | 57.21          |                 52.75 |   75.08 |                   54.37 |                  74.43 |                           31.72 |                   65.05 |
+| Culture         | Tradition   | 57.21          |                 45.5  |   66.67 |                   47.75 |                  58.11 |                           31.98 |                   54.95 |
+| Language        | Functional  | 57.14          |                 42.4  |   66.4  |                   37.6  |                  48    |                           24    |                   32.8  |
+| Language        | Grammar     | 16.38          |                 28.33 |   40    |                   27.5  |                  29.58 |                           23.33 |                   22.92 |
+| Language        | Textual     | 56.84          |                 54.04 |   78.25 |                   54.74 |                  73.33 |                           33.33 |                   59.65 |
 
 ### HAE_RAE_BENCH 1.0
 
@@ -136,15 +136,15 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Open-Source models
 
-| category              |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
-|:----------------------|----------------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
-| General Knowledge     |                 28.41 |   38.07 |                  39.77 |                   31.25 |                           28.41 |                   34.66 |
-| History               |                 31.38 |   37.77 |                  60.64 |                   32.45 |                           22.34 |                   44.15 |
-| Loan Words            |                 52.66 |   61.54 |                  70.41 |                   47.93 |                           35.5  |                   63.31 |
-| Rare Words            |                 51.6  |   62.72 |                  63.95 |                   55.06 |                           42.96 |                   63.21 |
-| Reading Comprehension |                 43.18 |   71.14 |                  64.43 |                   42.95 |                           41.16 |                   51.9  |
-| Standard Nomenclature |                 54.9  |   63.4  |                  66.01 |                   44.44 |                           32.68 |                   58.82 |
-| **Overall**           |                 44.47 |   59.23 |                  61.83 |                   44.21 |                           36.41 |                   53.9  |
+| category              |   gpt-oss-120b |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-MoE-instruct |   Phi-3.5-mini-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
+|:----------------------|---------------:|----------------------:|--------:|-----------------------:|------------------------:|--------------------------------:|------------------------:|
+| General Knowledge     |          16.48 |                 28.41 |   38.07 |                  39.77 |                   31.25 |                           28.41 |                   34.66 |
+| History               |          48.91 |                 31.38 |   37.77 |                  60.64 |                   32.45 |                           22.34 |                   44.15 |
+| Loan Words            |          31.95 |                 52.66 |   61.54 |                  70.41 |                   47.93 |                           35.5  |                   63.31 |
+| Rare Words            |          43.95 |                 51.6  |   62.72 |                  63.95 |                   55.06 |                           42.96 |                   63.21 |
+| Reading Comprehension |          34.9  |                 43.18 |   71.14 |                  64.43 |                   42.95 |                           41.16 |                   51.9  |
+| Standard Nomenclature |          56.21 |                 54.9  |   63.4  |                  66.01 |                   44.44 |                           32.68 |                   58.82 |
+| **Overall**           |          38.66 |                 44.47 |   59.23 |                  61.83 |                   44.21 |                           36.41 |                   53.9  |
 
 ### KMMLU (0-shot)
 
@@ -217,13 +217,16 @@ Please do not forget to modify the `.env` file to match your account. Rename `.e
 
 ### Modify your `.env`
 
+# basic info
+MODEL_NAME=<YOUR_MODEL_VERSION>
+MODEL_VERSION=<YOUR_MODEL_VERSION>
+
 #### Azure OpenAI
 ```ini
 AZURE_OPENAI_ENDPOINT=<YOUR_OPEN_ENDPOINT>
 AZURE_OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 AZURE_OPENAI_API_VERSION=<YOUR_OPENAI_API_VERSION>
 AZURE_OPENAI_DEPLOYMENT_NAME=<YOUR_DEPLOYMENT_NAME> (e.g., gpt-4o-mini)
-OPENAI_MODEL_VERSION=<YOUR_OPENAI_MODEL_VERSION> (e.g., 2024-07-18)>
 ```
 
 #### Azure AI Foundry
@@ -237,7 +240,6 @@ AZURE_AI_DEPLOYMENT_NAME=Phi-4
 ```ini
 OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 OPENAI_DEPLOYMENT_NAME=<YOUR_OPENAI_API_VERSION>
-OPENAI_MODEL_VERSION=<YOUR_OPENAI_MODEL_VERSION> (e.g., 2024-07-18)
 ```
 
 #### Azure ML

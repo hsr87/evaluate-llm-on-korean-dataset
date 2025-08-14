@@ -155,6 +155,19 @@ def process_batch_streaming(batch_data, model_config, template_type="basic"):
                             })
                         break
                         
+                except openai.BadRequestError as e:
+                    logger.error(f"BadRequestError: {e}. Adding failed responses for this batch.")
+                    logger.info(f"Question sample: {batch_data[i]['question'][:100]}..." if batch_data else "No question data")
+                    # 실패한 질문들에 대해 기본값으로 추가
+                    for qna in mini_batch:
+                        results.append({
+                            "category": qna["category"],
+                            "answer": qna["answer"],
+                            "pred": "FAILED",
+                            "response": "BAD_REQUEST_ERROR",
+                        })
+                    break
+                        
                 except Exception as e:
                     logger.error(f"Error processing batch: {e}")
                     for qna in mini_batch:
@@ -196,30 +209,40 @@ def process_category_streaming(category_info):
         
         logger.info(f"Processing {total_items} items for category {category} in chunks of {chunk_size}")
         
-        # 청크별로 스트리밍 처리
-        for start_idx in range(0, total_items, chunk_size):
-            end_idx = min(start_idx + chunk_size, total_items)
-            chunk_ds = category_ds.select(range(start_idx, end_idx))
-            
-            # 청크를 배치 데이터로 변환
-            chunk_batch = [
-                {
-                    "category": category,
-                    "question": get_prompt(x),
-                    "answer": get_answer(x),
-                }
-                for x in chunk_ds
-            ]
-            
-            # 청크 처리
-            chunk_results = process_batch_streaming(chunk_batch, model_config, template_type)
-            category_responses.extend(chunk_results)
-            
-            # 중간 저장 (메모리 절약)
-            if len(category_responses) >= 1000:
-                save_results_incremental(category_responses, csv_path)
-                logger.info(f"Intermediate save for category {category}: {len(category_responses)} items")
-                category_responses = []
+        # 청크별 진행률 표시 추가
+        total_chunks = (total_items + chunk_size - 1) // chunk_size
+        with tqdm(total=total_chunks, desc=f"Processing {category}", position=0, leave=True) as pbar:
+            # 청크별로 스트리밍 처리
+            for start_idx in range(0, total_items, chunk_size):
+                end_idx = min(start_idx + chunk_size, total_items)
+                chunk_ds = category_ds.select(range(start_idx, end_idx))
+                
+                # 청크를 배치 데이터로 변환
+                chunk_batch = [
+                    {
+                        "category": category,
+                        "question": get_prompt(x),
+                        "answer": get_answer(x),
+                    }
+                    for x in chunk_ds
+                ]
+                
+                # 청크 처리
+                chunk_results = process_batch_streaming(chunk_batch, model_config, template_type)
+                category_responses.extend(chunk_results)
+                
+                # 진행률 업데이트
+                pbar.update(1)
+                pbar.set_postfix({
+                    'items': f"{len(category_responses)}/{total_items}",
+                    'chunk_size': len(chunk_results)
+                })
+                
+                # 중간 저장 (메모리 절약)
+                if len(category_responses) >= 1000:
+                    save_results_incremental(category_responses, csv_path)
+                    logger.info(f"Intermediate save for category {category}: {len(category_responses)} items")
+                    category_responses = []
         
         # 마지막 배치 저장
         if category_responses:
@@ -255,8 +278,8 @@ def benchmark_multiprocess(args):
     os.makedirs("results", exist_ok=True)
     csv_path = f"results/[HAERAE] {model_name}-{model_version}.csv"
     
-    # HAERAE 카테고리 목록
-    haerae_category = [
+    # 모든 HAERAE 카테고리 목록
+    all_haerae_categories = [
         "General Knowledge",
         "History",
         "Loan Words",
@@ -265,23 +288,28 @@ def benchmark_multiprocess(args):
         "Standard Nomenclature",
     ]
     
+    # 실행할 카테고리 결정
+    if args.categories:
+        # 사용자가 지정한 카테고리들 검증
+        invalid_categories = [c for c in args.categories if c not in all_haerae_categories]
+        if invalid_categories:
+            logger.error(f"Invalid categories specified: {invalid_categories}")
+            logger.error(f"Available categories: {all_haerae_categories}")
+            return
+        selected_categories = args.categories
+        logger.info(f"🎯 Processing user-specified categories: {selected_categories}")
+    else:
+        selected_categories = all_haerae_categories
+        logger.info(f"🎯 Processing all categories: {selected_categories}")
+    
     # 완료된 카테고리 확인
     completed_categories = get_completed_categories(csv_path)
     
-    # 시작할 카테고리 필터링
-    if args.start_category:
-        try:
-            start_idx = haerae_category.index(args.start_category)
-            remaining_categories = haerae_category[start_idx:]
-            logger.info(f"Starting from category: {args.start_category}")
-        except ValueError:
-            logger.error(f"Category {args.start_category} not found in category list")
-            return
-    else:
-        remaining_categories = [c for c in haerae_category if c not in completed_categories]
+    # 남은 카테고리 필터링 (완료되지 않은 카테고리만 처리)
+    remaining_categories = [c for c in selected_categories if c not in completed_categories]
     
     if not remaining_categories:
-        logger.info("All categories already completed!")
+        logger.info("All specified categories already completed!")
         return
     
     logger.info(f"Processing {len(remaining_categories)} remaining categories: {remaining_categories}")
@@ -295,7 +323,7 @@ def benchmark_multiprocess(args):
     
     start_time = time.time()
     
-    # 멀티프로세싱 실행
+    # 멀티프로세싱 실행 - tqdm 개선
     with ProcessPoolExecutor(max_workers=args.max_workers) as executor:
         future_to_category = {
             executor.submit(process_category_streaming, task): task[0] 
@@ -303,19 +331,35 @@ def benchmark_multiprocess(args):
         }
         
         completed_count = 0
-        for future in tqdm(future_to_category, desc="Processing categories"):
-            category = future_to_category[future]
-            try:
-                result_category, status = future.result()
-                completed_count += 1
-                logger.info(f"Category {result_category} completed: {status} ({completed_count}/{len(remaining_categories)})")
-            except Exception as e:
-                logger.error(f"Category {category} failed with exception: {e}")
-    
+        # 진행률 표시 개선
+        with tqdm(total=len(remaining_categories), desc="Categories", position=1, leave=True) as category_pbar:
+            for future in future_to_category:
+                category = future_to_category[future]
+                try:
+                    result_category, status = future.result()
+                    completed_count += 1
+                    logger.info(f"Category {result_category} completed: {status} ({completed_count}/{len(remaining_categories)})")
+                    
+                    # 카테고리 진행률 업데이트
+                    category_pbar.update(1)
+                    category_pbar.set_postfix({
+                        'current': result_category,
+                        'status': status
+                    })
+                    
+                except Exception as e:
+                    logger.error(f"Category {category} failed with exception: {e}")
+                    completed_count += 1
+                    category_pbar.update(1)
+                    category_pbar.set_postfix({
+                        'current': category,
+                        'status': 'failed'
+                    })
+
     end_time = time.time()
     total_time = format_timespan(end_time - start_time)
     
-    logger.info(f"====== [DONE] All categories processed in {total_time} =====")
+    logger.info(f"====== [DONE] All specified categories processed in {total_time} =====")
     
     # 최종 평가
     logger.info(f"====== [START] Final Evaluation - CSV_PATH: {csv_path} =====")
@@ -337,7 +381,7 @@ def benchmark_sequential(args):
         args.model_provider, args.hf_model_id, temperature, max_tokens, max_retries
     )
     model_version = (
-        os.getenv("OPENAI_MODEL_VERSION")
+        os.getenv("MODEL_VERSION")
         if args.model_provider == "azureopenai"
         else None
     )
@@ -538,7 +582,15 @@ if __name__ == "__main__":
     parser.add_argument("--max_tokens", type=int, default=256)
     parser.add_argument("--temperature", type=float, default=0.01)
     parser.add_argument("--template_type", type=str, default="chat")
-    parser.add_argument("--start_category", type=str, default=None, help="Category to start from (for resuming)")
+    
+    # 특정 카테고리들만 실행하기 위한 인수
+    parser.add_argument(
+        "--categories", 
+        type=str, 
+        nargs='*', 
+        default=None, 
+        help='Specific categories to process (e.g., --categories "History" "Loan Words")'
+    )
     
     # 새로운 멀티프로세싱 관련 인수
     parser.add_argument("--use_multiprocessing", type=str2bool, default=True, help="Enable multiprocessing")
@@ -551,10 +603,16 @@ if __name__ == "__main__":
         args.model_provider in valid_providers
     ), f"Invalid 'model_provider' value. Please choose from {valid_providers}."
 
-    valid_template_types = ["basic", "chat"]
+    valid_template_types = ["basic", "chat", "gpt5"]
     assert (
         args.template_type in valid_template_types
     ), f"Invalid 'template_type' value. Please choose from {valid_template_types}."
+
+    # 카테고리 인수 로깅
+    if args.categories:
+        logger.info(f"🎯 User specified categories: {args.categories}")
+    else:
+        logger.info(f"🎯 Will process all available categories")
 
     logger.info(args)
     
