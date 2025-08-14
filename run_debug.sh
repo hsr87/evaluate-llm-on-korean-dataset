@@ -1,13 +1,14 @@
 #!/bin/bash
 
 ### Parallel execution version of run_all.sh with resume capability
-env_files=(.env_gpt5-*) 
+env_files=(.env_gpt-oss-120b) 
 is_debug=False
 batch_size=30
 max_tokens=256
 temperature=0.01
 max_parallel_jobs=2
-start_category=""  # 중단된 카테고리부터 시작하려면 여기에 카테고리명 입력
+num_debug_samples=100
+categories=""  #별도로 실행할 카테고리를 넣으려면 여기에 카테고리명 입력, 기존의 데이터는 삭제되므로 주의 필요
 
 echo "Found the following .env files:"
 for env_file in "${env_files[@]}"; do
@@ -28,42 +29,44 @@ run_model() {
         --batch_size "$batch_size" \
         --max_tokens "$max_tokens" \
         --temperature "$temperature" \
-        --template_type chat \
-          --start_category "$start_category" &
+        --template_type gpt5 \
+        --categories "$categories" \
+        --num_debug_samples 100 &
     
     # HAERAE 1.0
-    DOTENV_PATH="$env_file" python haerae_main.py \
-        --is_debug "$is_debug" \
-        --model_provider "$model_provider" \
-        --batch_size "$batch_size" \
-        --max_tokens "$max_tokens" \
-        --temperature "$temperature" \
-        --template_type chat \
-          --start_category "$start_category" &
+    # DOTENV_PATH="$env_file" python haerae_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type basic \
+    #     --categories "$categories" \
+    #     --num_debug_samples 100  &
     
-    # KMMLU - 재시작 지원
-    DOTENV_PATH="$env_file" python kmmlu_main.py \
-        --is_debug "$is_debug" \
-        --model_provider "$model_provider" \
-        --batch_size "$batch_size" \
-        --max_tokens "$max_tokens" \
-        --temperature "$temperature" \
-        --template_type chat \
-        --is_hard False \
-        --use_few_shot False \
-        --start_category "$start_category" &
+    # # KMMLU - 재시작 지원
+    # DOTENV_PATH="$env_file" python kmmlu_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type basic \
+    #     --is_hard False \
+    #     --use_few_shot False \
+    #     --categories "$categories" &
     
-    # KMMLU (HARD) - 재시작 지원
-    DOTENV_PATH="$env_file" python kmmlu_main.py \
-        --is_debug "$is_debug" \
-        --model_provider "$model_provider" \
-        --batch_size "$batch_size" \
-        --max_tokens "$max_tokens" \
-        --temperature "$temperature" \
-        --template_type chat \
-        --is_hard True \
-        --use_few_shot False \
-        --start_category "$start_category" &
+    # # KMMLU (HARD) - 재시작 지원
+    # DOTENV_PATH="$env_file" python kmmlu_main.py \
+    #     --is_debug "$is_debug" \
+    #     --model_provider "$model_provider" \
+    #     --batch_size "$batch_size" \
+    #     --max_tokens "$max_tokens" \
+    #     --temperature "$temperature" \
+    #     --template_type basic \
+    #     --is_hard True \
+    #     --use_few_shot False \
+    #     --categories "$categories" &
     
     wait  # 해당 모델의 모든 작업이 완료될 때까지 대기
     echo "Completed evaluation for $env_file"

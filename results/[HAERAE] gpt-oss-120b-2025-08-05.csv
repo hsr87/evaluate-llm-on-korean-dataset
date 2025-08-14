@@ -1,0 +1,1539 @@
+category,answer,pred,response
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,D,E,E
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,C,C,C
+Reading Comprehension,D,E,E
+Reading Comprehension,A,A,A
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,C,C
+Reading Comprehension,C,C,C
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,C,C,C
+Reading Comprehension,B,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,C,C,C
+Reading Comprehension,D,,
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,C,,
+Reading Comprehension,D,D,D
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,A,,
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,A
+Reading Comprehension,C,C,C
+Reading Comprehension,D,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,C,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,C,C
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,C,E,E
+Reading Comprehension,B,,
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,C,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,D,,
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,D,E,E
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,D,C,C
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,C,C,C
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,C,C,C
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,A,,
+Reading Comprehension,A,,
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,A,D,D
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,C,C
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,C,C,C
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,D,D,D
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,A,A,A
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,A,A,A
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,B,E,E
+Reading Comprehension,D,,
+Reading Comprehension,A,B,B
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,D,D,D
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,A
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,D,E,E
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,C,,
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,D,B,B
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,D,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,B,E,E
+Reading Comprehension,C,C,C
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,C,C,C
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,C,C,C
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,B,A,A
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,D,D,D
+Reading Comprehension,B,,
+Reading Comprehension,C,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,C,A,A
+Reading Comprehension,B,B,B
+Reading Comprehension,C,C,C
+Reading Comprehension,C,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,B,B,B
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,B,B,B
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,A,A,A
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,C,,
+Reading Comprehension,C,C,C
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,A,A,A
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,A,,
+Reading Comprehension,D,D,D
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,A
+Reading Comprehension,C,,
+Reading Comprehension,C,C,C
+Reading Comprehension,A,A,A
+Reading Comprehension,A,A,A
+Reading Comprehension,B,B,B
+Reading Comprehension,B,B,B
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,D,,
+Reading Comprehension,D,,
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,B,,
+Reading Comprehension,C,C,C
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,C,C,C
+Reading Comprehension,B,C,C
+Reading Comprehension,D,,
+Reading Comprehension,C,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,A
+Reading Comprehension,C,A,A
+Reading Comprehension,A,,
+Reading Comprehension,B,,
+Reading Comprehension,A,,
+Reading Comprehension,C,,
+Reading Comprehension,B,B,B
+Reading Comprehension,A,A,A
+Reading Comprehension,C,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,C,C,C
+Reading Comprehension,A,,
+Reading Comprehension,A,D,D
+Reading Comprehension,B,,
+Reading Comprehension,D,D,D
+Reading Comprehension,B,,
+Reading Comprehension,D,,
+Reading Comprehension,A,,
+Reading Comprehension,D,,
+Reading Comprehension,C,,
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,C,E,E
+Rare Words,A,A,A
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,A,A,A
+Rare Words,E,E,E
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,C,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,D,B,B
+Rare Words,E,E,E
+Rare Words,D,D,D
+Rare Words,D,,
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,B,A,A
+Rare Words,D,,
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,E,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,D,D,D
+Rare Words,B,,
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,D,,
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,E,,
+Rare Words,C,C,C
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,D,B,B
+Rare Words,A,,
+Rare Words,B,,
+Rare Words,E,E,E
+Rare Words,A,,
+Rare Words,E,A,A
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,E,E,E
+Rare Words,A,A,A
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,C,,
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,B,,
+Rare Words,C,C,C
+Rare Words,B,D,D
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,A,B,B
+Rare Words,A,A,A
+Rare Words,D,,
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,E,,
+Rare Words,B,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,D,,
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,D,,
+Rare Words,C,,
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,B,,
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,C,,
+Rare Words,C,,
+Rare Words,A,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,E,E,E
+Rare Words,D,,
+Rare Words,C,C,C
+Rare Words,E,E,E
+Rare Words,E,E,E
+Rare Words,E,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,C,C,C
+Rare Words,E,E,E
+Rare Words,D,,
+Rare Words,B,A,A
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,D,,
+Rare Words,E,E,E
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,C,,
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,D,,
+Rare Words,B,B,B
+Rare Words,A,,
+Rare Words,A,A,A
+Rare Words,D,,
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,D,C,C
+Rare Words,A,,
+Rare Words,C,C,C
+Rare Words,E,E,E
+Rare Words,E,,
+Rare Words,E,,
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,A,,
+Rare Words,B,C,C
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,D,,
+Rare Words,E,E,E
+Rare Words,E,E,E
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,C,A,A
+Rare Words,C,,
+Rare Words,B,E,E
+Rare Words,B,B,B
+Rare Words,B,,
+Rare Words,A,,
+Rare Words,D,D,D
+Rare Words,C,,
+Rare Words,A,,
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,E,,
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,B,E,E
+Rare Words,B,B,B
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,E,E,E
+Rare Words,C,,
+Rare Words,C,,
+Rare Words,E,E,E
+Rare Words,C,,
+Rare Words,B,,
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,D,,
+Rare Words,B,,
+Rare Words,A,,
+Rare Words,D,D,D
+Rare Words,D,D,D
+Rare Words,A,C,C
+Rare Words,C,,
+Rare Words,B,B,B
+Rare Words,B,,
+Rare Words,D,,
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,A,,
+Rare Words,B,,
+Rare Words,D,D,D
+Rare Words,B,,
+Rare Words,B,,
+Rare Words,D,,
+Rare Words,C,,
+Rare Words,C,,
+Rare Words,D,D,D
+Rare Words,D,,
+Rare Words,C,,
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,B,,
+Rare Words,A,,
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,D,,
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,B,,
+Rare Words,C,C,C
+Rare Words,E,E,E
+Rare Words,C,,
+Rare Words,B,,
+Rare Words,A,,
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,B,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,E,,
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,A,A,A
+Rare Words,B,,
+Rare Words,E,E,E
+Rare Words,A,A,A
+Rare Words,E,,
+Rare Words,C,,
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,E,E,E
+Rare Words,C,,
+Rare Words,D,,
+Rare Words,A,,
+Rare Words,E,C,C
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,B,,
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,D,,
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,B,B,B
+Rare Words,A,,
+Rare Words,D,D,D
+Rare Words,E,,
+Rare Words,D,,
+Rare Words,B,,
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,A,,
+Rare Words,D,,
+Rare Words,B,B,B
+Rare Words,E,,
+Rare Words,D,B,B
+Rare Words,A,A,A
+Rare Words,B,A,A
+Rare Words,A,,
+Rare Words,E,,
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,B,,
+Rare Words,E,,
+Rare Words,C,,
+Rare Words,D,,
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,B,,
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,E,E,E
+Rare Words,D,,
+Rare Words,D,D,D
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,B,C,C
+Rare Words,A,,
+Rare Words,D,C,C
+Rare Words,A,A,A
+Rare Words,E,,
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,E,,
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,D,D,D
+Rare Words,B,,
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,D,,
+Rare Words,B,,
+Rare Words,E,B,B
+Rare Words,D,,
+Rare Words,C,,
+Rare Words,C,B,B
+Rare Words,C,,
+Rare Words,D,,
+Rare Words,B,B,B
+Rare Words,D,,
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,E,,
+Rare Words,E,,
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,E,,
+Rare Words,C,,
+Rare Words,B,,
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,A,,
+Rare Words,A,,
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,E,,
+Rare Words,A,,
+Rare Words,C,,
+Rare Words,E,,
+Rare Words,E,E,E
+Rare Words,B,,
+Rare Words,D,D,D
+Rare Words,D,,
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,B,,
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,E,,
+Rare Words,B,,
+Rare Words,C,,
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,E,A,A
+Rare Words,E,,
+Rare Words,C,C,C
+Rare Words,D,,
+Rare Words,D,,
+Rare Words,B,,
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,C,,
+Rare Words,D,D,D
+Rare Words,E,,
+Rare Words,B,,
+Rare Words,B,B,B
+Rare Words,E,E,E
+Rare Words,A,E,E
+Rare Words,E,,
+Rare Words,C,D,D
+Rare Words,C,C,C
+Rare Words,A,,
+Rare Words,C,C,C
+Rare Words,A,A,A
+History,B,,
+History,E,E,E
+History,E,E,E
+History,C,D,D
+History,C,C,C
+History,C,C,C
+History,D,D,D
+History,B,,
+History,E,E,E
+History,E,E,E
+History,D,,
+History,E,E,E
+History,C,,
+History,C,C,C
+History,C,C,C
+History,E,E,E
+History,B,,
+History,E,E,E
+History,D,,
+History,D,,
+History,E,,
+History,B,B,B
+History,A,,
+History,D,,
+History,B,B,B
+History,B,,
+History,C,,
+History,E,,
+History,C,,
+History,A,E,E
+History,B,B,B
+History,A,A,A
+History,E,,
+History,C,,
+History,A,A,A
+History,C,C,C
+History,C,C,C
+History,E,,
+History,B,B,B
+History,C,,
+History,A,,
+History,D,,
+History,B,,
+History,D,,
+History,B,A,A
+History,E,E,E
+History,B,,
+History,C,E,E
+History,B,,
+History,B,,
+History,C,,
+History,E,,
+History,A,,
+History,E,E,E
+History,B,B,B
+History,E,,
+History,D,,
+History,D,D,D
+History,D,,
+History,D,D,D
+History,C,C,C
+History,D,,
+History,B,,
+History,B,E,E
+History,C,C,C
+History,A,FAILED,BAD_REQUEST_ERROR
+History,B,B,B
+History,B,,
+History,D,D,D
+History,E,,
+History,B,,
+History,B,,
+History,A,A,A
+History,D,D,D
+History,E,E,E
+History,E,,
+History,D,,
+History,B,A,A
+History,E,E,E
+History,C,,
+History,E,E,E
+History,C,B,B
+History,C,C,C
+History,D,D,D
+History,D,D,D
+History,E,E,E
+History,A,A,A
+History,D,C,C
+History,A,,
+History,B,,
+History,D,D,D
+History,C,C,C
+History,C,C,C
+History,C,C,C
+History,E,E,E
+History,C,C,C
+History,B,B,B
+History,D,D,D
+History,D,D,D
+History,C,C,C
+History,A,A,A
+History,C,C,C
+History,B,,
+History,E,,
+History,A,A,A
+History,C,C,C
+History,B,B,B
+History,E,,
+History,E,E,E
+History,C,C,C
+History,B,,
+History,A,,
+History,D,D,D
+History,B,B,B
+History,B,B,B
+History,B,,
+History,A,,
+History,C,,
+History,C,C,C
+History,A,,
+History,B,,
+History,E,,
+History,B,,
+History,A,,
+History,E,,
+History,B,B,B
+History,D,,
+History,E,,
+History,D,D,D
+History,C,C,C
+History,A,A,A
+History,E,,
+History,A,,
+History,A,A,A
+History,A,,
+History,B,,
+History,C,C,C
+History,A,,
+History,D,,
+History,D,D,D
+History,C,C,C
+History,A,A,A
+History,A,,
+History,E,,
+History,D,D,D
+History,B,B,B
+History,D,,
+History,B,B,B
+History,E,E,E
+History,A,,
+History,A,FAILED,BAD_REQUEST_ERROR
+History,E,,
+History,E,E,E
+History,D,FAILED,BAD_REQUEST_ERROR
+History,B,,
+History,E,E,E
+History,A,,
+History,D,,
+History,E,E,E
+History,E,E,E
+History,D,,
+History,D,,
+History,D,A,A
+History,B,,
+History,A,A,A
+History,B,,
+History,E,E,E
+History,D,D,D
+History,D,D,D
+History,C,C,C
+History,E,,
+History,E,,
+History,D,,
+History,B,B,B
+History,D,FAILED,BAD_REQUEST_ERROR
+History,C,C,C
+History,C,,
+History,B,B,B
+History,D,D,D
+History,C,,
+History,D,,
+History,E,,
+History,C,C,C
+History,E,E,E
+History,A,A,A
+History,E,,
+History,D,,
+History,E,E,E
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,D,,
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,B,,
+Loan Words,D,D,D
+Loan Words,E,,
+Loan Words,A,A,A
+Loan Words,A,,
+Loan Words,A,,
+Loan Words,C,,
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,D,,
+Loan Words,E,,
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,E,,
+Loan Words,D,,
+Loan Words,E,,
+Loan Words,A,,
+Loan Words,B,B,B
+Loan Words,D,,
+Loan Words,C,,
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,A,,
+Loan Words,B,B,B
+Loan Words,C,,
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,B,,
+Loan Words,A,A,A
+Loan Words,E,,
+Loan Words,D,,
+Loan Words,D,,
+Loan Words,C,C,C
+Loan Words,D,,
+Loan Words,D,,
+Loan Words,B,B,B
+Loan Words,B,B,B
+Loan Words,E,,
+Loan Words,E,,
+Loan Words,E,,
+Loan Words,C,C,C
+Loan Words,C,,
+Loan Words,A,A,A
+Loan Words,C,C,C
+Loan Words,B,,
+Loan Words,C,,
+Loan Words,D,,
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,E,,
+Loan Words,D,D,D
+Loan Words,E,,
+Loan Words,C,,
+Loan Words,D,,
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,B,,
+Loan Words,C,C,C
+Loan Words,B,,
+Loan Words,C,C,C
+Loan Words,A,,
+Loan Words,C,,
+Loan Words,C,C,C
+Loan Words,E,E,E
+Loan Words,A,,
+Loan Words,D,,
+Loan Words,B,,
+Loan Words,B,,
+Loan Words,D,,
+Loan Words,D,,
+Loan Words,A,,
+Loan Words,A,,
+Loan Words,D,D,D
+Loan Words,E,,
+Loan Words,B,,
+Loan Words,D,,
+Loan Words,C,,
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,E,,
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,E,,
+Loan Words,A,,
+Loan Words,D,,
+Loan Words,B,B,B
+Loan Words,C,,
+Loan Words,A,A,A
+Loan Words,A,,
+Loan Words,C,,
+Loan Words,C,,
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,A,,
+Loan Words,D,,
+Loan Words,B,,
+Loan Words,A,A,A
+Loan Words,D,,
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,E,,
+Loan Words,D,,
+Loan Words,D,,
+Loan Words,A,,
+Loan Words,B,,
+Loan Words,A,,
+Loan Words,D,,
+Loan Words,A,,
+Loan Words,E,,
+Loan Words,C,,
+Loan Words,D,,
+Loan Words,E,,
+Loan Words,A,,
+Loan Words,B,,
+Loan Words,E,,
+Loan Words,C,,
+Loan Words,A,,
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,A,,
+Loan Words,E,E,E
+Loan Words,D,,
+Loan Words,C,C,C
+Loan Words,E,,
+Loan Words,B,,
+Loan Words,C,,
+Loan Words,C,,
+Loan Words,D,,
+Loan Words,E,,
+Loan Words,C,,
+Loan Words,E,,
+Loan Words,D,,
+Loan Words,B,,
+Loan Words,C,,
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,D,,
+Loan Words,E,,
+Loan Words,D,A,A
+Loan Words,C,C,C
+Loan Words,B,B,B
+Loan Words,D,,
+Loan Words,A,,
+Loan Words,D,,
+Loan Words,D,D,D
+Loan Words,D,,
+Loan Words,E,,
+Loan Words,D,,
+Loan Words,A,A,A
+Loan Words,D,,
+Loan Words,A,,
+Loan Words,C,,
+Standard Nomenclature,A,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,,
+Standard Nomenclature,B,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,C,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,E,,
+Standard Nomenclature,E,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,,
+Standard Nomenclature,E,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,C,C
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,A,A
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,C,C
+Standard Nomenclature,A,A,A
+Standard Nomenclature,D,D,D
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,,
+Standard Nomenclature,A,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,,
+Standard Nomenclature,A,A,A
+Standard Nomenclature,E,,
+Standard Nomenclature,A,A,A
+Standard Nomenclature,D,,
+Standard Nomenclature,A,,
+Standard Nomenclature,B,,
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,,
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,A,,
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,,
+Standard Nomenclature,E,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,E,,
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,B,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,,
+Standard Nomenclature,D,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,,
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,A,,
+Standard Nomenclature,E,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,C,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,A,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,,
+Standard Nomenclature,B,,
+Standard Nomenclature,E,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,,
+Standard Nomenclature,E,,
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,A,A
+Standard Nomenclature,D,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,,
+Standard Nomenclature,A,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,,
+Standard Nomenclature,C,,
+Standard Nomenclature,C,C,C
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,,
+Standard Nomenclature,E,,
+Standard Nomenclature,B,,
+Standard Nomenclature,E,E,E
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,E,E
+Standard Nomenclature,D,,
+Standard Nomenclature,E,,
+Standard Nomenclature,D,,
+Standard Nomenclature,E,,
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,,
+Standard Nomenclature,D,D,D
+Standard Nomenclature,A,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,E,E
+General Knowledge,B,C,C
+General Knowledge,C,,
+General Knowledge,E,,
+General Knowledge,B,,
+General Knowledge,E,,
+General Knowledge,E,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,D,D,D
+General Knowledge,E,,
+General Knowledge,D,D,D
+General Knowledge,A,,
+General Knowledge,C,C,C
+General Knowledge,B,,
+General Knowledge,D,,
+General Knowledge,A,,
+General Knowledge,B,,
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,D,D,D
+General Knowledge,B,,
+General Knowledge,B,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,A,A,A
+General Knowledge,A,,
+General Knowledge,B,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,A,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,E,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,D,,
+General Knowledge,D,,
+General Knowledge,E,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,A,,
+General Knowledge,D,,
+General Knowledge,E,,
+General Knowledge,A,A,A
+General Knowledge,D,,
+General Knowledge,A,,
+General Knowledge,B,,
+General Knowledge,E,,
+General Knowledge,B,,
+General Knowledge,D,D,D
+General Knowledge,A,,
+General Knowledge,E,,
+General Knowledge,C,C,C
+General Knowledge,B,D,D
+General Knowledge,E,,
+General Knowledge,A,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,C,C,C
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,A,,
+General Knowledge,E,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,B,A,A
+General Knowledge,C,,
+General Knowledge,C,C,C
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,C,B,B
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,B,B,B
+General Knowledge,E,,
+General Knowledge,D,,
+General Knowledge,A,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,E,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,A,,
+General Knowledge,E,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,A,,
+General Knowledge,E,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,A,,
+General Knowledge,B,,
+General Knowledge,E,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,A,,
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,D,,
+General Knowledge,E,,
+General Knowledge,B,B,B
+General Knowledge,C,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,E,,
+General Knowledge,C,C,C
+General Knowledge,A,,
+General Knowledge,D,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,E,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,B,,
+General Knowledge,E,,
+General Knowledge,E,,
+General Knowledge,A,,
+General Knowledge,D,,
+General Knowledge,E,,
+General Knowledge,A,,
+General Knowledge,C,,
+General Knowledge,C,,
+General Knowledge,D,,
+General Knowledge,B,,
+General Knowledge,C,,
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,B,B,B
+General Knowledge,A,,
+General Knowledge,D,D,D
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,C,,
+General Knowledge,B,,
+General Knowledge,C,C,C

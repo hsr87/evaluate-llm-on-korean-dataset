@@ -51,6 +51,38 @@ def get_prompt_template(template_type):
         - Please do not answer with a sentence like 'The answer is A'.
         - Don't give multiple answers like 'A, B'.
         - Just say one choice in one word.
+        
+        """
+        system_message_template = SystemMessagePromptTemplate.from_template(
+            system_prompt
+        )
+        human_prompt = [
+            {"type": "text", "text": "{question}"},
+        ]
+        human_message_template = HumanMessagePromptTemplate.from_template(human_prompt)
+
+        prompt = ChatPromptTemplate.from_messages(
+            [system_message_template, human_message_template]
+        )
+    elif template_type == "gpt5":
+        system_prompt = """
+            System:
+            You are a multiple-choice answerer.
+
+            Reasoning: low
+            Do not browse, call tools, or explain.
+
+            STRICT OUTPUT:
+            Return EXACTLY one uppercase letter from [A,B,C,D,E].
+            No other text. No punctuation, no quotes, no spaces, no code fences.
+            If uncertain, guess the most probable option and output only its letter.
+
+            Right:  C
+            Wrong:  The answer is C / C. / "C" / [C]
+            
+            Right:  A
+            Wrong:  The answer is A / A. / "A" / [A]
+
         """
         system_message_template = SystemMessagePromptTemplate.from_template(
             system_prompt
@@ -76,7 +108,7 @@ def get_llm_client(
     """Get LLM client"""
 
     if model_provider == "azureopenai":
-        print("Using Azure OpenAI model provider.")
+        # print("Using Azure OpenAI model provider.")
         model_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
         
         # GPT-5 계열 모델들 (gpt-5-chat 추가)
@@ -85,6 +117,14 @@ def get_llm_client(
                 azure_deployment=model_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 max_retries=max_retries,
+            )
+        elif model_name in ["gpt-oss-120b", "gpt-oss-20b"]:
+            llm = AzureChatOpenAI(
+                azure_deployment=model_name,
+                openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                max_retries=max_retries,
+                temperature=temperature,
+                stop=["\n"]
             )
         else:
             llm = AzureChatOpenAI(
