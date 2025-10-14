@@ -236,6 +236,12 @@ AZURE_AI_INFERENCE_ENDPOINT=https://<YOUR_ENDPOINT_NAME>.services.ai.azure.com/m
 AZURE_AI_DEPLOYMENT_NAME=Phi-4
 ```
 
+#### AWS Bedrock
+```ini
+BEDROCK_MODEL_ID=amazon.nova-pro-v1:0
+AWS_REGION=us-west-2
+```
+
 #### OpenAI
 ```ini
 OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
@@ -302,6 +308,42 @@ parser.add_argument("--max_retries", type=int, default=3)
 parser.add_argument("--max_tokens", type=int, default=256)
 parser.add_argument("--temperature", type=float, default=0.01)
 parser.add_argument("--template_type", type=str, default="basic")
+parser.add_argument("--wait_time", type=float, default=1.0)  # For Bedrock throttling protection
+```
+
+**Note for AWS Bedrock users**: If you encounter `ThrottlingException` errors, increase the `--wait_time` parameter (e.g., `--wait_time 2.0` or higher) to add delays between requests and avoid rate limiting.
+
+```bash
+#!/bin/bash
+model_provider="bedrock"
+
+# CLIcK
+uv run python click_main.py \
+      --model_provider "$model_provider" \
+      --batch_size 20 \
+      --max_tokens 512 \
+      --temperature 0.01 \
+      --template_type basic \
+      --wait_time 2.0
+
+# HAERAE
+uv run python haerae_main.py \
+      --model_provider "$model_provider" \
+      --batch_size 20 \
+      --max_tokens 512 \
+      --temperature 0.01 \
+      --template_type basic \
+      --wait_time 2.0
+
+# KMMLU
+uv run python kmmlu_main.py \
+      --model_provider "$model_provider" \
+      --batch_size 20 \
+      --max_tokens 512 \
+      --temperature 0.01 \
+      --template_type basic \
+      --is_hard False \
+      --wait_time 2.0
 ```
 
 azure-gpt-4o-mini Benchmark results (temperature=0.0)

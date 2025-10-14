@@ -1,8 +1,15 @@
 import os
 import argparse
+import boto3
+import time
+from functools import wraps
+from typing import Any, Dict, List, Optional
 
 from langchain_openai import AzureChatOpenAI, ChatOpenAI
 from langchain_huggingface import HuggingFaceEndpoint
+from langchain_aws import ChatBedrockConverse
+from langchain_core.messages import BaseMessage
+from langchain_core.callbacks import CallbackManagerForLLMRun
 
 from langchain_core.prompts import (
     PromptTemplate,
@@ -10,11 +17,40 @@ from langchain_core.prompts import (
     HumanMessagePromptTemplate,
     SystemMessagePromptTemplate,
 )
-
+from langchain_core.runnables import RunnableLambda
 from langchain_community.llms.azureml_endpoint import AzureMLOnlineEndpoint
 from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
 from .phi3_formatter import CustomPhi3ContentFormatter
 
+
+class ThrottledChatBedrockConverse(ChatBedrockConverse):
+    """ChatBedrockConverse with throttling protection"""
+    
+    def __init__(self, wait_time: float = 10.0, **kwargs):
+        super().__init__(**kwargs)
+        object.__setattr__(self, 'wait_time', wait_time)
+        object.__setattr__(self, 'last_request_time', 0)
+    
+    def _generate(
+        self,
+        messages: List[BaseMessage],
+        stop: Optional[List[str]] = None,
+        run_manager: Optional[CallbackManagerForLLMRun] = None,
+        **kwargs: Any,
+    ) -> Any:
+        # Add throttling delay
+        current_time = time.time()
+        last_request_time = getattr(self, 'last_request_time', 0)
+        time_since_last = current_time - last_request_time
+        wait_time = getattr(self, 'wait_time', 10.0)
+        
+        if time_since_last < wait_time:
+            sleep_time = wait_time - time_since_last
+            time.sleep(sleep_time)
+        
+        object.__setattr__(self, 'last_request_time', time.time())
+        return super()._generate(messages, stop, run_manager, **kwargs)
+    
 
 def str2bool(v):
     """Convert string to boolean value."""
@@ -37,8 +73,12 @@ def format_timespan(seconds):
     return timespan
 
 
-def get_prompt_template(template_type):
+def get_prompt_template(template_type, model_provider=None):
     """Get prompt template based on the template type."""
+
+    # Force chat template for Bedrock models that require messages format
+    if model_provider == "bedrock" and template_type == "basic":
+        template_type = "chat"
 
     if template_type == "basic":
         prompt = PromptTemplate.from_template("{question}")
@@ -103,7 +143,7 @@ def get_prompt_template(template_type):
 
 
 def get_llm_client(
-    model_provider, hf_model_id=None, temperature=0.01, max_tokens=256, max_retries=3
+    model_provider, hf_model_id=None, temperature=0.01, max_tokens=256, max_retries=3, wait_time=1.0
 ):
     """Get LLM client"""
 
@@ -177,9 +217,20 @@ def get_llm_client(
             credential=os.getenv("AZURE_AI_INFERENCE_KEY"),
             model_name=model_name,
         )
+    elif model_provider == "bedrock":
+        print("Using AWS Bedrock as model provider.")
+        model_name = os.getenv("BEDROCK_MODEL_ID")
+        
+        llm = ThrottledChatBedrockConverse(
+            model=model_name,
+            region_name=os.getenv("AWS_REGION"),
+            temperature=temperature,
+            max_tokens=max_tokens,
+            wait_time=wait_time
+        )
     else:
         raise ValueError(
-            "Invalid 'model_provider' value. Please choose from ['azureopenai', 'openai', 'huggingface', 'azureml', 'azureai']"
+            "Invalid 'model_provider' value. Please choose from ['azureopenai', 'openai', 'huggingface', 'azureml', 'azureai', 'bedrock']"
         )
 
     return llm, model_name

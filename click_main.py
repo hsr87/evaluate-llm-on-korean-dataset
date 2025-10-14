@@ -216,10 +216,11 @@ def process_batch_streaming(batch_data, model_config, template_type="basic"):
             model_config.get('hf_model_id', 'microsoft/Phi-3.5-mini-instruct'),
             model_config['temperature'], 
             model_config['max_tokens'], 
-            model_config['max_retries']
+            model_config['max_retries'],
+            model_config.get('wait_time', 1.0)
         )
         
-        prompt_template = get_prompt_template(template_type)
+        prompt_template = get_prompt_template(template_type, model_config['provider'])
         chain = prompt_template | llm | MultipleChoicesFiveParser()
         
         results = []
@@ -232,6 +233,7 @@ def process_batch_streaming(batch_data, model_config, template_type="basic"):
             
             while retries <= max_retries:
                 try:
+                    # Handle LangChain chain
                     preds = chain.batch(mini_batch, {"max_concurrency": batch_size})
                     
                     for qna, pred in zip(mini_batch, preds):
@@ -422,6 +424,7 @@ def benchmark_multiprocess(args):
         'max_tokens': args.max_tokens,
         'temperature': args.temperature,
         'max_retries': args.max_retries,
+        'wait_time': args.wait_time,
     }
     
     # CSV 파일 경로 설정
@@ -557,7 +560,7 @@ def benchmark_sequential(args):
     max_tokens = args.max_tokens
     temperature = args.temperature
     llm, model_name = get_llm_client(
-        args.model_provider, args.hf_model_id, temperature, max_tokens, max_retries
+        args.model_provider, args.hf_model_id, temperature, max_tokens, max_retries, args.wait_time
     )
     model_version = (
         os.getenv("MODEL_VERSION")
@@ -575,7 +578,7 @@ def benchmark_sequential(args):
         for x in tqdm(click_ds)
     ]
     responses = []
-    prompt_template = get_prompt_template(args.template_type)
+    prompt_template = get_prompt_template(args.template_type, args.model_provider)
     chain = prompt_template | llm | MultipleChoicesFiveParser()
 
     logger.info(f"====== [START] Generate answers to questions given by LLM. =====")
@@ -812,10 +815,10 @@ if __name__ == "__main__":
     # 새로운 멀티프로세싱 관련 인수
     parser.add_argument("--use_multiprocessing", type=str2bool, default=True, help="Enable multiprocessing")
     parser.add_argument("--max_workers", type=int, default=3, help="Maximum number of worker processes")
-    parser.add_argument("--streaming_chunk_size", type=int, default=1000, help="Chunk size for streaming processing")
+    parser.add_argument("--wait_time", type=float, default=5.0, help="Wait time between Bedrock requests to avoid throttling")
 
     args = parser.parse_args()
-    valid_providers = ["azureopenai", "openai", "azureml", "azureai", "huggingface"]
+    valid_providers = ["azureopenai", "openai", "azureml", "azureai", "huggingface", "bedrock"]
     assert (
         args.model_provider in valid_providers
     ), f"Invalid 'model_provider' value. Please choose from {valid_providers}."

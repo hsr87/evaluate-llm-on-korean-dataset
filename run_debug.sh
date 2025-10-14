@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# uv run python click_main.py \
+#     --is_debug True \
+#     --model_provider bedrock \
+#     --batch_size 1 \
+#     --max_tokens 64 \
+#     --temperature 0.01 \
+#     --use_multiprocessing False \
+#     --template_type basic 
+
+
 ### Parallel execution version of run_all.sh with resume capability
 env_files=(.env_gpt-oss-120b) 
 is_debug=False
