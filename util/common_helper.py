@@ -149,18 +149,47 @@ def get_llm_client(
 
     if model_provider == "azureopenai":
         # print("Using Azure OpenAI model provider.")
-        model_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+        deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
         
         # GPT-5 계열 모델들 (gpt-5-chat 추가)
-        if model_name in ["gpt-5-mini", "gpt-5-nano", "gpt-5-chat"]:
+        if deployment_name in ["gpt-5-mini", "gpt-5-nano"]:
+            print("Using GPT-5.1 with default(medium) reasoning effort.")
             llm = AzureChatOpenAI(
-                azure_deployment=model_name,
+                azure_deployment=deployment_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 max_retries=max_retries,
+                #reasoning_effort="low", # use default reasoning_effort
             )
-        elif model_name in ["gpt-oss-120b", "gpt-oss-20b"]:
+        elif deployment_name in ["gpt-5.1-chat"]:
+            print("Using GPT-5.1 chat.")
             llm = AzureChatOpenAI(
-                azure_deployment=model_name,
+                azure_deployment=deployment_name,
+                openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                max_retries=max_retries,
+                reasoning_effort="low"
+            )
+        elif deployment_name in ["gpt-5.1"]:
+            model_name = os.getenv("MODEL_NAME")
+            reasoning_effort = os.getenv("REASONING_EFFORT")
+            if(model_name == "gpt-5.1"):
+                print(f"Using {model_name}, GPT-5.1 with reasoning_effort {reasoning_effort}.")
+                llm = AzureChatOpenAI(
+                    azure_deployment=deployment_name,
+                    openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                    max_retries=max_retries,
+                    #reasoning_effort="none", # use default reasoning_effort
+                )
+            elif (model_name == "gpt-51-medium"):
+                print(f"Using {model_name}, GPT-5.1 with reasoning_effort {reasoning_effort}.")
+                llm = AzureChatOpenAI(
+                    azure_deployment=deployment_name,
+                    openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                    max_retries=max_retries,
+                    reasoning_effort=reasoning_effort,
+                )
+        elif deployment_name in ["gpt-oss-120b", "gpt-oss-20b"]:
+            llm = AzureChatOpenAI(
+                azure_deployment=deployment_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 max_retries=max_retries,
                 temperature=temperature,
@@ -168,7 +197,7 @@ def get_llm_client(
             )
         else:
             llm = AzureChatOpenAI(
-                azure_deployment=model_name,
+                azure_deployment=deployment_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 temperature=temperature,
                 max_tokens=max_tokens,
@@ -176,9 +205,9 @@ def get_llm_client(
             )
     elif model_provider == "openai":
         print("Using OpenAI model provider.")
-        model_name = os.getenv("OPENAI_DEPLOYMENT_NAME")
+        deployment_name = os.getenv("OPENAI_DEPLOYMENT_NAME")
         llm = ChatOpenAI(
-            model=model_name,
+            model=deployment_name,
             temperature=temperature,
             max_tokens=max_tokens,
             max_retries=max_retries,
@@ -188,7 +217,7 @@ def get_llm_client(
             temperature == 0.0
         ):  # in case of not supporting 0.0 for some SLM, set to 0.01
             temperature = 0.01
-        model_name = hf_model_id.split("/")[-1]
+        deployment_name = hf_model_id.split("/")[-1]
         print("Using Hugging Face model provider.")
         llm = HuggingFaceEndpoint(
             repo_id=hf_model_id,
@@ -198,7 +227,7 @@ def get_llm_client(
         )
     elif model_provider == "azureml":
         print("Using Azure ML endpoint as model provider.")
-        model_name = os.getenv("AZURE_ML_DEPLOYMENT_NAME")
+        deployment_name = os.getenv("AZURE_ML_DEPLOYMENT_NAME")
 
         llm = AzureMLOnlineEndpoint(
             endpoint_url=os.getenv("AZURE_ML_ENDPOINT_URL"),
@@ -210,19 +239,19 @@ def get_llm_client(
 
     elif model_provider == "azureai":
         print("Using Azure AI Foundry endpoint as model provider.")
-        model_name = os.getenv("AZURE_AI_DEPLOYMENT_NAME")
+        deployment_name = os.getenv("AZURE_AI_DEPLOYMENT_NAME")
 
         llm = AzureAIChatCompletionsModel(
             endpoint=os.getenv("AZURE_AI_INFERENCE_ENDPOINT"),
             credential=os.getenv("AZURE_AI_INFERENCE_KEY"),
-            model_name=model_name,
+            model_name=deployment_name,
         )
     elif model_provider == "bedrock":
         print("Using AWS Bedrock as model provider.")
-        model_name = os.getenv("BEDROCK_MODEL_ID")
+        deployment_name = os.getenv("BEDROCK_MODEL_ID")
         
         llm = ThrottledChatBedrockConverse(
-            model=model_name,
+            model=deployment_name,
             region_name=os.getenv("AWS_REGION"),
             temperature=temperature,
             max_tokens=max_tokens,
@@ -233,4 +262,4 @@ def get_llm_client(
             "Invalid 'model_provider' value. Please choose from ['azureopenai', 'openai', 'huggingface', 'azureml', 'azureai', 'bedrock']"
         )
 
-    return llm, model_name
+    return llm, deployment_name

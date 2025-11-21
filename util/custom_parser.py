@@ -1,4 +1,4 @@
-from langchain.schema.output_parser import StrOutputParser
+from langchain_core.output_parsers import StrOutputParser
 from logger import logger
 
 class MultipleChoicesFourParser(StrOutputParser):

@@ -3,14 +3,14 @@ boto3
 datasets
 huggingface-hub
 ipykernel
-langchain
+langchain==1.0.7
 langchain-aws
 langchain-azure-ai
 langchain-community
 langchain-huggingface
 langchain-openai
 numpy
-openai
+openai==2.8.1
 pandas
 python-dotenv
 regex
@@ -19,3 +19,4 @@ safetensors
 tabulate
 tqdm
 transformers
+

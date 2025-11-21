@@ -1,353 +1,8 @@
 category,answer,pred,response
-General Knowledge,B,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,C,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,E,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,B,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,E,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,E,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,C,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,D,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,D,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,E,FILTERED,CONTENT_FILTER_ERROR
-General Knowledge,D,D,D
-General Knowledge,A,E,E
-General Knowledge,C,C,C
-General Knowledge,B,B,B
-General Knowledge,D,B,B
-General Knowledge,A,A,A
-General Knowledge,B,B,B
-General Knowledge,E,E,E
-General Knowledge,A,A,A
-General Knowledge,B,B,B
-General Knowledge,D,D,D
-General Knowledge,B,B,B
-General Knowledge,B,B,B
-General Knowledge,B,B,B
-General Knowledge,C,E,E
-General Knowledge,A,A,A
-General Knowledge,A,C,C
-General Knowledge,B,B,B
-General Knowledge,A,B,B
-General Knowledge,C,B,B
-General Knowledge,B,B,B
-General Knowledge,A,A,A
-General Knowledge,A,A,A
-General Knowledge,C,C,C
-General Knowledge,E,E,E
-General Knowledge,D,D,D
-General Knowledge,B,B,B
-General Knowledge,D,C,C
-General Knowledge,D,D,D
-General Knowledge,E,C,C
-General Knowledge,C,C,C
-General Knowledge,B,A,A
-General Knowledge,D,D,D
-General Knowledge,B,B,B
-General Knowledge,C,C,C
-General Knowledge,A,A,A
-General Knowledge,D,A,A
-General Knowledge,E,D,D
-General Knowledge,A,A,A
-General Knowledge,D,D,D
-General Knowledge,A,C,C
-General Knowledge,B,B,B
-General Knowledge,E,E,E
-General Knowledge,B,B,B
-General Knowledge,D,D,D
-General Knowledge,A,D,D
-General Knowledge,E,E,E
-General Knowledge,C,C,C
-General Knowledge,B,D,D
-General Knowledge,E,E,E
-General Knowledge,A,A,A
-General Knowledge,D,B,B
-General Knowledge,B,B,B
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,C,A,A
-General Knowledge,C,B,B
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,A,B,B
-General Knowledge,E,E,E
-General Knowledge,B,B,B
-General Knowledge,C,A,A
-General Knowledge,D,B,B
-General Knowledge,C,C,C
-General Knowledge,B,A,A
-General Knowledge,C,C,C
-General Knowledge,C,FAILED,RATE_LIMIT_ERROR
-General Knowledge,C,FAILED,RATE_LIMIT_ERROR
-General Knowledge,B,FAILED,RATE_LIMIT_ERROR
-General Knowledge,C,FAILED,RATE_LIMIT_ERROR
-General Knowledge,D,FAILED,RATE_LIMIT_ERROR
-General Knowledge,C,FAILED,RATE_LIMIT_ERROR
-General Knowledge,B,FAILED,RATE_LIMIT_ERROR
-General Knowledge,C,FAILED,RATE_LIMIT_ERROR
-General Knowledge,A,FAILED,RATE_LIMIT_ERROR
-General Knowledge,C,FAILED,RATE_LIMIT_ERROR
-General Knowledge,B,A,A
-General Knowledge,C,D,D
-General Knowledge,D,E,E
-General Knowledge,C,C,C
-General Knowledge,B,E,E
-General Knowledge,C,C,C
-General Knowledge,D,E,E
-General Knowledge,C,C,C
-General Knowledge,D,D,D
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,B,C,C
-General Knowledge,E,E,E
-General Knowledge,D,C,C
-General Knowledge,A,A,A
-General Knowledge,A,A,A
-General Knowledge,C,C,C
-General Knowledge,E,E,E
-General Knowledge,D,D,D
-General Knowledge,C,C,C
-General Knowledge,B,B,B
-General Knowledge,A,B,B
-General Knowledge,E,E,E
-General Knowledge,D,D,D
-General Knowledge,B,B,B
-General Knowledge,C,C,C
-General Knowledge,A,A,A
-General Knowledge,E,C,C
-General Knowledge,D,A,A
-General Knowledge,B,B,B
-General Knowledge,D,D,D
-General Knowledge,C,C,C
-General Knowledge,D,D,D
-General Knowledge,A,A,A
-General Knowledge,B,B,B
-General Knowledge,E,E,E
-General Knowledge,C,D,D
-General Knowledge,B,B,B
-General Knowledge,A,A,A
-General Knowledge,C,C,C
-General Knowledge,B,B,B
-General Knowledge,D,D,D
-General Knowledge,E,B,B
-General Knowledge,B,B,B
-General Knowledge,C,C,C
-General Knowledge,A,A,A
-General Knowledge,C,C,C
-General Knowledge,B,B,B
-General Knowledge,E,D,D
-General Knowledge,C,C,C
-General Knowledge,A,A,A
-General Knowledge,D,D,D
-General Knowledge,C,B,B
-General Knowledge,D,B,B
-General Knowledge,B,B,B
-General Knowledge,E,C,C
-General Knowledge,A,A,A
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,D,D,D
-General Knowledge,A,A,A
-General Knowledge,E,E,E
-General Knowledge,B,B,B
-General Knowledge,E,A,A
-General Knowledge,E,E,E
-General Knowledge,A,A,A
-General Knowledge,D,D,D
-General Knowledge,E,E,E
-General Knowledge,A,B,B
-General Knowledge,C,B,B
-General Knowledge,C,C,C
-General Knowledge,D,D,D
-General Knowledge,B,B,B
-General Knowledge,C,C,C
-General Knowledge,A,A,A
-General Knowledge,B,B,B
-General Knowledge,B,B,B
-General Knowledge,A,B,B
-General Knowledge,D,D,D
-General Knowledge,A,A,A
-General Knowledge,E,E,E
-General Knowledge,A,A,A
-General Knowledge,C,C,C
-General Knowledge,C,C,C
-General Knowledge,B,B,B
-General Knowledge,C,C,C
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,D,D,D
-Loan Words,A,A,A
-Loan Words,E,E,E
-Loan Words,E,E,E
-Loan Words,D,D,D
-Loan Words,B,B,B
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,A,A,A
-Loan Words,A,A,A
-Loan Words,C,C,C
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,E,C,C
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,A,E,E
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,E,E,E
-Loan Words,E,A,A
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,B,B,B
-Loan Words,D,D,D
-Loan Words,C,E,E
-Loan Words,D,D,D
-Loan Words,D,D,D
-Loan Words,C,C,C
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,B,B,B
-Loan Words,C,A,A
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,B,B,B
-Loan Words,A,A,A
-Loan Words,E,B,B
-Loan Words,D,C,C
-Loan Words,D,D,D
-Loan Words,C,C,C
-Loan Words,D,D,D
-Loan Words,D,D,D
-Loan Words,B,B,B
-Loan Words,B,B,B
-Loan Words,E,E,E
-Loan Words,E,E,E
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,C,C,C
-Loan Words,B,B,B
-Loan Words,C,C,C
-Loan Words,D,C,C
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,D,D,D
-Loan Words,D,D,D
-Loan Words,B,B,B
-Loan Words,D,D,D
-Loan Words,B,B,B
-Loan Words,C,C,C
-Loan Words,B,B,B
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,C,C,C
-Loan Words,C,B,B
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,D,B,B
-Loan Words,B,B,B
-Loan Words,B,B,B
-Loan Words,D,D,D
-Loan Words,D,D,D
-Loan Words,A,C,C
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,B,B,B
-Loan Words,D,D,D
-Loan Words,C,C,C
-Loan Words,D,D,D
-Loan Words,E,A,A
-Loan Words,A,A,A
-Loan Words,E,E,E
-Loan Words,E,E,E
-Loan Words,D,D,D
-Loan Words,C,C,C
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,B,B,B
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,A,A,A
-Loan Words,C,C,C
-Loan Words,C,C,C
-Loan Words,A,D,D
-Loan Words,E,B,B
-Loan Words,A,FAILED,RATE_LIMIT_ERROR
-Loan Words,D,FAILED,RATE_LIMIT_ERROR
-Loan Words,B,FAILED,RATE_LIMIT_ERROR
-Loan Words,A,FAILED,RATE_LIMIT_ERROR
-Loan Words,D,FAILED,RATE_LIMIT_ERROR
-Loan Words,A,FAILED,RATE_LIMIT_ERROR
-Loan Words,D,FAILED,RATE_LIMIT_ERROR
-Loan Words,E,FAILED,RATE_LIMIT_ERROR
-Loan Words,D,FAILED,RATE_LIMIT_ERROR
-Loan Words,D,FAILED,RATE_LIMIT_ERROR
-Loan Words,A,E,E
-Loan Words,B,B,B
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,A,D,D
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,D,B,B
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,B,A,A
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,C,C,C
-Loan Words,A,A,A
-Loan Words,A,A,A
-Loan Words,E,E,E
-Loan Words,D,A,A
-Loan Words,C,C,C
-Loan Words,E,E,E
-Loan Words,B,B,B
-Loan Words,C,C,C
-Loan Words,C,C,C
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,C,C,C
-Loan Words,E,A,A
-Loan Words,D,B,B
-Loan Words,B,B,B
-Loan Words,C,C,C
-Loan Words,E,E,E
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,E,A,A
-Loan Words,D,A,A
-Loan Words,C,C,C
-Loan Words,B,C,C
-Loan Words,D,B,B
-Loan Words,A,C,C
-Loan Words,D,D,D
-Loan Words,D,D,D
-Loan Words,D,D,D
-Loan Words,E,E,E
-Loan Words,D,B,B
-Loan Words,A,A,A
-Loan Words,D,D,D
-Loan Words,A,A,A
-Loan Words,C,B,B
 History,B,B,B
 History,E,E,E
 History,E,E,E
-History,C,D,D
+History,C,C,C
 History,C,C,C
 History,C,C,C
 History,D,D,D
@@ -389,12 +44,12 @@ History,D,D,D
 History,B,B,B
 History,D,D,D
 History,B,B,B
-History,E,C,C
+History,E,E,E
 History,B,B,B
 History,C,C,C
 History,B,B,B
 History,B,B,B
-History,C,E,E
+History,C,C,C
 History,E,E,E
 History,A,A,A
 History,E,E,E
@@ -404,16 +59,16 @@ History,D,D,D
 History,D,D,D
 History,D,D,D
 History,D,D,D
-History,C,FAILED,BAD_REQUEST_ERROR
-History,D,FAILED,BAD_REQUEST_ERROR
-History,B,FAILED,BAD_REQUEST_ERROR
-History,B,FAILED,BAD_REQUEST_ERROR
-History,C,FAILED,BAD_REQUEST_ERROR
-History,A,FAILED,BAD_REQUEST_ERROR
-History,B,FAILED,BAD_REQUEST_ERROR
-History,B,FAILED,BAD_REQUEST_ERROR
-History,D,FAILED,BAD_REQUEST_ERROR
-History,E,FAILED,BAD_REQUEST_ERROR
+History,C,C,C
+History,D,D,D
+History,B,B,B
+History,B,B,B
+History,C,C,C
+History,A,A,A
+History,B,B,B
+History,B,B,B
+History,D,D,D
+History,E,E,E
 History,B,D,D
 History,B,B,B
 History,A,A,A
@@ -421,29 +76,29 @@ History,D,D,D
 History,E,E,E
 History,E,E,E
 History,D,D,D
-History,B,B,B
+History,B,C,C
 History,E,E,E
-History,C,B,B
+History,C,C,C
 History,E,E,E
 History,C,C,C
 History,C,C,C
-History,D,C,C
-History,D,E,E
+History,D,D,D
+History,D,D,D
 History,E,E,E
 History,A,A,A
 History,D,D,D
 History,A,A,A
-History,B,A,A
-History,D,FAILED,RATE_LIMIT_ERROR
-History,C,FAILED,RATE_LIMIT_ERROR
-History,C,FAILED,RATE_LIMIT_ERROR
-History,C,FAILED,RATE_LIMIT_ERROR
-History,E,FAILED,RATE_LIMIT_ERROR
-History,C,FAILED,RATE_LIMIT_ERROR
-History,B,FAILED,RATE_LIMIT_ERROR
-History,D,FAILED,RATE_LIMIT_ERROR
-History,D,FAILED,RATE_LIMIT_ERROR
-History,C,FAILED,RATE_LIMIT_ERROR
+History,B,B,B
+History,D,D,D
+History,C,C,C
+History,C,C,C
+History,C,C,C
+History,E,E,E
+History,C,C,C
+History,B,B,B
+History,D,D,D
+History,D,D,D
+History,C,C,C
 History,A,A,A
 History,C,C,C
 History,B,C,C
@@ -464,7 +119,7 @@ History,A,A,A
 History,C,C,C
 History,C,C,C
 History,A,A,A
-History,B,B,B
+History,B,C,C
 History,E,E,E
 History,B,B,B
 History,A,A,A
@@ -474,26 +129,26 @@ History,D,D,D
 History,E,E,E
 History,D,D,D
 History,C,C,C
-History,A,FAILED,RATE_LIMIT_ERROR
-History,E,FAILED,RATE_LIMIT_ERROR
-History,A,FAILED,RATE_LIMIT_ERROR
-History,A,FAILED,RATE_LIMIT_ERROR
-History,A,FAILED,RATE_LIMIT_ERROR
-History,B,FAILED,RATE_LIMIT_ERROR
-History,C,FAILED,RATE_LIMIT_ERROR
-History,A,FAILED,RATE_LIMIT_ERROR
-History,D,FAILED,RATE_LIMIT_ERROR
-History,D,FAILED,RATE_LIMIT_ERROR
-History,C,C,C
 History,A,A,A
-History,A,A,A
-History,E,C,C
-History,D,B,B
-History,B,B,B
-History,D,C,C
-History,B,B,B
 History,E,E,E
 History,A,A,A
+History,A,A,A
+History,A,A,A
+History,B,B,B
+History,C,C,C
+History,A,A,A
+History,D,D,D
+History,D,D,D
+History,C,FAILED,BAD_REQUEST_ERROR
+History,A,FAILED,BAD_REQUEST_ERROR
+History,A,FAILED,BAD_REQUEST_ERROR
+History,E,FAILED,BAD_REQUEST_ERROR
+History,D,FAILED,BAD_REQUEST_ERROR
+History,B,FAILED,BAD_REQUEST_ERROR
+History,D,FAILED,BAD_REQUEST_ERROR
+History,B,FAILED,BAD_REQUEST_ERROR
+History,E,FAILED,BAD_REQUEST_ERROR
+History,A,FAILED,BAD_REQUEST_ERROR
 History,A,FAILED,BAD_REQUEST_ERROR
 History,E,FAILED,BAD_REQUEST_ERROR
 History,E,FAILED,BAD_REQUEST_ERROR
@@ -504,16 +159,16 @@ History,A,FAILED,BAD_REQUEST_ERROR
 History,D,FAILED,BAD_REQUEST_ERROR
 History,E,FAILED,BAD_REQUEST_ERROR
 History,E,FAILED,BAD_REQUEST_ERROR
-History,D,D,D
-History,D,D,D
-History,D,D,D
-History,B,A,A
-History,A,A,A
-History,B,B,B
-History,E,E,E
-History,D,D,D
-History,D,D,D
-History,C,C,C
+History,D,FAILED,BAD_REQUEST_ERROR
+History,D,FAILED,BAD_REQUEST_ERROR
+History,D,FAILED,BAD_REQUEST_ERROR
+History,B,FAILED,BAD_REQUEST_ERROR
+History,A,FAILED,BAD_REQUEST_ERROR
+History,B,FAILED,BAD_REQUEST_ERROR
+History,E,FAILED,BAD_REQUEST_ERROR
+History,D,FAILED,BAD_REQUEST_ERROR
+History,D,FAILED,BAD_REQUEST_ERROR
+History,C,FAILED,BAD_REQUEST_ERROR
 History,E,FAILED,BAD_REQUEST_ERROR
 History,E,FAILED,BAD_REQUEST_ERROR
 History,D,FAILED,BAD_REQUEST_ERROR
@@ -532,17 +187,362 @@ History,A,A,A
 History,E,E,E
 History,D,D,D
 History,E,E,E
+General Knowledge,B,C,C
+General Knowledge,C,C,C
+General Knowledge,E,E,E
+General Knowledge,B,B,B
+General Knowledge,E,E,E
+General Knowledge,E,E,E
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,D,D,D
+General Knowledge,E,E,E
+General Knowledge,D,D,D
+General Knowledge,A,E,E
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,D,B,B
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,B,B,B
+General Knowledge,B,B,B
+General Knowledge,C,E,E
+General Knowledge,A,A,A
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,A,A,A
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,E,D,D
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,D,D,D
+General Knowledge,D,D,D
+General Knowledge,E,E,E
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,D,D,D
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,D,D,D
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,E,E,E
+General Knowledge,B,B,B
+General Knowledge,D,D,D
+General Knowledge,A,B,B
+General Knowledge,E,E,E
+General Knowledge,C,C,C
+General Knowledge,B,D,D
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,C,A,A
+General Knowledge,C,C,C
+General Knowledge,C,A,A
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,B,C,C
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,E,E,E
+General Knowledge,D,C,C
+General Knowledge,A,A,A
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,E,E,E
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,B,A,A
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,D,B,B
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,E,B,B
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,D,D,D
+General Knowledge,E,E,E
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,E,E,E
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,D,D,D
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,E,E,E
+General Knowledge,A,C,C
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,B,B,B
+General Knowledge,E,A,A
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,D,D,D
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,D,D,D
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+General Knowledge,A,A,A
+General Knowledge,B,B,B
+General Knowledge,B,B,B
+General Knowledge,A,B,B
+General Knowledge,D,D,D
+General Knowledge,A,A,A
+General Knowledge,E,E,E
+General Knowledge,A,A,A
+General Knowledge,C,C,C
+General Knowledge,C,C,C
+General Knowledge,B,B,B
+General Knowledge,C,C,C
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,A,A,A
+Loan Words,E,E,E
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,A,A,A
+Loan Words,A,A,A
+Loan Words,C,C,C
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,E,B,B
+Loan Words,A,E,E
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,E,E,E
+Loan Words,E,A,A
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,B,B,B
+Loan Words,C,E,E
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,A,A,A
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,B,B,B
+Loan Words,E,E,E
+Loan Words,E,E,E
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,C,C,C
+Loan Words,B,B,B
+Loan Words,C,C,C
+Loan Words,D,C,C
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,C,C,C
+Loan Words,B,B,B
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,D,B,B
+Loan Words,B,B,B
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,A,C,C
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,E,E,E
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,A,D,D
+Loan Words,C,C,C
+Loan Words,C,C,C
+Loan Words,A,C,C
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,B,C,C
+Loan Words,A,A,A
+Loan Words,D,E,E
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,A,E,E
+Loan Words,B,B,B
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,A,E,E
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,B,B,B
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,C,C,C
+Loan Words,A,A,A
+Loan Words,A,D,D
+Loan Words,E,E,E
+Loan Words,D,A,A
+Loan Words,C,C,C
+Loan Words,E,E,E
+Loan Words,B,B,B
+Loan Words,C,B,B
+Loan Words,C,C,C
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,C,C,C
+Loan Words,E,A,A
+Loan Words,D,D,D
+Loan Words,B,B,B
+Loan Words,C,C,C
+Loan Words,E,E,E
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,C,C,C
+Loan Words,B,B,B
+Loan Words,D,D,D
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,D,D,D
+Loan Words,E,E,E
+Loan Words,D,D,D
+Loan Words,A,A,A
+Loan Words,D,D,D
+Loan Words,A,A,A
+Loan Words,C,B,B
 Standard Nomenclature,A,A,A
 Standard Nomenclature,B,B,B
 Standard Nomenclature,D,D,D
-Standard Nomenclature,D,E,E
 Standard Nomenclature,D,D,D
 Standard Nomenclature,D,D,D
-Standard Nomenclature,B,B,B
 Standard Nomenclature,D,D,D
 Standard Nomenclature,B,B,B
 Standard Nomenclature,D,D,D
-Standard Nomenclature,C,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,D,D
+Standard Nomenclature,C,C,C
 Standard Nomenclature,B,B,B
 Standard Nomenclature,B,B,B
 Standard Nomenclature,A,B,B
@@ -555,11 +555,11 @@ Standard Nomenclature,D,D,D
 Standard Nomenclature,E,E,E
 Standard Nomenclature,C,C,C
 Standard Nomenclature,E,E,E
-Standard Nomenclature,E,C,C
+Standard Nomenclature,E,E,E
 Standard Nomenclature,A,A,A
 Standard Nomenclature,A,A,A
 Standard Nomenclature,B,B,B
-Standard Nomenclature,E,B,B
+Standard Nomenclature,E,E,E
 Standard Nomenclature,C,C,C
 Standard Nomenclature,E,E,E
 Standard Nomenclature,E,E,E
@@ -570,141 +570,141 @@ Standard Nomenclature,A,A,A
 Standard Nomenclature,D,D,D
 Standard Nomenclature,C,C,C
 Standard Nomenclature,D,D,D
-Standard Nomenclature,A,C,C
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,D,D
-Standard Nomenclature,B,B,B
-Standard Nomenclature,B,B,B
-Standard Nomenclature,D,D,D
-Standard Nomenclature,E,E,E
-Standard Nomenclature,D,D,D
-Standard Nomenclature,E,E,E
-Standard Nomenclature,E,E,E
-Standard Nomenclature,E,E,E
 Standard Nomenclature,A,A,A
 Standard Nomenclature,E,E,E
-Standard Nomenclature,A,A,A
-Standard Nomenclature,D,D,D
-Standard Nomenclature,A,A,A
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,A,A
-Standard Nomenclature,A,E,E
-Standard Nomenclature,E,E,E
-Standard Nomenclature,E,E,E
-Standard Nomenclature,C,C,C
-Standard Nomenclature,A,A,A
-Standard Nomenclature,A,A,A
-Standard Nomenclature,A,B,B
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,E,E
-Standard Nomenclature,E,E,E
-Standard Nomenclature,A,C,C
-Standard Nomenclature,C,C,C
-Standard Nomenclature,B,C,C
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,C,C
-Standard Nomenclature,C,C,C
-Standard Nomenclature,D,D,D
-Standard Nomenclature,D,D,D
-Standard Nomenclature,B,B,B
-Standard Nomenclature,C,C,C
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,A,A
-Standard Nomenclature,C,C,C
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,A,A
-Standard Nomenclature,B,B,B
-Standard Nomenclature,B,B,B
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,E,E
-Standard Nomenclature,A,A,A
-Standard Nomenclature,D,D,D
-Standard Nomenclature,D,D,D
-Standard Nomenclature,C,C,C
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,A,A
-Standard Nomenclature,A,A,A
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,A,A,A
-Standard Nomenclature,C,C,C
-Standard Nomenclature,D,D,D
-Standard Nomenclature,D,D,D
-Standard Nomenclature,D,D,D
-Standard Nomenclature,D,D,D
-Standard Nomenclature,D,D,D
-Standard Nomenclature,A,A,A
-Standard Nomenclature,C,C,C
-Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,E,E,E
-Standard Nomenclature,C,C,C
 Standard Nomenclature,B,B,B
 Standard Nomenclature,B,E,E
-Standard Nomenclature,D,D,D
+Standard Nomenclature,A,E,E
 Standard Nomenclature,B,B,B
-Standard Nomenclature,A,A,A
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,E,E
 Standard Nomenclature,E,E,E
 Standard Nomenclature,A,A,A
-Standard Nomenclature,C,C,C
-Standard Nomenclature,D,D,D
-Standard Nomenclature,E,C,C
-Standard Nomenclature,C,C,C
 Standard Nomenclature,E,E,E
-Standard Nomenclature,B,B,B
-Standard Nomenclature,D,C,C
-Standard Nomenclature,B,B,B
-Standard Nomenclature,C,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,D,D,D
 Standard Nomenclature,A,A,A
 Standard Nomenclature,B,B,B
-Standard Nomenclature,C,A,A
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,A,A
+Standard Nomenclature,E,E,E
+Standard Nomenclature,E,E,E
 Standard Nomenclature,C,C,C
-Standard Nomenclature,C,C,C
-Standard Nomenclature,C,C,C
-Standard Nomenclature,D,D,D
-Standard Nomenclature,E,C,C
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,A,A
+Standard Nomenclature,E,E,E
 Standard Nomenclature,B,B,B
-Standard Nomenclature,E,E,E
-Standard Nomenclature,D,D,D
-Standard Nomenclature,B,B,B
-Standard Nomenclature,E,E,E
-Standard Nomenclature,D,D,D
-Standard Nomenclature,E,E,E
-Standard Nomenclature,D,D,D
+Standard Nomenclature,A,A,A
 Standard Nomenclature,E,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
 Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,C,C
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,E,E
 Standard Nomenclature,B,C,C
+Standard Nomenclature,A,A,A
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,A,A,A
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,D,D,D
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,E,E
+Standard Nomenclature,C,C,C
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,A,A,A
+Standard Nomenclature,E,E,E
+Standard Nomenclature,A,A,A
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,C,C,C
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,D,D
+Standard Nomenclature,A,A,A
+Standard Nomenclature,B,B,B
+Standard Nomenclature,C,C,C
+Standard Nomenclature,C,C,C
+Standard Nomenclature,C,C,C
+Standard Nomenclature,C,C,C
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,C,C
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,E,E
+Standard Nomenclature,D,D,D
+Standard Nomenclature,B,B,B
+Standard Nomenclature,E,E,E
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,D,D,D
+Standard Nomenclature,E,E,E
+Standard Nomenclature,B,B,B
+Standard Nomenclature,B,B,B
 Standard Nomenclature,D,D,D
 Standard Nomenclature,A,A,A
 Standard Nomenclature,B,B,B
 Standard Nomenclature,B,B,B
 Standard Nomenclature,E,E,E
 Rare Words,D,C,C
-Rare Words,A,C,C
+Rare Words,A,D,D
 Rare Words,C,E,E
 Rare Words,A,A,A
 Rare Words,D,D,D
 Rare Words,E,E,E
 Rare Words,A,A,A
 Rare Words,E,E,E
-Rare Words,A,C,C
 Rare Words,A,A,A
-Rare Words,C,FAILED,RATE_LIMIT_ERROR
-Rare Words,D,FAILED,RATE_LIMIT_ERROR
-Rare Words,A,FAILED,RATE_LIMIT_ERROR
-Rare Words,B,FAILED,RATE_LIMIT_ERROR
-Rare Words,E,FAILED,RATE_LIMIT_ERROR
-Rare Words,D,FAILED,RATE_LIMIT_ERROR
-Rare Words,E,FAILED,RATE_LIMIT_ERROR
-Rare Words,D,FAILED,RATE_LIMIT_ERROR
-Rare Words,D,FAILED,RATE_LIMIT_ERROR
-Rare Words,D,FAILED,RATE_LIMIT_ERROR
+Rare Words,A,A,A
+Rare Words,C,E,E
+Rare Words,D,D,D
+Rare Words,A,D,D
+Rare Words,B,B,B
+Rare Words,E,E,E
+Rare Words,D,B,B
+Rare Words,E,E,E
+Rare Words,D,D,D
+Rare Words,D,D,D
+Rare Words,D,D,D
 Rare Words,C,C,C
 Rare Words,B,B,B
 Rare Words,D,C,C
@@ -712,19 +712,19 @@ Rare Words,B,B,B
 Rare Words,E,E,E
 Rare Words,E,E,E
 Rare Words,E,E,E
-Rare Words,A,A,A
+Rare Words,A,D,D
 Rare Words,D,D,D
 Rare Words,B,B,B
 Rare Words,D,D,D
 Rare Words,E,E,E
-Rare Words,D,D,D
+Rare Words,D,B,B
 Rare Words,E,E,E
 Rare Words,A,A,A
 Rare Words,E,E,E
 Rare Words,B,B,B
 Rare Words,D,D,D
 Rare Words,C,C,C
-Rare Words,A,C,C
+Rare Words,A,A,A
 Rare Words,B,B,B
 Rare Words,E,E,E
 Rare Words,C,C,C
@@ -734,7 +734,7 @@ Rare Words,B,B,B
 Rare Words,D,B,B
 Rare Words,A,A,A
 Rare Words,B,B,B
-Rare Words,E,E,E
+Rare Words,E,B,B
 Rare Words,A,A,A
 Rare Words,E,E,E
 Rare Words,D,D,D
@@ -756,12 +756,12 @@ Rare Words,C,C,C
 Rare Words,C,C,C
 Rare Words,B,B,B
 Rare Words,C,C,C
-Rare Words,B,C,C
+Rare Words,B,B,B
 Rare Words,D,D,D
 Rare Words,A,C,C
+Rare Words,A,B,B
 Rare Words,A,A,A
-Rare Words,A,A,A
-Rare Words,D,A,A
+Rare Words,D,B,B
 Rare Words,B,B,B
 Rare Words,E,E,E
 Rare Words,A,B,B
@@ -775,14 +775,14 @@ Rare Words,A,A,A
 Rare Words,D,D,D
 Rare Words,A,A,A
 Rare Words,B,B,B
-Rare Words,D,E,E
+Rare Words,D,D,D
 Rare Words,C,C,C
 Rare Words,C,C,C
 Rare Words,C,C,C
-Rare Words,B,E,E
-Rare Words,D,C,C
+Rare Words,B,B,B
+Rare Words,D,D,D
 Rare Words,A,A,A
-Rare Words,A,A,A
+Rare Words,A,D,D
 Rare Words,C,C,C
 Rare Words,C,C,C
 Rare Words,A,E,E
@@ -799,15 +799,15 @@ Rare Words,D,D,D
 Rare Words,A,A,A
 Rare Words,C,C,C
 Rare Words,E,E,E
-Rare Words,D,B,B
+Rare Words,D,D,D
 Rare Words,B,A,A
 Rare Words,D,D,D
 Rare Words,E,E,E
 Rare Words,E,E,E
 Rare Words,B,B,B
-Rare Words,E,B,B
+Rare Words,E,A,A
 Rare Words,A,A,A
-Rare Words,D,D,D
+Rare Words,D,C,C
 Rare Words,B,B,B
 Rare Words,D,D,D
 Rare Words,E,E,E
@@ -823,120 +823,120 @@ Rare Words,A,A,A
 Rare Words,D,D,D
 Rare Words,D,D,D
 Rare Words,E,A,A
-Rare Words,D,C,C
+Rare Words,D,D,D
 Rare Words,A,A,A
 Rare Words,C,C,C
 Rare Words,E,E,E
 Rare Words,E,E,E
-Rare Words,E,B,B
-Rare Words,D,D,D
-Rare Words,B,B,B
-Rare Words,C,C,C
-Rare Words,A,E,E
-Rare Words,B,B,B
-Rare Words,D,D,D
-Rare Words,A,C,C
-Rare Words,A,A,A
-Rare Words,A,A,A
-Rare Words,D,D,D
-Rare Words,E,E,E
-Rare Words,E,E,E
-Rare Words,A,A,A
-Rare Words,D,D,D
-Rare Words,C,C,C
-Rare Words,C,C,C
-Rare Words,C,C,C
-Rare Words,B,E,E
-Rare Words,B,B,B
-Rare Words,B,B,B
-Rare Words,A,D,D
-Rare Words,D,D,D
-Rare Words,C,C,C
-Rare Words,A,A,A
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,E,E,E
-Rare Words,B,B,B
-Rare Words,A,A,A
-Rare Words,B,B,B
-Rare Words,B,B,B
-Rare Words,B,B,B
-Rare Words,E,E,E
-Rare Words,A,A,A
-Rare Words,E,E,E
-Rare Words,C,C,C
-Rare Words,C,B,B
-Rare Words,E,E,E
-Rare Words,C,C,C
-Rare Words,B,B,B
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,E,E,E
-Rare Words,B,B,B
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,B,B,B
-Rare Words,A,A,A
-Rare Words,D,D,D
-Rare Words,D,D,D
-Rare Words,A,A,A
-Rare Words,C,C,C
-Rare Words,B,B,B
-Rare Words,B,D,D
-Rare Words,D,D,D
-Rare Words,A,A,A
-Rare Words,A,A,A
-Rare Words,A,A,A
-Rare Words,B,E,E
-Rare Words,D,D,D
-Rare Words,B,B,B
-Rare Words,B,B,B
-Rare Words,D,D,D
-Rare Words,C,C,C
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,D,D,D
-Rare Words,C,C,C
-Rare Words,B,B,B
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,B,B,B
-Rare Words,A,A,A
-Rare Words,D,D,D
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,D,D,D
-Rare Words,A,A,A
-Rare Words,B,B,B
-Rare Words,B,B,B
-Rare Words,C,C,C
-Rare Words,E,E,E
-Rare Words,C,C,C
-Rare Words,B,B,B
-Rare Words,A,A,A
-Rare Words,E,E,E
-Rare Words,C,C,C
-Rare Words,A,A,A
-Rare Words,C,C,C
-Rare Words,C,C,C
-Rare Words,D,D,D
-Rare Words,B,B,B
-Rare Words,A,A,A
-Rare Words,B,D,D
-Rare Words,D,C,C
-Rare Words,A,A,A
-Rare Words,A,A,A
-Rare Words,A,E,E
-Rare Words,B,B,B
-Rare Words,D,D,D
-Rare Words,C,C,C
-Rare Words,A,A,A
-Rare Words,A,A,A
-Rare Words,D,A,A
-Rare Words,A,A,A
-Rare Words,E,E,E
-Rare Words,C,C,C
 Rare Words,E,C,C
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,E,E,E
+Rare Words,E,E,E
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,B,E,E
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,A,B,B
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,E,E,E
+Rare Words,A,A,A
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,E,E,E
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,D,B,B
+Rare Words,A,B,B
+Rare Words,C,C,C
+Rare Words,B,B,B
+Rare Words,B,D,D
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,B,E,E
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,D,D,D
+Rare Words,C,D,D
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,B,B,B
+Rare Words,C,C,C
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,A,A,A
+Rare Words,C,C,C
+Rare Words,C,C,C
+Rare Words,D,D,D
+Rare Words,B,B,B
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,A,A,A
+Rare Words,B,B,B
+Rare Words,D,D,D
+Rare Words,C,C,C
+Rare Words,A,D,D
+Rare Words,A,A,A
+Rare Words,D,A,A
+Rare Words,A,A,A
+Rare Words,E,E,E
+Rare Words,C,C,C
+Rare Words,E,E,E
 Rare Words,B,B,B
 Rare Words,E,E,E
 Rare Words,D,D,D
@@ -953,11 +953,11 @@ Rare Words,A,A,A
 Rare Words,E,E,E
 Rare Words,C,C,C
 Rare Words,D,D,D
-Rare Words,E,E,E
+Rare Words,E,C,C
 Rare Words,A,A,A
 Rare Words,B,B,B
 Rare Words,E,E,E
-Rare Words,C,A,A
+Rare Words,C,C,C
 Rare Words,D,C,C
 Rare Words,A,A,A
 Rare Words,E,E,E
@@ -987,7 +987,7 @@ Rare Words,B,B,B
 Rare Words,E,E,E
 Rare Words,D,D,D
 Rare Words,A,A,A
-Rare Words,B,A,A
+Rare Words,B,B,B
 Rare Words,A,A,A
 Rare Words,E,E,E
 Rare Words,B,B,B
@@ -1021,7 +1021,7 @@ Rare Words,E,E,E
 Rare Words,C,C,C
 Rare Words,D,D,D
 Rare Words,D,D,D
-Rare Words,B,B,B
+Rare Words,B,D,D
 Rare Words,C,C,C
 Rare Words,A,A,A
 Rare Words,D,D,D
@@ -1032,12 +1032,12 @@ Rare Words,D,D,D
 Rare Words,C,C,C
 Rare Words,C,C,C
 Rare Words,C,C,C
-Rare Words,D,A,A
+Rare Words,D,D,D
 Rare Words,B,B,B
 Rare Words,D,D,D
 Rare Words,E,E,E
 Rare Words,A,C,C
-Rare Words,E,B,B
+Rare Words,E,E,E
 Rare Words,E,E,E
 Rare Words,C,C,C
 Rare Words,C,C,C
@@ -1079,32 +1079,32 @@ Rare Words,B,B,B
 Rare Words,C,C,C
 Rare Words,C,C,C
 Rare Words,D,D,D
-Rare Words,E,A,A
+Rare Words,E,E,E
 Rare Words,B,C,C
 Rare Words,B,B,B
 Rare Words,E,E,E
 Rare Words,A,A,A
 Rare Words,E,E,E
-Rare Words,C,C,C
-Rare Words,C,C,C
-Rare Words,A,A,A
+Rare Words,C,D,D
 Rare Words,C,C,C
 Rare Words,A,A,A
-Reading Comprehension,C,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,B,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,D,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,A,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,C,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,A,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,A,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,D,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,C,FAILED,RATE_LIMIT_ERROR
-Reading Comprehension,D,FAILED,RATE_LIMIT_ERROR
+Rare Words,C,C,C
+Rare Words,A,A,A
+Reading Comprehension,C,C,C
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,A
+Reading Comprehension,C,C,C
+Reading Comprehension,A,A,A
+Reading Comprehension,A,A,A
+Reading Comprehension,D,D,D
+Reading Comprehension,C,C,C
+Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
 Reading Comprehension,B,B,B
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
-Reading Comprehension,D,B,B
+Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
 Reading Comprehension,B,E,E
 Reading Comprehension,C,C,C
@@ -1113,9 +1113,9 @@ Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
-Reading Comprehension,B,D,D
+Reading Comprehension,B,A,A
 Reading Comprehension,C,C,C
-Reading Comprehension,B,D,D
+Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
@@ -1138,8 +1138,8 @@ Reading Comprehension,B,B,B
 Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
-Reading Comprehension,D,C,C
-Reading Comprehension,C,B,B
+Reading Comprehension,D,B,B
+Reading Comprehension,C,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
@@ -1171,12 +1171,12 @@ Reading Comprehension,C,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
-Reading Comprehension,B,A,A
+Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
-Reading Comprehension,C,A,A
+Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
-Reading Comprehension,C,E,E
+Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
@@ -1215,11 +1215,11 @@ Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
 Reading Comprehension,D,B,B
 Reading Comprehension,B,B,B
-Reading Comprehension,C,D,D
+Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
-Reading Comprehension,B,B,B
+Reading Comprehension,B,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
 Reading Comprehension,C,B,B
@@ -1240,7 +1240,7 @@ Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
-Reading Comprehension,D,C,C
+Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
 Reading Comprehension,C,A,A
@@ -1257,7 +1257,7 @@ Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
-Reading Comprehension,C,B,B
+Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
@@ -1270,7 +1270,7 @@ Reading Comprehension,C,E,E
 Reading Comprehension,A,A,A
 Reading Comprehension,C,D,D
 Reading Comprehension,D,D,D
-Reading Comprehension,D,A,A
+Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
@@ -1285,7 +1285,7 @@ Reading Comprehension,A,D,D
 Reading Comprehension,C,A,A
 Reading Comprehension,D,B,B
 Reading Comprehension,B,B,B
-Reading Comprehension,A,C,C
+Reading Comprehension,A,A,A
 Reading Comprehension,B,B,B
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
@@ -1293,7 +1293,7 @@ Reading Comprehension,A,A,A
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
-Reading Comprehension,C,D,D
+Reading Comprehension,C,B,B
 Reading Comprehension,B,B,B
 Reading Comprehension,B,B,B
 Reading Comprehension,C,B,B
@@ -1333,8 +1333,8 @@ Reading Comprehension,B,B,B
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
-Reading Comprehension,D,D,D
-Reading Comprehension,D,B,B
+Reading Comprehension,D,E,E
+Reading Comprehension,D,C,C
 Reading Comprehension,B,D,D
 Reading Comprehension,D,D,D
 Reading Comprehension,A,B,B
@@ -1352,7 +1352,7 @@ Reading Comprehension,A,A,A
 Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
-Reading Comprehension,D,C,C
+Reading Comprehension,D,A,A
 Reading Comprehension,A,C,C
 Reading Comprehension,D,C,C
 Reading Comprehension,D,D,D
@@ -1367,7 +1367,7 @@ Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
-Reading Comprehension,C,A,A
+Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
@@ -1382,25 +1382,25 @@ Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
-Reading Comprehension,C,E,E
+Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
-Reading Comprehension,B,B,B
+Reading Comprehension,B,A,A
 Reading Comprehension,C,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
-Reading Comprehension,A,A,A
+Reading Comprehension,A,E,E
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
-Reading Comprehension,D,B,B
+Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
 Reading Comprehension,B,B,B
@@ -1408,7 +1408,7 @@ Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
 Reading Comprehension,B,B,B
 Reading Comprehension,C,C,C
-Reading Comprehension,D,C,C
+Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
 Reading Comprehension,B,B,B
 Reading Comprehension,D,C,C
@@ -1446,7 +1446,7 @@ Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
 Reading Comprehension,D,D,D
-Reading Comprehension,D,A,A
+Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
 Reading Comprehension,B,B,B
 Reading Comprehension,B,B,B
@@ -1459,7 +1459,7 @@ Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
-Reading Comprehension,C,D,D
+Reading Comprehension,C,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
@@ -1468,11 +1468,11 @@ Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
 Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
-Reading Comprehension,D,D,D
+Reading Comprehension,D,E,E
 Reading Comprehension,A,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
-Reading Comprehension,C,B,B
+Reading Comprehension,C,C,C
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
@@ -1488,7 +1488,7 @@ Reading Comprehension,A,A,A
 Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
-Reading Comprehension,B,C,C
+Reading Comprehension,B,B,B
 Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
 Reading Comprehension,C,C,C
@@ -1501,8 +1501,8 @@ Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
 Reading Comprehension,A,B,B
 Reading Comprehension,C,C,C
-Reading Comprehension,D,C,C
-Reading Comprehension,D,C,C
+Reading Comprehension,D,D,D
+Reading Comprehension,D,D,D
 Reading Comprehension,B,B,B
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
@@ -1518,7 +1518,7 @@ Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,A,A,A
-Reading Comprehension,C,B,B
+Reading Comprehension,C,A,A
 Reading Comprehension,A,A,A
 Reading Comprehension,B,B,B
 Reading Comprehension,A,A,A
@@ -1529,11 +1529,11 @@ Reading Comprehension,C,C,C
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
 Reading Comprehension,A,A,A
+Reading Comprehension,A,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
+Reading Comprehension,B,B,B
+Reading Comprehension,D,D,D
 Reading Comprehension,A,C,C
-Reading Comprehension,B,C,C
-Reading Comprehension,D,D,D
-Reading Comprehension,B,B,B
-Reading Comprehension,D,D,D
-Reading Comprehension,A,A,A
 Reading Comprehension,D,D,D
 Reading Comprehension,C,C,C
