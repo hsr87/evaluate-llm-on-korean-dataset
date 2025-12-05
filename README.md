@@ -1,8 +1,8 @@
-# Korean language proficiency evaluation for LLM/SLM models using KMMLU, CLIcK, and HAE-RAE dataset
+# Korean language proficiency evaluation for LLM/SLM models using KMMLU, CLIcK, HAE-RAE, and HRM8K dataset
 
 ## Overview
 
-With the continuous emergence of various LLM/SLM models, there is a need for robust evaluation datasets for non-English languages such as Korean. KMMLU (Korean Massive Multi-task Language Understanding), CLIcK (Cultural and Linguistic Intelligence in Korean) and HAE_RAE_BENCH 1.0 fill this gap by providing a rich, well-categorized dataset that focuses on cultural and linguistic aspects, enabling detailed evaluation of Korean language models. This code performs benchmarking on two datasets with minimal time and effort.
+With the continuous emergence of various LLM/SLM models, there is a need for robust evaluation datasets for non-English languages such as Korean. KMMLU (Korean Massive Multi-task Language Understanding), CLIcK (Cultural and Linguistic Intelligence in Korean), HAE_RAE_BENCH 1.0, and HRM8K fill this gap by providing rich, well-categorized datasets that focus on cultural, linguistic, and mathematical reasoning aspects, enabling detailed evaluation of Korean language models. This code performs benchmarking on these datasets with minimal time and effort.
 
 ### CLIcK (Cultural and Linguistic Intelligence in Korean)
 This dataset assesses Korean language proficiency in the subject areas of Korean Culture (History, Geography, Law, Politics, Society, Tradition, Economy, Pop culture) and Korean Language (Textual, Functional, Grammar). There are a total of 1,995 sample data in 11 categories. This dataset presents 4- or 5-choice multiple choice questions. Depending on the question, additional context is given.
@@ -23,6 +23,11 @@ The KMMLU dataset is a large-scale multi-task language understanding evaluation 
 This dataset is an extended version of the KMMLU dataset, with more challenging questions. It is designed to further evaluate the limits of Korean NLP models and contains questions that require a particularly high level of comprehension and reasoning skills.
 
 - [Paper](https://arxiv.org/abs/2402.11548), [Hugging Face](https://huggingface.co/datasets/HAERAE-HUB/KMMLU-HARD)
+
+### HRM8K
+HRM8K (HAE-RAE Math 8K) is a bilingual math reasoning benchmark for Korean and English, comprising 8,011 instances. It includes Korean School Math (KSM) with 1,428 challenging problems from Korean Olympiad and competition-level exams, and Prior Sets with 6,583 problems from existing English benchmarks (GSM8K, MATH, Omni-MATH, MMMLU). This dataset evaluates mathematical reasoning capabilities in both languages.
+
+- [Paper](https://arxiv.org/abs/2501.02448), [Hugging Face](https://huggingface.co/datasets/HAERAE-HUB/HRM8K)
 
 
 ## Implementation
@@ -417,6 +422,15 @@ uv run python benchmarks/kmmlu_main.py \
     --template_type basic \
     --is_hard True \
     --num_shots 0
+
+# HRM8K (GSM8K subset)
+uv run python benchmarks/hrm8k_main.py \
+    --model_provider azureopenai \
+    --batch_size 10 \
+    --max_tokens 1500 \
+    --temperature 0.01 \
+    --template_type basic \
+    --subset GSM8K
 ```
 
 ### Available Parameters
@@ -433,6 +447,7 @@ uv run python benchmarks/kmmlu_main.py \
 --wait_time             # Wait time between requests (default: 1.0)
 --num_shots             # Number of few-shot examples for KMMLU (default: 0)
 --is_hard               # Use KMMLU-HARD dataset (default: False)
+--subset                # HRM8K subset: GSM8K, MATH, OMNI_MATH, MMMLU, KSM (default: GSM8K)
 --categories            # Specific categories to evaluate (optional)
 ```
 
@@ -475,4 +490,14 @@ Evaluation results are saved in:
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2402.11548}, 
 }
-``
+
+@misc{ko2025hrm8k,
+      title={HRM8K: A Bilingual Math Reasoning Benchmark for Korean and English}, 
+      author={Hyunwoo Ko and Guijin Son and Dasol Choi},
+      year={2025},
+      eprint={2501.02448},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.02448}, 
+}
+```

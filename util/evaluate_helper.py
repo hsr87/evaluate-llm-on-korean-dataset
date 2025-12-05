@@ -30,9 +30,9 @@ def extract_single_alphabet_answer(row):
         return pred
 
 
-def evaluate(csv_path, dataset="CLIcK", verbose=False):
+def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
 
-    valid_datasets = ["CLIcK", "KMMLU", "KMMLU-HARD", "HAERAE"]
+    valid_datasets = ["CLIcK", "KMMLU", "KMMLU-HARD", "HAERAE", "hrm8k"]
     assert (
         dataset in valid_datasets
     ), f"Invalid 'dataset' value. Please choose from {valid_datasets}."
@@ -53,15 +53,17 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
         with open(mapping_path, "r") as json_file:
             id_to_category = json.load(json_file)
 
-        result["category"] = result["id"].map(id_to_category)
-        
-        # 매핑되지 않은 ID들 확인 및 제거
-        missing_ids = result[result["category"].isna()]["id"].unique()
-        if len(missing_ids) > 0:
-            print(f"Warning: Found IDs without category mapping: {missing_ids[:10]}...")  # 처음 10개만 출력
-            print(f"Total missing IDs: {len(missing_ids)}")
-            # NaN 값이 있는 행들을 제거
-            result = result.dropna(subset=["category"])
+        if "id" in result.columns:
+            result["category"] = result["id"].map(id_to_category)
+            
+            # 매핑되지 않은 ID들 확인 및 제거
+            missing_ids = result[result["category"].isna()]["id"].unique()
+            if len(missing_ids) > 0:
+                print(f"Warning: Found IDs without category mapping: {missing_ids[:10]}...")
+                print(f"Total missing IDs: {len(missing_ids)}")
+                result = result.dropna(subset=["category"])
+        elif "category" not in result.columns:
+            raise ValueError("CLIcK dataset requires either 'id' or 'category' column")
         
         result["supercategory"] = result["category"].apply(
             lambda x: (
@@ -80,11 +82,18 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
         
         result["category"] = result["category"].map(convert_to_pascal_case)
         result["supercategory"] = result["category"].map(category_to_supercategory)
-        
-    result["correct"] = result["answer"] == result["pred"]
+    elif dataset == "hrm8k":
+        if "subset" not in result.columns:
+            result["subset"] = subset if subset else "Unknown"
+        result["category"] = result["subset"]
+    
+    # For hrm8k, correct column is already calculated during evaluation
+    if dataset != "hrm8k":
+        result["correct"] = result["answer"] == result["pred"]
+    
     overall_acc = round(result["correct"].mean() * 100, 2)
 
-    if dataset == "HAERAE":
+    if dataset in ["HAERAE", "hrm8k"]:
         category_acc = (
             result.groupby(["category"])
             .agg(

@@ -135,14 +135,17 @@ def main():
     
     load_dotenv()
     
-    logger.info(f"Using {get_provider_name(args.model_provider)} as model provider.")
+    # .env에서 MODEL_PROVIDER 읽기 (없으면 args 사용)
+    model_provider = os.getenv("MODEL_PROVIDER", args.model_provider)
+    
+    logger.info(f"Using {get_provider_name(model_provider)} as model provider.")
     
     # 모델 설정
     model_name = os.getenv("MODEL_NAME", "gpt-4o-mini")
     model_version = os.getenv("MODEL_VERSION", "2024-07-18")
     
     model_config = {
-        'provider': args.model_provider,
+        'provider': model_provider,
         'hf_model_id': args.hf_model_id,
         'batch_size': args.batch_size,
         'max_tokens': args.max_tokens,

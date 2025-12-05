@@ -82,7 +82,7 @@ class BenchmarkEvaluator:
             system_prompt=system_prompt
         )
         
-        chain = prompt_template | llm | parser_class()
+        chain = prompt_template | llm | parser_class() if parser_class else prompt_template | llm
         
         results = []
         batch_size = self.model_config['batch_size']
@@ -168,11 +168,25 @@ class BenchmarkEvaluator:
     
     def _make_result(self, qna, pred):
         """결과 엔트리 생성 (서브클래스에서 오버라이드)"""
-        return {
-            "answer": qna["answer"],
-            "pred": pred[0],
-            "response": pred[1],
-        }
+        if isinstance(pred, (list, tuple)):
+            return {
+                "answer": qna["answer"],
+                "pred": pred[0],
+                "response": pred[1],
+            }
+        else:
+            # Handle AIMessage object
+            response_text = pred.content if hasattr(pred, 'content') else str(pred)
+            
+            # Handle list content (for reasoning models)
+            if isinstance(response_text, list):
+                response_text = ' '.join([str(item) for item in response_text])
+            
+            return {
+                "answer": qna["answer"],
+                "pred": None,
+                "response": response_text,
+            }
     
     def _make_failed(self, qna, error):
         """실패 엔트리 생성"""
@@ -202,6 +216,7 @@ class CLIcKEvaluator(BenchmarkEvaluator):
     def _make_result(self, qna, pred):
         return {
             "id": qna["id"],
+            "category": qna.get("category", self.id_to_category.get(str(qna["id"]))),
             "trial": 0,
             "answer": qna["answer"],
             "pred": pred[0],
@@ -211,6 +226,7 @@ class CLIcKEvaluator(BenchmarkEvaluator):
     def _make_failed(self, qna, error):
         return {
             "id": qna["id"],
+            "category": qna.get("category", self.id_to_category.get(str(qna["id"]))),
             "trial": 0,
             "answer": qna["answer"],
             "pred": "FAILED",
@@ -256,6 +272,32 @@ class KMMLUEvaluator(BenchmarkEvaluator):
     def _make_failed(self, qna, error):
         return {
             "category": qna["category"],
+            "answer": qna["answer"],
+            "pred": "FAILED",
+            "response": error,
+        }
+
+
+class HRM8KEvaluator(BenchmarkEvaluator):
+    """HRM8K 벤치마크 평가"""
+    
+    def _make_result(self, qna, pred):
+        response_text = pred.content if hasattr(pred, 'content') else str(pred)
+        if isinstance(response_text, list):
+            response_text = ' '.join([str(item) for item in response_text])
+        
+        return {
+            "subset": qna["subset"],
+            "index": qna.get("index"),
+            "answer": qna["answer"],
+            "pred": None,
+            "response": response_text,
+        }
+    
+    def _make_failed(self, qna, error):
+        return {
+            "subset": qna["subset"],
+            "index": qna.get("index"),
             "answer": qna["answer"],
             "pred": "FAILED",
             "response": error,
