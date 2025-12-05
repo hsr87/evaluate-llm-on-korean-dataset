@@ -1,23 +1,13 @@
 #!/bin/bash
 
-# uv run python click_main.py \
-#     --is_debug True \
-#     --model_provider bedrock \
-#     --batch_size 1 \
-#     --max_tokens 64 \
-#     --temperature 0.01 \
-#     --use_multiprocessing False \
-#     --template_type basic 
-
-
 ### Parallel execution version of run_all.sh with resume capability
-env_files=(.env_gpt-oss-120b) 
-is_debug=False
-batch_size=30
+env_files=(.env_gpt-51-medium) 
+is_debug=True
+batch_size=20
 max_tokens=256
 temperature=0.01
-max_parallel_jobs=2
-num_debug_samples=100
+max_parallel_jobs=4
+num_debug_samples=30
 categories=""  #별도로 실행할 카테고리를 넣으려면 여기에 카테고리명 입력, 기존의 데이터는 삭제되므로 주의 필요
 
 echo "Found the following .env files:"
@@ -40,8 +30,8 @@ run_model() {
         --max_tokens "$max_tokens" \
         --temperature "$temperature" \
         --template_type gpt5 \
-        --categories "$categories" \
-        --num_debug_samples 100 &
+       --num_debug_samples "$num_debug_samples" \
+       --categories "$categories" \
     
     # HAERAE 1.0
     # DOTENV_PATH="$env_file" python haerae_main.py \
@@ -50,9 +40,9 @@ run_model() {
     #     --batch_size "$batch_size" \
     #     --max_tokens "$max_tokens" \
     #     --temperature "$temperature" \
-    #     --template_type basic \
+    #     --template_type gpt5 \
+    #     --num_debug_samples "$num_debug_samples" \
     #     --categories "$categories" \
-    #     --num_debug_samples 100  &
     
     # # KMMLU - 재시작 지원
     # DOTENV_PATH="$env_file" python kmmlu_main.py \

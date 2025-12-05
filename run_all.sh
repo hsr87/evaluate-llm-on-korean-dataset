@@ -1,13 +1,13 @@
 #!/bin/bash
 
 ### Parallel execution version of run_all.sh with resume capability
-env_files=(.env_*) 
-is_debug=True
-batch_size=30
+env_files=(.env_gpt-5*) 
+is_debug=False
+batch_size=20
 max_tokens=256
-temperature=0.01
-max_parallel_jobs=2
-start_category=""  # 중단된 카테고리부터 시작하려면 여기에 카테고리명 입력
+temperature=0.01    #not use in gpt-5, gpt-5.1
+max_parallel_jobs=3
+categories=""  # 중단된 카테고리부터 시작하려면 여기에 카테고리명 입력
 
 echo "Found the following .env files:"
 for env_file in "${env_files[@]}"; do
@@ -21,25 +21,25 @@ run_model() {
     
     echo "Starting evaluation for $env_file"
     
-    # CLIcK
+    # # CLIcK
     DOTENV_PATH="$env_file" python click_main.py \
         --is_debug "$is_debug" \
         --model_provider "$model_provider" \
         --batch_size "$batch_size" \
         --max_tokens "$max_tokens" \
         --temperature "$temperature" \
-        --template_type chat \
-          --start_category "$start_category" &
+        --template_type gpt5 \
+          --categories "$categories" &
     
-    # HAERAE 1.0
+    # # HAERAE 1.0
     DOTENV_PATH="$env_file" python haerae_main.py \
         --is_debug "$is_debug" \
         --model_provider "$model_provider" \
         --batch_size "$batch_size" \
         --max_tokens "$max_tokens" \
         --temperature "$temperature" \
-        --template_type chat \
-          --start_category "$start_category" &
+        --template_type gpt5 \
+          --categories "$categories" &
     
     # KMMLU - 재시작 지원
     DOTENV_PATH="$env_file" python kmmlu_main.py \
@@ -48,30 +48,30 @@ run_model() {
         --batch_size "$batch_size" \
         --max_tokens "$max_tokens" \
         --temperature "$temperature" \
-        --template_type chat \
+        --template_type gpt5 \
         --is_hard False \
         --use_few_shot False \
-        --start_category "$start_category" &
+        --categories "$categories" &
     
-    # KMMLU (HARD) - 재시작 지원
+    # # KMMLU (HARD) - 재시작 지원
     DOTENV_PATH="$env_file" python kmmlu_main.py \
         --is_debug "$is_debug" \
         --model_provider "$model_provider" \
         --batch_size "$batch_size" \
         --max_tokens "$max_tokens" \
         --temperature "$temperature" \
-        --template_type chat \
+        --template_type gpt5 \
         --is_hard True \
         --use_few_shot False \
-        --start_category "$start_category" &
+        --categories "$categories" &
     
     wait  # 해당 모델의 모든 작업이 완료될 때까지 대기
     echo "Completed evaluation for $env_file"
 }
 
 # 재시작 기능 안내
-if [[ -n "$start_category" ]]; then
-    echo "Resuming from category: $start_category"
+if [[ -n "$categories" ]]; then
+    echo "Resuming from category: $categories"
 else
     echo "Starting from the beginning (or skipping completed categories)"
 fi

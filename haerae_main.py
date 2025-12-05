@@ -1,8 +1,9 @@
 import os
 import json
 import time
+import random
 import argparse
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed, TimeoutError
 import multiprocessing as mp
 
 import openai
@@ -157,28 +158,88 @@ def process_batch_streaming(batch_data, model_config, template_type="basic"):
                         break
                         
                 except openai.BadRequestError as e:
-                    logger.error(f"BadRequestError: {e}. Adding failed responses for this batch.")
-                    logger.info(f"Question sample: {batch_data[i]['question'][:100]}..." if batch_data else "No question data")
-                    # 실패한 질문들에 대해 기본값으로 추가
-                    for qna in mini_batch:
-                        results.append({
-                            "category": qna["category"],
-                            "answer": qna["answer"],
-                            "pred": "FAILED",
-                            "response": "BAD_REQUEST_ERROR",
-                        })
-                    break
+                    error_msg = str(e)
+                    
+                    # Content filtering 에러 처리
+                    if "prompt_filter_results" in error_msg or "Response missing `choices` key" in error_msg:
+                        logger.warning(f"Content filtering detected for batch - marking as FILTERED")
+                        for qna in mini_batch:
+                            results.append({
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FILTERED",
+                                "response": "CONTENT_FILTER_ERROR",
+                            })
+                        break  # 재시도하지 않고 바로 다음 배치로
+                    else:
+                        logger.error(f"BadRequestError: {e}. Adding failed responses for this batch.")
+                        logger.info(f"Question sample: {batch_data[i]['question'][:100]}..." if batch_data else "No question data")
+                        # 실패한 질문들에 대해 기본값으로 추가
+                        for qna in mini_batch:
+                            results.append({
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FAILED",
+                                "response": "BAD_REQUEST_ERROR",
+                            })
+                        break
+                        
+                except KeyError as e:
+                    error_msg = str(e)
+                    
+                    # Content filtering KeyError 처리
+                    if "'choices'" in error_msg or "prompt_filter_results" in error_msg:
+                        logger.warning(f"Content filtering KeyError - marking batch as FILTERED")
+                        for qna in mini_batch:
+                            results.append({
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FILTERED",
+                                "response": "CONTENT_FILTER_ERROR",
+                            })
+                        break  # 재시도하지 않고 바로 다음 배치로
+                    else:
+                        # 다른 KeyError는 일반 처리
+                        logger.error(f"KeyError in batch processing: {e}")
+                        retries += 1
+                        if retries > max_retries:
+                            for qna in mini_batch:
+                                results.append({
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": "FAILED",
+                                    "response": f"KEYERROR: {str(e)}",
+                                })
+                            break
+                        time.sleep(2 ** retries)
                         
                 except Exception as e:
-                    logger.error(f"Error processing batch: {e}")
-                    for qna in mini_batch:
-                        results.append({
-                            "category": qna["category"],
-                            "answer": qna["answer"],
-                            "pred": "FAILED",
-                            "response": f"ERROR: {str(e)}",
-                        })
-                    break
+                    error_msg = str(e)
+                    
+                    # Content filtering 일반 Exception 처리
+                    if "prompt_filter_results" in error_msg or "Response missing `choices` key" in error_msg:
+                        logger.warning(f"Content filtering Exception - marking batch as FILTERED")
+                        for qna in mini_batch:
+                            results.append({
+                                "category": qna["category"],
+                                "answer": qna["answer"],
+                                "pred": "FILTERED",
+                                "response": "CONTENT_FILTER_ERROR",
+                            })
+                        break  # 재시도하지 않고 바로 다음 배치로
+                    else:
+                        logger.error(f"Error processing batch: {e}")
+                        retries += 1
+                        if retries > max_retries:
+                            for qna in mini_batch:
+                                results.append({
+                                    "category": qna["category"],
+                                    "answer": qna["answer"],
+                                    "pred": "FAILED",
+                                    "response": f"ERROR: {str(e)}",
+                                })
+                            break
+                        time.sleep(2 ** retries)
         
         return results
         
@@ -231,6 +292,10 @@ def process_category_streaming(category_info):
                 # 청크 처리
                 chunk_results = process_batch_streaming(chunk_batch, model_config, template_type)
                 category_responses.extend(chunk_results)
+                
+                # 청크 처리 후 랜덤 sleep (0-1초)
+                sleep_time = random.uniform(0, 1)
+                time.sleep(sleep_time)
                 
                 # 진행률 업데이트
                 pbar.update(1)
@@ -291,7 +356,7 @@ def benchmark_multiprocess(args):
     ]
     
     # 실행할 카테고리 결정
-    if args.categories:
+    if args.categories and args.categories != ['']:
         # 사용자가 지정한 카테고리들 검증
         invalid_categories = [c for c in args.categories if c not in all_haerae_categories]
         if invalid_categories:
@@ -335,10 +400,11 @@ def benchmark_multiprocess(args):
         completed_count = 0
         # 진행률 표시 개선
         with tqdm(total=len(remaining_categories), desc="Categories", position=1, leave=True) as category_pbar:
-            for future in future_to_category:
+            for future in as_completed(future_to_category):
                 category = future_to_category[future]
                 try:
-                    result_category, status = future.result()
+                    # 200초 타임아웃 설정 (카테고리당 최대 처리 시간)
+                    result_category, status = future.result(timeout=200)
                     completed_count += 1
                     logger.info(f"Category {result_category} completed: {status} ({completed_count}/{len(remaining_categories)})")
                     
@@ -347,6 +413,15 @@ def benchmark_multiprocess(args):
                     category_pbar.set_postfix({
                         'current': result_category,
                         'status': status
+                    })
+                
+                except TimeoutError:
+                    logger.error(f"Category {category} timed out after 30 minutes")
+                    completed_count += 1
+                    category_pbar.update(1)
+                    category_pbar.set_postfix({
+                        'current': category,
+                        'status': 'timeout'
                     })
                     
                 except Exception as e:
@@ -611,7 +686,7 @@ if __name__ == "__main__":
     ), f"Invalid 'template_type' value. Please choose from {valid_template_types}."
 
     # 카테고리 인수 로깅
-    if args.categories:
+    if args.categories and args.categories != ['']:
         logger.info(f"🎯 User specified categories: {args.categories}")
     else:
         logger.info(f"🎯 Will process all available categories")
