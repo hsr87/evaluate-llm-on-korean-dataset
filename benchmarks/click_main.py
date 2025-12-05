@@ -17,7 +17,7 @@ from config.question_templates import TYPE_1, TYPE_2, TYPE_3, TYPE_4
 from core.evaluator import CLIcKEvaluator
 from core.logger import logger
 from util.custom_parser import MultipleChoicesFiveParser
-from util.common_helper import str2bool, format_timespan, get_provider_name
+from util.common_helper import str2bool, format_timespan, get_provider_name, check_existing_csv_in_debug
 from util.evaluate_helper import evaluate
 
 
@@ -131,6 +131,11 @@ def main():
     os.makedirs("results", exist_ok=True)
     csv_path = f"results/[CLIcK] {model_name}-{model_version}.csv"
     
+    # 디버그 모드에서 기존 CSV 확인
+    if check_existing_csv_in_debug(csv_path, args.is_debug):
+        evaluate(csv_path, dataset="CLIcK", verbose=True)
+        return
+    
     # 카테고리 목록
     all_categories = [
         "Economy", "Geography", "History", "Law", "Politics",
@@ -150,14 +155,25 @@ def main():
         with open("mapping/id_to_category.json", "r") as f:
             id_to_category = json.load(f)
         
+        # 각 카테고리의 실제 문제 수 계산
+        click_ds = load_dataset("EunsuKim/CLIcK", split="train")
+        category_sizes = {}
+        for item in click_ds:
+            cat = id_to_category.get(str(item["id"]))
+            if cat:
+                category_sizes[cat] = category_sizes.get(cat, 0) + 1
+        
         completed_categories = []
         if os.path.exists(csv_path):
             df = pd.read_csv(csv_path)
             if not df.empty:
-                # ID를 카테고리로 변환하여 완료된 카테고리 확인
                 df['category'] = df['id'].astype(str).map(id_to_category)
                 category_counts = df['category'].value_counts()
-                completed_categories = [cat for cat, count in category_counts.items() if count >= 10]
+                # 실제 카테고리 크기와 비교
+                completed_categories = [
+                    cat for cat, count in category_counts.items() 
+                    if cat in category_sizes and count >= category_sizes[cat]
+                ]
                 logger.info(f"Completed categories: {completed_categories}")
         
         categories_to_run = [c for c in all_categories if c not in completed_categories]

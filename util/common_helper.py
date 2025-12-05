@@ -65,6 +65,15 @@ def str2bool(v):
         raise argparse.ArgumentTypeError("Boolean value expected.")
 
 
+def check_existing_csv_in_debug(csv_path, is_debug):
+    """Check if CSV exists in debug mode and ask user whether to reuse it."""
+    if not is_debug or not os.path.exists(csv_path):
+        return False
+    
+    print(f"\n✅ 기존 결과 파일이 존재합니다. 자동으로 사용합니다: {csv_path}\n")
+    return True
+
+
 def format_timespan(seconds):
     """Format seconds into human-readable timespan."""
     hours = seconds // 3600

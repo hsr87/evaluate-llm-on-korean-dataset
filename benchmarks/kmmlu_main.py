@@ -15,7 +15,7 @@ from config.question_templates import TYPE_2, TYPE_MMLU_FEW_SHOT
 from core.evaluator import KMMLUEvaluator
 from core.logger import logger
 from util.custom_parser import MultipleChoicesFourParser
-from util.common_helper import str2bool, format_timespan, get_provider_name
+from util.common_helper import str2bool, format_timespan, get_provider_name, check_existing_csv_in_debug
 from util.evaluate_helper import evaluate
 
 
@@ -165,6 +165,11 @@ def main():
     os.makedirs("results", exist_ok=True)
     csv_path = f"results/[{dataset_label}] {model_name}-{model_version}{shot_label}.csv"
     
+    # 디버그 모드에서 기존 CSV 확인
+    if check_existing_csv_in_debug(csv_path, args.is_debug):
+        evaluate(csv_path, dataset=dataset_label, verbose=True)
+        return
+    
     # 카테고리 목록 (실제 데이터셋에서 사용 가능한 것만)
     all_categories = [
         "maritime_engineering", "materials_engineering", "railway_and_automotive_engineering",
@@ -190,8 +195,15 @@ def main():
             return
         categories_to_run = args.categories
     else:
+        # 각 카테고리의 실제 문제 수 계산
+        category_sizes = {}
+        for category in all_categories:
+            dataset_category = map_category_name(category, args.is_hard)
+            ds_dict = load_dataset(hf_dataset_id, dataset_category)
+            category_sizes[category] = len(ds_dict["test"])
+        
         evaluator = KMMLUEvaluator(model_config, args.template_type)
-        completed = evaluator.get_completed_categories(csv_path, min_records=10)
+        completed = evaluator.get_completed_categories(csv_path, category_sizes=category_sizes)
         categories_to_run = [c for c in all_categories if c not in completed]
     
     if not categories_to_run:

@@ -15,7 +15,7 @@ from config.question_templates import TYPE_4
 from core.evaluator import HAERAEEvaluator
 from core.logger import logger
 from util.custom_parser import MultipleChoicesFiveParser
-from util.common_helper import str2bool, format_timespan, get_provider_name
+from util.common_helper import str2bool, format_timespan, get_provider_name, check_existing_csv_in_debug
 from util.evaluate_helper import evaluate
 
 
@@ -111,6 +111,11 @@ def main():
     os.makedirs("results", exist_ok=True)
     csv_path = f"results/[HAERAE] {model_name}-{model_version}.csv"
     
+    # 디버그 모드에서 기존 CSV 확인
+    if check_existing_csv_in_debug(csv_path, args.is_debug):
+        evaluate(csv_path, dataset="HAERAE", verbose=True)
+        return
+    
     # 카테고리 목록
     all_categories = [
         "General Knowledge", "History", "Loan Words",
@@ -126,8 +131,14 @@ def main():
             return
         categories_to_run = args.categories
     else:
+        # 각 카테고리의 실제 문제 수 계산
+        category_sizes = {}
+        for category in all_categories:
+            ds = load_dataset("HAERAE-HUB/HAE_RAE_BENCH_1.0", category)["test"]
+            category_sizes[category] = len(ds)
+        
         evaluator = HAERAEEvaluator(model_config, args.template_type)
-        completed = evaluator.get_completed_categories(csv_path, min_records=10)
+        completed = evaluator.get_completed_categories(csv_path, category_sizes=category_sizes)
         categories_to_run = [c for c in all_categories if c not in completed]
     
     if not categories_to_run:

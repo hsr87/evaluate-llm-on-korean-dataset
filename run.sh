@@ -5,6 +5,14 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$PROJECT_ROOT"
 
+# Check if .env file exists
+if [ ! -f ".env" ]; then
+    echo "Error: .env 파일이 없습니다."
+    echo ".env.sample 파일을 .env로 복사하고 설정을 완료해주세요."
+    echo "예: cp .env.sample .env"
+    exit 1
+fi
+
 ### Parallel execution version of run_all.sh with resume capability
 
 # Ask user for dataset selection

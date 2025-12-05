@@ -50,14 +50,16 @@ class BenchmarkEvaluator:
         logger.info(f"✅ Saved {len(df_new)} records to {csv_path} (Total: {len(df_combined)})")
         return df_combined
     
-    def get_completed_categories(self, csv_path, category_key='category', min_records=10):
-        """완료된 카테고리 반환"""
+    def get_completed_categories(self, csv_path, category_key='category', category_sizes=None):
+        """완료된 카테고리 반환 (실제 카테고리 크기와 비교)"""
         if os.path.exists(csv_path):
             try:
                 df = pd.read_csv(csv_path)
                 if not df.empty and category_key in df.columns:
                     counts = df[category_key].value_counts()
-                    return [cat for cat, cnt in counts.items() if cnt >= min_records]
+                    if category_sizes:
+                        return [cat for cat, cnt in counts.items() if cat in category_sizes and cnt >= category_sizes[cat]]
+                    return list(counts.index)
             except (pd.errors.EmptyDataError, pd.errors.ParserError) as e:
                 logger.warning(f"CSV read error (file may be empty or being written): {e}")
             except Exception as e:
