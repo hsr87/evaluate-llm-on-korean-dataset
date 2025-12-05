@@ -1,5 +1,6 @@
 import re
 import json
+import os
 import numpy as np
 import pandas as pd
 
@@ -48,7 +49,8 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
         print(f"Evaluating on {len(result)} valid responses")
 
     if dataset == "CLIcK":
-        with open("id_to_category.json", "r") as json_file:
+        mapping_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "mapping", "id_to_category.json")
+        with open(mapping_path, "r") as json_file:
             id_to_category = json.load(json_file)
 
         result["category"] = result["id"].map(id_to_category)
@@ -72,7 +74,8 @@ def evaluate(csv_path, dataset="CLIcK", verbose=False):
             )
         )
     elif dataset in ["KMMLU", "KMMLU-HARD"]:
-        with open("kmmlu_category.json", "r") as json_file:
+        mapping_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "mapping", "kmmlu_category.json")
+        with open(mapping_path, "r") as json_file:
             category_to_supercategory = json.load(json_file)
         
         result["category"] = result["category"].map(convert_to_pascal_case)

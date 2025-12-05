@@ -21,6 +21,7 @@ from langchain_core.runnables import RunnableLambda
 from langchain_community.llms.azureml_endpoint import AzureMLOnlineEndpoint
 from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
 from .phi3_formatter import CustomPhi3ContentFormatter
+from config.prompts import get_system_prompt
 
 
 class ThrottledChatBedrockConverse(ChatBedrockConverse):
@@ -74,58 +75,19 @@ def format_timespan(seconds):
 
 
 def get_prompt_template(template_type, model_provider=None):
-    """Get prompt template based on the template type."""
+    """Get prompt template based on the template type.
+    
+    Returns:
+        tuple: (prompt_template, system_prompt_text or None)
+    """
 
-    # Force chat template for Bedrock models that require messages format
-    if model_provider == "bedrock" and template_type == "basic":
-        template_type = "chat"
-
+    system_prompt_text = get_system_prompt()
+    
     if template_type == "basic":
         prompt = PromptTemplate.from_template("{question}")
     elif template_type == "chat":
-        system_prompt = """You are an AI assistant who reads a given question and solves multiple choice questions.
-        You don't need to write a detailed explanation of your answer in sentences. Just answer in one word like.
-        
-        ## Constraints
-        - Just answer in one word like 'A', 'B', 'C', 'D', or 'E'.
-        - Please do not answer with a sentence like 'The answer is A'.
-        - Don't give multiple answers like 'A, B'.
-        - Just say one choice in one word.
-        
-        """
         system_message_template = SystemMessagePromptTemplate.from_template(
-            system_prompt
-        )
-        human_prompt = [
-            {"type": "text", "text": "{question}"},
-        ]
-        human_message_template = HumanMessagePromptTemplate.from_template(human_prompt)
-
-        prompt = ChatPromptTemplate.from_messages(
-            [system_message_template, human_message_template]
-        )
-    elif template_type == "gpt5":
-        system_prompt = """
-            System:
-            You are a multiple-choice answerer.
-
-            Reasoning: low
-            Do not browse, call tools, or explain.
-
-            STRICT OUTPUT:
-            Return EXACTLY one uppercase letter from [A,B,C,D,E].
-            No other text. No punctuation, no quotes, no spaces, no code fences.
-            If uncertain, guess the most probable option and output only its letter.
-
-            Right:  C
-            Wrong:  The answer is C / C. / "C" / [C]
-            
-            Right:  A
-            Wrong:  The answer is A / A. / "A" / [A]
-
-        """
-        system_message_template = SystemMessagePromptTemplate.from_template(
-            system_prompt
+            f"System:\n\n{system_prompt_text}"
         )
         human_prompt = [
             {"type": "text", "text": "{question}"},
@@ -139,57 +101,54 @@ def get_prompt_template(template_type, model_provider=None):
         raise ValueError(
             "Invalid 'template_type' value. Please choose from ['basic', 'chat']"
         )
-    return prompt
+    return prompt, system_prompt_text
+
+
+def get_provider_name(model_provider):
+    """Get human-readable provider name"""
+    provider_names = {
+        "azureopenai": "Azure OpenAI",
+        "openai": "OpenAI",
+        "bedrock": "AWS Bedrock",
+        "huggingface": "Hugging Face",
+        "azureml": "Azure ML endpoint",
+        "azureai": "Azure AI Foundry endpoint"
+    }
+    return provider_names.get(model_provider, model_provider)
 
 
 def get_llm_client(
-    model_provider, hf_model_id=None, temperature=0.01, max_tokens=256, max_retries=3, wait_time=1.0
+    model_provider, hf_model_id=None, temperature=0.01, max_tokens=256, max_retries=3, wait_time=1.0, system_prompt=None
 ):
     """Get LLM client"""
 
     if model_provider == "azureopenai":
-        # print("Using Azure OpenAI model provider.")
-        deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+
+        model_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+        reasoning_effort = os.getenv("REASONING_EFFORT")
         
+        # GPT-5.1 계열 모델들 (reasoning_effort 지원)
+        if model_name in ["gpt-51", "gpt-51-chat"]:
+            model_kwargs = {}
+            if reasoning_effort:
+                model_kwargs["reasoning_effort"] = reasoning_effort
+            
+            llm = AzureChatOpenAI(
+                azure_deployment=model_name,
+                openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+                max_retries=max_retries,
+                model_kwargs=model_kwargs,
+            )
         # GPT-5 계열 모델들 (gpt-5-chat 추가)
-        if deployment_name in ["gpt-5-mini", "gpt-5-nano"]:
-            print("Using GPT-5.1 with default(medium) reasoning effort.")
+        elif model_name in ["gpt-5-mini", "gpt-5-nano", "gpt-5-chat"]:
             llm = AzureChatOpenAI(
-                azure_deployment=deployment_name,
+                azure_deployment=model_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 max_retries=max_retries,
-                #reasoning_effort="low", # use default reasoning_effort
             )
-        elif deployment_name in ["gpt-5.1-chat"]:
-            print("Using GPT-5.1 chat.")
+        elif model_name in ["gpt-oss-120b", "gpt-oss-20b"]:
             llm = AzureChatOpenAI(
-                azure_deployment=deployment_name,
-                openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-                max_retries=max_retries,
-                reasoning_effort="low"
-            )
-        elif deployment_name in ["gpt-5.1"]:
-            model_name = os.getenv("MODEL_NAME")
-            reasoning_effort = os.getenv("REASONING_EFFORT")
-            if(model_name == "gpt-5.1"):
-                print(f"Using {model_name}, GPT-5.1 with reasoning_effort {reasoning_effort}.")
-                llm = AzureChatOpenAI(
-                    azure_deployment=deployment_name,
-                    openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-                    max_retries=max_retries,
-                    #reasoning_effort="none", # use default reasoning_effort
-                )
-            elif (model_name == "gpt-51-medium"):
-                print(f"Using {model_name}, GPT-5.1 with reasoning_effort {reasoning_effort}.")
-                llm = AzureChatOpenAI(
-                    azure_deployment=deployment_name,
-                    openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-                    max_retries=max_retries,
-                    reasoning_effort=reasoning_effort,
-                )
-        elif deployment_name in ["gpt-oss-120b", "gpt-oss-20b"]:
-            llm = AzureChatOpenAI(
-                azure_deployment=deployment_name,
+                azure_deployment=model_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 max_retries=max_retries,
                 temperature=temperature,
@@ -197,17 +156,17 @@ def get_llm_client(
             )
         else:
             llm = AzureChatOpenAI(
-                azure_deployment=deployment_name,
+                azure_deployment=model_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 temperature=temperature,
                 max_tokens=max_tokens,
                 max_retries=max_retries,
             )
     elif model_provider == "openai":
-        print("Using OpenAI model provider.")
-        deployment_name = os.getenv("OPENAI_DEPLOYMENT_NAME")
+
+        model_name = os.getenv("OPENAI_DEPLOYMENT_NAME")
         llm = ChatOpenAI(
-            model=deployment_name,
+            model=model_name,
             temperature=temperature,
             max_tokens=max_tokens,
             max_retries=max_retries,
@@ -217,8 +176,8 @@ def get_llm_client(
             temperature == 0.0
         ):  # in case of not supporting 0.0 for some SLM, set to 0.01
             temperature = 0.01
-        deployment_name = hf_model_id.split("/")[-1]
-        print("Using Hugging Face model provider.")
+        model_name = hf_model_id.split("/")[-1]
+
         llm = HuggingFaceEndpoint(
             repo_id=hf_model_id,
             temperature=temperature,
@@ -226,8 +185,8 @@ def get_llm_client(
             huggingfacehub_api_token=os.getenv("HF_API_TOKEN"),
         )
     elif model_provider == "azureml":
-        print("Using Azure ML endpoint as model provider.")
-        deployment_name = os.getenv("AZURE_ML_DEPLOYMENT_NAME")
+
+        model_name = os.getenv("AZURE_ML_DEPLOYMENT_NAME")
 
         llm = AzureMLOnlineEndpoint(
             endpoint_url=os.getenv("AZURE_ML_ENDPOINT_URL"),
@@ -238,28 +197,52 @@ def get_llm_client(
         )
 
     elif model_provider == "azureai":
-        print("Using Azure AI Foundry endpoint as model provider.")
-        deployment_name = os.getenv("AZURE_AI_DEPLOYMENT_NAME")
+
+        model_name = os.getenv("AZURE_AI_DEPLOYMENT_NAME")
 
         llm = AzureAIChatCompletionsModel(
             endpoint=os.getenv("AZURE_AI_INFERENCE_ENDPOINT"),
             credential=os.getenv("AZURE_AI_INFERENCE_KEY"),
-            model_name=deployment_name,
+            model_name=model_name,
         )
     elif model_provider == "bedrock":
-        print("Using AWS Bedrock as model provider.")
-        deployment_name = os.getenv("BEDROCK_MODEL_ID")
+
+        model_name = os.getenv("BEDROCK_MODEL_ID")
         
-        llm = ThrottledChatBedrockConverse(
-            model=deployment_name,
-            region_name=os.getenv("AWS_REGION"),
-            temperature=temperature,
-            max_tokens=max_tokens,
-            wait_time=wait_time
-        )
+        # Build additional_model_request_fields
+        additional_fields = {}
+        
+        # Reasoning config
+        reasoning_enabled = os.getenv("REASONING_ENABLED", "false").lower() == "true"
+        if reasoning_enabled:
+            reasoning_effort = os.getenv("REASONING_EFFORT", "high")
+            additional_fields["reasoningConfig"] = {
+                "type": "enabled",
+                "maxReasoningEffort": reasoning_effort
+            }
+        
+        # Prepare system prompt
+        system_messages = None
+        if system_prompt:
+            system_messages = [system_prompt] if isinstance(system_prompt, str) else system_prompt
+        
+        # When reasoning is enabled with high effort, temperature and max_tokens must be unset
+        bedrock_kwargs = {
+            "model": model_name,
+            "region_name": os.getenv("AWS_REGION"),
+            "wait_time": wait_time,
+            "system": system_messages,
+            "additional_model_request_fields": additional_fields if additional_fields else None
+        }
+        
+        if not (reasoning_enabled and reasoning_effort == "high"):
+            bedrock_kwargs["temperature"] = temperature
+            bedrock_kwargs["max_tokens"] = max_tokens
+        
+        llm = ThrottledChatBedrockConverse(**bedrock_kwargs)
     else:
         raise ValueError(
             "Invalid 'model_provider' value. Please choose from ['azureopenai', 'openai', 'huggingface', 'azureml', 'azureai', 'bedrock']"
         )
 
-    return llm, deployment_name
+    return llm, model_name

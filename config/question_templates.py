@@ -1,3 +1,5 @@
+"""Question prompt templates for benchmarks"""
+
 TYPE_1 = """주어진 맥락을 천천히 읽고, 질문에 대한 적절한 정답을 A, B, C, D 중에 골라 알파벳 하나로 답하시오.
 (Read the given context, and choose the correct answer to the question from options A, B, C, or D. Respond with a single alphabet.)
 

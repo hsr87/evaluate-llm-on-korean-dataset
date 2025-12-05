@@ -311,154 +311,138 @@ To use Jupyter Notebook in VS Code or Cursor, choose one of the two methods belo
 2. Click **Python: Select Interpreter** with the shortcut **Ctrl + Shift + P (Windows/Linux)**, **Cmd + Shift + P (macOS)**, and then select **.venv**.
 <img src="./imgs/quick-start-03.png" width="100%"/>
 
-Please do not forget to modify the `.env` file to match your account. Rename `.env.sample` to `.env` or copy and use it
+### Configuration
 
-### Modify your `.env`
+Rename `.env.sample` to `.env` and configure your credentials:
 
-# basic info
-MODEL_NAME=<YOUR_MODEL_VERSION>
+```ini
+# Basic info
+MODEL_NAME=<YOUR_MODEL_NAME>
 MODEL_VERSION=<YOUR_MODEL_VERSION>
+REASONING_EFFORT=medium  # For GPT-5.1: none, minimal, low, medium, high
+```
 
 #### Azure OpenAI
 ```ini
-AZURE_OPENAI_ENDPOINT=<YOUR_OPEN_ENDPOINT>
-AZURE_OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
-AZURE_OPENAI_API_VERSION=<YOUR_OPENAI_API_VERSION>
-AZURE_OPENAI_DEPLOYMENT_NAME=<YOUR_DEPLOYMENT_NAME> (e.g., gpt-4o-mini)
+AZURE_OPENAI_ENDPOINT=<YOUR_ENDPOINT>
+AZURE_OPENAI_API_KEY=<YOUR_API_KEY>
+AZURE_OPENAI_DEPLOYMENT_NAME=<YOUR_DEPLOYMENT_NAME>
+AZURE_OPENAI_API_VERSION=2025-04-01-preview
 ```
 
 #### Azure AI Foundry
 ```ini
 AZURE_AI_INFERENCE_KEY=<YOUR_API_KEY>
-AZURE_AI_INFERENCE_ENDPOINT=https://<YOUR_ENDPOINT_NAME>.services.ai.azure.com/models
+AZURE_AI_INFERENCE_ENDPOINT=<YOUR_ENDPOINT>
 AZURE_AI_DEPLOYMENT_NAME=Phi-4
 ```
 
 #### AWS Bedrock
 ```ini
-BEDROCK_MODEL_ID=amazon.nova-pro-v1:0
+BEDROCK_MODEL_ID=us.amazon.nova-2-lite-v1:0
 AWS_REGION=us-west-2
 ```
 
 #### OpenAI
 ```ini
-OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
-OPENAI_DEPLOYMENT_NAME=<YOUR_OPENAI_API_VERSION>
+OPENAI_API_KEY=<YOUR_API_KEY>
+OPENAI_DEPLOYMENT_NAME=<YOUR_DEPLOYMENT_NAME>
 ```
 
 #### Azure ML
-You can create endpoints by provisioning a managed compute host or using the serverless option.
-For Phi-3.5, if you do not have a managed GPU compute quota, you can temporarily use Microsoft's shared quota for 168 hours. For more information, please refer to these links: [Phi-3.5 deployment](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-phi-3?tabs=phi-3-5&pivots=programming-language-python), [Azure ML deployment](https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-deploy-model)
 ```ini
-AZURE_ML_DEPLOYMENT_NAME=<YOUR_ML_DEPLOYMENT_NAME>
-AZURE_ML_ENDPOINT_URL=<YOUR_ML_ENDPOINT_URL>
-AZURE_ML_ENDPOINT_TYPE=<YOUR_ML_ENDPOINT_TYPE> (dedicated or serverless)
-AZURE_ML_API_KEY=<YOUR_ML_API_KEY>
+AZURE_ML_DEPLOYMENT_NAME=<YOUR_DEPLOYMENT_NAME>
+AZURE_ML_ENDPOINT_URL=<YOUR_ENDPOINT_URL>
+AZURE_ML_ENDPOINT_TYPE=<dedicated or serverless>
+AZURE_ML_API_KEY=<YOUR_API_KEY>
 ```
 
 #### Hugging Face
-Please refer to [this guide](https://huggingface.co/docs/hub/security-tokens) to generate a Hugging Face token.
 ```ini
 HF_API_TOKEN=<YOUR_HF_API_TOKEN>
 ```
 
-Execute the command to perform the evaluation. (The evaluation results are saved in the `./results` folder and `./evals`.)
-Below is an example.
-   
+### Running Evaluations
+
+#### Interactive Mode (Recommended)
+Run the interactive script that guides you through the evaluation process:
+
 ```bash
-#!/bin/bash
-model_provider="azureopenai"
-
-# CLIcK
-uv run python click_main.py \
-      --model_provider "$model_provider" \
-      --batch_size 20 \
-      --max_tokens 512 \
-      --temperature 0.01 \
-      --template_type basic
-
-# HAERAE
-uv run python haerae_main.py \
-      --model_provider "$model_provider" \
-      --batch_size 20 \
-      --max_tokens 512 \
-      --temperature 0.01 \
-      --template_type basic
-
-# KMMLU
-uv run python kmmlu_main.py \
-      --model_provider "$model_provider" \
-      --batch_size 20 \
-      --max_tokens 512 \
-      --temperature 0.01 \
-      --template_type basic \
-      --is_hard False
+./run.sh
 ```
 
-### Tunable parameters
+The script will ask you to:
+1. Select dataset (CLIcK, HAE-RAE, KMMLU, KMMLU-HARD)
+2. Choose debug mode (y/n)
+3. Set batch size (default: 5)
+4. Set max tokens (default: 1500)
+5. Set temperature (default: 0.01)
+
+#### Manual Mode
+Run individual benchmarks directly:
+
+```bash
+# CLIcK
+uv run python benchmarks/click_main.py \
+    --model_provider azureopenai \
+    --batch_size 20 \
+    --max_tokens 512 \
+    --temperature 0.01 \
+    --template_type basic
+
+# HAE-RAE
+uv run python benchmarks/haerae_main.py \
+    --model_provider azureopenai \
+    --batch_size 20 \
+    --max_tokens 512 \
+    --temperature 0.01 \
+    --template_type basic
+
+# KMMLU (0-shot)
+uv run python benchmarks/kmmlu_main.py \
+    --model_provider azureopenai \
+    --batch_size 20 \
+    --max_tokens 512 \
+    --temperature 0.01 \
+    --template_type basic \
+    --is_hard False \
+    --num_shots 0
+
+# KMMLU-HARD (0-shot)
+uv run python benchmarks/kmmlu_main.py \
+    --model_provider azureopenai \
+    --batch_size 20 \
+    --max_tokens 512 \
+    --temperature 0.01 \
+    --template_type basic \
+    --is_hard True \
+    --num_shots 0
+```
+
+### Available Parameters
+
 ```python
-parser.add_argument("--is_debug", type=bool, default=True)
-parser.add_argument("--num_debug_samples", type=int, default=20)
-parser.add_argument("--model_provider", type=str, default="azureopenai")
-parser.add_argument("--hf_model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.2")
-parser.add_argument("--batch_size", type=int, default=10)
-parser.add_argument("--max_retries", type=int, default=3)
-parser.add_argument("--max_tokens", type=int, default=256)
-parser.add_argument("--temperature", type=float, default=0.01)
-parser.add_argument("--template_type", type=str, default="basic")
-parser.add_argument("--wait_time", type=float, default=1.0)  # For Bedrock throttling protection
+--is_debug              # Enable debug mode (default: True)
+--num_debug_samples     # Number of samples in debug mode (default: 20)
+--model_provider        # Provider: azureopenai, bedrock, openai, azureml, azureaifoundry, huggingface
+--batch_size            # Batch size for processing (default: 10)
+--max_retries           # Maximum retry attempts (default: 3)
+--max_tokens            # Maximum tokens in response (default: 256)
+--temperature           # Sampling temperature (default: 0.01)
+--template_type         # Prompt template type (default: basic)
+--wait_time             # Wait time between requests (default: 1.0)
+--num_shots             # Number of few-shot examples for KMMLU (default: 0)
+--is_hard               # Use KMMLU-HARD dataset (default: False)
+--categories            # Specific categories to evaluate (optional)
 ```
 
 **Note for AWS Bedrock users**: If you encounter `ThrottlingException` errors, increase the `--wait_time` parameter (e.g., `--wait_time 2.0` or higher) to add delays between requests and avoid rate limiting.
 
-```bash
-#!/bin/bash
-model_provider="bedrock"
+### Output
 
-# CLIcK
-uv run python click_main.py \
-      --model_provider "$model_provider" \
-      --batch_size 20 \
-      --max_tokens 512 \
-      --temperature 0.01 \
-      --template_type basic \
-      --wait_time 2.0
-
-# HAERAE
-uv run python haerae_main.py \
-      --model_provider "$model_provider" \
-      --batch_size 20 \
-      --max_tokens 512 \
-      --temperature 0.01 \
-      --template_type basic \
-      --wait_time 2.0
-
-# KMMLU
-uv run python kmmlu_main.py \
-      --model_provider "$model_provider" \
-      --batch_size 20 \
-      --max_tokens 512 \
-      --temperature 0.01 \
-      --template_type basic \
-      --is_hard False \
-      --wait_time 2.0
-```
-
-azure-gpt-4o-mini Benchmark results (temperature=0.0)
-```bash
-   category_big     category   correct
-0       Culture      Economy  0.830508
-1       Culture    Geography  0.778626
-2       Culture      History  0.484000
-3       Culture          Law  0.575342
-4       Culture     Politics  0.833333
-5       Culture  Pop Culture  0.853659
-6       Culture      Society  0.857605
-7       Culture    Tradition  0.743243
-8      Language   Functional  0.648000
-9      Language      Grammar  0.425000
-10     Language      Textual  0.807018
-```
+Evaluation results are saved in:
+- `./results/` - Detailed CSV results for each model and dataset
+- `./evals/` - Aggregated evaluation metrics
 
 ## References
 
@@ -491,4 +475,4 @@ azure-gpt-4o-mini Benchmark results (temperature=0.0)
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2402.11548}, 
 }
-```
+``
