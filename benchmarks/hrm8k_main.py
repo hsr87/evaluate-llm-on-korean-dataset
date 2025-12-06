@@ -15,7 +15,10 @@ from util.evaluate_helper import evaluate
 from util.hrm8k_calculator import extract_answer
 
 def get_prompt(x):
-    return f"질문: {x['question']}\n\n위 문제를 단계별로 풀이하고, 최종 답을 #### 뒤에 숫자만 작성하세요."
+    """Generate prompt for math problem"""
+    return f"""Question: {x['question']}
+
+Solve this problem step by step and write your final answer after #### followed by only the numerical value."""
 
 def get_answer(x):
     return x["answer"]
@@ -27,7 +30,7 @@ def main():
     parser.add_argument("--model_provider", type=str, default="azureopenai")
     parser.add_argument("--batch_size", type=int, default=10)
     parser.add_argument("--max_retries", type=int, default=3)
-    parser.add_argument("--max_tokens", type=int, default=1500)
+    parser.add_argument("--max_tokens", type=int, default=3000)
     parser.add_argument("--temperature", type=float, default=0.01)
     parser.add_argument("--template_type", type=str, default="basic")
     parser.add_argument("--wait_time", type=float, default=1.0)
@@ -59,7 +62,8 @@ def main():
         evaluate(csv_path, dataset="hrm8k", verbose=True)
         return
 
-    all_subsets = ["GSM8K", "MATH", "OMNI_MATH", "MMMLU", "KSM"]
+    #all_subsets = ["GSM8K", "MATH", "OMNI_MATH", "MMMLU", "KSM"]
+    all_subsets = ["GSM8K", "MATH", "MMMLU", "KSM"]
     
     if args.subset:
         subsets_to_run = [args.subset] if args.subset in all_subsets else []
@@ -80,6 +84,13 @@ def main():
         logger.info(f"\n{'='*50}")
         logger.info(f"Processing subset: {subset}")
         
+        # Adjust max_tokens based on subset complexity
+        if subset in ["OMNI_MATH", "KSM"]:
+            model_config["max_tokens"] = max(args.max_tokens, 12000)
+            logger.info(f"⚠️  {subset} detected: max_tokens increased to {model_config['max_tokens']}")
+        else:
+            model_config["max_tokens"] = args.max_tokens
+        
         dataset = load_dataset("HAERAE-HUB/HRM8K", subset, split="test")
         
         if args.is_debug:
@@ -93,14 +104,20 @@ def main():
             "index": i
         } for i, x in enumerate(dataset)]
 
-        responses = evaluator.process_batch(batch_data, None)
+        responses = evaluator.process_batch(batch_data, None, use_math_prompt=True)
         
         for r in responses:
             pred_answer = extract_answer(r["response"])
             r["pred"] = pred_answer
-            if pred_answer is not None and r["answer"] is not None:
+            
+            # Parse ground truth answer if it's a string with Greek letters or fractions
+            gt_answer = r["answer"]
+            if isinstance(gt_answer, str):
+                gt_answer = extract_answer(gt_answer)
+            
+            if pred_answer is not None and gt_answer is not None:
                 try:
-                    r["correct"] = abs(float(pred_answer) - float(r["answer"])) < 1e-5
+                    r["correct"] = abs(float(pred_answer) - float(gt_answer)) < 1e-5
                 except (ValueError, TypeError):
                     r["correct"] = False
             else:

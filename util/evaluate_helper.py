@@ -13,7 +13,7 @@ def convert_to_pascal_case(category):
     # KMMLU 카테고리는 이미 올바른 형식이므로 변환하지 않음
     if "-" in category:
         return category
-    return "-".join(word.capitalize() for word in category.split("_"))
+    return "-".join(word.capitalize() if word != "and" else "and" for word in category.split("_"))
 
 
 def extract_single_alphabet_answer(row):
@@ -32,7 +32,7 @@ def extract_single_alphabet_answer(row):
 
 def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
 
-    valid_datasets = ["CLIcK", "KMMLU", "KMMLU-HARD", "HAERAE", "hrm8k"]
+    valid_datasets = ["CLIcK", "KMMLU", "KMMLU-HARD", "HAERAE", "hrm8k", "KoBALT", "KorMedMCQA"]
     assert (
         dataset in valid_datasets
     ), f"Invalid 'dataset' value. Please choose from {valid_datasets}."
@@ -93,7 +93,24 @@ def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
     
     overall_acc = round(result["correct"].mean() * 100, 2)
 
-    if dataset in ["HAERAE", "hrm8k"]:
+    if dataset == "KoBALT":
+        # Level별 정확도
+        level_names = {1: "Easy", 2: "Moderate", 3: "Hard"}
+        result["level_name"] = result["level"].map(level_names)
+        
+        category_acc = (
+            result.groupby(["level", "level_name"])
+            .agg(
+                accuracy=("correct", "mean"),
+            )
+            .reset_index()
+            .sort_values("level")
+        )
+        category_acc = category_acc[["level_name", "accuracy"]]
+        category_acc.columns = ["category", "accuracy"]
+        category_acc["accuracy"] = category_acc["accuracy"].multiply(100).round(2)
+        supercategory_acc = None
+    elif dataset in ["HAERAE", "hrm8k", "KorMedMCQA"]:
         category_acc = (
             result.groupby(["category"])
             .agg(

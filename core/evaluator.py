@@ -66,11 +66,36 @@ class BenchmarkEvaluator:
                 logger.warning(f"Error reading categories: {e}")
         return []
     
-    def process_batch(self, batch_data, parser_class):
-        """배치 처리"""
+    def process_batch(self, batch_data, parser_class, num_choices=5, use_math_prompt=False):
+        """배치 처리
+        
+        Args:
+            batch_data: 처리할 데이터 배치
+            parser_class: 파서 클래스
+            num_choices: 선택지 개수 (기본값: 5)
+            use_math_prompt: 수학 문제용 프롬프트 사용 여부 (기본값: False)
+        """
         from tqdm import tqdm
         
-        prompt_template, system_prompt = get_prompt_template(self.template_type, self.model_config['provider'])
+        prompt_template, system_prompt = get_prompt_template(
+            self.template_type, 
+            self.model_config['provider'],
+            num_choices=num_choices,
+            use_math_prompt=use_math_prompt
+        )
+        
+        # Debug: 첫 번째 샘플의 프롬프트 로깅
+        if batch_data and os.getenv("IS_DEBUG", "false").lower() == "true":
+            with open("debug_qna.log", "a", encoding="utf-8") as f:
+                f.write("\n" + "="*80 + "\n")
+                f.write("SYSTEM PROMPT:\n")
+                f.write("-"*80 + "\n")
+                f.write(system_prompt + "\n")
+                f.write("-"*80 + "\n")
+                f.write("QUESTION PROMPT (Sample):\n")
+                f.write("-"*80 + "\n")
+                f.write(batch_data[0]["question"] + "\n")
+                f.write("="*80 + "\n\n")
         
         llm, _ = get_llm_client(
             self.model_config['provider'],
@@ -94,7 +119,32 @@ class BenchmarkEvaluator:
                 
                 for retry in range(max_retries + 1):
                     try:
+                        # Debug: Parser 없이 raw LLM 응답 먼저 확인
+                        if os.getenv("IS_DEBUG", "false").lower() == "true" and parser_class:
+                            raw_chain = prompt_template | llm
+                            raw_preds = raw_chain.batch(mini_batch, {"max_concurrency": batch_size})
+                            with open("debug_qna.log", "a", encoding="utf-8") as f:
+                                for qna, raw_pred in zip(mini_batch, raw_preds):
+                                    f.write("\n" + "="*80 + "\n")
+                                    f.write(f"RAW LLM OUTPUT (before parser):\n")
+                                    f.write(f"Type: {type(raw_pred)}\n")
+                                    f.write(f"Content: {raw_pred}\n")
+                                    if hasattr(raw_pred, 'content'):
+                                        f.write(f"Content attr: {repr(raw_pred.content)}\n")
+                                    f.write("="*80 + "\n\n")
+                        
                         preds = chain.batch(mini_batch, {"max_concurrency": batch_size})
+                        
+                        # Debug: LLM 응답 로깅
+                        if os.getenv("IS_DEBUG", "false").lower() == "true":
+                            with open("debug_qna.log", "a", encoding="utf-8") as f:
+                                for qna, pred in zip(mini_batch, preds):
+                                    f.write("\n" + "="*80 + "\n")
+                                    f.write(f"QUESTION: {qna.get('question', 'N/A')}\n")
+                                    f.write("-"*80 + "\n")
+                                    f.write(f"LLM RESPONSE: {pred}\n")
+                                    f.write("="*80 + "\n\n")
+                        
                         results.extend([self._make_result(qna, pred) for qna, pred in zip(mini_batch, preds)])
                         pbar.update(len(mini_batch))
                         break
@@ -298,6 +348,30 @@ class HRM8KEvaluator(BenchmarkEvaluator):
         return {
             "subset": qna["subset"],
             "index": qna.get("index"),
+            "answer": qna["answer"],
+            "pred": "FAILED",
+            "response": error,
+        }
+
+
+class KoBALTEvaluator(BenchmarkEvaluator):
+    """KoBALT 벤치마크 평가"""
+    
+    def _make_result(self, qna, pred):
+        return {
+            "category": qna.get("category"),
+            "subcategory": qna.get("subcategory"),
+            "level": qna.get("level"),
+            "answer": qna["answer"],
+            "pred": pred[0],
+            "response": pred[1],
+        }
+    
+    def _make_failed(self, qna, error):
+        return {
+            "category": qna.get("category"),
+            "subcategory": qna.get("subcategory"),
+            "level": qna.get("level"),
             "answer": qna["answer"],
             "pred": "FAILED",
             "response": error,

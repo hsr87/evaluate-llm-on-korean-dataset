@@ -10,6 +10,7 @@ __pycache__
 .ipynb_checkpoints/
 test.ipynb
 debug.log
+debug_qna.log
 run_all_gpts.sh
 
 evals/
@@ -18,3 +19,5 @@ CLIcK/
 .env_*
 .vscode/
 uv.lock
+
+verify_omni_math.py

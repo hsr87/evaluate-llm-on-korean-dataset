@@ -1,45 +1,70 @@
 """Question prompt templates for benchmarks"""
 
-TYPE_1 = """주어진 맥락을 천천히 읽고, 질문에 대한 적절한 정답을 A, B, C, D 중에 골라 알파벳 하나로 답하시오.
-(Read the given context, and choose the correct answer to the question from options A, B, C, or D. Respond with a single alphabet.)
 
-맥락 (Context): {CONTEXT}
-질문 (Question): {QUESTION}
-보기 (Options):
-A: {A}, B: {B}, C: {C}, D: {D}
-정답 (Answer): """
+def _get_options_string(num_choices):
+    """Generate options string (e.g., 'A, B, C, D' or 'A, B, C, D, E')"""
+    letters = [chr(65 + i) for i in range(num_choices)]
+    return ', '.join(letters[:-1]) + f', {letters[-1]}' if num_choices > 1 else letters[0]
 
-TYPE_2 = """주어진 질문을 천천히 읽고, 적절한 정답을 A, B, C, D 중에 골라 알파벳 하나로 답하시오.
-(Read the given Question, and choose the correct answer from options A, B, C, or D. Respond with a single alphabet.)
 
-질문 (Question): {QUESTION}
-보기 (Options):
-A: {A}, B: {B}, C: {C}, D: {D}
-정답 (Answer): """
+def _get_options_format(num_choices):
+    """Generate options format string (e.g., 'A: {A}, B: {B}, C: {C}, D: {D}')"""
+    return ', '.join([f'{chr(65 + i)}: {{{chr(65 + i)}}}' for i in range(num_choices)])
 
-TYPE_3 = """주어진 맥락을 천천히 읽고, 질문에 대한 적절한 정답을 A, B, C, D, E 중에 골라 알파벳 하나로 답하시오.
-(Read the given context, and choose the correct answer to the question from options A, B, C, D, or E. Respond with a single alphabet.)
 
-맥락 (Context): {CONTEXT}
-질문 (Question): {QUESTION}
-보기 (Options):
-A: {A}, B: {B}, C: {C}, D: {D}, E: {E}
-정답 (Answer): """
+def get_question_template(num_choices=5, with_context=False, few_shot=False):
+    """Generate question template dynamically
+    
+    Args:
+        num_choices: Number of answer choices (4, 5, 10, etc.)
+        with_context: Whether to include context/paragraph
+        few_shot: Whether to include few-shot examples
+    """
+    options_str = _get_options_string(num_choices)
+    options_format = _get_options_format(num_choices)
+    
+    if few_shot:
+        return f"""<instruction>
+You are taking a multiple choice exam. Select the single correct answer from the choices provided and respond with ONLY the letter ({options_str}). Do not include any explanation or additional text.
+</instruction>
 
-TYPE_4 = """주어진 질문을 천천히 읽고, 적절한 정답을 A, B, C, D, E 중에 골라 알파벳 하나로 답하시오.
-(Read the given Question, and choose the correct answer from options A, B, C, D, or E. Respond with a single alphabet.)
+<examples>
+{{FEW_SHOTS}}
+</examples>
 
-질문 (Question): {QUESTION}
-보기 (Options):
-A: {A}, B: {B}, C: {C}, D: {D}, E: {E}
-정답 (Answer): """
+<question>{{QUESTION}}</question>
 
-TYPE_MMLU_FEW_SHOT = """주어진 질문을 천천히 읽고, 적절한 정답을 A, B, C, D 중에 골라 알파벳 하나로 답하시오.
-(Read the given Question, and choose the correct answer from options A, B, C, or D. Respond with a single alphabet.)
+<choices>
+{options_format}
+</choices>
 
-{FEW_SHOTS}
+<answer>"""
+    
+    if with_context:
+        return f"""<instruction>
+You are taking a multiple choice exam. Read the context carefully, then select the single correct answer from the choices provided and respond with ONLY the letter ({options_str}). Do not include any explanation or additional text.
+</instruction>
 
-질문 (Question): {QUESTION}
-보기 (Options):
-A: {A}, B: {B}, C: {C}, D: {D}
-정답 (Answer): """
+<context>
+{{CONTEXT}}
+</context>
+
+<question>{{QUESTION}}</question>
+
+<choices>
+{options_format}
+</choices>
+
+<answer>"""
+    
+    return f"""<instruction>
+You are taking a multiple choice exam. Select the single correct answer from the choices provided and respond with ONLY the letter ({options_str}). Do not include any explanation or additional text.
+</instruction>
+
+<question>{{QUESTION}}</question>
+
+<choices>
+{options_format}
+</choices>
+
+<answer>"""

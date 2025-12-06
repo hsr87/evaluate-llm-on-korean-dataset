@@ -11,7 +11,7 @@ from tqdm import tqdm
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config.question_templates import TYPE_2, TYPE_MMLU_FEW_SHOT
+from config.question_templates import get_question_template
 from core.evaluator import KMMLUEvaluator
 from core.logger import logger
 from util.custom_parser import MultipleChoicesFourParser
@@ -31,17 +31,17 @@ def generate_few_shots_prompt(data):
 
 def get_prompt(x, few_shots=None):
     """프롬프트 생성"""
-    if few_shots is None:
-        return TYPE_2.format(
-            QUESTION=x["question"],
-            A=x["A"], B=x["B"], C=x["C"], D=x["D"]
-        )
-    else:
-        return TYPE_MMLU_FEW_SHOT.format(
-            FEW_SHOTS=few_shots,
-            QUESTION=x["question"],
-            A=x["A"], B=x["B"], C=x["C"], D=x["D"]
-        )
+    template = get_question_template(num_choices=4, with_context=False, few_shot=bool(few_shots))
+    
+    format_dict = {
+        "QUESTION": x["question"],
+        "A": x["A"], "B": x["B"], "C": x["C"], "D": x["D"]
+    }
+    
+    if few_shots:
+        format_dict["FEW_SHOTS"] = few_shots
+    
+    return template.format(**format_dict)
 
 
 def get_answer(x):
@@ -102,7 +102,7 @@ def process_category(category_info):
         
         # 평가 실행
         evaluator = KMMLUEvaluator(model_config, template_type)
-        results = evaluator.process_batch(batch_data, MultipleChoicesFourParser)
+        results = evaluator.process_batch(batch_data, MultipleChoicesFourParser, num_choices=4)
         
         # 결과 저장
         evaluator.save_results(results, csv_path)

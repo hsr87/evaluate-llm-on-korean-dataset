@@ -1,0 +1,3113 @@
+category,answer,pred,response
+History,B,B,"### ANSWER
+B"
+History,E,E,"### ANSWER
+E"
+History,E,E,"### ANSWER
+E"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,D,D,"### ANSWER
+D"
+History,B,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,E,E,"### ANSWER
+E"
+History,D,D,"### ANSWER  
+D"
+History,E,E,"### ANSWER
+E"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,E,E,"### ANSWER
+E"
+History,B,B,"### ANSWER
+B"
+History,E,E,"### ANSWER
+E"
+History,D,C,"### ANSWER
+C"
+History,D,A,"### ANSWER
+A"
+History,E,E,"### ANSWER  
+E"
+History,B,B,"### ANSWER
+B"
+History,A,A,"### ANSWER
+A"
+History,D,A,"### ANSWER
+A"
+History,B,B,"### ANSWER
+B"
+History,B,B,"### ANSWER
+B"
+History,C,C,"### ANSWER
+C"
+History,E,E,"### ANSWER  
+E"
+History,C,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,B,B,"### ANSWER
+B"
+History,A,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,C,B,"### ANSWER  
+B"
+History,A,D,"### ANSWER
+D"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,E,D,"### ANSWER
+D"
+History,B,B,"### ANSWER
+B"
+History,C,D,"### ANSWER
+D"
+History,A,E,"### ANSWER
+E"
+History,D,D,"### ANSWER
+D"
+History,B,B,"### ANSWER  
+B"
+History,D,A,"### ANSWER  
+A"
+History,B,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,B,B,"### ANSWER
+B"
+History,C,A,"### ANSWER
+A"
+History,B,B,"### ANSWER
+B"
+History,B,A,"### ANSWER
+A"
+History,C,C,"### ANSWER
+C"
+History,E,D,"### ANSWER
+D"
+History,A,A,"### ANSWER
+A"
+History,E,E,"### ANSWER  
+E"
+History,B,B,"### ANSWER
+B"
+History,E,E,"### ANSWER
+E"
+History,D,D,"### ANSWER
+D"
+History,D,D,"### ANSWER
+D"
+History,D,D,"### ANSWER
+D"
+History,D,D,"### ANSWER  
+D"
+History,C,C,"### ANSWER
+C"
+History,D,C,"### ANSWER
+C"
+History,B,B,"### ANSWER
+B"
+History,B,B,"### ANSWER
+B"
+History,C,B,"### ANSWER  
+B"
+History,A,A,"### ANSWER
+A"
+History,B,B,"### ANSWER  
+B"
+History,B,E,"### ANSWER
+E"
+History,D,D,"### ANSWER
+D"
+History,E,A,"### ANSWER
+A"
+History,B,B,"### ANSWER  
+B"
+History,B,B,"### ANSWER
+B"
+History,A,A,"### ANSWER
+A"
+History,D,D,"### ANSWER  
+D"
+History,E,E,"### ANSWER
+E"
+History,E,E,"### ANSWER
+E"
+History,D,D,"### ANSWER
+D"
+History,B,C,"### ANSWER
+C"
+History,E,E,"### ANSWER
+E"
+History,C,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,D,D,"### ANSWER  
+D"
+History,D,E,"### ANSWER
+E"
+History,E,E,"### ANSWER
+E"
+History,A,A,"### ANSWER
+A"
+History,D,D,"### ANSWER  
+D"
+History,A,A,"### ANSWER
+A"
+History,B,A,"### ANSWER
+A"
+History,D,D,"### ANSWER
+D"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,C,C,"### ANSWER
+C"
+History,E,E,"### ANSWER
+E"
+History,C,C,"### ANSWER
+C"
+History,B,B,"### ANSWER
+B"
+History,D,D,"### ANSWER
+D"
+History,D,D,"### ANSWER
+D"
+History,C,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,C,C,"### ANSWER
+C"
+History,B,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,A,A,"### ANSWER
+A"
+History,C,C,"### ANSWER
+C"
+History,B,B,"### ANSWER
+B"
+History,E,E,"### ANSWER  
+E"
+History,E,E,"### ANSWER  
+E"
+History,C,C,"### ANSWER
+C"
+History,B,B,"### ANSWER  
+B"
+History,A,A,"### ANSWER
+A"
+History,D,D,"### ANSWER
+D"
+History,B,B,"### ANSWER
+B"
+History,B,B,"### ANSWER
+B"
+History,B,B,"### ANSWER
+B"
+History,A,E,"### ANSWER
+E"
+History,C,C,"### ANSWER  
+C"
+History,C,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,B,D,"### ANSWER
+D"
+History,E,B,"### ANSWER
+B"
+History,B,B,"### ANSWER  
+B"
+History,A,A,"### ANSWER
+A"
+History,E,C,"### ANSWER
+C"
+History,B,B,"### ANSWER
+B"
+History,D,D,"### ANSWER
+D"
+History,E,E,"### ANSWER
+E"
+History,D,D,"### ANSWER  
+D"
+History,C,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,A,D,"### ANSWER
+D"
+History,A,D,"### ANSWER
+D"
+History,A,A,"### ANSWER
+A"
+History,B,B,"### ANSWER
+B"
+History,C,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,D,A,"### ANSWER
+A"
+History,D,D,"### ANSWER
+D"
+History,C,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,A,A,"### ANSWER
+A"
+History,E,C,"### ANSWER
+C"
+History,D,B,"### ANSWER
+B"
+History,B,B,"### ANSWER
+B"
+History,D,B,"### ANSWER
+B"
+History,B,B,"### ANSWER
+B"
+History,E,E,"### ANSWER  
+E"
+History,A,C,"### ANSWER
+C"
+History,A,A,"### ANSWER
+A"
+History,E,B,"### ANSWER
+B"
+History,E,E,"### ANSWER
+E"
+History,D,D,"### ANSWER  
+D"
+History,B,B,"### ANSWER
+B"
+History,E,E,"### ANSWER
+E"
+History,A,A,"### ANSWER
+A"
+History,D,D,"### ANSWER
+D"
+History,E,A,"### ANSWER
+A"
+History,E,E,"### ANSWER
+E"
+History,D,C,"### ANSWER
+C"
+History,D,D,"### ANSWER
+D"
+History,D,A,"### ANSWER
+A"
+History,B,A,"### ANSWER
+A"
+History,A,A,"### ANSWER
+A"
+History,B,C,"### ANSWER
+C"
+History,E,E,"### ANSWER
+E"
+History,D,D,"### ANSWER
+D"
+History,D,D,"### ANSWER
+D"
+History,C,C,"### ANSWER
+C"
+History,E,E,"### ANSWER
+E"
+History,E,B,"### ANSWER
+B"
+History,D,C,"### ANSWER
+C"
+History,B,B,"### ANSWER
+B"
+History,D,D,"### ANSWER  
+D"
+History,C,C,"### ANSWER  
+C"
+History,C,C,"### ANSWER
+C"
+History,B,E,"### ANSWER
+E"
+History,D,B,"### ANSWER  
+B"
+History,C,C,"### ANSWER
+C"
+History,D,D,"### ANSWER  
+D"
+History,E,E,"### ANSWER  
+E"
+History,C,C,"### ANSWER
+C"
+History,E,E,"### ANSWER
+E"
+History,A,B,"### ANSWER
+B"
+History,E,B,"### ANSWER
+B"
+History,D,D,"### ANSWER
+D"
+History,E,D,"### ANSWER
+D"
+General Knowledge,B,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,E,E,"### ANSWER  
+E"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,D,D,"D
+
+### ANSWER
+D"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,A,E,"### ANSWER
+E"
+General Knowledge,C,C,"### ANSWER  
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,D,B,"### ANSWER
+B"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,B,B,"B
+
+### ANSWER
+B"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,B,A,"### ANSWER
+A"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,C,E,"### ANSWER
+E"
+General Knowledge,A,E,"### ANSWER
+E"
+General Knowledge,A,,[EMPTY_RESPONSE]
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,A,B,"### ANSWER
+B"
+General Knowledge,C,B,"### ANSWER
+B"
+General Knowledge,B,E,"### ANSWER
+E"
+General Knowledge,A,A,"A
+
+### ANSWER
+A"
+General Knowledge,A,E,"E
+
+### ANSWER
+E"
+General Knowledge,C,B,"### ANSWER
+B"
+General Knowledge,E,D,"### ANSWER
+D"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,D,D,"### ANSWER  
+D"
+General Knowledge,E,D,"### ANSWER
+D"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,A,"### ANSWER
+A"
+General Knowledge,D,D,"### ANSWER  
+D"
+General Knowledge,B,B,"### ANSWER
+B
+
+**Reasoning:**  
+- **(ㄴ) 개마고원** (Gaema Plateau) is widely recognized as a volcanic plateau formed by basalt lava flows, meaning lava plateaus are developed in parts of it. This makes option **B** correct.  
+- Other options are incorrect:  
+  - **A** misstates (ㄱ)’s role as a boundary (마천령산맥 does"
+General Knowledge,C,E,"### ANSWER
+E"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,D,E,"### ANSWER
+E"
+General Knowledge,E,D,"### ANSWER
+D"
+General Knowledge,A,C,"### ANSWER
+C"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,B,D,"### ANSWER
+D"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,B,A,"### ANSWER
+A"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,A,C,"### ANSWER
+C"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,D,"### ANSWER
+D"
+General Knowledge,E,A,"### ANSWER
+A"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,D,,[EMPTY_RESPONSE]
+General Knowledge,B,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,E,"### ANSWER
+E"
+General Knowledge,C,D,"### ANSWER
+D"
+General Knowledge,C,A,"### ANSWER
+A"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,D,"### ANSWER
+D"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,A,D,"### ANSWER
+D"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,B,A,"### ANSWER
+A"
+General Knowledge,C,C,"C
+
+### ANSWER
+C"
+General Knowledge,D,E,"### ANSWER
+E"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,E,"E
+
+### ANSWER
+E"
+General Knowledge,C,A,"### ANSWER
+A"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,D,"### ANSWER
+D"
+General Knowledge,B,A,"### ANSWER
+A"
+General Knowledge,C,B,"### ANSWER
+B"
+General Knowledge,D,E,"### ANSWER
+E"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,D,"### ANSWER
+D"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,B,"B
+### ANSWER
+B"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,D,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,D,E,"### ANSWER
+E"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,C,"### ANSWER
+C"
+General Knowledge,E,B,"B
+
+### ANSWER
+B"
+General Knowledge,D,,[EMPTY_RESPONSE]
+General Knowledge,A,,[EMPTY_RESPONSE]
+General Knowledge,A,E,"### ANSWER
+E"
+General Knowledge,C,B,"### ANSWER
+B"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,D,B,"### ANSWER
+B"
+General Knowledge,C,,[EMPTY_RESPONSE]
+General Knowledge,B,,[EMPTY_RESPONSE]
+General Knowledge,A,,[EMPTY_RESPONSE]
+General Knowledge,E,C,"### ANSWER
+C"
+General Knowledge,D,B,"### ANSWER
+B"
+General Knowledge,B,,[EMPTY_RESPONSE]
+General Knowledge,C,C,"C
+### ANSWER
+C"
+General Knowledge,A,B,"### ANSWER
+B"
+General Knowledge,E,C,"C
+
+### ANSWER
+C"
+General Knowledge,D,C,"### ANSWER
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,D,D,D
+General Knowledge,C,E,"E
+### ANSWER
+E"
+General Knowledge,D,B,"### ANSWER
+B"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,E,A,"### ANSWER
+A"
+General Knowledge,C,E,"E
+### ANSWER
+E"
+General Knowledge,B,B,"B
+
+### ANSWER
+B"
+General Knowledge,A,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,E,C,"C
+
+### ANSWER
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,C,B,"### ANSWER
+B"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,C,E,"### ANSWER
+E"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,A,,[EMPTY_RESPONSE]
+General Knowledge,D,E,"### ANSWER
+E"
+General Knowledge,C,,[EMPTY_RESPONSE]
+General Knowledge,D,,[EMPTY_RESPONSE]
+General Knowledge,B,C,"### ANSWER
+C"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,A,"### ANSWER
+A"
+General Knowledge,D,B,"### ANSWER
+B"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,E,B,"### ANSWER
+B"
+General Knowledge,B,B,"B
+
+### ANSWER
+B"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,A,,[EMPTY_RESPONSE]
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,E,C,"### ANSWER
+C"
+General Knowledge,A,B,"### ANSWER
+B"
+General Knowledge,C,B,"### ANSWER
+B"
+General Knowledge,C,A,"### ANSWER
+A"
+General Knowledge,D,C,"C
+
+### ANSWER
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,A,B,"### ANSWER
+B"
+General Knowledge,D,D,"### ANSWER
+D"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,E,E,"### ANSWER
+E"
+General Knowledge,A,A,"### ANSWER
+A"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,C,C,"### ANSWER
+C"
+General Knowledge,B,B,"### ANSWER
+B"
+General Knowledge,C,C,"### ANSWER
+C"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,A,"### ANSWER
+A"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,E,,[EMPTY_RESPONSE]
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,D,D,"### ANSWER  
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,B,"### ANSWER
+B"
+Loan Words,B,D,"### ANSWER
+D"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,C,E,"### ANSWER
+E"
+Loan Words,D,,[EMPTY_RESPONSE]
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,D,,[EMPTY_RESPONSE]
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,B,"### ANSWER
+B"
+Loan Words,D,C,"### ANSWER
+C"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,B,C,"### ANSWER
+C"
+Loan Words,D,A,"### ANSWER
+A"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,D,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,B,"### ANSWER
+B"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,B,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,A,B,"### ANSWER
+B"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,,[EMPTY_RESPONSE]
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,D,"### ANSWER
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,B,"### ANSWER
+B"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,B,"### ANSWER
+B"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,C,"### ANSWER
+C"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,A,E,"### ANSWER
+E"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,A,C,"### ANSWER
+C"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,D,"### ANSWER
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,B,"### ANSWER
+B"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,,[EMPTY_RESPONSE]
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,E,B,"### ANSWER
+B"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,C,A,"### ANSWER
+A"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,E,A,"### ANSWER
+A"
+Loan Words,D,E,"### ANSWER
+E"
+Loan Words,B,D,"### ANSWER
+D"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,C,"### ANSWER
+C"
+Loan Words,E,E,"### ANSWER  
+E"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,C,C,"### ANSWER
+C"
+Loan Words,B,B,"### ANSWER
+B"
+Loan Words,D,A,"### ANSWER
+A"
+Loan Words,A,,[EMPTY_RESPONSE]
+Loan Words,D,A,"### ANSWER
+A"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,E,E,"### ANSWER
+E"
+Loan Words,D,B,"### ANSWER
+B"
+Loan Words,A,A,"### ANSWER
+A"
+Loan Words,D,D,"### ANSWER
+D"
+Loan Words,A,C,"### ANSWER
+C"
+Loan Words,C,C,"### ANSWER
+C"
+Standard Nomenclature,A,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,D,C,"### ANSWER
+C"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,C,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,E,A,"### ANSWER
+A"
+Standard Nomenclature,E,A,"### ANSWER
+A"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,E,E,"### ANSWER  
+E"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,C,"### ANSWER
+C"
+Standard Nomenclature,A,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,D,D,"### ANSWER  
+D"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,A,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,B,C,"### ANSWER
+C"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,D,"### ANSWER
+D"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,D,D,"### ANSWER  
+D"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,E,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,C,"### ANSWER
+C"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,B,B,"The correct standard term for ""추첨"" in Korean is ""제비뽑기"", which directly translates to drawing lots or randomization using slips of paper. Among the options, B matches this term precisely, while others are either informal, incorrect, or unrelated terms.
+
+### ANSWER
+B"
+Standard Nomenclature,B,E,"### ANSWER
+E"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,D,E,"### ANSWER
+E"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,D,"### ANSWER
+D"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,E,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER  
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,A,D,"### ANSWER
+D"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,D,B,"### ANSWER
+B"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,C,B,"### ANSWER
+B"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,C,B,"### ANSWER
+B"
+Standard Nomenclature,C,B,"### ANSWER
+B"
+Standard Nomenclature,C,C,"### ANSWER
+C"
+Standard Nomenclature,C,E,"### ANSWER
+E"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,E,C,"### ANSWER
+C"
+Standard Nomenclature,B,D,"### ANSWER
+D"
+Standard Nomenclature,E,C,"### ANSWER
+C"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Standard Nomenclature,D,D,"### ANSWER
+D
+
+**Reasoning:** ""부상하다"" 의미는 계급이나 지위가 상승하는 것을 나타냅니다. 선택지 중에서 ""떠오르다""는 ""상승하다"" 또는 ""높아지다""의 의미로, 부상하는 상황에 적절히 부합합니다. 다른 선택지는 의미가 일치하지 않습니다."
+Standard Nomenclature,E,A,"### ANSWER
+A"
+Standard Nomenclature,D,A,"### ANSWER
+A"
+Standard Nomenclature,E,D,"### ANSWER
+D"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,D,D,"### ANSWER
+D"
+Standard Nomenclature,A,A,"### ANSWER
+A"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,B,B,"### ANSWER
+B"
+Standard Nomenclature,E,E,"### ANSWER
+E"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,E,"### ANSWER
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,E,"### ANSWER
+E"
+Rare Words,E,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,C,"### ANSWER
+C"
+Rare Words,A,D,"### ANSWER
+D"
+Rare Words,C,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,B,"### ANSWER
+B"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,D,"### ANSWER
+D"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,A,"### ANSWER
+A"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,A,"### ANSWER
+A"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"C
+
+### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,B,"### ANSWER
+B"
+Rare Words,C,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,,[EMPTY_RESPONSE]
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,A,,[EMPTY_RESPONSE]
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,B,"### ANSWER
+B"
+Rare Words,A,,[EMPTY_RESPONSE]
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,A,"### ANSWER
+A"
+Rare Words,C,D,"### ANSWER
+D"
+Rare Words,C,D,"### ANSWER
+D"
+Rare Words,C,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,D,"### ANSWER
+D"
+Rare Words,A,D,"### ANSWER  
+D"
+Rare Words,C,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,C,"### ANSWER
+C"
+Rare Words,B,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,B,"### ANSWER
+B"
+Rare Words,E,A,"### ANSWER
+A"
+Rare Words,D,,[EMPTY_RESPONSE]
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,E,"### ANSWER
+E"
+Rare Words,B,A,"### ANSWER  
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER  
+B"
+Rare Words,E,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER  
+B"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,A,"### ANSWER
+A"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,A,D,"### ANSWER
+D"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,D,"### ANSWER
+D"
+Rare Words,B,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,A,,[EMPTY_RESPONSE]
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,A,"### ANSWER
+A"
+Rare Words,B,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,B,"### ANSWER
+B"
+Rare Words,C,B,"### ANSWER
+B"
+Rare Words,D,E,"### ANSWER
+E"
+Rare Words,D,E,"### ANSWER  
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER  
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER  
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,D,"### ANSWER
+D"
+Rare Words,C,A,"### ANSWER  
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER  
+A"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,B,D,"### ANSWER  
+D"
+Rare Words,D,,[EMPTY_RESPONSE]
+Rare Words,A,B,"### ANSWER
+B"
+Rare Words,A,B,"### ANSWER
+B"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,B,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,A,"고유색은 물체의 본래 색깔을 나타내는 단어로, 다른 선택지는 관련이 없다.
+
+### ANSWER
+A"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER  
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,A,"### ANSWER
+A"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,A,"### ANSWER
+A"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,A,"### ANSWER
+A"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,E,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER  
+B"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,B,"### ANSWER  
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,B,"### ANSWER
+B"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,C,"### ANSWER
+C"
+Rare Words,E,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,B,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER  
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,A,B,"### ANSWER
+B"
+Rare Words,D,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,A,"### ANSWER
+A"
+Rare Words,B,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,B,"### ANSWER
+B"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,C,B,"### ANSWER
+B"
+Rare Words,C,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,A,"### ANSWER
+A"
+Rare Words,B,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,A,"### ANSWER
+A"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,E,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,,[EMPTY_RESPONSE]
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,D,"### ANSWER
+D"
+Rare Words,D,A,"### ANSWER
+A"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,A,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER  
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,A,A,"### ANSWER  
+A"
+Rare Words,C,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,A,"### ANSWER
+A"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER  
+E"
+Rare Words,C,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,D,D,"### ANSWER
+D"
+Rare Words,E,D,"### ANSWER
+D"
+Rare Words,B,C,"### ANSWER
+C"
+Rare Words,B,B,"### ANSWER
+B"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,A,E,"### ANSWER  
+E"
+Rare Words,E,E,"### ANSWER
+E"
+Rare Words,C,D,"### ANSWER
+D"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,E,"### ANSWER
+E"
+Rare Words,C,C,"### ANSWER
+C"
+Rare Words,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"A
+
+### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,E,"### ANSWER
+E"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"D
+
+### ANSWER
+D"
+Reading Comprehension,B,E,"E
+###"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,C,C,"C  
+### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,B,,[EMPTY_RESPONSE]
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,B,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,C,"### ANSWER
+C"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,C,"### ANSWER
+C"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,E,"### ANSWER
+E"
+Reading Comprehension,B,,[EMPTY_RESPONSE]
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,D
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,A,"### ANSWER
+A"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,A,"A
+
+### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,E,"E
+
+### ANSWER
+E"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,C,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,D,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,E,"### ANSWER
+E"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,C,C,"C
+### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,A,D,"### ANSWER
+D"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,E,E
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,C,B,"### ANSWER  
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,,[EMPTY_RESPONSE]
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,C,C,"C
+
+### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"D
+### ANSWER
+D"
+Reading Comprehension,D,C,"### ANSWER
+C"
+Reading Comprehension,B,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,D,"D
+
+### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,A,C,"### ANSWER
+C"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"C
+
+### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,B,"### ANSWER  
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"D
+
+### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,A,"### ANSWER  
+A"
+Reading Comprehension,D,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,E,E
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,A,"### ANSWER  
+A"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"D
+
+### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,A,"### ANSWER
+A"
+Reading Comprehension,D,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"The passage explains that presenting information in ㉡ format (diagram with on-screen text while reading it aloud) increases cognitive load by requiring students to process both visual and textual information simultaneously, exceeding the brain's capacity. In contrast, ㉠ (diagram with verbal explanation) allows easier processing. Choice C claims both have the same information capacity, which contradicts the core argument that ㉡ overloads cognitive capacity. Thus, C is the inappropriate statement.
+
+### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"D
+
+### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,A,"### ANSWER  
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,B,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,E,"E
+
+### ANSWER
+E"
+Reading Comprehension,A,A,"A
+### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,C,"### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,B,"### ANSWER
+B"
+Reading Comprehension,C,,[EMPTY_RESPONSE]
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"C
+
+### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,D,D,"D
+
+### ANSWER
+D"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"### ANSWER  
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,A,B,"### ANSWER
+B"
+Reading Comprehension,A,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,C,"### ANSWER  
+C"
+Reading Comprehension,D,,[EMPTY_RESPONSE]
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,A,"A
+
+### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,D,B,"### ANSWER
+B"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,B,B,"### ANSWER  
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,B,B,"B
+
+### ANSWER
+B"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,C,C,"### ANSWER  
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"
+Reading Comprehension,A,A,"### ANSWER
+A"
+Reading Comprehension,A,D,"### ANSWER
+D"
+Reading Comprehension,B,B,"### ANSWER
+B"
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,B,,[EMPTY_RESPONSE]
+Reading Comprehension,D,D,"### ANSWER
+D"
+Reading Comprehension,A,C,"### ANSWER
+C"
+Reading Comprehension,D,D,"### ANSWER  
+D"
+Reading Comprehension,C,C,"### ANSWER
+C"

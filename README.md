@@ -1,8 +1,8 @@
-# Korean language proficiency evaluation for LLM/SLM models using KMMLU, CLIcK, HAE-RAE, and HRM8K dataset
+# Korean language proficiency evaluation for LLM/SLM models using KMMLU, CLIcK, HAE-RAE, HRM8K, KoBALT, and KorMedMCQA dataset
 
 ## Overview
 
-With the continuous emergence of various LLM/SLM models, there is a need for robust evaluation datasets for non-English languages such as Korean. KMMLU (Korean Massive Multi-task Language Understanding), CLIcK (Cultural and Linguistic Intelligence in Korean), HAE_RAE_BENCH 1.0, and HRM8K fill this gap by providing rich, well-categorized datasets that focus on cultural, linguistic, and mathematical reasoning aspects, enabling detailed evaluation of Korean language models. This code performs benchmarking on these datasets with minimal time and effort.
+With the continuous emergence of various LLM/SLM models, there is a need for robust evaluation datasets for non-English languages such as Korean. KMMLU (Korean Massive Multi-task Language Understanding), CLIcK (Cultural and Linguistic Intelligence in Korean), HAE_RAE_BENCH 1.0, HRM8K, KoBALT, and KorMedMCQA fill this gap by providing rich, well-categorized datasets that focus on cultural, linguistic, mathematical reasoning, advanced linguistic phenomena, and medical knowledge, enabling detailed evaluation of Korean language models. This code performs benchmarking on these datasets with minimal time and effort.
 
 ### CLIcK (Cultural and Linguistic Intelligence in Korean)
 This dataset assesses Korean language proficiency in the subject areas of Korean Culture (History, Geography, Law, Politics, Society, Tradition, Economy, Pop culture) and Korean Language (Textual, Functional, Grammar). There are a total of 1,995 sample data in 11 categories. This dataset presents 4- or 5-choice multiple choice questions. Depending on the question, additional context is given.
@@ -29,14 +29,31 @@ HRM8K (HAE-RAE Math 8K) is a bilingual math reasoning benchmark for Korean and E
 
 - [Paper](https://arxiv.org/abs/2501.02448), [Hugging Face](https://huggingface.co/datasets/HAERAE-HUB/HRM8K)
 
+### KoBALT-700
+KoBALT (Korean Benchmark for Advanced Linguistic Tasks) is designed to evaluate LLMs on Korean linguistic phenomena. It consists of 700 expert-written multiple-choice questions (A-J, 10 choices) covering 24 fine-grained linguistic phenomena across 5 core domains: Syntax (300), Semantics (215), Pragmatics (81), Phonetics/Phonology (62), and Morphology (42). Questions are categorized into 3 difficulty levels (1: easy, 2: moderate, 3: hard).
+
+- [Paper](https://arxiv.org/abs/2505.16125), [GitHub](https://github.com/snunlp/KoBALT), [Hugging Face](https://huggingface.co/datasets/snunlp/KoBALT-700)
+
+### KorMedMCQA
+KorMedMCQA is a Korean Medical Multiple-Choice Question Answering benchmark derived from professional healthcare licensing examinations conducted in Korea between 2012 and 2024. The dataset contains 7,469 questions from examinations for doctor (2,489 questions), nurse (1,751 questions), pharmacist (1,817 questions), and dentist (1,412 questions), covering a wide range of medical disciplines. This dataset presents 5-choice multiple choice questions with answers numbered 1-5.
+
+- [Paper](https://arxiv.org/abs/2403.01469), [Hugging Face](https://huggingface.co/datasets/sean0042/KorMedMCQA)
+
 
 ## Implementation
 
-The code skeleton is based on https://github.com/corca-ai/evaluating-gpt-4o-on-CLIcK, but a lot of parts have changed. 
+The code skeleton is based on https://github.com/corca-ai/evaluating-gpt-4o-on-CLIcK, but significant improvements have been made:
 
-In particular, we modified the code to run on Azure OpenAI & Hugging Face and added logic for parallel processing, content filtering (400 error), and max request error (429 error) exception handling. 
+- **Multi-provider support**: Azure OpenAI, AWS Bedrock, OpenAI, Azure ML, Azure AI Foundry, and Hugging Face
+- **Parallel processing**: Efficient batch processing with configurable concurrency
+- **Robust error handling**: Content filtering (400 error) and rate limit (429 error) exception handling
+- **Advanced parsing**: Custom output parsers supporting reasoning models (e.g., Nova) with multiple response format detection
+- **Optimized prompts**: XML-tagged structured prompts with clear instructions for better LLM comprehension
+- **Comprehensive logging**: Debug mode with detailed request/response logging for troubleshooting 
 
 ## Results
+🔥 Dec 6, 2025: Added **HRM8K, KoBALT, and KorMedMCQA** benchmark datasets. Added **AWS Nova 2.0 Lite** (launched at re:Invent 2025) KMMLU benchmark results. Notably, Nova 2.0 Lite, despite being a lightweight model, outperforms GPT-4.1 on KMMLU with 67.02% accuracy (0-shot) compared to GPT-4.1's 65.49%.
+
 🔥 Nov 21, 2025: Added **GPT-5.1, GPT-5.1-chat** benchmark results. GPT-5.1 now supports reasoning_effort="none", while other 5.x models introduce a new "minimal" setting, transforming GPT-5.1 into a flexible spectrum rather than a single fixed-intelligence model. In our benchmark, GPT-5.1 (medium) achieved the highest KMMLU score with 83.65% accuracy (0-shot), whereas GPT-5.1 with the default none setting recorded a score that was approximately 20 percentage points lower, at 62.14% (0-shot).
 
 🔥 Aug 11, 2025: Added **GPT-5** family benchmark results. What is very impressive is the KMMLU score (0-shot 78.53% accuracy) and KMMLU-Hard score of GPT-5-mini (0-shot 61.68% accuracy). For KMMLU-Hard, many open-source models struggle to even surpass 30% accuracy.
@@ -62,7 +79,15 @@ The numbers in the table below are the average accuracy (%). For Azure OpenAI mo
 
 The prompt is the same as the CLIcK paper prompt. The experimental results may vary depending on the system prompt, context, and parameters. The experimental results below were given with max_tokens=512, temperature=0.01 without using few-shot, context, or system prompt.
 
+**Important for HRM8K (especially OMNI_MATH subset):**
+- OMNI_MATH problems are extremely complex and require significantly more tokens
+- Recommended settings: `--max_tokens 5000` or higher
+- For reasoning models (e.g., Nova with reasoning), consider using lower reasoning effort to reduce token consumption
+- If you encounter `stopReason: 'max_tokens'`, increase the token limit further
+
 Since most of them are ChatCompletion or instruction fine-tuned models, the variation may be large compared to the results of other group's experiments. However, our experimental results show that the trend follows similarly under the same experimental conditions. (e.g., GPT-4o: 70.57/GPT-4o-mini: 60.31 in Experimental Condition 1; GPT-4o: 67.76/GPT-4o-mini: 57.53 in Experimental Condition 2).
+
+- Nova 2.0 Lite: us.amazon.nova-2-lite-v1:0 model (reasoning mode: medium)
 
 - GPT-5.1 (medium): 2025-11-13 model version (reasoning_effort="medium")
 - GPT-5.1: 2025-11-13 model version (reasoning_effort="none" as default)
@@ -135,15 +160,15 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Proprietary models
 
-| category              |   GPT-5.1 (medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |
-|:----------------------|-------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|
-| General Knowledge     |              90.34 |     75.57 |          71.59 |        69.28 |        82.39 |        72.16 |     75.57 |          52.27 |          43.18 |    77.27 |         53.41 |
-| History               |              96.62 |     91.07 |          91.77 |        89.86 |        91.14 |        85.96 |     93.62 |          89.89 |          64.89 |    92.02 |         84.57 |
-| Loan Words            |              89.35 |     79.88 |          75.74 |        82.39 |        86.98 |        86.98 |     79.29 |          73.96 |          73.37 |    79.88 |         76.33 |
-| Rare Words            |              88.15 |     87.16 |          85.68 |        86.84 |        78.02 |        75.31 |     88.15 |          83.7  |          76.54 |    87.9  |         81.98 |
-| Reading Comprehension |              90.16 |     85.23 |          84.79 |        86.27 |        87.7  |        77.18 |     86.35 |          82.55 |          67.11 |    85.46 |         77.18 |
-| Standard Nomenclature |              94.77 |     83.66 |          84.97 |        85.62 |        83.66 |        81.05 |     87.58 |          78.43 |          73.86 |    88.89 |         75.82 |
-| **Overall**           |              90.65 |     84.52 |          83.22 |        84.32 |        84.35 |        78.6  |     85.83 |          78.93 |          67.95 |    85.7  |         76.4  |
+| category              |   Nova 2.0 Lite |   GPT-5.1 (medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |
+|:----------------------|----------------:|-------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|
+| General Knowledge     |           53.98 |              90.34 |     75.57 |          71.59 |        69.28 |        82.39 |        72.16 |     75.57 |          52.27 |          43.18 |    77.27 |         53.41 |
+| History               |           75    |              96.62 |     91.07 |          91.77 |        89.86 |        91.14 |        85.96 |     93.62 |          89.89 |          64.89 |    92.02 |         84.57 |
+| Loan Words            |           78.11 |              89.35 |     79.88 |          75.74 |        82.39 |        86.98 |        86.98 |     79.29 |          73.96 |          73.37 |    79.88 |         76.33 |
+| Rare Words            |           68.64 |              88.15 |     87.16 |          85.68 |        86.84 |        78.02 |        75.31 |     88.15 |          83.7  |          76.54 |    87.9  |         81.98 |
+| Reading Comprehension |           82.1  |              90.16 |     85.23 |          84.79 |        86.27 |        87.7  |        77.18 |     86.35 |          82.55 |          67.11 |    85.46 |         77.18 |
+| Standard Nomenclature |           81.05 |              94.77 |     83.66 |          84.97 |        85.62 |        83.66 |        81.05 |     87.58 |          78.43 |          73.86 |    88.89 |         75.82 |
+| **Overall**           |           73.93 |              90.65 |     84.52 |          83.22 |        84.32 |        84.35 |        78.6  |     85.83 |          78.93 |          67.95 |    85.7  |         76.4  |
 
 #### Open-Source models
 
@@ -161,62 +186,62 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Proprietary models
 ##### Accuracy by supercategory
-| supercategory   |   GPT-5.1 (medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |
-|:----------------|-------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|
-| Applied Science |              83.65 |     62.14 |          59.96 |        62.64 |        76.94 |        69.97 |     61.98 |          56.21 |          45.84 |    61.52 |         49.29 |
-| HUMSS           |              83.7  |     72.32 |          68.18 |        70.78 |        75.21 |        66.44 |     71.7  |          64.11 |          51.56 |    69.45 |         56.59 |
-| Other           |              80.96 |     66.2  |          63.15 |        65.81 |        73.12 |        65.3  |     65.29 |          58.26 |          47.93 |    63.79 |         52.35 |
-| STEM            |              86.18 |     66.62 |          64.04 |        67.27 |        79.32 |        73.33 |     66.56 |          61.17 |          50.78 |    65.16 |         54.74 |
-| **Overall**     |              83.73 |     65.9  |          63.11 |        65.92 |        76.47 |        69.28 |     65.49 |          59.26 |          48.57 |    64.26 |         52.63 |
+| supercategory   |   Nova 2.0 Lite |   GPT-5.1 (medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |
+|:----------------|----------------:|-------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|
+| Applied Science |           68.06 |              83.65 |     62.14 |          59.96 |        62.64 |        76.94 |        69.97 |     61.98 |          56.21 |          45.84 |    61.52 |         49.29 |
+| HUMSS           |           63.24 |              83.7  |     72.32 |          68.18 |        70.78 |        75.21 |        66.44 |     71.7  |          64.11 |          51.56 |    69.45 |         56.59 |
+| Other           |           63.32 |              80.96 |     66.2  |          63.15 |        65.81 |        73.12 |        65.3  |     65.29 |          58.26 |          47.93 |    63.79 |         52.35 |
+| STEM            |           70.9  |              86.18 |     66.62 |          64.04 |        67.27 |        79.32 |        73.33 |     66.56 |          61.17 |          50.78 |    65.16 |         54.74 |
+| **Overall**     |           67.02 |              83.73 |     65.9  |          63.11 |        65.92 |        76.47 |        69.28 |     65.49 |          59.26 |          48.57 |    64.26 |         52.63 |
 
 ##### Accuracy by category
-| supercategory   | category                                   |   GPT-5.1 (medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |
-|:----------------|:-------------------------------------------|-------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|
-| Applied Science | Aviation-Engineering-and-Maintenance       |              87.55 |     71.01 |          67.88 |        71.6  |        79.28 |        72.12 |     69.8  |          61.4  |          47.2  |    69.8  |         50.4  |
-| Applied Science | Electronics-Engineering                    |              94.2  |     72.7  |          70.6  |        74.8  |        91.6  |        87.3  |     73.3  |          69.6  |          58.1  |    73.2  |         64.5  |
-| Applied Science | Energy-Management                          |              82    |     54.06 |          51.47 |        54.18 |        72.96 |        66.46 |     53.7  |          45.4  |          36.3  |    50.3  |         39.5  |
-| Applied Science | Environmental-Science                      |              75.53 |     45.91 |          42.35 |        46.56 |        70.23 |        61.96 |     47.8  |          41.9  |          35.8  |    45.82 |         36.5  |
-| Applied Science | Gas-Technology-and-Engineering             |              78.03 |     52.7  |          52.53 |        51.59 |        71.69 |        65.16 |     51.2  |          48.9  |          39.9  |    50.7  |         44.6  |
-| Applied Science | Geomatics                                  |              79.2  |     52.1  |          51.5  |        51.9  |        71    |        62.2  |     54.9  |          49.3  |          42.6  |    56.4  |         43.7  |
-| Applied Science | Industrial-Engineer                        |              79    |     63.2  |          59.9  |        62    |        74    |        64.6  |     62    |          55.6  |          48.1  |    61.7  |         53.1  |
-| Applied Science | Machine-Design-and-Manufacturing           |              88.8  |     68.3  |          65.4  |        67.8  |        81.6  |        72.6  |     67.7  |          60.8  |          45.9  |    68.4  |         53    |
-| Applied Science | Maritime-Engineering                       |              87.33 |     68.83 |          66.33 |        70.33 |        79.33 |        72.5  |     68.67 |          60.67 |          44.5  |    67    |         52.5  |
-| Applied Science | Nondestructive-Testing                     |              76.84 |     64.9  |          62.14 |        64.75 |        69.79 |        66.84 |     63.9  |          59.9  |          48.1  |    65.2  |         48    |
-| Applied Science | Railway-and-Automotive-Engineering         |              83.65 |     54.95 |          50.51 |        57.45 |        77.11 |        69.79 |     55.9  |          50.3  |          42.9  |    53.9  |         40.9  |
-| Applied Science | Telecommunications-and-Wireless-Technology |              89.6  |     76.5  |          77.1  |        78.6  |        83.8  |        78.1  |     77.6  |          72.5  |          60.1  |    77.8  |         66.1  |
-| HUMSS           | Accounting                                 |              97    |     77    |          62    |        71    |        92    |        78    |     71    |          64    |          38    |    72    |         48    |
-| HUMSS           | Criminal-Law                               |              63    |     52.5  |          47    |        47.5  |        48    |        45    |     54    |          43    |          38.5  |    52.5  |         37    |
-| HUMSS           | Economics                                  |              86.15 |     80    |          71.54 |        78.46 |        83.85 |        74.62 |     77.69 |          74.62 |          56.92 |    74.62 |         64.62 |
-| HUMSS           | Education                                  |              93    |     88    |          80    |        85    |        89    |        77    |     86    |          80    |          59    |    83    |         70    |
-| HUMSS           | Korean-History                             |              82    |     55.56 |          52.22 |        55.56 |        65.56 |        42.22 |     53    |          39    |          33    |    56    |         32    |
-| HUMSS           | Law                                        |              75.6  |     67.5  |          63.7  |        65.9  |        63.84 |        53.43 |     65.9  |          59.1  |          45.1  |    65.8  |         50.6  |
-| HUMSS           | Management                                 |              89.5  |     77.4  |          74    |        76    |        82.9  |        73.7  |     78.3  |          69.2  |          59    |    74.2  |         64.2  |
-| HUMSS           | Political-Science-and-Sociology            |              88.67 |     80    |          77.33 |        80.33 |        79.67 |        68    |     81    |          68.33 |          56    |    79.67 |         62.33 |
-| HUMSS           | Psychology                                 |              81.1  |     71.3  |          64.8  |        67.8  |        70.5  |        61.2  |     68.3  |          59    |          45.6  |    66.4  |         50.4  |
-| HUMSS           | Social-Welfare                             |              92.4  |     76.9  |          76.5  |        78.4  |        89.9  |        86.1  |     78.3  |          76    |          62.8  |    74.5  |         67.7  |
-| HUMSS           | Taxation                                   |              66    |     54    |          46.5  |        49.5  |        47    |        36    |     54    |          42.5  |          35.5  |    51    |         39.5  |
-| Other           | Agricultural-Sciences                      |              71.63 |     57.68 |          51.82 |        56.26 |        61.86 |        54.3  |     57    |          47.8  |          37.4  |    53.9  |         41.8  |
-| Other           | Construction                               |              73.94 |     52.89 |          50.82 |        53.64 |        63.67 |        55.4  |     52.2  |          47.4  |          38.9  |    50.7  |         41.8  |
-| Other           | Fashion                                    |              76.84 |     67.76 |          63.57 |        67.07 |        69.18 |        60.91 |     67.7  |          57.9  |          48.4  |    65.8  |         51.1  |
-| Other           | Food-Processing                            |              79.9  |     67.4  |          64.95 |        66.87 |        74.24 |        66.5  |     66.5  |          59.6  |          45.3  |    64.9  |         51.7  |
-| Other           | Health                                     |              92    |     80    |          86    |        82    |        83    |        78    |     84    |          74    |          63    |    80    |         69    |
-| Other           | Interior-Architecture-and-Design           |              89.3  |     79.2  |          77.4  |        79.3  |        81.2  |        72.7  |     79.6  |          71.4  |          57.7  |    77.6  |         64    |
-| Other           | Marketing                                  |              93    |     89.9  |          88.1  |        88.4  |        88.8  |        84.6  |     90.3  |          87.6  |          78.6  |    88.9  |         83.1  |
-| Other           | Patent                                     |              65    |     61    |          46    |        60    |        52    |        29    |     57    |          51    |          45    |    52    |         33    |
-| Other           | Public-Safety                              |              76    |     57.73 |          52.05 |        56.52 |        64.86 |        57.21 |     53.4  |          46    |          39.6  |    53.2  |         44.3  |
-| Other           | Real-Estate                                |              71.5  |     65    |          59.5  |        61.5  |        66    |        57    |     62.5  |          54.5  |          48.5  |    64.5  |         49    |
-| Other           | Refrigerating-Machinery                    |              88.19 |     54.64 |          54.02 |        56.84 |        81.06 |        73.6  |     55.1  |          48.3  |          36.2  |    54.7  |         41.9  |
-| STEM            | Biology                                    |              84.49 |     66.73 |          61.96 |        67.76 |        73.33 |        63.23 |     66.4  |          54.6  |          38.7  |    63.1  |         45.5  |
-| STEM            | Chemical-Engineering                       |              90.89 |     64.09 |          64.02 |        66.17 |        86.91 |        82.45 |     67.7  |          61.4  |          50.4  |    65.1  |         55.8  |
-| STEM            | Chemistry                                  |              92.5  |     73.93 |          69.81 |        71.79 |        89.82 |        86.67 |     71.5  |          64.33 |          54.83 |    68.67 |         57.33 |
-| STEM            | Civil-Engineering                          |              79.6  |     54.5  |          51    |        56.6  |        70.5  |        65    |     52.9  |          50.4  |          42.7  |    54.3  |         46.9  |
-| STEM            | Computer-Science                           |              94.7  |     88.9  |          87.5  |        88.9  |        91    |        86.6  |     89.2  |          85    |          76.2  |    88.2  |         80.1  |
-| STEM            | Ecology                                    |              77.5  |     66.7  |          61.9  |        65.1  |        69.1  |        61.6  |     64.5  |          58.8  |          53.3  |    64.4  |         54.3  |
-| STEM            | Electrical-Engineering                     |              74    |     45.8  |          43.2  |        48.3  |        64.1  |        57.4  |     46.2  |          43.9  |          35.8  |    46    |         38.5  |
-| STEM            | Information-Technology                     |              94.9  |     85.3  |          84.3  |        85.3  |        91.6  |        88.2  |     86    |          82.6  |          72.2  |    83.6  |         78.4  |
-| STEM            | Materials-Engineering                      |              87.77 |     74.33 |          71.65 |        73.47 |        78.18 |        70.6  |     72.4  |          64.6  |          47.9  |    69.4  |         52.1  |
-| STEM            | Math                                       |              93    |     30    |          26.67 |        32.67 |        91.33 |        89    |     32    |          35.33 |          28.33 |    32.67 |         30    |
-| STEM            | Mechanical-Engineering                     |              86.98 |     60.1  |          59.08 |        61.63 |        80.21 |        73.06 |     61.1  |          55.1  |          44.1  |    60    |         46.9  |
+| supercategory   | category                                   |   Nova 2.0 Lite |   GPT-5.1 (medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |
+|:----------------|:-------------------------------------------|----------------:|-------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|
+| Applied Science | Aviation-Engineering-and-Maintenance       |           70.8  |              87.55 |     71.01 |          67.88 |        71.6  |        79.28 |        72.12 |     69.8  |          61.4  |          47.2  |    69.8  |         50.4  |
+| Applied Science | Electronics-Engineering                    |           86.7  |              94.2  |     72.7  |          70.6  |        74.8  |        91.6  |        87.3  |     73.3  |          69.6  |          58.1  |    73.2  |         64.5  |
+| Applied Science | Energy-Management                          |           63.6  |              82    |     54.06 |          51.47 |        54.18 |        72.96 |        66.46 |     53.7  |          45.4  |          36.3  |    50.3  |         39.5  |
+| Applied Science | Environmental-Science                      |           62.4  |              75.53 |     45.91 |          42.35 |        46.56 |        70.23 |        61.96 |     47.8  |          41.9  |          35.8  |    45.82 |         36.5  |
+| Applied Science | Gas-Technology-and-Engineering             |           66.1  |              78.03 |     52.7  |          52.53 |        51.59 |        71.69 |        65.16 |     51.2  |          48.9  |          39.9  |    50.7  |         44.6  |
+| Applied Science | Geomatics                                  |           60.1  |              79.2  |     52.1  |          51.5  |        51.9  |        71    |        62.2  |     54.9  |          49.3  |          42.6  |    56.4  |         43.7  |
+| Applied Science | Industrial-Engineer                        |           63    |              79    |     63.2  |          59.9  |        62    |        74    |        64.6  |     62    |          55.6  |          48.1  |    61.7  |         53.1  |
+| Applied Science | Machine-Design-and-Manufacturing           |           72.9  |              88.8  |     68.3  |          65.4  |        67.8  |        81.6  |        72.6  |     67.7  |          60.8  |          45.9  |    68.4  |         53    |
+| Applied Science | Maritime-Engineering                       |           62.5  |              87.33 |     68.83 |          66.33 |        70.33 |        79.33 |        72.5  |     68.67 |          60.67 |          44.5  |    67    |         52.5  |
+| Applied Science | Nondestructive-Testing                     |           61.5  |              76.84 |     64.9  |          62.14 |        64.75 |        69.79 |        66.84 |     63.9  |          59.9  |          48.1  |    65.2  |         48    |
+| Applied Science | Railway-and-Automotive-Engineering         |           66.1  |              83.65 |     54.95 |          50.51 |        57.45 |        77.11 |        69.79 |     55.9  |          50.3  |          42.9  |    53.9  |         40.9  |
+| Applied Science | Telecommunications-and-Wireless-Technology |           78.8  |              89.6  |     76.5  |          77.1  |        78.6  |        83.8  |        78.1  |     77.6  |          72.5  |          60.1  |    77.8  |         66.1  |
+| HUMSS           | Accounting                                 |           62    |              97    |     77    |          62    |        71    |        92    |        78    |     71    |          64    |          38    |    72    |         48    |
+| HUMSS           | Criminal-Law                               |           35    |              63    |     52.5  |          47    |        47.5  |        48    |        45    |     54    |          43    |          38.5  |    52.5  |         37    |
+| HUMSS           | Economics                                  |           66.92 |              86.15 |     80    |          71.54 |        78.46 |        83.85 |        74.62 |     77.69 |          74.62 |          56.92 |    74.62 |         64.62 |
+| HUMSS           | Education                                  |           77    |              93    |     88    |          80    |        85    |        89    |        77    |     86    |          80    |          59    |    83    |         70    |
+| HUMSS           | Korean-History                             |           29    |              82    |     55.56 |          52.22 |        55.56 |        65.56 |        42.22 |     53    |          39    |          33    |    56    |         32    |
+| HUMSS           | Law                                        |           51.2  |              75.6  |     67.5  |          63.7  |        65.9  |        63.84 |        53.43 |     65.9  |          59.1  |          45.1  |    65.8  |         50.6  |
+| HUMSS           | Management                                 |           70.4  |              89.5  |     77.4  |          74    |        76    |        82.9  |        73.7  |     78.3  |          69.2  |          59    |    74.2  |         64.2  |
+| HUMSS           | Political-Science-and-Sociology            |           68.33 |              88.67 |     80    |          77.33 |        80.33 |        79.67 |        68    |     81    |          68.33 |          56    |    79.67 |         62.33 |
+| HUMSS           | Psychology                                 |           57.6  |              81.1  |     71.3  |          64.8  |        67.8  |        70.5  |        61.2  |     68.3  |          59    |          45.6  |    66.4  |         50.4  |
+| HUMSS           | Social-Welfare                             |           84.2  |              92.4  |     76.9  |          76.5  |        78.4  |        89.9  |        86.1  |     78.3  |          76    |          62.8  |    74.5  |         67.7  |
+| HUMSS           | Taxation                                   |           40    |              66    |     54    |          46.5  |        49.5  |        47    |        36    |     54    |          42.5  |          35.5  |    51    |         39.5  |
+| Other           | Agricultural-Sciences                      |           52.5  |              71.63 |     57.68 |          51.82 |        56.26 |        61.86 |        54.3  |     57    |          47.8  |          37.4  |    53.9  |         41.8  |
+| Other           | Construction                               |           55.3  |              73.94 |     52.89 |          50.82 |        53.64 |        63.67 |        55.4  |     52.2  |          47.4  |          38.9  |    50.7  |         41.8  |
+| Other           | Fashion                                    |           55.2  |              76.84 |     67.76 |          63.57 |        67.07 |        69.18 |        60.91 |     67.7  |          57.9  |          48.4  |    65.8  |         51.1  |
+| Other           | Food-Processing                            |           61    |              79.9  |     67.4  |          64.95 |        66.87 |        74.24 |        66.5  |     66.5  |          59.6  |          45.3  |    64.9  |         51.7  |
+| Other           | Health                                     |           79    |              92    |     80    |          86    |        82    |        83    |        78    |     84    |          74    |          63    |    80    |         69    |
+| Other           | Interior-Architecture-and-Design           |           72.8  |              89.3  |     79.2  |          77.4  |        79.3  |        81.2  |        72.7  |     79.6  |          71.4  |          57.7  |    77.6  |         64    |
+| Other           | Marketing                                  |           83.3  |              93    |     89.9  |          88.1  |        88.4  |        88.8  |        84.6  |     90.3  |          87.6  |          78.6  |    88.9  |         83.1  |
+| Other           | Patent                                     |           35    |              65    |     61    |          46    |        60    |        52    |        29    |     57    |          51    |          45    |    52    |         33    |
+| Other           | Public-Safety                              |           57.1  |              76    |     57.73 |          52.05 |        56.52 |        64.86 |        57.21 |     53.4  |          46    |          39.6  |    53.2  |         44.3  |
+| Other           | Real-Estate                                |           51    |              71.5  |     65    |          59.5  |        61.5  |        66    |        57    |     62.5  |          54.5  |          48.5  |    64.5  |         49    |
+| Other           | Refrigerating-Machinery                    |           73.1  |              88.19 |     54.64 |          54.02 |        56.84 |        81.06 |        73.6  |     55.1  |          48.3  |          36.2  |    54.7  |         41.9  |
+| STEM            | Biology                                    |           54.2  |              84.49 |     66.73 |          61.96 |        67.76 |        73.33 |        63.23 |     66.4  |          54.6  |          38.7  |    63.1  |         45.5  |
+| STEM            | Chemical-Engineering                       |           83.8  |              90.89 |     64.09 |          64.02 |        66.17 |        86.91 |        82.45 |     67.7  |          61.4  |          50.4  |    65.1  |         55.8  |
+| STEM            | Chemistry                                  |           83.67 |              92.5  |     73.93 |          69.81 |        71.79 |        89.82 |        86.67 |     71.5  |          64.33 |          54.83 |    68.67 |         57.33 |
+| STEM            | Civil-Engineering                          |           60.7  |              79.6  |     54.5  |          51    |        56.6  |        70.5  |        65    |     52.9  |          50.4  |          42.7  |    54.3  |         46.9  |
+| STEM            | Computer-Science                           |           84.7  |              94.7  |     88.9  |          87.5  |        88.9  |        91    |        86.6  |     89.2  |          85    |          76.2  |    88.2  |         80.1  |
+| STEM            | Ecology                                    |           60.4  |              77.5  |     66.7  |          61.9  |        65.1  |        69.1  |        61.6  |     64.5  |          58.8  |          53.3  |    64.4  |         54.3  |
+| STEM            | Electrical-Engineering                     |           57.7  |              74    |     45.8  |          43.2  |        48.3  |        64.1  |        57.4  |     46.2  |          43.9  |          35.8  |    46    |         38.5  |
+| STEM            | Information-Technology                     |           88.4  |              94.9  |     85.3  |          84.3  |        85.3  |        91.6  |        88.2  |     86    |          82.6  |          72.2  |    83.6  |         78.4  |
+| STEM            | Materials-Engineering                      |           66.9  |              87.77 |     74.33 |          71.65 |        73.47 |        78.18 |        70.6  |     72.4  |          64.6  |          47.9  |    69.4  |         52.1  |
+| STEM            | Math                                       |           82.67 |              93    |     30    |          26.67 |        32.67 |        91.33 |        89    |     32    |          35.33 |          28.33 |    32.67 |         30    |
+| STEM            | Mechanical-Engineering                     |           70.1  |              86.98 |     60.1  |          59.08 |        61.63 |        80.21 |        73.06 |     61.1  |          55.1  |          44.1  |    60    |         46.9  |
 
 
 #### Open-Source models
@@ -377,7 +402,7 @@ Run the interactive script that guides you through the evaluation process:
 ```
 
 The script will ask you to:
-1. Select dataset (CLIcK, HAE-RAE, KMMLU, KMMLU-HARD)
+1. Select dataset (CLIcK, HAE-RAE, KMMLU, KMMLU-HARD, HRM8K, KoBALT, KorMedMCQA)
 2. Choose debug mode (y/n)
 3. Set batch size (default: 5)
 4. Set max tokens (default: 1500)
@@ -431,6 +456,22 @@ uv run python benchmarks/hrm8k_main.py \
     --temperature 0.01 \
     --template_type basic \
     --subset GSM8K
+
+# KoBALT
+uv run python benchmarks/kobalt_main.py \
+    --model_provider azureopenai \
+    --batch_size 10 \
+    --max_tokens 512 \
+    --temperature 0.01 \
+    --template_type basic
+
+# KorMedMCQA (all subsets)
+uv run python benchmarks/kormedmcqa_main.py \
+    --model_provider azureopenai \
+    --batch_size 10 \
+    --max_tokens 512 \
+    --temperature 0.01 \
+    --template_type basic
 ```
 
 ### Available Parameters
@@ -499,5 +540,25 @@ Evaluation results are saved in:
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2501.02448}, 
+}
+
+@misc{lee2025kobalt,
+      title={KoBALT: A Benchmark for Evaluating Korean Linguistic Phenomena in Large Language Models}, 
+      author={Dohyun Lee and Seunghyun Hwang and Seungtaek Choi and Hwisang Jeon and Sohyun Park and Sungjoon Park and Yungi Kim},
+      year={2025},
+      eprint={2505.16125},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.16125}, 
+}
+
+@misc{kweon2024kormedmcqa,
+      title={KorMedMCQA: Multi-Choice Question Answering Benchmark for Korean Healthcare Professional Licensing Examinations}, 
+      author={Sunjun Kweon and Jiyoun Kim and Sujeong Im and Eunbyeol Cho and Seongsu Bae and Jungwoo Oh and Gyubok Lee and Jong Hak Moon and Seng Chan You and Seungjin Baek and Chang Hoon Han and Yoon Bin Jung and Yohan Jo and Edward Choi},
+      year={2024},
+      eprint={2403.01469},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2403.01469}, 
 }
 ```

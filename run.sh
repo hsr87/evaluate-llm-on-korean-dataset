@@ -16,7 +16,7 @@ fi
 ### Parallel execution version of run_all.sh with resume capability
 
 # Ask user for dataset selection
-read -p "[Q1] 평가할 데이터셋을 선택하세요 (1:CLIcK, 2:HAE-RAE, 3:KMMLU, 4:KMMLU-HARD, 5:HRM8K, 기본값: 1): " dataset_choice
+read -p "[Q1] 평가할 데이터셋을 선택하세요 (1:CLIcK, 2:HAE-RAE, 3:KMMLU, 4:KMMLU-HARD, 5:HRM8K, 6:KoBALT, 7:KorMedMCQA, 기본값: 1): " dataset_choice
 dataset_choice=${dataset_choice:-1}
 
 case "$dataset_choice" in
@@ -25,6 +25,8 @@ case "$dataset_choice" in
     3) benchmark="kmmlu" ;;
     4) benchmark="kmmlu-hard" ;;
     5) benchmark="hrm8k" ;;
+    6) benchmark="kobalt" ;;
+    7) benchmark="kormedmcqa" ;;
     *) 
         echo "잘못된 선택입니다. 기본값(CLIcK)으로 실행합니다."
         benchmark="click"
@@ -36,7 +38,7 @@ read -p "[Q2] 디버그 모드로 실행하시겠습니까? (y/n, 기본값: y):
 debug_choice=${debug_choice:-y}
 if [[ "$debug_choice" =~ ^[Yy]$ ]]; then
     is_debug=True
-    num_debug_samples=15
+    num_debug_samples=5
 else
     is_debug=False
     num_debug_samples=0
@@ -47,8 +49,8 @@ read -p "[Q3] Batch size를 입력하세요 (기본값: 5): " batch_input
 batch_size=${batch_input:-5}
 
 # Ask user for max tokens
-read -p "[Q4] Max tokens를 입력하세요 (기본값: 1500): " tokens_input
-max_tokens=${tokens_input:-1500}
+read -p "[Q4] Max tokens를 입력하세요 (기본값: 4096): " tokens_input
+max_tokens=${tokens_input:-4096}
 
 # Ask user for temperature
 read -p "[Q5] Temperature를 입력하세요 (기본값: 0.01): " temp_input
@@ -75,7 +77,7 @@ run_model() {
     [[ -n "$categories" ]] && common_args="$common_args --categories $categories"
     
     case "$benchmark" in
-        click)./
+        click)
             DOTENV_PATH="$env_file" uv run python benchmarks/click_main.py $common_args
             ;;
         haerae)
@@ -90,9 +92,15 @@ run_model() {
         hrm8k)
             DOTENV_PATH="$env_file" uv run python benchmarks/hrm8k_main.py $common_args
             ;;
+        kobalt)
+            DOTENV_PATH="$env_file" uv run python benchmarks/kobalt_main.py $common_args
+            ;;
+        kormedmcqa)
+            DOTENV_PATH="$env_file" uv run python benchmarks/kormedmcqa_main.py $common_args
+            ;;
         *)
             echo "Invalid benchmark: $benchmark"
-            echo "Usage: ./scripts/run_debug.sh [click|haerae|kmmlu|kmmlu-hard|hrm8k]"
+            echo "Usage: ./scripts/run_debug.sh [click|haerae|kmmlu|kmmlu-hard|hrm8k|kobalt|kormedmcqa]"
             exit 1
             ;;
     esac

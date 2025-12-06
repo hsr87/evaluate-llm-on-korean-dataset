@@ -13,7 +13,7 @@ import pandas as pd
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config.question_templates import TYPE_1, TYPE_2, TYPE_3, TYPE_4
+from config.question_templates import get_question_template
 from core.evaluator import CLIcKEvaluator
 from core.logger import logger
 from util.custom_parser import MultipleChoicesFiveParser
@@ -25,25 +25,19 @@ def get_prompt(x):
     """프롬프트 생성"""
     num_choices = len(x["choices"])
     choices = x["choices"]
+    has_context = bool(x["paragraph"])
     
-    if num_choices == 4:
-        template = TYPE_1 if x["paragraph"] else TYPE_2
-        return template.format(
-            CONTEXT=x["paragraph"], QUESTION=x["question"],
-            A=choices[0], B=choices[1], C=choices[2], D=choices[3]
-        ) if x["paragraph"] else template.format(
-            QUESTION=x["question"], A=choices[0], B=choices[1], C=choices[2], D=choices[3]
-        )
-    elif num_choices == 5:
-        template = TYPE_3 if x["paragraph"] else TYPE_4
-        return template.format(
-            CONTEXT=x["paragraph"], QUESTION=x["question"],
-            A=choices[0], B=choices[1], C=choices[2], D=choices[3], E=choices[4]
-        ) if x["paragraph"] else template.format(
-            QUESTION=x["question"], A=choices[0], B=choices[1], C=choices[2], D=choices[3], E=choices[4]
-        )
-    else:
-        raise ValueError(f"Invalid number of choices: {num_choices}")
+    template = get_question_template(num_choices=num_choices, with_context=has_context)
+    
+    format_dict = {
+        "QUESTION": x["question"],
+        **{chr(65 + i): choices[i] for i in range(num_choices)}
+    }
+    
+    if has_context:
+        format_dict["CONTEXT"] = x["paragraph"]
+    
+    return template.format(**format_dict)
 
 
 def get_answer(x):
@@ -81,7 +75,7 @@ def process_category(category_info):
         
         # 평가 실행
         evaluator = CLIcKEvaluator(model_config, template_type)
-        results = evaluator.process_batch(category_data, MultipleChoicesFiveParser)
+        results = evaluator.process_batch(category_data, MultipleChoicesFiveParser, num_choices=5)
         
         # 결과 저장
         evaluator.save_results(results, csv_path)

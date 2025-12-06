@@ -83,14 +83,24 @@ def format_timespan(seconds):
     return timespan
 
 
-def get_prompt_template(template_type, model_provider=None):
+def get_prompt_template(template_type, model_provider=None, num_choices=5, use_math_prompt=False):
     """Get prompt template based on the template type.
+    
+    Args:
+        template_type: Type of template ('basic' or 'chat')
+        model_provider: Model provider name
+        num_choices: Number of answer choices (default: 5)
+        use_math_prompt: Use math-specific system prompt (default: False)
     
     Returns:
         tuple: (prompt_template, system_prompt_text or None)
     """
-
-    system_prompt_text = get_system_prompt()
+    
+    if use_math_prompt:
+        from config.prompts import get_math_system_prompt
+        system_prompt_text = get_math_system_prompt()
+    else:
+        system_prompt_text = get_system_prompt(num_choices=num_choices)
     
     if template_type == "basic":
         prompt = PromptTemplate.from_template("{question}")

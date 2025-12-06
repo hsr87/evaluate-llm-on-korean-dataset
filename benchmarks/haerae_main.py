@@ -11,7 +11,7 @@ from tqdm import tqdm
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config.question_templates import TYPE_4
+from config.question_templates import get_question_template
 from core.evaluator import HAERAEEvaluator
 from core.logger import logger
 from util.custom_parser import MultipleChoicesFiveParser
@@ -21,7 +21,8 @@ from util.evaluate_helper import evaluate
 
 def get_prompt(x):
     """프롬프트 생성"""
-    return TYPE_4.format(
+    template = get_question_template(num_choices=5, with_context=False)
+    return template.format(
         QUESTION=x["question"],
         A=x["a"], B=x["b"], C=x["c"], D=x["d"], E=x["e"]
     )
@@ -60,7 +61,7 @@ def process_category(category_info):
         
         # 평가 실행
         evaluator = HAERAEEvaluator(model_config, template_type)
-        results = evaluator.process_batch(batch_data, MultipleChoicesFiveParser)
+        results = evaluator.process_batch(batch_data, MultipleChoicesFiveParser, num_choices=5)
         
         # 결과 저장
         evaluator.save_results(results, csv_path)
