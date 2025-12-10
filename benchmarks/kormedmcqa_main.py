@@ -4,7 +4,7 @@ import sys
 import json
 import time
 import argparse
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from dotenv import load_dotenv
 from datasets import load_dataset
 from tqdm import tqdm
@@ -43,8 +43,8 @@ def process_chunk(chunk_info):
     
     try:
         evaluator = CLIcKEvaluator(model_config, template_type)
-        results = evaluator.process_batch(data_chunk, MultipleChoicesFiveParser, num_choices=5)
-        evaluator.save_results(results, csv_path, chunk_id=chunk_id)
+        results = evaluator.process_batch(data_chunk, MultipleChoicesFiveParser, num_choices=5, csv_path=csv_path, chunk_id=chunk_id)
+        # save_results는 이제 process_batch 내에서 실시간으로 처리됨
         
         logger.info(f"✅ Completed chunk {chunk_id}")
         return chunk_id, "completed"
@@ -68,6 +68,10 @@ def main():
     parser.add_argument("--hf_model_id", type=str, default=None)
     parser.add_argument("--num_workers", type=int, default=4)
     args = parser.parse_args()
+    
+    dotenv_path = os.getenv('DOTENV_PATH', '.env')
+    print(f"DEBUG: Loading dotenv from: {dotenv_path}")
+    load_dotenv(dotenv_path, override=True)
 
     # Model config
     model_provider = os.getenv("MODEL_PROVIDER", args.model_provider)
@@ -75,6 +79,7 @@ def main():
     logger.info(f"Model Provider: {provider_name}")
     model_name = os.getenv("MODEL_NAME", "gpt-4o-mini")
     model_version = os.getenv("MODEL_VERSION", "2024-07-18")
+    print(f"DEBUG: MODEL_NAME={model_name}, MODEL_VERSION={model_version}")
     
     model_config = {
         'provider': model_provider,
@@ -136,16 +141,17 @@ def main():
     # 병렬 실행
     start_time = time.time()
     with ProcessPoolExecutor(max_workers=args.num_workers) as executor:
-        results = list(tqdm(
-            executor.map(process_chunk, chunks),
-            total=len(chunks),
-            desc="Processing chunks"
-        ))
+        futures = {executor.submit(process_chunk, chunk): i for i, chunk in enumerate(chunks)}
+        
+        with tqdm(total=len(all_data), desc="Processing samples", unit="samples") as pbar:
+            for future in as_completed(futures):
+                chunk_idx = futures[future]
+                chunk_size = len(chunks[chunk_idx][1])
+                pbar.update(chunk_size)
+                pbar.set_postfix({"chunk": f"{sum(1 for f in futures if f.done())}/{len(chunks)}"})
+        
+        results = [future.result() for future in futures]
     
-    # chunk 파일들을 합치기
-    from core.evaluator import BaseEvaluator
-    evaluator = BaseEvaluator({}, "basic")  # 임시 evaluator for merging
-    evaluator.merge_chunk_files(csv_path, len(chunks))
     
     elapsed_time = time.time() - start_time
     logger.info(f"⏱️  Total time: {format_timespan(elapsed_time)}")

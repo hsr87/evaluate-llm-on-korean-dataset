@@ -108,7 +108,7 @@ def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
         )
         category_acc = category_acc[["level_name", "accuracy"]]
         category_acc.columns = ["category", "accuracy"]
-        category_acc["accuracy"] = category_acc["accuracy"].multiply(100).round(2)
+        category_acc["accuracy"] = pd.to_numeric(category_acc["accuracy"], errors="coerce").multiply(100).round(2)
         supercategory_acc = None
     elif dataset in ["HAERAE", "hrm8k", "KorMedMCQA"]:
         category_acc = (
@@ -118,7 +118,7 @@ def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
             )
             .reset_index()
         )
-        category_acc["accuracy"] = category_acc["accuracy"].multiply(100).round(2)
+        category_acc["accuracy"] = pd.to_numeric(category_acc["accuracy"], errors="coerce").multiply(100).round(2)
         supercategory_acc = None
     else:
         category_acc = (
@@ -128,7 +128,7 @@ def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
             )
             .reset_index()
         )
-        category_acc["accuracy"] = category_acc["accuracy"].multiply(100).round(2)
+        category_acc["accuracy"] = pd.to_numeric(category_acc["accuracy"], errors="coerce").multiply(100).round(2)
 
         supercategory_acc = (
             result.groupby("supercategory")
@@ -138,7 +138,7 @@ def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
             .reset_index()
         )
         supercategory_acc["accuracy"] = (
-            supercategory_acc["accuracy"].multiply(100).round(2)
+            pd.to_numeric(supercategory_acc["accuracy"], errors="coerce").multiply(100).round(2)
         )
 
     if verbose:

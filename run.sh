@@ -5,11 +5,12 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$PROJECT_ROOT"
 
-# Check if .env file exists
-if [ ! -f ".env" ]; then
-    echo "Error: .env 파일이 없습니다."
-    echo ".env.sample 파일을 .env로 복사하고 설정을 완료해주세요."
-    echo "예: cp .env.sample .env"
+# 동적으로 env 폴더에서 .env 파일들 찾기
+env_files=(env/.env*)
+if [ ! -e "${env_files[0]}" ]; then
+    echo "Error: env 폴더에 .env 파일이 없습니다."
+    echo "env 폴더를 만들고 .env 파일들을 추가해주세요."
+    echo "예: mkdir env && cp .env.sample env/.env.model1"
     exit 1
 fi
 
@@ -45,12 +46,12 @@ else
 fi
 
 # Ask user for batch size
-read -p "[Q3] Batch size를 입력하세요 (기본값: 5): " batch_input
-batch_size=${batch_input:-5}
+read -p "[Q3] Batch size를 입력하세요 (기본값: 4): " batch_input
+batch_size=${batch_input:-4}
 
 # Ask user for max tokens
-read -p "[Q4] Max tokens를 입력하세요 (기본값: 4096): " tokens_input
-max_tokens=${tokens_input:-4096}
+read -p "[Q4] Max tokens를 입력하세요 (기본값: 128): " tokens_input
+max_tokens=${tokens_input:-128}
 
 # Ask user for temperature
 read -p "[Q5] Temperature를 입력하세요 (기본값: 0.01): " temp_input
@@ -60,10 +61,9 @@ temperature=${temp_input:-0.01}
 read -p "[Q6] Num workers를 입력하세요 (기본값: 10): " workers_input
 num_workers=${workers_input:-10}
 
-#env_files=(.env_gpt-oss-120b) 
-env_files=(.env)
+# 파일 개수에 따라 max_parallel_jobs 설정
+max_parallel_jobs=${#env_files[@]}
 template_type=chat
-max_parallel_jobs=2
 categories=""  #별도로 실행할 카테고리를 넣으려면 여기에 카테고리명 입력, 기존의 데이터는 삭제되므로 주의 필요
 
 echo "Found the following .env files:"

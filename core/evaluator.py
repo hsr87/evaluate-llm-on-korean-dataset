@@ -32,37 +32,26 @@ class BenchmarkEvaluator:
                 logger.warning(f"Error loading results: {e}")
         return pd.DataFrame()
     
-    def merge_chunk_files(self, csv_path, num_chunks):
-        """chunk 파일들을 합쳐서 최종 CSV 생성"""
-        all_dfs = []
-        
-        for i in range(num_chunks):
-            chunk_path = csv_path.replace('.csv', f'_chunk_{i}.csv')
-            if os.path.exists(chunk_path):
-                df_chunk = pd.read_csv(chunk_path)
-                all_dfs.append(df_chunk)
-                os.remove(chunk_path)  # 임시 파일 삭제
-        
-        if all_dfs:
-            df_combined = pd.concat(all_dfs, ignore_index=True)
-            os.makedirs(os.path.dirname(csv_path), exist_ok=True)
-            df_combined.to_csv(csv_path, index=False)
-            logger.info(f"✅ Merged {len(all_dfs)} chunks into {csv_path} (Total: {len(df_combined)} records)")
-            return df_combined
-        else:
-            logger.warning("No chunk files found to merge")
-            return pd.DataFrame()
-
     def save_results(self, responses, csv_path, merge_key='category', chunk_id=None):
-        """결과 저장 (병렬 처리 시 chunk별 저장)"""
+        """결과 저장 (병렬 처리 시 즉시 메인 파일에 추가)"""
         df_new = pd.DataFrame(responses)
         
         if chunk_id is not None:
-            # 병렬 처리: chunk별 임시 파일 저장
-            chunk_path = csv_path.replace('.csv', f'_chunk_{chunk_id}.csv')
-            os.makedirs(os.path.dirname(chunk_path), exist_ok=True)
-            df_new.to_csv(chunk_path, index=False)
-            logger.info(f"✅ Saved {len(df_new)} records to chunk file {chunk_path}")
+            # 병렬 처리: 메인 파일에 즉시 추가 (thread-safe)
+            import fcntl
+            
+            if os.path.exists(csv_path):
+                # 기존 파일에 추가
+                with open(csv_path, 'a', newline='', encoding='utf-8') as f:
+                    fcntl.flock(f.fileno(), fcntl.LOCK_EX)  # 파일 잠금
+                    df_new.to_csv(f, header=False, index=False)
+            else:
+                # 새 파일 생성
+                os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+                with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+                    fcntl.flock(f.fileno(), fcntl.LOCK_EX)  # 파일 잠금
+                    df_new.to_csv(f, header=True, index=False)
+            
             return df_new
         else:
             # 단일 처리: 기존 방식
@@ -96,7 +85,7 @@ class BenchmarkEvaluator:
                 logger.warning(f"Error reading categories: {e}")
         return []
     
-    def process_batch(self, batch_data, parser_class, num_choices=5, use_math_prompt=False):
+    def process_batch(self, batch_data, parser_class, num_choices=5, use_math_prompt=False, csv_path=None, chunk_id=None):
         """배치 처리
         
         Args:
@@ -104,6 +93,8 @@ class BenchmarkEvaluator:
             parser_class: 파서 클래스
             num_choices: 선택지 개수 (기본값: 5)
             use_math_prompt: 수학 문제용 프롬프트 사용 여부 (기본값: False)
+            csv_path: CSV 파일 경로 (실시간 저장용)
+            chunk_id: 청크 ID (병렬 처리용)
         """
         from tqdm import tqdm
         
@@ -176,7 +167,13 @@ class BenchmarkEvaluator:
                                     f.write(f"LLM RESPONSE: {pred}\n")
                                     f.write("="*80 + "\n\n")
                         
-                        results.extend([self._make_result(qna, pred) for qna, pred in zip(mini_batch, preds)])
+                        batch_results = [self._make_result(qna, pred) for qna, pred in zip(mini_batch, preds)]
+                        results.extend(batch_results)
+                        
+                        # 즉시 저장 (실시간 업데이트)
+                        if csv_path and batch_results:
+                            self.save_results(batch_results, csv_path, chunk_id=chunk_id)
+                        
                         pbar.update(len(mini_batch))
                         break
                     except RateLimitError:
@@ -324,9 +321,9 @@ class CLIcKEvaluator(BenchmarkEvaluator):
             "response": error,
         }
     
-    def save_results(self, responses, csv_path):
+    def save_results(self, responses, csv_path, chunk_id=None):
         """CLIcK는 ID 기준으로 저장"""
-        return super().save_results(responses, csv_path, merge_key='id')
+        return super().save_results(responses, csv_path, merge_key='id', chunk_id=chunk_id)
 
 
 class HAERAEEvaluator(BenchmarkEvaluator):

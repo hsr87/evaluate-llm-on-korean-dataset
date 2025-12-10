@@ -135,12 +135,20 @@ def extract_answer(response):
     frac_match = re.findall(r'\\\\?frac\{(-?\d+)\}\{(-?\d+)\}', response_str)
     if frac_match:
         last_frac = frac_match[-1]
-        return float(last_frac[0]) / float(last_frac[1])
+        denominator = float(last_frac[1])
+        if denominator != 0:
+            return float(last_frac[0]) / denominator
+        else:
+            return None  # 분모가 0인 경우
     
     plain_frac = re.findall(r'(-?\d+)/(-?\d+)', response_str)
     if plain_frac:
         last_frac = plain_frac[-1]
-        return float(last_frac[0]) / float(last_frac[1])
+        denominator = float(last_frac[1])
+        if denominator != 0:
+            return float(last_frac[0]) / denominator
+        else:
+            return None  # 분모가 0인 경우
     
     numbers = re.findall(r'-?\d+(?:,\d{3})*(?:\.\d+)?', response_str)
     if numbers:

@@ -354,7 +354,45 @@ To use Jupyter Notebook in VS Code or Cursor, choose one of the two methods belo
 
 ### Configuration
 
-Rename `.env.sample` to `.env` and configure your credentials:
+#### Multiple Models Setup
+For testing multiple models simultaneously, create separate configuration files in the `env/` folder:
+
+```bash
+mkdir env
+cp .env.sample env/.env.gpt4
+cp .env.sample env/.env.claude
+cp .env.sample env/.env.nova
+```
+
+Each file should have different model configurations:
+
+**env/.env.gpt4:**
+```ini
+MODEL_NAME=gpt-4o
+MODEL_VERSION=2024-05-13
+AZURE_OPENAI_ENDPOINT=<YOUR_ENDPOINT>
+AZURE_OPENAI_API_KEY=<YOUR_API_KEY>
+```
+
+**env/.env.claude:**
+```ini
+MODEL_NAME=claude-4-5
+MODEL_VERSION=2025-12-05
+BEDROCK_MODEL_ID=anthropic.claude-3-5-sonnet-20241022-v2:0
+AWS_REGION=us-west-2
+```
+
+**env/.env.nova:**
+```ini
+MODEL_NAME=nova-2-lite
+MODEL_VERSION=2025-12-05
+BEDROCK_MODEL_ID=us.amazon.nova-2-lite-v1:0
+AWS_REGION=us-west-2
+```
+
+The `./run.sh` script will automatically detect all `.env` files in the `env/` folder and run evaluations in parallel.
+
+#### Configuration Options
 
 ```ini
 # Basic info
