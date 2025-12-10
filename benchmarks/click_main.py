@@ -48,16 +48,16 @@ def get_answer(x):
 
 def process_chunk(chunk_info):
     """데이터 청크 처리"""
-    chunk_id, data_chunk, model_config, template_type, csv_path = chunk_info
+    chunk_id, data_chunk, model_config, template_type, csv_path, model_name = chunk_info
     
-    logger.info(f"Processing chunk {chunk_id} with {len(data_chunk)} samples")
+    logger.info(f"[{model_name}] Processing chunk {chunk_id} with {len(data_chunk)} samples")
     
     try:
         evaluator = CLIcKEvaluator(model_config, template_type)
         results = evaluator.process_batch(data_chunk, MultipleChoicesFiveParser, num_choices=5, csv_path=csv_path, chunk_id=chunk_id)
         # save_results는 이제 process_batch 내에서 실시간으로 처리됨
         
-        logger.info(f"✅ Completed chunk {chunk_id}")
+        logger.info(f"✅ [{model_name}] Completed chunk {chunk_id}")
         return chunk_id, "completed"
         
     except Exception as e:
@@ -158,12 +158,12 @@ def main():
         evaluate(csv_path, dataset="CLIcK", verbose=True)
         return
     
-    logger.info(f"Processing {len(all_data)} samples with {args.num_workers} workers")
+    logger.info(f"🚀 [{model_name}] Processing {len(all_data)} samples with {args.num_workers} workers")
     
     # 데이터를 worker 수만큼 균등 분할
     chunk_size = (len(all_data) + args.num_workers - 1) // args.num_workers
     chunks = [
-        (i, all_data[i*chunk_size:(i+1)*chunk_size], model_config, args.template_type, csv_path)
+        (i, all_data[i*chunk_size:(i+1)*chunk_size], model_config, args.template_type, csv_path, model_name)
         for i in range(args.num_workers)
         if i*chunk_size < len(all_data)
     ]
@@ -189,7 +189,7 @@ def main():
     # 결과 요약
     elapsed = time.time() - start_time
     logger.info(f"\n{'='*50}")
-    logger.info(f"Evaluation completed in {format_timespan(elapsed)}")
+    logger.info(f"✅ [{model_name}] Evaluation completed in {format_timespan(elapsed)}")
     logger.info(f"Results saved to: {csv_path}")
     
     for chunk_id, status in results:
