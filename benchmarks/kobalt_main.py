@@ -25,7 +25,7 @@ def process_chunk(chunk_info):
     try:
         evaluator = KoBALTEvaluator(model_config, template_type)
         results = evaluator.process_batch(data_chunk, MultipleChoicesTenParser, num_choices=10, csv_path=csv_path, chunk_id=chunk_id)
-        evaluator.save_results(results, csv_path, merge_key='level')
+        # save_results는 process_batch 내에서 이미 호출됨
         
         logger.info(f"✅ Completed chunk {chunk_id}")
         return chunk_id, "completed"
@@ -99,7 +99,9 @@ def main():
     
     # 디버그 모드
     if args.is_debug:
+        logger.info(f"🔍 Debug mode: requested {args.num_debug_samples} samples, available {len(all_data)} samples")
         all_data = all_data[:args.num_debug_samples]
+        logger.info(f"🔍 Using {len(all_data)} samples for evaluation")
     
     if not all_data:
         logger.info("✅ All data completed!")

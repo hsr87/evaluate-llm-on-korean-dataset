@@ -19,25 +19,23 @@ def _get_choice_examples(num_choices):
 
 def _generate_direct_prompt(num_choices):
     """Generate direct answer prompt"""
-    return f"""You MUST output ONLY a single uppercase letter ({_get_choice_letters(num_choices)}). Nothing else.
+    return f"""CRITICAL: You MUST respond with EXACTLY ONE LETTER ONLY ({_get_choice_letters(num_choices)}).
 
-DO NOT:
-- Add explanations
-- Add reasoning
-- Add punctuation
-- Add quotes
-- Add formatting
-- Add any other text
+ABSOLUTELY NO explanations, reasoning, or additional text.
 
-ONLY output one letter. Examples:
+Just the letter. Period.
+
+Examples of CORRECT responses:
 {_get_choice_examples(num_choices)}
 
-WRONG (DO NOT DO THIS):
-A. The answer is...
-"C"
-Answer: B
-**D**
-E\\n\\nExplanation:..."""
+Examples of WRONG responses (NEVER do this):
+- "A. The answer is..."
+- "I think the answer is C"
+- "C\\n\\nBecause..."
+- "Answer: B"
+- "The correct choice is D"
+
+RESPOND WITH ONLY ONE LETTER."""
 
 
 def _generate_reasoning_prompt(num_choices, reasoning_effort="medium"):
