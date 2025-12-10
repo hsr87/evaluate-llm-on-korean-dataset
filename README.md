@@ -404,74 +404,29 @@ Run the interactive script that guides you through the evaluation process:
 The script will ask you to:
 1. Select dataset (CLIcK, HAE-RAE, KMMLU, KMMLU-HARD, HRM8K, KoBALT, KorMedMCQA)
 2. Choose debug mode (y/n)
-3. Set batch size (default: 5)
+3. Set batch size (default: 10)
 4. Set max tokens (default: 1500)
 5. Set temperature (default: 0.01)
+6. Set number of workers (default: 4)
 
 #### Manual Mode
 Run individual benchmarks directly:
 
 ```bash
-# CLIcK
+# Example: CLIcK benchmark
 uv run python benchmarks/click_main.py \
     --model_provider azureopenai \
-    --batch_size 20 \
-    --max_tokens 512 \
-    --temperature 0.01 \
-    --template_type basic
-
-# HAE-RAE
-uv run python benchmarks/haerae_main.py \
-    --model_provider azureopenai \
-    --batch_size 20 \
-    --max_tokens 512 \
-    --temperature 0.01 \
-    --template_type basic
-
-# KMMLU (0-shot)
-uv run python benchmarks/kmmlu_main.py \
-    --model_provider azureopenai \
-    --batch_size 20 \
-    --max_tokens 512 \
-    --temperature 0.01 \
-    --template_type basic \
-    --is_hard False \
-    --num_shots 0
-
-# KMMLU-HARD (0-shot)
-uv run python benchmarks/kmmlu_main.py \
-    --model_provider azureopenai \
-    --batch_size 20 \
-    --max_tokens 512 \
-    --temperature 0.01 \
-    --template_type basic \
-    --is_hard True \
-    --num_shots 0
-
-# HRM8K (GSM8K subset)
-uv run python benchmarks/hrm8k_main.py \
-    --model_provider azureopenai \
-    --batch_size 10 \
-    --max_tokens 1500 \
-    --temperature 0.01 \
-    --template_type basic \
-    --subset GSM8K
-
-# KoBALT
-uv run python benchmarks/kobalt_main.py \
-    --model_provider azureopenai \
     --batch_size 10 \
     --max_tokens 512 \
-    --temperature 0.01 \
-    --template_type basic
+    --temperature 0.01
 
-# KorMedMCQA (all subsets)
-uv run python benchmarks/kormedmcqa_main.py \
-    --model_provider azureopenai \
-    --batch_size 10 \
-    --max_tokens 512 \
-    --temperature 0.01 \
-    --template_type basic
+# Available benchmark scripts:
+# benchmarks/click_main.py
+# benchmarks/haerae_main.py  
+# benchmarks/kmmlu_main.py
+# benchmarks/hrm8k_main.py
+# benchmarks/kobalt_main.py
+# benchmarks/kormedmcqa_main.py
 ```
 
 ### Available Parameters
@@ -486,6 +441,7 @@ uv run python benchmarks/kormedmcqa_main.py \
 --temperature           # Sampling temperature (default: 0.01)
 --template_type         # Prompt template type (default: basic)
 --wait_time             # Wait time between requests (default: 1.0)
+--num_workers           # Number of parallel workers for processing (default: 4)
 --num_shots             # Number of few-shot examples for KMMLU (default: 0)
 --is_hard               # Use KMMLU-HARD dataset (default: False)
 --subset                # HRM8K subset: GSM8K, MATH, OMNI_MATH, MMMLU, KSM (default: GSM8K)
