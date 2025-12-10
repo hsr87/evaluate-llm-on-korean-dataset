@@ -42,7 +42,7 @@ def process_chunk(chunk_info):
     try:
         evaluator = HAERAEEvaluator(model_config, template_type)
         results = evaluator.process_batch(data_chunk, MultipleChoicesFiveParser, num_choices=5)
-        evaluator.save_results(results, csv_path)
+        evaluator.save_results(results, csv_path, chunk_id=chunk_id)
         
         logger.info(f"✅ Completed chunk {chunk_id}")
         return chunk_id, "completed"
@@ -64,7 +64,7 @@ def main():
     parser.add_argument("--max_tokens", type=int, default=256)
     parser.add_argument("--temperature", type=float, default=0.01)
     parser.add_argument("--template_type", type=str, default="basic")
-    parser.add_argument("--wait_time", type=float, default=1.0)
+    parser.add_argument("--wait_time", type=float, default=float(os.getenv("WAIT_TIME", "30.0")))
     parser.add_argument("--categories", nargs="+", default=None)
     parser.add_argument("--num_workers", type=int, default=4)
     args = parser.parse_args()
@@ -158,6 +158,11 @@ def main():
             desc="Processing chunks",
             position=0
         ))
+    
+    # chunk 파일들을 합치기
+    from core.evaluator import BaseEvaluator
+    evaluator = BaseEvaluator({}, "basic")  # 임시 evaluator for merging
+    evaluator.merge_chunk_files(csv_path, len(chunks))
     
     # 결과 요약
     elapsed = time.time() - start_time

@@ -32,23 +32,53 @@ class BenchmarkEvaluator:
                 logger.warning(f"Error loading results: {e}")
         return pd.DataFrame()
     
-    def save_results(self, responses, csv_path, merge_key='category'):
-        """결과 저장 (중복 제거)"""
+    def merge_chunk_files(self, csv_path, num_chunks):
+        """chunk 파일들을 합쳐서 최종 CSV 생성"""
+        all_dfs = []
+        
+        for i in range(num_chunks):
+            chunk_path = csv_path.replace('.csv', f'_chunk_{i}.csv')
+            if os.path.exists(chunk_path):
+                df_chunk = pd.read_csv(chunk_path)
+                all_dfs.append(df_chunk)
+                os.remove(chunk_path)  # 임시 파일 삭제
+        
+        if all_dfs:
+            df_combined = pd.concat(all_dfs, ignore_index=True)
+            os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+            df_combined.to_csv(csv_path, index=False)
+            logger.info(f"✅ Merged {len(all_dfs)} chunks into {csv_path} (Total: {len(df_combined)} records)")
+            return df_combined
+        else:
+            logger.warning("No chunk files found to merge")
+            return pd.DataFrame()
+
+    def save_results(self, responses, csv_path, merge_key='category', chunk_id=None):
+        """결과 저장 (병렬 처리 시 chunk별 저장)"""
         df_new = pd.DataFrame(responses)
         
-        if os.path.exists(csv_path):
-            df_existing = pd.read_csv(csv_path)
-            current_key = df_new[merge_key].iloc[0] if not df_new.empty else None
-            if current_key:
-                df_existing = df_existing[df_existing[merge_key] != current_key]
-            df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+        if chunk_id is not None:
+            # 병렬 처리: chunk별 임시 파일 저장
+            chunk_path = csv_path.replace('.csv', f'_chunk_{chunk_id}.csv')
+            os.makedirs(os.path.dirname(chunk_path), exist_ok=True)
+            df_new.to_csv(chunk_path, index=False)
+            logger.info(f"✅ Saved {len(df_new)} records to chunk file {chunk_path}")
+            return df_new
         else:
-            df_combined = df_new
-        
-        os.makedirs(os.path.dirname(csv_path), exist_ok=True)
-        df_combined.to_csv(csv_path, index=False)
-        logger.info(f"✅ Saved {len(df_new)} records to {csv_path} (Total: {len(df_combined)})")
-        return df_combined
+            # 단일 처리: 기존 방식
+            if os.path.exists(csv_path):
+                df_existing = pd.read_csv(csv_path)
+                current_key = df_new[merge_key].iloc[0] if not df_new.empty else None
+                if current_key:
+                    df_existing = df_existing[df_existing[merge_key] != current_key]
+                df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+            else:
+                df_combined = df_new
+            
+            os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+            df_combined.to_csv(csv_path, index=False)
+            logger.info(f"✅ Saved {len(df_new)} records to {csv_path} (Total: {len(df_combined)})")
+            return df_combined
     
     def get_completed_categories(self, csv_path, category_key='category', category_sizes=None):
         """완료된 카테고리 반환 (실제 카테고리 크기와 비교)"""
@@ -112,6 +142,7 @@ class BenchmarkEvaluator:
         results = []
         batch_size = self.model_config['batch_size']
         max_retries = self.model_config['max_retries']
+        wait_time = self.model_config.get('wait_time', 1.0)
         
         with tqdm(total=len(batch_data), desc="  Samples", leave=False, position=1, file=sys.stdout, mininterval=0.1, dynamic_ncols=True) as pbar:
             for i in range(0, len(batch_data), batch_size):
@@ -199,8 +230,17 @@ class BenchmarkEvaluator:
                     except Exception as e:
                         error_msg = str(e)
                         
+                        # Throttling error 처리 (AWS Bedrock, Azure OpenAI 등)
+                        if "ThrottlingException" in error_msg or "Too many requests" in error_msg or "throttl" in error_msg.lower():
+                            if retry < max_retries:
+                                logger.warning(f"Throttling detected, waiting {wait_time}s before retry...")
+                                time.sleep(wait_time)
+                            else:
+                                results.extend([self._make_failed(qna, "THROTTLING") for qna in mini_batch])
+                                pbar.update(len(mini_batch))
+                                break
                         # Content filtering 일반 Exception 처리
-                        if "prompt_filter_results" in error_msg or "Response missing `choices` key" in error_msg:
+                        elif "prompt_filter_results" in error_msg or "Response missing `choices` key" in error_msg:
                             logger.warning(f"Content filtering Exception - marking batch as FILTERED")
                             results.extend([self._make_filtered(qna) for qna in mini_batch])
                             pbar.update(len(mini_batch))
@@ -213,6 +253,7 @@ class BenchmarkEvaluator:
                             else:
                                 results.extend([self._make_failed(qna, str(e)) for qna in mini_batch])
                                 pbar.update(len(mini_batch))
+                                break
         
         return results
     

@@ -40,17 +40,27 @@ Answer: B
 E\\n\\nExplanation:..."""
 
 
-def _generate_reasoning_prompt(num_choices):
-    """Generate reasoning prompt"""
+def _generate_reasoning_prompt(num_choices, reasoning_effort="medium"):
+    """Generate reasoning prompt based on effort level"""
+    effort_instructions = {
+        "none": "Keep your reasoning VERY BRIEF (1 sentence maximum)",
+        "minimal": "Keep your reasoning BRIEF (1-2 sentences maximum)", 
+        "low": "Keep your reasoning CONCISE (2-3 sentences maximum)",
+        "medium": "Provide clear reasoning (3-4 sentences maximum)",
+        "high": "Provide detailed reasoning and analysis (4-6 sentences maximum)"
+    }
+    
+    instruction = effort_instructions.get(reasoning_effort, effort_instructions["medium"])
+    
     return f"""You are a multiple-choice question answerer. Your task is to analyze the question carefully and select the single best answer.
 
 INSTRUCTIONS:
-1. Keep your reasoning BRIEF and CONCISE (2-3 sentences maximum)
+1. {instruction}
 2. After reasoning, provide your answer in the format: ### ANSWER followed by a single letter
 3. Your answer must be ONLY one uppercase letter: {_get_choice_letters(num_choices)}
 
 CORRECT OUTPUT FORMAT:
-[Brief reasoning in 2-3 sentences]
+[Reasoning based on {reasoning_effort} effort level]
 
 ### ANSWER
 A
@@ -64,7 +74,7 @@ INCORRECT OUTPUT EXAMPLES:
 - [C]
 - ```C```
 
-Remember: Keep reasoning SHORT and always use ### ANSWER format."""
+Remember: Follow the {reasoning_effort} reasoning level and always use ### ANSWER format."""
 
 
 def _is_reasoning_enabled():
@@ -79,10 +89,11 @@ def get_system_prompt(num_choices=5):
         num_choices: Number of answer choices (4, 5, 10, etc.)
     """
     reasoning_enabled = _is_reasoning_enabled()
+    reasoning_effort = os.getenv("REASONING_EFFORT", "medium")
     
     if reasoning_enabled:
-        prompt = _generate_reasoning_prompt(num_choices)
-        mode = "Reasoning mode enabled"
+        prompt = _generate_reasoning_prompt(num_choices, reasoning_effort)
+        mode = f"Reasoning mode enabled ({reasoning_effort} effort)"
     else:
         prompt = _generate_direct_prompt(num_choices)
         mode = "Direct answer mode"

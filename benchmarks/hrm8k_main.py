@@ -33,7 +33,7 @@ def main():
     parser.add_argument("--max_tokens", type=int, default=3000)
     parser.add_argument("--temperature", type=float, default=0.01)
     parser.add_argument("--template_type", type=str, default="basic")
-    parser.add_argument("--wait_time", type=float, default=1.0)
+    parser.add_argument("--wait_time", type=float, default=float(os.getenv("WAIT_TIME", "30.0")))
     parser.add_argument("--subset", type=str, default=None)
     args = parser.parse_args()
 

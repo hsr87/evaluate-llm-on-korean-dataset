@@ -45,10 +45,10 @@ KorMedMCQA is a Korean Medical Multiple-Choice Question Answering benchmark deri
 The code skeleton is based on https://github.com/corca-ai/evaluating-gpt-4o-on-CLIcK, but significant improvements have been made:
 
 - **Multi-provider support**: Azure OpenAI, AWS Bedrock, OpenAI, Azure ML, Azure AI Foundry, and Hugging Face
-- **Parallel processing**: Efficient batch processing with configurable concurrency
-- **Robust error handling**: Content filtering (400 error) and rate limit (429 error) exception handling
-- **Advanced parsing**: Custom output parsers supporting reasoning models (e.g., Nova) with multiple response format detection
-- **Optimized prompts**: XML-tagged structured prompts with clear instructions for better LLM comprehension
+- **Parallel processing**: Efficient batch processing with configurable concurrency and chunk-based file merging
+- **Robust error handling**: Content filtering, rate limiting, and throttling exception handling with configurable wait times
+- **Advanced parsing**: Custom output parsers supporting reasoning models with multiple response format detection
+- **Adaptive prompts**: Reasoning-aware system prompts with configurable effort levels (none/minimal/low/medium/high)
 - **Comprehensive logging**: Debug mode with detailed request/response logging for troubleshooting 
 
 ## Results
@@ -84,6 +84,17 @@ The prompt is the same as the CLIcK paper prompt. The experimental results may v
 - Recommended settings: `--max_tokens 5000` or higher
 - For reasoning models (e.g., Nova with reasoning), consider using lower reasoning effort to reduce token consumption
 - If you encounter `stopReason: 'max_tokens'`, increase the token limit further
+
+**Reasoning Configuration:**
+- `REASONING_ENABLED=true` enables reasoning mode for system prompts across all providers
+- `REASONING_EFFORT` levels: none (minimal reasoning), minimal (1-2 sentences), low (2-3 sentences), medium (3-4 sentences), high (4-6 sentences)
+- For Bedrock Nova models, reasoning config is also applied to the model's native reasoning capability
+- For other providers, reasoning is handled through enhanced system prompts
+
+**Throttling Protection:**
+- `WAIT_TIME` environment variable controls delay when throttling errors occur (default: 30 seconds)
+- Only activates on `ThrottlingException`, `Too many requests`, or similar throttling errors
+- Normal processing continues without delays
 
 Since most of them are ChatCompletion or instruction fine-tuned models, the variation may be large compared to the results of other group's experiments. However, our experimental results show that the trend follows similarly under the same experimental conditions. (e.g., GPT-4o: 70.57/GPT-4o-mini: 60.31 in Experimental Condition 1; GPT-4o: 67.76/GPT-4o-mini: 57.53 in Experimental Condition 2).
 
@@ -349,7 +360,13 @@ Rename `.env.sample` to `.env` and configure your credentials:
 # Basic info
 MODEL_NAME=<YOUR_MODEL_NAME>
 MODEL_VERSION=<YOUR_MODEL_VERSION>
-REASONING_EFFORT=medium  # For GPT-5.1: none, minimal, low, medium, high
+
+# Reasoning Configuration (applies to all providers)
+REASONING_ENABLED=true  # Enable reasoning mode for system prompts
+REASONING_EFFORT=medium  # none, minimal, low, medium, high
+
+# Wait time between requests (seconds) - helps avoid throttling
+WAIT_TIME=30  # Default: 30 seconds, only used when throttling errors occur
 ```
 
 #### Azure OpenAI
@@ -447,8 +464,6 @@ uv run python benchmarks/click_main.py \
 --subset                # HRM8K subset: GSM8K, MATH, OMNI_MATH, MMMLU, KSM (default: GSM8K)
 --categories            # Specific categories to evaluate (optional)
 ```
-
-**Note for AWS Bedrock users**: If you encounter `ThrottlingException` errors, increase the `--wait_time` parameter (e.g., `--wait_time 2.0` or higher) to add delays between requests and avoid rate limiting.
 
 ### Output
 

@@ -44,7 +44,7 @@ def main():
     parser.add_argument("--max_tokens", type=int, default=256)
     parser.add_argument("--temperature", type=float, default=0.01)
     parser.add_argument("--template_type", type=str, default="basic")
-    parser.add_argument("--wait_time", type=float, default=1.0)
+    parser.add_argument("--wait_time", type=float, default=float(os.getenv("WAIT_TIME", "30.0")))
     parser.add_argument("--levels", nargs="+", type=int, default=None, help="Filter by levels (1, 2, 3)")
     parser.add_argument("--num_workers", type=int, default=4)
     args = parser.parse_args()
@@ -125,6 +125,11 @@ def main():
             desc="Processing chunks",
             position=0
         ))
+    
+    # chunk 파일들을 합치기
+    from core.evaluator import BaseEvaluator
+    evaluator = BaseEvaluator({}, "basic")  # 임시 evaluator for merging
+    evaluator.merge_chunk_files(csv_path, len(chunks))
     
     elapsed = time.time() - start_time
     logger.info(f"\n{'='*50}")

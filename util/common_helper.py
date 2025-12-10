@@ -24,35 +24,6 @@ from .phi3_formatter import CustomPhi3ContentFormatter
 from config.prompts import get_system_prompt
 
 
-class ThrottledChatBedrockConverse(ChatBedrockConverse):
-    """ChatBedrockConverse with throttling protection"""
-    
-    def __init__(self, wait_time: float = 10.0, **kwargs):
-        super().__init__(**kwargs)
-        object.__setattr__(self, 'wait_time', wait_time)
-        object.__setattr__(self, 'last_request_time', 0)
-    
-    def _generate(
-        self,
-        messages: List[BaseMessage],
-        stop: Optional[List[str]] = None,
-        run_manager: Optional[CallbackManagerForLLMRun] = None,
-        **kwargs: Any,
-    ) -> Any:
-        # Add throttling delay
-        current_time = time.time()
-        last_request_time = getattr(self, 'last_request_time', 0)
-        time_since_last = current_time - last_request_time
-        wait_time = getattr(self, 'wait_time', 10.0)
-        
-        if time_since_last < wait_time:
-            sleep_time = wait_time - time_since_last
-            time.sleep(sleep_time)
-        
-        object.__setattr__(self, 'last_request_time', time.time())
-        return super()._generate(messages, stop, run_manager, **kwargs)
-    
-
 def str2bool(v):
     """Convert string to boolean value."""
     if isinstance(v, bool):
@@ -137,9 +108,13 @@ def get_provider_name(model_provider):
 
 
 def get_llm_client(
-    model_provider, hf_model_id=None, temperature=0.01, max_tokens=256, max_retries=3, wait_time=1.0, system_prompt=None
+    model_provider, hf_model_id=None, temperature=0.01, max_tokens=256, max_retries=3, wait_time=None, system_prompt=None
 ):
     """Get LLM client"""
+    
+    # Use environment variable for wait_time if not provided
+    if wait_time is None:
+        wait_time = float(os.getenv("WAIT_TIME", "30.0"))
 
     if model_provider == "azureopenai":
 
@@ -231,9 +206,11 @@ def get_llm_client(
         # Build additional_model_request_fields
         additional_fields = {}
         
-        # Reasoning config
+        # Reasoning config - only for Nova models
         reasoning_enabled = os.getenv("REASONING_ENABLED", "false").lower() == "true"
-        if reasoning_enabled:
+        is_nova_model = "nova" in model_name.lower()
+        
+        if reasoning_enabled and is_nova_model:
             reasoning_effort = os.getenv("REASONING_EFFORT", "high")
             additional_fields["reasoningConfig"] = {
                 "type": "enabled",
@@ -249,16 +226,15 @@ def get_llm_client(
         bedrock_kwargs = {
             "model": model_name,
             "region_name": os.getenv("AWS_REGION"),
-            "wait_time": wait_time,
             "system": system_messages,
             "additional_model_request_fields": additional_fields if additional_fields else None
         }
         
-        if not (reasoning_enabled and reasoning_effort == "high"):
+        if not (reasoning_enabled and is_nova_model and reasoning_effort == "high"):
             bedrock_kwargs["temperature"] = temperature
             bedrock_kwargs["max_tokens"] = max_tokens
         
-        llm = ThrottledChatBedrockConverse(**bedrock_kwargs)
+        llm = ChatBedrockConverse(**bedrock_kwargs)
     else:
         raise ValueError(
             "Invalid 'model_provider' value. Please choose from ['azureopenai', 'openai', 'huggingface', 'azureml', 'azureai', 'bedrock']"

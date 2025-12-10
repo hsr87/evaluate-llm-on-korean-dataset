@@ -38,7 +38,7 @@ read -p "[Q2] 디버그 모드로 실행하시겠습니까? (y/n, 기본값: y):
 debug_choice=${debug_choice:-y}
 if [[ "$debug_choice" =~ ^[Yy]$ ]]; then
     is_debug=True
-    num_debug_samples=5
+    num_debug_samples=20
 else
     is_debug=False
     num_debug_samples=0
