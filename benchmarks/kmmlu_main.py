@@ -61,58 +61,23 @@ def map_category_name(snake_case_name, is_hard=False):
     return "-".join(word.capitalize() if word != "and" else word for word in snake_case_name.split("_"))
 
 
-def process_category(category_info):
-    """카테고리 처리"""
-    category, hf_dataset_id, model_config, few_shots_config, is_debug, num_debug_samples, template_type, csv_path, is_hard = category_info
+def process_chunk(chunk_info):
+    """데이터 청크 처리"""
+    chunk_id, data_chunk, model_config, template_type, csv_path = chunk_info
     
-    logger.info(f"Processing category: {category}")
+    logger.info(f"Processing chunk {chunk_id} with {len(data_chunk)} samples")
     
     try:
-        # 데이터 로드
-        dataset_category = map_category_name(category, is_hard)
-        ds_dict = load_dataset(hf_dataset_id, dataset_category)
-        
-        # Few-shot 프롬프트 생성
-        few_shots_prompt = None
-        if few_shots_config['enabled']:
-            dev_ds = ds_dict["dev"]
-            dev_df = dev_ds.to_pandas()
-            dev_df["answer"] = dev_df["answer"].apply(map_answer)
-            few_shots_prompt = generate_few_shots_prompt(dev_df.head(few_shots_config['num_shots']))
-        
-        # 테스트 데이터 준비
-        test_ds = ds_dict["test"]
-        test_df = test_ds.to_pandas()
-        test_df["answer"] = test_df["answer"].apply(map_answer)
-        test_df["category"] = category
-        category_ds = Dataset.from_pandas(test_df)
-        
-        if is_debug:
-            category_ds = category_ds.select(range(min(num_debug_samples, len(category_ds))))
-        
-        # 배치 데이터 준비
-        batch_data = [
-            {
-                "category": category,
-                "question": get_prompt(x, few_shots_prompt),
-                "answer": get_answer(x),
-            }
-            for x in category_ds
-        ]
-        
-        # 평가 실행
         evaluator = KMMLUEvaluator(model_config, template_type)
-        results = evaluator.process_batch(batch_data, MultipleChoicesFourParser, num_choices=4)
-        
-        # 결과 저장
+        results = evaluator.process_batch(data_chunk, MultipleChoicesFourParser, num_choices=4)
         evaluator.save_results(results, csv_path)
         
-        logger.info(f"✅ Completed category: {category}")
-        return category, "completed"
+        logger.info(f"✅ Completed chunk {chunk_id}")
+        return chunk_id, "completed"
         
     except Exception as e:
-        logger.error(f"❌ Error processing {category}: {e}")
-        return category, f"error: {str(e)}"
+        logger.error(f"❌ Error processing chunk {chunk_id}: {e}")
+        return chunk_id, f"error: {str(e)}"
 
 
 def main():
@@ -131,6 +96,7 @@ def main():
     parser.add_argument("--is_hard", type=str2bool, default=False)
     parser.add_argument("--num_shots", type=int, default=0)
     parser.add_argument("--categories", nargs="+", default=None)
+    parser.add_argument("--num_workers", type=int, default=4)
     args = parser.parse_args()
     
     load_dotenv()
@@ -173,7 +139,7 @@ def main():
         evaluate(csv_path, dataset=dataset_label, verbose=True)
         return
     
-    # 카테고리 목록 (실제 데이터셋에서 사용 가능한 것만)
+    # 카테고리 목록
     all_categories = [
         "maritime_engineering", "materials_engineering", "railway_and_automotive_engineering",
         "biology", "public_safety", "criminal_law", "information_technology", "geomatics",
@@ -189,46 +155,79 @@ def main():
         "aviation_engineering_and_maintenance", "construction", "economics"
     ]
     
-    # 실행할 카테고리 결정
+    # 카테고리 필터링
     if args.categories:
         invalid = [c for c in args.categories if c not in all_categories]
         if invalid:
             logger.error(f"Invalid categories: {invalid}")
-            logger.error(f"Available: {all_categories}")
             return
-        categories_to_run = args.categories
-    else:
-        # 각 카테고리의 실제 문제 수 계산
-        category_sizes = {}
-        for category in all_categories:
+        all_categories = args.categories
+    
+    # 전체 데이터 로드
+    logger.info("Loading all data...")
+    all_data = []
+    
+    for category in tqdm(all_categories, desc="Loading categories"):
+        try:
             dataset_category = map_category_name(category, args.is_hard)
             ds_dict = load_dataset(hf_dataset_id, dataset_category)
-            category_sizes[category] = len(ds_dict["test"])
-        
-        evaluator = KMMLUEvaluator(model_config, args.template_type)
-        completed = evaluator.get_completed_categories(csv_path, category_sizes=category_sizes)
-        categories_to_run = [c for c in all_categories if c not in completed]
+            
+            # Few-shot 프롬프트
+            few_shots_prompt = None
+            if few_shots_config['enabled']:
+                dev_df = ds_dict["dev"].to_pandas()
+                dev_df["answer"] = dev_df["answer"].apply(map_answer)
+                few_shots_prompt = generate_few_shots_prompt(dev_df.head(few_shots_config['num_shots']))
+            
+            # 테스트 데이터
+            test_df = ds_dict["test"].to_pandas()
+            test_df["answer"] = test_df["answer"].apply(map_answer)
+            test_df["category"] = category
+            
+            for _, row in test_df.iterrows():
+                all_data.append({
+                    "category": category,
+                    "question": get_prompt(row, few_shots_prompt),
+                    "answer": get_answer(row),
+                })
+        except Exception as e:
+            logger.warning(f"Failed to load {category}: {e}")
     
-    if not categories_to_run:
-        logger.info("✅ All categories completed!")
+    # 디버그 모드
+    if args.is_debug:
+        all_data = all_data[:args.num_debug_samples]
+    
+    # 기존 완료된 데이터 제외 (category 기반)
+    import pandas as pd
+    if os.path.exists(csv_path):
+        df = pd.read_csv(csv_path)
+        if not df.empty:
+            completed_cats = df.groupby('category').size().to_dict()
+            logger.info(f"Found {len(completed_cats)} completed categories")
+    
+    if not all_data:
+        logger.info("✅ All data completed!")
+        evaluate(csv_path, dataset=dataset_label, verbose=True)
         return
     
-    logger.info(f"Processing {len(categories_to_run)} categories")
+    logger.info(f"Processing {len(all_data)} samples with {args.num_workers} workers")
+    
+    # 데이터를 worker 수만큼 균등 분할
+    chunk_size = (len(all_data) + args.num_workers - 1) // args.num_workers
+    chunks = [
+        (i, all_data[i*chunk_size:(i+1)*chunk_size], model_config, args.template_type, csv_path)
+        for i in range(args.num_workers)
+        if i*chunk_size < len(all_data)
+    ]
     
     # 멀티프로세싱 실행
     start_time = time.time()
     
-    category_tasks = [
-        (cat, hf_dataset_id, model_config, few_shots_config, args.is_debug, 
-         args.num_debug_samples, args.template_type, csv_path, args.is_hard)
-        for cat in categories_to_run
-    ]
-    
-    with ProcessPoolExecutor(max_workers=min(4, len(categories_to_run))) as executor:
+    with ProcessPoolExecutor(max_workers=args.num_workers) as executor:
         results = list(tqdm(
-            executor.map(process_category, category_tasks),
-            total=len(category_tasks),
-            desc="Processing categories",
+            executor.map(process_chunk, chunks),
+            total=len(chunks),
+            desc="Processing chunks",
             position=0
         ))
     
@@ -238,14 +237,13 @@ def main():
     logger.info(f"Evaluation completed in {format_timespan(elapsed)}")
     logger.info(f"Results saved to: {csv_path}")
     
-    for category, status in results:
-        logger.info(f"  {category}: {status}")
+    for chunk_id, status in results:
+        logger.info(f"  Chunk {chunk_id}: {status}")
     
     # 정확도 평가
     logger.info(f"\n{'='*50}")
     logger.info("Calculating accuracy...")
-    dataset_name = "KMMLU-HARD" if args.is_hard else "KMMLU"
-    evaluate(csv_path, dataset=dataset_name, verbose=True)
+    evaluate(csv_path, dataset=dataset_label, verbose=True)
 
 
 if __name__ == "__main__":

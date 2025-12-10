@@ -35,45 +35,23 @@ def get_prompt(x):
     )
 
 
-def process_subset(subset_info):
-    """서브셋 처리"""
-    subset, model_config, is_debug, num_debug_samples, template_type, csv_path = subset_info
+def process_chunk(chunk_info):
+    """데이터 청크 처리"""
+    chunk_id, data_chunk, model_config, template_type, csv_path = chunk_info
     
-    logger.info(f"Processing subset: {subset}")
+    logger.info(f"Processing chunk {chunk_id} with {len(data_chunk)} samples")
     
     try:
-        # 데이터셋 로드
-        ds = load_dataset("sean0042/KorMedMCQA", name=subset)["test"]
-        
-        # 서브셋 데이터 준비
-        subset_data = []
-        for i, item in enumerate(ds):
-            if is_debug and i >= num_debug_samples:
-                break
-            
-            # Convert answer from 1-5 to A-E
-            answer = chr(64 + item["answer"])
-            
-            subset_data.append({
-                "id": f"{subset}_{i}",
-                "category": subset,
-                "question": get_prompt(item),
-                "answer": answer,
-            })
-        
-        # 평가 실행
         evaluator = CLIcKEvaluator(model_config, template_type)
-        results = evaluator.process_batch(subset_data, MultipleChoicesFiveParser, num_choices=5)
-        
-        # 결과 저장
+        results = evaluator.process_batch(data_chunk, MultipleChoicesFiveParser, num_choices=5)
         evaluator.save_results(results, csv_path)
         
-        logger.info(f"✅ Completed subset: {subset}")
-        return subset, "completed"
+        logger.info(f"✅ Completed chunk {chunk_id}")
+        return chunk_id, "completed"
         
     except Exception as e:
-        logger.error(f"❌ Error processing {subset}: {e}")
-        return subset, f"error: {str(e)}"
+        logger.error(f"❌ Error processing chunk {chunk_id}: {e}")
+        return chunk_id, f"error: {str(e)}"
 
 
 def main():
@@ -88,7 +66,7 @@ def main():
     parser.add_argument("--template_type", type=str, default="basic")
     parser.add_argument("--wait_time", type=float, default=1.0)
     parser.add_argument("--hf_model_id", type=str, default=None)
-    parser.add_argument("--max_workers", type=int, default=4)
+    parser.add_argument("--num_workers", type=int, default=4)
     args = parser.parse_args()
 
     # Model config
@@ -117,33 +95,62 @@ def main():
         evaluate(csv_path, dataset="KorMedMCQA", verbose=True)
         return
     
-    # 서브셋 목록
+    # 전체 데이터 로드
+    logger.info("Loading all data...")
     subsets = ["doctor", "nurse", "pharm", "dentist"]
+    all_data = []
     
-    # 병렬 처리 준비
-    subset_tasks = [
-        (subset, model_config, args.is_debug, args.num_debug_samples, args.template_type, csv_path)
-        for subset in subsets
+    for subset in tqdm(subsets, desc="Loading subsets"):
+        try:
+            ds = load_dataset("sean0042/KorMedMCQA", name=subset)["test"]
+            for i, item in enumerate(ds):
+                answer = chr(64 + item["answer"])
+                all_data.append({
+                    "id": f"{subset}_{i}",
+                    "category": subset,
+                    "question": get_prompt(item),
+                    "answer": answer,
+                })
+        except Exception as e:
+            logger.warning(f"Failed to load {subset}: {e}")
+    
+    # 디버그 모드
+    if args.is_debug:
+        all_data = all_data[:args.num_debug_samples]
+    
+    if not all_data:
+        logger.info("✅ All data completed!")
+        evaluate(csv_path, dataset="KorMedMCQA", verbose=True)
+        return
+    
+    logger.info(f"Processing {len(all_data)} samples with {args.num_workers} workers")
+    
+    # 데이터를 worker 수만큼 균등 분할
+    chunk_size = (len(all_data) + args.num_workers - 1) // args.num_workers
+    chunks = [
+        (i, all_data[i*chunk_size:(i+1)*chunk_size], model_config, args.template_type, csv_path)
+        for i in range(args.num_workers)
+        if i*chunk_size < len(all_data)
     ]
     
     # 병렬 실행
     start_time = time.time()
-    with ProcessPoolExecutor(max_workers=args.max_workers) as executor:
+    with ProcessPoolExecutor(max_workers=args.num_workers) as executor:
         results = list(tqdm(
-            executor.map(process_subset, subset_tasks),
-            total=len(subset_tasks),
-            desc="Processing subsets"
+            executor.map(process_chunk, chunks),
+            total=len(chunks),
+            desc="Processing chunks"
         ))
     
     elapsed_time = time.time() - start_time
     logger.info(f"⏱️  Total time: {format_timespan(elapsed_time)}")
     
     # 결과 요약
-    for subset, status in results:
+    for chunk_id, status in results:
         if status == "completed":
-            logger.info(f"✅ {subset}: {status}")
+            logger.info(f"✅ Chunk {chunk_id}: {status}")
         else:
-            logger.error(f"❌ {subset}: {status}")
+            logger.error(f"❌ Chunk {chunk_id}: {status}")
     
     # 최종 평가
     evaluate(csv_path, dataset="KorMedMCQA", verbose=True)

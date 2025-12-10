@@ -56,6 +56,10 @@ max_tokens=${tokens_input:-4096}
 read -p "[Q5] Temperature를 입력하세요 (기본값: 0.01): " temp_input
 temperature=${temp_input:-0.01}
 
+# Ask user for num workers
+read -p "[Q6] Num workers를 입력하세요 (기본값: 10): " workers_input
+num_workers=${workers_input:-10}
+
 #env_files=(.env_gpt-oss-120b) 
 env_files=(.env)
 template_type=chat
@@ -73,7 +77,7 @@ run_model() {
     echo "Starting evaluation for $env_file"
     
     # 공통 arguments 구성
-    local common_args="--is_debug $is_debug --batch_size $batch_size --max_tokens $max_tokens --temperature $temperature --template_type basic --num_debug_samples $num_debug_samples"
+    local common_args="--is_debug $is_debug --batch_size $batch_size --max_tokens $max_tokens --temperature $temperature --template_type basic --num_debug_samples $num_debug_samples --num_workers $num_workers"
     [[ -n "$categories" ]] && common_args="$common_args --categories $categories"
     
     case "$benchmark" in

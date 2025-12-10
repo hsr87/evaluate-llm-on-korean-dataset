@@ -46,46 +46,23 @@ def get_answer(x):
     return chr(0x41 + answer_idx)
 
 
-def process_category(category_info):
-    """카테고리 처리"""
-    category, model_config, is_debug, num_debug_samples, template_type, csv_path = category_info
+def process_chunk(chunk_info):
+    """데이터 청크 처리"""
+    chunk_id, data_chunk, model_config, template_type, csv_path = chunk_info
     
-    logger.info(f"Processing category: {category}")
+    logger.info(f"Processing chunk {chunk_id} with {len(data_chunk)} samples")
     
     try:
-        # 데이터 로드
-        click_ds = load_dataset("EunsuKim/CLIcK", split="train")
-        with open("mapping/id_to_category.json", "r") as f:
-            id_to_category = json.load(f)
-        
-        # 카테고리 필터링
-        category_data = [
-            {
-                "id": item["id"],
-                "category": category,
-                "question": get_prompt(item),
-                "answer": get_answer(item),
-            }
-            for item in click_ds
-            if id_to_category.get(str(item["id"])) == category
-        ]
-        
-        if is_debug:
-            category_data = category_data[:num_debug_samples]
-        
-        # 평가 실행
         evaluator = CLIcKEvaluator(model_config, template_type)
-        results = evaluator.process_batch(category_data, MultipleChoicesFiveParser, num_choices=5)
-        
-        # 결과 저장
+        results = evaluator.process_batch(data_chunk, MultipleChoicesFiveParser, num_choices=5)
         evaluator.save_results(results, csv_path)
         
-        logger.info(f"✅ Completed category: {category}")
-        return category, "completed"
+        logger.info(f"✅ Completed chunk {chunk_id}")
+        return chunk_id, "completed"
         
     except Exception as e:
-        logger.error(f"❌ Error processing {category}: {e}")
-        return category, f"error: {str(e)}"
+        logger.error(f"❌ Error processing chunk {chunk_id}: {e}")
+        return chunk_id, f"error: {str(e)}"
 
 
 def main():
@@ -102,6 +79,7 @@ def main():
     parser.add_argument("--template_type", type=str, default="basic")
     parser.add_argument("--wait_time", type=float, default=1.0)
     parser.add_argument("--categories", nargs="+", default=None)
+    parser.add_argument("--num_workers", type=int, default=4)
     args = parser.parse_args()
     
     load_dotenv()
@@ -134,67 +112,67 @@ def main():
         evaluate(csv_path, dataset="CLIcK", verbose=True)
         return
     
-    # 카테고리 목록
-    all_categories = [
-        "Economy", "Geography", "History", "Law", "Politics",
-        "Pop Culture", "Society", "Tradition", "Functional", "Grammar", "Textual"
+    # 전체 데이터 로드
+    click_ds = load_dataset("EunsuKim/CLIcK", split="train")
+    with open("mapping/id_to_category.json", "r") as f:
+        id_to_category = json.load(f)
+    
+    # 전체 데이터 준비
+    all_data = [
+        {
+            "id": item["id"],
+            "category": id_to_category.get(str(item["id"])),
+            "question": get_prompt(item),
+            "answer": get_answer(item),
+        }
+        for item in click_ds
     ]
     
-    # 실행할 카테고리 결정
+    # 카테고리 필터링 (지정된 경우)
     if args.categories:
+        all_categories = list(set(id_to_category.values()))
         invalid = [c for c in args.categories if c not in all_categories]
         if invalid:
             logger.error(f"Invalid categories: {invalid}")
             logger.error(f"Available: {all_categories}")
             return
-        categories_to_run = args.categories
-    else:
-        # 기존 결과에서 완료된 카테고리 확인
-        with open("mapping/id_to_category.json", "r") as f:
-            id_to_category = json.load(f)
-        
-        # 각 카테고리의 실제 문제 수 계산
-        click_ds = load_dataset("EunsuKim/CLIcK", split="train")
-        category_sizes = {}
-        for item in click_ds:
-            cat = id_to_category.get(str(item["id"]))
-            if cat:
-                category_sizes[cat] = category_sizes.get(cat, 0) + 1
-        
-        completed_categories = []
-        if os.path.exists(csv_path):
-            df = pd.read_csv(csv_path)
-            if not df.empty:
-                df['category'] = df['id'].astype(str).map(id_to_category)
-                category_counts = df['category'].value_counts()
-                # 실제 카테고리 크기와 비교
-                completed_categories = [
-                    cat for cat, count in category_counts.items() 
-                    if cat in category_sizes and count >= category_sizes[cat]
-                ]
-                logger.info(f"Completed categories: {completed_categories}")
-        
-        categories_to_run = [c for c in all_categories if c not in completed_categories]
+        all_data = [d for d in all_data if d["category"] in args.categories]
     
-    if not categories_to_run:
-        logger.info("✅ All categories completed!")
+    # 디버그 모드
+    if args.is_debug:
+        all_data = all_data[:args.num_debug_samples]
+    
+    # 기존 결과 제외
+    if os.path.exists(csv_path):
+        df = pd.read_csv(csv_path)
+        if not df.empty:
+            completed_ids = set(df['id'].astype(int).tolist())
+            all_data = [d for d in all_data if d['id'] not in completed_ids]
+            logger.info(f"Skipping {len(completed_ids)} completed samples")
+    
+    if not all_data:
+        logger.info("✅ All data completed!")
+        evaluate(csv_path, dataset="CLIcK", verbose=True)
         return
     
-    logger.info(f"Processing {len(categories_to_run)} categories: {categories_to_run}")
+    logger.info(f"Processing {len(all_data)} samples with {args.num_workers} workers")
+    
+    # 데이터를 worker 수만큼 균등 분할
+    chunk_size = (len(all_data) + args.num_workers - 1) // args.num_workers
+    chunks = [
+        (i, all_data[i*chunk_size:(i+1)*chunk_size], model_config, args.template_type, csv_path)
+        for i in range(args.num_workers)
+        if i*chunk_size < len(all_data)
+    ]
     
     # 멀티프로세싱 실행
     start_time = time.time()
     
-    category_tasks = [
-        (cat, model_config, args.is_debug, args.num_debug_samples, args.template_type, csv_path)
-        for cat in categories_to_run
-    ]
-    
-    with ProcessPoolExecutor(max_workers=min(4, len(categories_to_run))) as executor:
+    with ProcessPoolExecutor(max_workers=args.num_workers) as executor:
         results = list(tqdm(
-            executor.map(process_category, category_tasks),
-            total=len(category_tasks),
-            desc="Processing categories",
+            executor.map(process_chunk, chunks),
+            total=len(chunks),
+            desc="Processing chunks",
             position=0
         ))
     
@@ -204,8 +182,8 @@ def main():
     logger.info(f"Evaluation completed in {format_timespan(elapsed)}")
     logger.info(f"Results saved to: {csv_path}")
     
-    for category, status in results:
-        logger.info(f"  {category}: {status}")
+    for chunk_id, status in results:
+        logger.info(f"  Chunk {chunk_id}: {status}")
     
     # 정확도 평가
     logger.info(f"\n{'='*50}")
