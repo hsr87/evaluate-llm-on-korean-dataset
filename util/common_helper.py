@@ -120,11 +120,12 @@ def get_llm_client(
 
         model_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
         reasoning_effort = os.getenv("REASONING_EFFORT")
-        
+        reasoning_enabled = os.getenv("REASONING_ENABLED", "false").lower() == "true"
+
         # GPT-5.1 계열 모델들 (reasoning_effort 지원)
-        if model_name in ["gpt-51", "gpt-51-chat"]:
+        if model_name in ["gpt-5.1", "gpt-5.1-chat", "gpt-5.1(medium)"]:
             model_kwargs = {}
-            if reasoning_effort:
+            if reasoning_enabled and reasoning_effort:
                 model_kwargs["reasoning_effort"] = reasoning_effort
             
             llm = AzureChatOpenAI(
