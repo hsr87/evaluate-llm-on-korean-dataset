@@ -1,0 +1,8183 @@
+category,answer,pred,response
+information_technology,D,D,"### ANSWER
+D"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,A,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,C,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+management,A,B,"### ANSWER
+B"
+management,A,D,"### ANSWER
+D"
+management,C,D,"### ANSWER
+D"
+management,B,B,"### ANSWER
+B"
+mechanical_engineering,C,A,"### ANSWER
+A"
+mechanical_engineering,C,D,"### ANSWER
+D"
+mechanical_engineering,A,C,"### ANSWER
+C"
+mechanical_engineering,A,B,"### ANSWER
+B"
+energy_management,D,C,"### ANSWER
+C"
+energy_management,A,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,D,"### ANSWER
+D"
+psychology,A,B,"### ANSWER
+B"
+psychology,D,C,"### ANSWER
+C"
+psychology,D,D,"### ANSWER
+D"
+psychology,B,D,"### ANSWER  
+D"
+gas_technology_and_engineering,B,C,"### ANSWER
+C"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+agricultural_sciences,D,B,"### ANSWER
+B"
+agricultural_sciences,C,B,"### ANSWER  
+B"
+agricultural_sciences,D,C,"### ANSWER
+C"
+agricultural_sciences,B,B,"### ANSWER  
+B"
+information_technology,C,A,"### ANSWER
+A"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,B,A,"### ANSWER
+A"
+information_technology,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,D,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,C,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+management,A,A,"### ANSWER
+A"
+management,C,C,"### ANSWER
+C"
+management,C,C,"### ANSWER
+C"
+management,D,D,"### ANSWER
+D"
+ecology,B,B,"### ANSWER
+B"
+ecology,B,C,"### ANSWER
+C"
+ecology,B,D,"### ANSWER  
+D"
+ecology,B,D,"### ANSWER  
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+energy_management,D,B,"### ANSWER
+B"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,A,B,"### ANSWER
+B"
+energy_management,A,A,"### ANSWER
+A"
+food_processing,C,D,"### ANSWER
+D"
+food_processing,A,D,"### ANSWER
+D"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,C,B,"### ANSWER
+B"
+maritime_engineering,B,D,"### ANSWER
+D"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,D,"### ANSWER
+D"
+electrical_engineering,D,C,"### ANSWER
+C"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,C,C,"### ANSWER
+C"
+real_estate,A,C,"### ANSWER
+C"
+real_estate,B,D,"### ANSWER  
+D"
+real_estate,A,C,"### ANSWER
+C"
+real_estate,A,D,"### ANSWER  
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,C,"### ANSWER
+C"
+environmental_science,B,B,"### ANSWER
+B"
+environmental_science,C,B,"### ANSWER
+B"
+environmental_science,C,B,"### ANSWER  
+B"
+environmental_science,C,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER  
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER
+D"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,D,"### ANSWER
+D"
+energy_management,C,B,"### ANSWER
+B"
+energy_management,B,A,"### ANSWER
+A"
+nondestructive_testing,B,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER  
+B"
+nondestructive_testing,C,D,"### ANSWER
+D"
+nondestructive_testing,C,D,"### ANSWER
+D"
+psychology,B,D,"### ANSWER
+D"
+psychology,B,B,"### ANSWER
+B"
+psychology,B,B,"### ANSWER
+B"
+psychology,A,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+accounting,A,D,"### ANSWER  
+D"
+accounting,D,D,"### ANSWER
+D"
+accounting,B,A,"### ANSWER
+A"
+accounting,D,D,"### ANSWER  
+D"
+mechanical_engineering,B,A,"### ANSWER
+A"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,A,"### ANSWER  
+A"
+aviation_engineering_and_maintenance,A,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,B,"B
+
+### ANSWER
+B"
+gas_technology_and_engineering,D,A,"### ANSWER
+A"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+real_estate,B,B,"### ANSWER
+B"
+real_estate,D,D,"### ANSWER
+D"
+real_estate,B,B,"### ANSWER
+B"
+real_estate,C,D,"### ANSWER  
+D"
+management,B,D,"### ANSWER  
+D"
+management,D,C,"### ANSWER
+C"
+management,A,A,"### ANSWER
+A"
+management,C,A,"### ANSWER
+A"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,A,A,"### ANSWER
+A"
+information_technology,B,B,"### ANSWER
+B"
+food_processing,D,C,"### ANSWER
+C"
+food_processing,A,D,"### ANSWER
+D"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,C,B,"### ANSWER  
+B"
+maritime_engineering,D,A,"### ANSWER
+A"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,B,"### ANSWER
+B"
+maritime_engineering,C,C,"### ANSWER
+C"
+agricultural_sciences,D,B,"### ANSWER  
+B"
+agricultural_sciences,B,B,"### ANSWER  
+B"
+agricultural_sciences,A,A,"### ANSWER
+A"
+agricultural_sciences,D,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+environmental_science,B,D,"### ANSWER
+D"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,A,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,C,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+health,D,D,"### ANSWER  
+D"
+health,A,A,"### ANSWER
+A"
+health,C,D,"### ANSWER  
+D"
+health,A,D,"### ANSWER
+D"
+nondestructive_testing,B,D,"### ANSWER
+D"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,B,D,"### ANSWER
+D"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,A,"### ANSWER
+A"
+real_estate,C,A,"### ANSWER  
+A"
+real_estate,D,A,"### ANSWER
+A"
+real_estate,C,B,"### ANSWER
+B"
+real_estate,B,B,"### ANSWER
+B"
+agricultural_sciences,A,A,"### ANSWER
+A"
+agricultural_sciences,D,B,"### ANSWER
+B"
+agricultural_sciences,A,A,"### ANSWER
+A"
+agricultural_sciences,B,A,"### ANSWER  
+A"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,D,D,"### ANSWER
+D"
+management,D,C,"### ANSWER
+C"
+management,D,B,"### ANSWER  
+B"
+management,D,C,"### ANSWER
+C"
+management,A,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,D,"### ANSWER
+D"
+gas_technology_and_engineering,A,C,"### ANSWER
+C"
+gas_technology_and_engineering,A,C,"### ANSWER
+C"
+maritime_engineering,C,B,"### ANSWER
+B"
+maritime_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,C,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,,[EMPTY_RESPONSE]
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,C,A,"### ANSWER
+A"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,D,C,"### ANSWER
+C"
+mechanical_engineering,B,A,"### ANSWER
+A"
+energy_management,C,A,"### ANSWER
+A"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,A,B,"### ANSWER
+B"
+energy_management,C,A,"### ANSWER
+A"
+health,B,C,"### ANSWER
+C"
+health,A,A,"### ANSWER
+A"
+health,C,A,"### ANSWER
+A"
+health,B,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,D,"### ANSWER  
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+psychology,D,D,"### ANSWER  
+D"
+psychology,D,D,"### ANSWER
+D"
+psychology,D,C,"### ANSWER
+C"
+psychology,D,A,"### ANSWER
+A"
+agricultural_sciences,B,A,"### ANSWER
+A"
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,C,B,"### ANSWER
+B"
+agricultural_sciences,C,C,"### ANSWER
+C"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,D,B,"### ANSWER
+B"
+chemical_engineering,C,B,"### ANSWER
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+nondestructive_testing,C,A,"### ANSWER
+A"
+nondestructive_testing,B,A,"### ANSWER
+A"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,C,D,"### ANSWER
+D"
+agricultural_sciences,C,D,"### ANSWER
+D"
+agricultural_sciences,A,B,"### ANSWER
+B"
+agricultural_sciences,D,C,"### ANSWER
+C"
+agricultural_sciences,D,B,"### ANSWER
+B"
+food_processing,D,C,"### ANSWER
+C"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,D,C,"### ANSWER
+C"
+food_processing,B,B,"### ANSWER
+B"
+real_estate,D,B,"### ANSWER
+B"
+real_estate,D,B,"### ANSWER
+B"
+real_estate,D,C,"### ANSWER
+C"
+real_estate,A,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,D,"### ANSWER
+D"
+health,D,A,"### ANSWER
+A"
+health,B,D,"### ANSWER
+D"
+health,A,C,"### ANSWER
+C"
+health,C,C,"### ANSWER
+C"
+management,A,D,"### ANSWER  
+D"
+management,D,D,"### ANSWER
+D"
+management,A,A,"### ANSWER
+A"
+management,B,B,"### ANSWER
+B"
+psychology,A,B,"### ANSWER
+B"
+psychology,B,C,"### ANSWER
+C"
+psychology,C,C,"### ANSWER
+C"
+psychology,A,A,"### ANSWER
+A"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,C,C,"### ANSWER
+C"
+environmental_science,D,D,"### ANSWER  
+D"
+environmental_science,B,D,"### ANSWER
+D"
+environmental_science,C,B,"### ANSWER
+B"
+environmental_science,C,A,"### ANSWER
+A"
+accounting,D,D,"### ANSWER
+D"
+accounting,C,B,"### ANSWER  
+B"
+accounting,D,D,"### ANSWER  
+D"
+accounting,C,C,"### ANSWER  
+C"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,D,D,"### ANSWER  
+D"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,B,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+railway_and_automotive_engineering,B,A,"### ANSWER
+A"
+computer_science,C,D,"### ANSWER
+D"
+computer_science,D,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,C,C,"### ANSWER
+C"
+maritime_engineering,C,A,"### ANSWER
+A"
+maritime_engineering,A,C,"### ANSWER
+C"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,B,B,"### ANSWER
+B"
+information_technology,C,D,"### ANSWER
+D"
+information_technology,C,,[EMPTY_RESPONSE]
+information_technology,C,A,"### ANSWER
+A"
+information_technology,B,B,"### ANSWER
+B"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,D,D,"### ANSWER
+D"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,A,C,"### ANSWER
+C"
+chemical_engineering,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,B,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+health,C,C,"### ANSWER
+C"
+health,A,B,"### ANSWER
+B"
+health,B,C,"### ANSWER
+C"
+health,C,A,"### ANSWER  
+A"
+accounting,B,B,"### ANSWER  
+B"
+accounting,D,C,"### ANSWER
+C"
+accounting,C,D,"### ANSWER
+D"
+accounting,B,B,"### ANSWER
+B"
+management,C,A,"### ANSWER
+A"
+management,D,C,"### ANSWER
+C"
+management,A,B,"### ANSWER
+B"
+management,B,D,"### ANSWER  
+D"
+agricultural_sciences,B,A,"### ANSWER
+A"
+agricultural_sciences,D,B,"### ANSWER
+B"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,D,A,"### ANSWER  
+A"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,C,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,A,D,"### ANSWER
+D"
+mechanical_engineering,C,A,"### ANSWER
+A"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,B,"B
+
+### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,B,B,"### ANSWER  
+B"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,D,"### ANSWER
+D"
+real_estate,C,C,"### ANSWER
+C"
+real_estate,D,A,"### ANSWER
+A"
+real_estate,A,C,"### ANSWER
+C"
+real_estate,D,B,"### ANSWER
+B"
+agricultural_sciences,B,D,"### ANSWER
+D"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,B,C,"### ANSWER
+C"
+accounting,D,A,"### ANSWER
+A"
+accounting,B,A,"### ANSWER
+A"
+accounting,A,A,"### ANSWER
+A"
+accounting,D,D,"### ANSWER  
+D"
+aviation_engineering_and_maintenance,B,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,A,"### ANSWER
+A"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,B,C,"### ANSWER
+C"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,D,C,"### ANSWER
+C"
+health,C,C,"### ANSWER
+C"
+health,B,A,"### ANSWER  
+A"
+health,C,A,"### ANSWER
+A"
+health,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,B,"B
+
+### ANSWER
+B"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+management,C,C,"### ANSWER
+C"
+management,C,C,"### ANSWER
+C"
+management,A,C,"### ANSWER
+C"
+management,A,A,"### ANSWER
+A"
+psychology,B,B,"### ANSWER
+B"
+psychology,A,C,"### ANSWER
+C"
+psychology,A,B,"### ANSWER  
+B"
+psychology,A,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,A,D,"### ANSWER
+D"
+real_estate,A,D,"### ANSWER  
+D"
+real_estate,B,D,"### ANSWER  
+D"
+food_processing,C,B,"### ANSWER  
+B"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,D,B,"### ANSWER
+B"
+computer_science,B,C,"### ANSWER
+C"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,D,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+psychology,B,C,"### ANSWER
+C"
+psychology,A,D,"### ANSWER
+D"
+psychology,B,B,"### ANSWER
+B"
+psychology,B,A,"### ANSWER
+A"
+gas_technology_and_engineering,D,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER  
+D"
+gas_technology_and_engineering,D,B,"### ANSWER
+B"
+gas_technology_and_engineering,C,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+agricultural_sciences,A,D,"### ANSWER
+D"
+agricultural_sciences,B,C,"### ANSWER  
+C"
+agricultural_sciences,A,B,"### ANSWER
+B"
+agricultural_sciences,D,B,"### ANSWER  
+B"
+maritime_engineering,C,D,"### ANSWER  
+D"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,B,"### ANSWER
+B"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,A,D,"### ANSWER
+D"
+energy_management,C,C,"### ANSWER
+C"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,C,D,"### ANSWER
+D"
+electrical_engineering,C,B,"### ANSWER
+B"
+chemistry,B,D,"### ANSWER
+D"
+chemistry,D,C,"### ANSWER
+C"
+chemistry,B,D,"### ANSWER
+D"
+chemistry,B,B,"### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,B,C,"### ANSWER
+C"
+environmental_science,B,D,"### ANSWER
+D"
+chemical_engineering,C,,[EMPTY_RESPONSE]
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,A,A,"### ANSWER
+A"
+health,D,D,"### ANSWER  
+D"
+health,D,D,"### ANSWER
+D"
+health,A,B,"### ANSWER
+B"
+political_science_and_sociology,B,B,"### ANSWER  
+B"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,A,A,"### ANSWER
+A"
+real_estate,C,A,"### ANSWER
+A"
+real_estate,B,D,"### ANSWER  
+D"
+maritime_engineering,D,A,"### ANSWER
+A"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,A,"### ANSWER
+A"
+railway_and_automotive_engineering,C,B,"### ANSWER
+B"
+railway_and_automotive_engineering,C,D,"### ANSWER
+D"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,B,"### ANSWER
+B"
+computer_science,D,B,"### ANSWER
+B"
+food_processing,C,D,"### ANSWER
+D"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,D,D,"### ANSWER  
+D"
+management,B,A,"### ANSWER
+A"
+management,C,A,"### ANSWER
+A"
+management,A,A,"### ANSWER
+A"
+management,A,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,D,C,"### ANSWER  
+C"
+chemistry,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+chemical_engineering,A,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,A,A,"### ANSWER
+A"
+agricultural_sciences,A,C,"### ANSWER
+C"
+agricultural_sciences,B,C,"### ANSWER
+C"
+agricultural_sciences,A,D,"### ANSWER  
+D"
+agricultural_sciences,D,C,"### ANSWER
+C"
+information_technology,D,A,"### ANSWER  
+A"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,B,A,"### ANSWER
+A"
+information_technology,B,D,"### ANSWER
+D"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,D,B,"### ANSWER
+B"
+mechanical_engineering,D,B,"### ANSWER
+B"
+mechanical_engineering,C,B,"### ANSWER
+B"
+psychology,D,D,"### ANSWER
+D"
+psychology,D,A,"### ANSWER
+A"
+psychology,B,B,"### ANSWER
+B"
+psychology,C,C,"### ANSWER
+C"
+food_processing,B,D,"### ANSWER
+D"
+food_processing,B,A,"### ANSWER
+A"
+food_processing,C,D,"### ANSWER
+D"
+food_processing,A,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,D,"D
+
+### ANSWER
+D"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,B,D,"### ANSWER
+D"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+political_science_and_sociology,B,A,"### ANSWER
+A"
+political_science_and_sociology,B,C,"### ANSWER
+C"
+energy_management,C,D,"### ANSWER  
+D"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+real_estate,A,A,"### ANSWER
+A"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,D,D,"### ANSWER
+D"
+real_estate,D,B,"### ANSWER  
+B"
+railway_and_automotive_engineering,C,D,"### ANSWER
+D"
+railway_and_automotive_engineering,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER  
+B"
+railway_and_automotive_engineering,D,C,"### ANSWER
+C"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,C,B,"### ANSWER
+B"
+information_technology,D,A,"### ANSWER
+A"
+information_technology,D,D,"### ANSWER
+D"
+psychology,A,D,"### ANSWER
+D"
+psychology,A,B,"### ANSWER
+B"
+psychology,B,C,"### ANSWER
+C"
+psychology,D,A,"### ANSWER
+A"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,C,A,"### ANSWER
+A"
+environmental_science,C,B,"### ANSWER
+B"
+maritime_engineering,D,A,"### ANSWER
+A"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,A,"### ANSWER
+A"
+mechanical_engineering,C,B,"### ANSWER
+B"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,C,B,"### ANSWER
+B"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,D,A,"### ANSWER
+A"
+food_processing,A,A,"### ANSWER
+A"
+food_processing,C,B,"### ANSWER  
+B"
+aviation_engineering_and_maintenance,D,C,"### ANSWER  
+C"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,A,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,A,A,"### ANSWER
+A"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,D,C,"### ANSWER
+C"
+electrical_engineering,C,C,"### ANSWER
+C"
+computer_science,D,B,"### ANSWER
+B"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,D,A,"### ANSWER
+A"
+computer_science,C,C,"### ANSWER
+C"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,B,A,"### ANSWER
+A"
+energy_management,B,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER  
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER  
+D"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+management,A,D,"### ANSWER
+D"
+management,B,B,"### ANSWER
+B"
+management,C,D,"### ANSWER
+D"
+management,A,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,C,B,"### ANSWER
+B"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,C,A,"### ANSWER
+A"
+psychology,B,C,"### ANSWER
+C"
+psychology,A,D,"### ANSWER  
+D"
+psychology,D,C,"### ANSWER
+C"
+psychology,A,C,"### ANSWER
+C"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,A,C,"### ANSWER
+C"
+food_processing,C,B,"### ANSWER
+B"
+food_processing,C,D,"### ANSWER
+D"
+chemistry,B,D,"### ANSWER
+D"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,C,A,"### ANSWER
+A"
+gas_technology_and_engineering,D,D,"### ANSWER  
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,C,,[EMPTY_RESPONSE]
+real_estate,D,A,"### ANSWER
+A"
+real_estate,B,A,"### ANSWER  
+A"
+real_estate,B,B,"### ANSWER  
+B"
+real_estate,B,B,"### ANSWER
+B"
+maritime_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,B,D,"### ANSWER
+D"
+agricultural_sciences,C,B,"### ANSWER
+B"
+agricultural_sciences,B,,[EMPTY_RESPONSE]
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,C,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,A,A,"### ANSWER  
+A"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+information_technology,D,A,"### ANSWER
+A"
+information_technology,A,C,"### ANSWER
+C"
+information_technology,C,B,"### ANSWER
+B"
+information_technology,C,D,"### ANSWER
+D"
+environmental_science,C,C,"### ANSWER  
+C"
+environmental_science,B,C,"### ANSWER
+C"
+environmental_science,B,B,"### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+electrical_engineering,B,A,"### ANSWER
+A"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER  
+D"
+electrical_engineering,B,D,"### ANSWER
+D"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,D,B,"### ANSWER
+B"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,D,D,"### ANSWER
+D"
+political_science_and_sociology,B,D,"### ANSWER
+D"
+political_science_and_sociology,C,C,"### ANSWER
+C"
+political_science_and_sociology,B,C,"### ANSWER  
+C"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+computer_science,A,B,"### ANSWER
+B"
+computer_science,D,C,"### ANSWER
+C"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,C,"### ANSWER  
+C"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+management,A,A,"### ANSWER
+A"
+management,C,A,"### ANSWER
+A"
+management,A,A,"### ANSWER
+A"
+management,D,B,"### ANSWER
+B"
+real_estate,A,C,"### ANSWER  
+C"
+real_estate,D,C,"### ANSWER  
+C"
+real_estate,B,A,"### ANSWER  
+A"
+real_estate,B,B,"### ANSWER
+B"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,C,A,"### ANSWER
+A"
+environmental_science,A,A,"### ANSWER
+A"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,C,"### ANSWER
+C"
+maritime_engineering,D,B,"### ANSWER
+B"
+maritime_engineering,D,B,"### ANSWER
+B"
+food_processing,B,A,"### ANSWER
+A"
+food_processing,C,B,"### ANSWER
+B"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,C,B,"### ANSWER
+B"
+chemistry,D,A,"### ANSWER
+A"
+chemistry,A,B,"### ANSWER
+B"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,C,C,"### ANSWER
+C"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+agricultural_sciences,C,D,"### ANSWER
+D"
+agricultural_sciences,B,D,"### ANSWER
+D"
+agricultural_sciences,B,B,"### ANSWER  
+B"
+agricultural_sciences,C,B,"### ANSWER
+B"
+psychology,C,A,"### ANSWER
+A"
+psychology,B,B,"### ANSWER
+B"
+psychology,A,B,"### ANSWER
+B"
+psychology,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,A,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,B,"### ANSWER
+B"
+computer_science,D,B,"### ANSWER
+B"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,B,"### ANSWER
+B"
+environmental_science,C,A,"### ANSWER
+A"
+environmental_science,C,D,"### ANSWER
+D"
+environmental_science,D,D,"### ANSWER  
+D"
+environmental_science,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,,[EMPTY_RESPONSE]
+railway_and_automotive_engineering,C,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,C,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+real_estate,C,C,"### ANSWER
+C"
+real_estate,B,C,"### ANSWER
+C"
+real_estate,C,A,"### ANSWER
+A"
+real_estate,B,D,"### ANSWER  
+D"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,B,C,"### ANSWER  
+C"
+energy_management,B,D,"### ANSWER  
+D"
+energy_management,B,C,"### ANSWER
+C"
+political_science_and_sociology,C,C,"### ANSWER
+C"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,C,D,"### ANSWER
+D"
+political_science_and_sociology,C,C,"### ANSWER
+C"
+construction,B,C,"### ANSWER
+C"
+construction,C,C,"### ANSWER
+C"
+construction,D,D,"### ANSWER
+D"
+construction,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,A,B,"### ANSWER  
+B"
+maritime_engineering,B,C,"### ANSWER
+C"
+maritime_engineering,D,B,"### ANSWER
+B"
+food_processing,A,B,"### ANSWER
+B"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,D,C,"### ANSWER
+C"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER
+A"
+management,C,C,"### ANSWER
+C"
+management,D,B,"### ANSWER
+B"
+management,C,C,"### ANSWER
+C"
+management,D,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER
+D"
+environmental_science,D,B,"### ANSWER  
+B"
+environmental_science,D,D,"### ANSWER  
+D"
+environmental_science,D,B,"### ANSWER  
+B"
+environmental_science,C,B,"### ANSWER  
+B"
+construction,D,D,"### ANSWER
+D"
+construction,A,B,"### ANSWER  
+B"
+construction,D,C,"### ANSWER
+C"
+construction,C,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,C,"### ANSWER
+C"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,A,B,"### ANSWER
+B"
+real_estate,B,A,"### ANSWER  
+A"
+real_estate,B,C,"### ANSWER
+C"
+food_processing,C,D,"### ANSWER  
+D"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,B,C,"### ANSWER
+C"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,B,"### ANSWER
+B"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,C,A,"### ANSWER
+A"
+agricultural_sciences,A,C,"### ANSWER
+C"
+agricultural_sciences,B,D,"### ANSWER
+D"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,C,B,"### ANSWER
+B"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,B,D,"### ANSWER
+D"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,B,"### ANSWER
+B"
+information_technology,B,B,"### ANSWER
+B"
+energy_management,D,D,"### ANSWER
+D"
+energy_management,D,D,"### ANSWER
+D"
+energy_management,A,D,"### ANSWER
+D"
+energy_management,B,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+chemistry,C,C,"### ANSWER  
+C"
+chemistry,D,C,"### ANSWER
+C"
+chemistry,D,D,"### ANSWER
+D"
+chemistry,A,A,"### ANSWER
+A"
+environmental_science,D,D,"### ANSWER  
+D"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,D,D,"### ANSWER
+D"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,D,"### ANSWER
+D"
+psychology,A,B,"### ANSWER
+B"
+psychology,B,D,"### ANSWER  
+D"
+psychology,A,C,"### ANSWER
+C"
+psychology,A,B,"### ANSWER
+B"
+real_estate,B,C,"### ANSWER
+C"
+real_estate,A,B,"### ANSWER
+B"
+real_estate,D,B,"### ANSWER
+B"
+real_estate,C,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,B,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+agricultural_sciences,D,B,"### ANSWER
+B"
+agricultural_sciences,A,A,"### ANSWER
+A"
+interior_architecture_and_design,D,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+maritime_engineering,B,D,"### ANSWER
+D"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,A,C,"### ANSWER
+C"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,B,B,"### ANSWER
+B"
+political_science_and_sociology,A,C,"### ANSWER
+C"
+political_science_and_sociology,A,D,"### ANSWER
+D"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,B,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,A,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+railway_and_automotive_engineering,B,D,"### ANSWER
+D"
+management,D,C,"### ANSWER
+C"
+management,B,A,"### ANSWER
+A"
+management,B,C,"### ANSWER
+C"
+management,D,C,"### ANSWER  
+C"
+computer_science,D,C,"### ANSWER
+C"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,C,D,"### ANSWER
+D"
+computer_science,C,C,"### ANSWER
+C"
+psychology,D,C,"### ANSWER
+C"
+psychology,A,B,"### ANSWER
+B"
+psychology,C,C,"### ANSWER
+C"
+psychology,A,A,"### ANSWER
+A"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,B,D,"### ANSWER
+D"
+energy_management,B,D,"### ANSWER
+D"
+energy_management,B,B,"### ANSWER
+B"
+real_estate,B,A,"### ANSWER
+A"
+real_estate,A,A,"### ANSWER
+A"
+real_estate,D,A,"### ANSWER
+A"
+real_estate,A,A,"### ANSWER
+A"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,B,B,"### ANSWER
+B"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,A,"### ANSWER
+A"
+construction,D,D,"### ANSWER
+D"
+construction,D,A,"### ANSWER
+A"
+construction,B,B,"### ANSWER
+B"
+construction,C,A,"### ANSWER
+A"
+interior_architecture_and_design,C,D,"### ANSWER
+D"
+interior_architecture_and_design,D,B,"### ANSWER
+B"
+interior_architecture_and_design,D,B,"### ANSWER  
+B"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,A,"### ANSWER
+A"
+chemical_engineering,D,A,"### ANSWER
+A"
+chemical_engineering,B,A,"### ANSWER
+A"
+mechanical_engineering,B,A,"### ANSWER
+A"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,D,D,"### ANSWER
+D"
+management,B,B,"### ANSWER
+B"
+management,B,B,"### ANSWER
+B"
+management,D,D,"### ANSWER
+D"
+management,C,C,"### ANSWER  
+C"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,C,C,"### ANSWER
+C"
+chemistry,B,D,"### ANSWER
+D"
+chemistry,B,C,"### ANSWER
+C"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER
+A"
+maritime_engineering,A,C,"### ANSWER  
+C"
+maritime_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,B,C,"### ANSWER
+C"
+maritime_engineering,C,B,"### ANSWER
+B"
+public_safety,C,C,"### ANSWER
+C"
+public_safety,D,B,"### ANSWER
+B"
+public_safety,D,A,"### ANSWER  
+A"
+public_safety,C,D,"### ANSWER
+D"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,D,D,D
+food_processing,A,A,"### ANSWER  
+A"
+food_processing,C,D,"### ANSWER
+D"
+gas_technology_and_engineering,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,C,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+political_science_and_sociology,A,D,"### ANSWER
+D"
+political_science_and_sociology,A,D,"### ANSWER
+D"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,D,C,"### ANSWER
+C"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,D,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,D,C,"### ANSWER
+C"
+energy_management,B,D,"### ANSWER
+D"
+energy_management,B,B,"### ANSWER
+B"
+computer_science,C,D,"### ANSWER
+D"
+computer_science,D,A,"### ANSWER
+A"
+computer_science,B,C,"### ANSWER
+C"
+computer_science,D,B,"### ANSWER  
+B"
+information_technology,B,A,"### ANSWER
+A"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,C,C,"### ANSWER
+C"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,A,"### ANSWER
+A"
+chemical_engineering,A,A,"### ANSWER
+A"
+management,B,B,"### ANSWER
+B"
+management,D,D,"### ANSWER  
+D"
+management,B,A,"### ANSWER
+A"
+management,B,B,"### ANSWER  
+B"
+industrial_engineer,D,B,"### ANSWER
+B"
+industrial_engineer,D,D,"### ANSWER
+D"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,D,B,"### ANSWER
+B"
+real_estate,C,D,"### ANSWER
+D"
+real_estate,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,D,D,"### ANSWER
+D"
+energy_management,C,C,"### ANSWER
+C"
+interior_architecture_and_design,C,A,"### ANSWER
+A"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,C,D,"### ANSWER  
+D"
+interior_architecture_and_design,A,A,"### ANSWER
+A"
+public_safety,D,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,B,D,"### ANSWER
+D"
+maritime_engineering,A,B,"### ANSWER
+B"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,D,"### ANSWER
+D"
+computer_science,D,A,"### ANSWER
+A"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,B,"### ANSWER
+B"
+computer_science,B,B,"### ANSWER
+B"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,C,D,"### ANSWER
+D"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,D,D,"### ANSWER
+D"
+psychology,D,D,"### ANSWER
+D"
+psychology,D,D,"### ANSWER
+D"
+psychology,B,D,"### ANSWER
+D"
+psychology,A,B,"### ANSWER
+B"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,C,"### ANSWER
+C"
+environmental_science,C,B,"### ANSWER
+B"
+refrigerating_machinery,B,D,"### ANSWER
+D"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+construction,C,C,"### ANSWER
+C"
+construction,B,A,"### ANSWER
+A"
+construction,D,D,"### ANSWER
+D"
+construction,B,D,"### ANSWER
+D"
+industrial_engineer,C,B,"### ANSWER
+B"
+industrial_engineer,D,A,"### ANSWER
+A"
+industrial_engineer,C,A,"### ANSWER
+A"
+industrial_engineer,C,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER  
+B"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,A,D,"### ANSWER  
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,D,D,"### ANSWER
+D"
+chemistry,D,B,"### ANSWER
+B"
+management,A,A,"### ANSWER
+A"
+management,D,C,"### ANSWER  
+C"
+management,A,B,"### ANSWER
+B"
+management,A,B,"### ANSWER
+B"
+psychology,B,C,"### ANSWER
+C"
+psychology,D,D,"### ANSWER
+D"
+psychology,A,D,"### ANSWER
+D"
+psychology,A,A,"### ANSWER
+A"
+refrigerating_machinery,D,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,A,"### ANSWER
+A"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+food_processing,B,C,"### ANSWER
+C"
+food_processing,A,B,"### ANSWER
+B"
+food_processing,C,D,"### ANSWER
+D"
+food_processing,C,A,"### ANSWER
+A"
+law,A,B,"### ANSWER
+B"
+law,B,C,"### ANSWER
+C"
+law,A,B,"### ANSWER  
+B"
+law,D,B,"### ANSWER
+B"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,D,A,"### ANSWER
+A"
+public_safety,B,B,"### ANSWER  
+B"
+public_safety,C,D,"### ANSWER
+D"
+real_estate,C,A,"### ANSWER  
+A"
+real_estate,D,D,"### ANSWER
+D"
+real_estate,B,D,"### ANSWER  
+D"
+real_estate,B,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,C,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER
+D"
+political_science_and_sociology,D,D,"### ANSWER
+D"
+political_science_and_sociology,B,C,"### ANSWER
+C"
+political_science_and_sociology,A,B,"### ANSWER
+B"
+political_science_and_sociology,A,A,"### ANSWER  
+A"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,D,D,"### ANSWER
+D"
+interior_architecture_and_design,B,D,"### ANSWER
+D"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,D,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,C,"### ANSWER  
+C"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,D,D,"### ANSWER
+D"
+construction,B,C,"### ANSWER
+C"
+construction,C,C,"### ANSWER
+C"
+construction,B,C,"### ANSWER
+C"
+construction,B,D,"### ANSWER
+D"
+industrial_engineer,C,A,"### ANSWER
+A"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,B,D,"### ANSWER
+D"
+industrial_engineer,D,D,"### ANSWER
+D"
+food_processing,A,B,"### ANSWER
+B"
+food_processing,A,A,"### ANSWER
+A"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,B,B,"### ANSWER  
+B"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,A,A,"### ANSWER  
+A"
+mechanical_engineering,A,A,"### ANSWER
+A"
+fashion,C,D,"### ANSWER
+D"
+fashion,B,D,"### ANSWER
+D"
+fashion,A,B,"### ANSWER
+B"
+public_safety,A,C,"### ANSWER
+C"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,C,B,"### ANSWER  
+B"
+public_safety,D,D,"### ANSWER
+D"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,D,A,"### ANSWER
+A"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,C,B,"### ANSWER
+B"
+psychology,C,B,"### ANSWER
+B"
+psychology,D,B,"### ANSWER
+B"
+psychology,D,A,"### ANSWER
+A"
+taxation,A,D,"### ANSWER  
+D"
+law,A,C,"### ANSWER
+C"
+law,A,D,"### ANSWER
+D"
+law,A,C,"### ANSWER  
+C"
+law,B,D,"### ANSWER  
+D"
+chemistry,D,D,"### ANSWER
+D"
+chemistry,C,D,"### ANSWER
+D"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,C,D,"### ANSWER  
+D"
+interior_architecture_and_design,B,D,"### ANSWER  
+D"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,A,A,"### ANSWER
+A"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,,[EMPTY_RESPONSE]
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,B,"### ANSWER
+B"
+maritime_engineering,D,C,"### ANSWER
+C"
+maritime_engineering,C,A,"### ANSWER
+A"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,B,D,"### ANSWER
+D"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,C,D,"### ANSWER
+D"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,B,D,"### ANSWER
+D"
+real_estate,C,B,"### ANSWER
+B"
+real_estate,B,D,"### ANSWER  
+D"
+real_estate,B,C,"### ANSWER
+C"
+real_estate,D,D,"### ANSWER  
+D"
+computer_science,B,,[EMPTY_RESPONSE]
+computer_science,D,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,D,"### ANSWER
+D"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,A,B,"### ANSWER
+B"
+industrial_engineer,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,C,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+fashion,C,D,"### ANSWER
+D"
+fashion,D,D,"### ANSWER
+D"
+fashion,C,B,"### ANSWER
+B"
+fashion,A,D,"### ANSWER
+D"
+construction,D,D,"### ANSWER
+D"
+construction,C,C,"### ANSWER
+C"
+construction,C,C,"### ANSWER
+C"
+construction,C,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,C,B,"### ANSWER
+B"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,B,,[EMPTY_RESPONSE]
+management,A,C,"### ANSWER
+C"
+management,B,A,"### ANSWER
+A"
+management,C,C,"### ANSWER
+C"
+management,A,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,C,"### ANSWER
+C"
+interior_architecture_and_design,A,A,"### ANSWER
+A"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,A,C,"### ANSWER
+C"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,C,D,"### ANSWER  
+D"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,A,A,"### ANSWER
+A"
+food_processing,D,D,"### ANSWER  
+D"
+food_processing,C,D,"### ANSWER
+D"
+public_safety,C,D,"### ANSWER
+D"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,D,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER
+A"
+electrical_engineering,D,C,"### ANSWER
+C"
+electrical_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,D,B,"### ANSWER
+B"
+electronics_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+real_estate,B,B,"### ANSWER  
+B"
+real_estate,D,D,"### ANSWER
+D"
+real_estate,A,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+construction,D,A,"### ANSWER
+A"
+construction,B,A,"### ANSWER
+A"
+construction,D,D,"### ANSWER  
+D"
+construction,D,D,"### ANSWER
+D"
+law,B,D,"### ANSWER  
+D"
+law,B,D,"### ANSWER  
+D"
+law,B,C,"### ANSWER
+C"
+law,B,D,"### ANSWER  
+D"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,C,"### ANSWER
+C"
+computer_science,B,C,"### ANSWER
+C"
+taxation,D,C,"### ANSWER
+C"
+taxation,A,D,"### ANSWER
+D"
+taxation,D,B,"### ANSWER  
+B"
+taxation,C,D,"### ANSWER
+D"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,B,D,"### ANSWER
+D"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,B,A,"### ANSWER  
+A"
+maritime_engineering,A,B,"### ANSWER
+B"
+maritime_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,B,B,"### ANSWER  
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,B,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemistry,A,A,"### ANSWER  
+A"
+chemistry,A,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER  
+A"
+chemistry,D,D,"### ANSWER
+D"
+fashion,B,B,"### ANSWER
+B"
+fashion,B,C,"### ANSWER
+C"
+fashion,D,A,"### ANSWER
+A"
+fashion,B,A,"### ANSWER
+A"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,B,B,"### ANSWER
+B"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,C,D,"### ANSWER
+D"
+refrigerating_machinery,D,C,"### ANSWER
+C"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,C,A,"### ANSWER
+A"
+interior_architecture_and_design,D,C,"### ANSWER
+C"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+management,C,C,"### ANSWER
+C"
+management,C,B,"### ANSWER
+B"
+management,B,B,"### ANSWER
+B"
+management,B,A,"### ANSWER
+A"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,C,"### ANSWER
+C"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,A,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,C,B,"### ANSWER
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,D,D,"### ANSWER
+D"
+construction,C,A,"### ANSWER
+A"
+construction,B,B,"### ANSWER
+B"
+construction,D,D,"### ANSWER
+D"
+construction,B,D,"### ANSWER
+D"
+law,A,A,"### ANSWER
+A"
+law,C,B,"### ANSWER  
+B"
+law,B,B,"### ANSWER
+B"
+law,C,C,"### ANSWER  
+C"
+taxation,A,B,"### ANSWER  
+B"
+taxation,B,B,"### ANSWER
+B"
+taxation,D,C,"### ANSWER
+C"
+taxation,B,D,"### ANSWER  
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,D,"### ANSWER
+D"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+political_science_and_sociology,C,D,"### ANSWER  
+D"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,C,C,"### ANSWER
+C"
+political_science_and_sociology,B,D,"### ANSWER
+D"
+public_safety,C,B,"### ANSWER
+B"
+public_safety,C,C,"### ANSWER
+C"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,A,"### ANSWER
+A"
+law,B,D,"### ANSWER
+D"
+law,C,C,"### ANSWER
+C"
+law,A,D,"### ANSWER  
+D"
+law,D,B,"### ANSWER
+B"
+marketing,C,D,"### ANSWER  
+D"
+marketing,A,C,"### ANSWER  
+C"
+marketing,B,A,"### ANSWER
+A"
+marketing,B,B,"### ANSWER
+B"
+computer_science,D,C,"### ANSWER
+C"
+computer_science,D,C,"### ANSWER
+C"
+computer_science,C,B,"### ANSWER
+B"
+computer_science,C,D,"### ANSWER
+D"
+food_processing,C,D,"### ANSWER
+D"
+food_processing,C,A,"### ANSWER  
+A"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,B,B,"### ANSWER
+B"
+maritime_engineering,A,B,"### ANSWER
+B"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,D,C,"### ANSWER
+C"
+management,B,B,"### ANSWER
+B"
+management,D,D,"### ANSWER
+D"
+management,A,B,"### ANSWER
+B"
+management,D,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,B,B,"### ANSWER  
+B"
+interior_architecture_and_design,D,B,"### ANSWER
+B"
+interior_architecture_and_design,D,A,"### ANSWER  
+A"
+interior_architecture_and_design,A,C,"### ANSWER
+C"
+interior_architecture_and_design,D,C,"### ANSWER
+C"
+public_safety,D,A,"### ANSWER
+A"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER  
+D"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+marketing,A,B,"### ANSWER
+B"
+marketing,B,C,"### ANSWER
+C"
+marketing,B,A,"### ANSWER
+A"
+marketing,D,D,"### ANSWER
+D"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+refrigerating_machinery,B,D,"### ANSWER
+D"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+computer_science,D,A,"### ANSWER
+A"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,D,A,"### ANSWER
+A"
+law,C,D,"### ANSWER
+D"
+law,A,B,"### ANSWER
+B"
+law,C,A,"### ANSWER
+A"
+law,D,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER
+A"
+food_processing,C,A,"### ANSWER
+A"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER  
+D"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+taxation,A,C,"### ANSWER
+C"
+taxation,A,D,"### ANSWER  
+D"
+taxation,A,D,"### ANSWER  
+D"
+taxation,D,D,"### ANSWER  
+D"
+public_safety,C,C,"### ANSWER
+C"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,B,C,"### ANSWER
+C"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,C,"### ANSWER
+C"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,A,B,"### ANSWER
+B"
+electronics_engineering,B,A,"### ANSWER
+A"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,A,"### ANSWER
+A"
+management,B,C,"### ANSWER
+C"
+management,A,D,"### ANSWER
+D"
+management,D,D,"### ANSWER  
+D"
+management,C,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+fashion,C,D,"### ANSWER
+D"
+fashion,D,B,"### ANSWER
+B"
+fashion,B,D,"### ANSWER
+D"
+fashion,C,D,"### ANSWER
+D"
+interior_architecture_and_design,D,C,"### ANSWER
+C"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,B,D,"### ANSWER  
+D"
+interior_architecture_and_design,B,C,"### ANSWER
+C"
+construction,D,C,"### ANSWER
+C"
+construction,D,C,"### ANSWER
+C"
+construction,C,D,"### ANSWER
+D"
+construction,D,B,"### ANSWER
+B"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,D,A,"### ANSWER
+A"
+political_science_and_sociology,C,A,"### ANSWER
+A"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+political_science_and_sociology,B,B,"### ANSWER
+B"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,A,A,"### ANSWER  
+A"
+maritime_engineering,B,A,"### ANSWER
+A"
+maritime_engineering,D,D,"### ANSWER
+D"
+industrial_engineer,C,A,"### ANSWER
+A"
+industrial_engineer,B,A,"### ANSWER
+A"
+industrial_engineer,D,A,"### ANSWER
+A"
+industrial_engineer,D,A,"### ANSWER
+A"
+marketing,A,B,"### ANSWER
+B"
+marketing,C,B,"### ANSWER
+B"
+marketing,A,A,"### ANSWER
+A"
+marketing,C,B,"### ANSWER
+B"
+public_safety,D,C,"### ANSWER
+C"
+public_safety,C,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+taxation,D,C,"### ANSWER
+C"
+taxation,A,C,"### ANSWER
+C"
+taxation,B,C,"### ANSWER
+C"
+taxation,A,B,"### ANSWER
+B"
+fashion,D,C,"### ANSWER
+C"
+fashion,A,B,"### ANSWER
+B"
+fashion,A,A,"### ANSWER
+A"
+fashion,A,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,D,C,"### ANSWER
+C"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,C,B,"### ANSWER
+B"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,B,B,"### ANSWER
+B"
+math,A,A,"### ANSWER
+A"
+math,A,A,"### ANSWER
+A"
+math,A,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+chemical_engineering,B,B,"### ANSWER  
+B"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,B,B,"### ANSWER  
+B"
+chemical_engineering,C,C,"### ANSWER
+C"
+law,C,A,"### ANSWER
+A"
+law,D,D,"### ANSWER
+D"
+law,B,D,"### ANSWER  
+D"
+law,D,C,"### ANSWER
+C"
+electronics_engineering,C,D,"### ANSWER
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,A,A,"### ANSWER
+A"
+electronics_engineering,D,D,"### ANSWER  
+D"
+marketing,D,B,"### ANSWER
+B"
+marketing,C,A,"### ANSWER
+A"
+marketing,D,B,"### ANSWER
+B"
+marketing,C,C,"### ANSWER
+C"
+food_processing,D,D,"### ANSWER
+D"
+food_processing,B,B,"### ANSWER  
+B"
+food_processing,B,C,"### ANSWER
+C"
+food_processing,A,B,"### ANSWER
+B"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,B,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,D,"### ANSWER
+D"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,A,"### ANSWER  
+A"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+law,A,B,"### ANSWER
+B"
+law,C,B,"### ANSWER  
+B"
+law,D,C,"### ANSWER
+C"
+law,D,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,A,,[EMPTY_RESPONSE]
+gas_technology_and_engineering,C,B,"### ANSWER
+B"
+marketing,B,D,"### ANSWER
+D"
+marketing,A,A,"### ANSWER
+A"
+marketing,B,B,"### ANSWER
+B"
+marketing,C,B,"### ANSWER
+B"
+information_technology,D,C,"### ANSWER
+C"
+information_technology,D,,[EMPTY_RESPONSE]
+geomatics,C,A,"### ANSWER
+A"
+geomatics,C,C,"### ANSWER
+C"
+interior_architecture_and_design,B,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+industrial_engineer,C,D,"### ANSWER
+D"
+industrial_engineer,C,A,"### ANSWER
+A"
+industrial_engineer,B,D,"### ANSWER
+D"
+industrial_engineer,C,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,C,C,"### ANSWER
+C"
+political_science_and_sociology,B,C,"### ANSWER
+C"
+political_science_and_sociology,A,B,"### ANSWER
+B"
+political_science_and_sociology,B,A,"### ANSWER
+A"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,A,A,"### ANSWER
+A"
+math,D,D,"### ANSWER
+D"
+construction,B,C,"### ANSWER
+C"
+construction,B,B,"### ANSWER
+B"
+construction,D,B,"### ANSWER
+B"
+construction,B,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,D,B,"### ANSWER
+B"
+computer_science,B,D,"### ANSWER
+D"
+law,D,C,"### ANSWER
+C"
+law,D,D,"### ANSWER
+D"
+law,B,C,"### ANSWER
+C"
+law,C,D,"### ANSWER  
+D"
+marketing,B,A,"### ANSWER
+A"
+marketing,D,B,"### ANSWER
+B"
+marketing,A,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,D,"### ANSWER
+D"
+railway_and_automotive_engineering,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,C,D,"### ANSWER
+D"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,C,A,"### ANSWER
+A"
+fashion,C,B,"### ANSWER
+B"
+fashion,B,A,"### ANSWER
+A"
+fashion,B,C,"### ANSWER
+C"
+fashion,D,A,"### ANSWER
+A"
+food_processing,B,D,"### ANSWER
+D"
+food_processing,D,B,"### ANSWER
+B"
+food_processing,A,D,"### ANSWER
+D"
+food_processing,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,D,C,"### ANSWER
+C"
+chemistry,D,C,"### ANSWER
+C"
+industrial_engineer,B,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+industrial_engineer,B,C,"### ANSWER
+C"
+industrial_engineer,B,A,"### ANSWER  
+A"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,C,D,"### ANSWER
+D"
+computer_science,C,A,"### ANSWER
+A"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,B,"### ANSWER
+B"
+electronics_engineering,D,D,"### ANSWER
+D"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+interior_architecture_and_design,C,C,"### ANSWER  
+C"
+interior_architecture_and_design,A,A,"### ANSWER
+A"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+law,B,D,"### ANSWER
+D"
+law,A,B,"### ANSWER
+B"
+law,D,A,"### ANSWER  
+A"
+law,D,C,"### ANSWER
+C"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,B,D,"### ANSWER
+D"
+geomatics,D,B,"### ANSWER
+B"
+geomatics,B,B,"### ANSWER
+B"
+chemical_engineering,A,B,"### ANSWER  
+B"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,B,A,"### ANSWER
+A"
+fashion,A,C,"### ANSWER
+C"
+fashion,C,D,"### ANSWER
+D"
+fashion,D,A,"### ANSWER
+A"
+fashion,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+railway_and_automotive_engineering,C,B,"### ANSWER
+B"
+railway_and_automotive_engineering,B,D,"### ANSWER
+D"
+marketing,B,D,"### ANSWER  
+D"
+marketing,C,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+marketing,A,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,A,"### ANSWER
+A"
+gas_technology_and_engineering,B,A,"### ANSWER
+A"
+gas_technology_and_engineering,B,D,"### ANSWER
+D"
+fashion,A,C,"### ANSWER
+C"
+fashion,C,A,"### ANSWER
+A"
+fashion,D,B,"### ANSWER
+B"
+fashion,B,D,"### ANSWER
+D"
+political_science_and_sociology,A,B,"### ANSWER
+B"
+political_science_and_sociology,D,A,"### ANSWER
+A"
+political_science_and_sociology,C,D,"### ANSWER
+D"
+political_science_and_sociology,B,A,"### ANSWER
+A"
+computer_science,C,A,"### ANSWER
+A"
+computer_science,B,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,D,C,"### ANSWER
+C"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemical_engineering,A,A,"### ANSWER  
+A"
+chemical_engineering,A,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+interior_architecture_and_design,C,D,"### ANSWER
+D"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+interior_architecture_and_design,B,D,"### ANSWER
+D"
+electronics_engineering,D,A,"### ANSWER
+A"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,D,A,"### ANSWER
+A"
+electronics_engineering,B,B,"### ANSWER
+B"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,B,A,"### ANSWER
+A"
+industrial_engineer,C,D,"### ANSWER
+D"
+industrial_engineer,D,B,"### ANSWER
+B"
+industrial_engineer,D,A,"### ANSWER
+A"
+industrial_engineer,C,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,A,,[EMPTY_RESPONSE]
+social_welfare,A,A,"### ANSWER
+A"
+computer_science,C,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,C,B,"### ANSWER
+B"
+computer_science,D,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,C,C,"### ANSWER
+C"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER
+A"
+chemistry,A,,[EMPTY_RESPONSE]
+chemistry,A,B,"### ANSWER
+B"
+chemistry,D,D,"### ANSWER
+D"
+chemistry,A,A,"### ANSWER  
+A"
+fashion,C,B,"### ANSWER
+B"
+fashion,D,B,"### ANSWER
+B"
+fashion,C,A,"### ANSWER
+A"
+fashion,B,A,"### ANSWER
+A"
+gas_technology_and_engineering,D,C,"### ANSWER
+C"
+gas_technology_and_engineering,A,C,"### ANSWER
+C"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,A,"### ANSWER
+A"
+interior_architecture_and_design,A,C,"### ANSWER
+C"
+interior_architecture_and_design,C,D,"### ANSWER
+D"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+law,C,B,"### ANSWER  
+B"
+law,B,B,"### ANSWER
+B"
+law,B,D,"### ANSWER
+D"
+law,C,B,"### ANSWER  
+B"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,C,C,"### ANSWER
+C"
+geomatics,B,A,"### ANSWER
+A"
+geomatics,D,C,"### ANSWER
+C"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,B,B,"### ANSWER
+B"
+public_safety,D,C,"### ANSWER
+C"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,B,D,"### ANSWER
+D"
+public_safety,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,A,"### ANSWER  
+A"
+chemical_engineering,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+political_science_and_sociology,D,D,"### ANSWER
+D"
+political_science_and_sociology,D,D,"### ANSWER
+D"
+political_science_and_sociology,A,B,"### ANSWER
+B"
+political_science_and_sociology,C,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER  
+D"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,D,A,"### ANSWER
+A"
+social_welfare,A,A,"### ANSWER
+A"
+taxation,A,C,"### ANSWER
+C"
+taxation,C,B,"### ANSWER
+B"
+taxation,B,B,"### ANSWER
+B"
+taxation,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+marketing,A,,[EMPTY_RESPONSE]
+marketing,B,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+marketing,D,D,"### ANSWER
+D"
+fashion,A,B,"### ANSWER
+B"
+fashion,B,B,"### ANSWER
+B"
+fashion,C,D,"### ANSWER
+D"
+fashion,A,A,"### ANSWER
+A"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,B,"### ANSWER
+B"
+construction,D,B,"### ANSWER
+B"
+construction,C,D,"### ANSWER
+D"
+construction,B,D,"### ANSWER
+D"
+construction,D,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,A,B,"### ANSWER
+B"
+industrial_engineer,B,A,"### ANSWER
+A"
+industrial_engineer,C,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,D,B,"### ANSWER
+B"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,C,C,"### ANSWER
+C"
+public_safety,C,A,"### ANSWER
+A"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,C,C,"### ANSWER
+C"
+law,A,A,"### ANSWER
+A"
+law,C,C,"### ANSWER
+C"
+law,A,A,"### ANSWER
+A"
+law,D,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,A,C,"### ANSWER
+C"
+computer_science,B,C,"### ANSWER
+C"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+marketing,A,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+marketing,B,D,"### ANSWER
+D"
+marketing,D,D,"### ANSWER
+D"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+political_science_and_sociology,A,C,"### ANSWER
+C"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,D,C,"### ANSWER  
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+public_safety,D,C,"### ANSWER
+C"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,D,C,"### ANSWER
+C"
+public_safety,C,A,"### ANSWER
+A"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,B,C,"### ANSWER
+C"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,B,B,"### ANSWER
+B"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,B,B,"### ANSWER  
+B"
+geomatics,D,C,"### ANSWER  
+C"
+geomatics,C,C,"### ANSWER
+C"
+industrial_engineer,D,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+industrial_engineer,D,B,"### ANSWER
+B"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,C,A,"### ANSWER
+A"
+law,D,A,"### ANSWER
+A"
+law,C,D,"### ANSWER  
+D"
+law,A,A,"### ANSWER
+A"
+law,A,B,"### ANSWER  
+B"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,D,A,"### ANSWER
+A"
+computer_science,B,B,"### ANSWER
+B"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,D,D,"### ANSWER  
+D"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,D,D,"### ANSWER
+D"
+taxation,A,D,"### ANSWER  
+D"
+taxation,C,B,"### ANSWER  
+B"
+taxation,D,B,"### ANSWER
+B"
+taxation,C,D,"### ANSWER
+D"
+fashion,C,A,"### ANSWER
+A"
+fashion,B,B,"### ANSWER
+B"
+fashion,D,D,"### ANSWER
+D"
+fashion,A,C,"### ANSWER
+C"
+political_science_and_sociology,B,B,"### ANSWER  
+B"
+political_science_and_sociology,C,B,"### ANSWER
+B"
+political_science_and_sociology,B,B,"### ANSWER
+B"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,A,,[EMPTY_RESPONSE]
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+marketing,A,A,"### ANSWER
+A"
+marketing,B,D,"### ANSWER
+D"
+marketing,A,B,"### ANSWER
+B"
+marketing,D,A,"### ANSWER
+A"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,A,D,"### ANSWER
+D"
+geomatics,A,A,"### ANSWER
+A"
+law,C,D,"### ANSWER  
+D"
+law,B,C,"### ANSWER  
+C"
+law,B,D,"### ANSWER
+D"
+law,C,D,"### ANSWER
+D"
+interior_architecture_and_design,B,A,"### ANSWER
+A"
+interior_architecture_and_design,B,A,"### ANSWER
+A"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,D,B,"### ANSWER
+B"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,D,D,"### ANSWER
+D"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,A,B,"### ANSWER
+B"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,C,C,"### ANSWER
+C"
+computer_science,C,D,"### ANSWER
+D"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,A,C,"### ANSWER
+C"
+industrial_engineer,D,B,"### ANSWER
+B"
+industrial_engineer,B,B,"### ANSWER
+B"
+taxation,A,D,"### ANSWER  
+D"
+taxation,D,C,"### ANSWER
+C"
+taxation,B,D,"### ANSWER  
+D"
+taxation,C,B,"### ANSWER
+B"
+marketing,B,C,"### ANSWER
+C"
+marketing,D,C,"### ANSWER
+C"
+marketing,C,C,"### ANSWER
+C"
+marketing,C,C,"### ANSWER
+C"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER  
+A"
+chemistry,B,B,"### ANSWER
+B"
+chemistry,A,A,"### ANSWER
+A"
+fashion,A,D,"### ANSWER
+D"
+fashion,A,B,"### ANSWER
+B"
+fashion,A,D,"### ANSWER
+D"
+fashion,B,D,"### ANSWER
+D"
+gas_technology_and_engineering,D,D,"### ANSWER
+D"
+gas_technology_and_engineering,C,C,"### ANSWER
+C"
+gas_technology_and_engineering,A,A,"### ANSWER
+A"
+gas_technology_and_engineering,A,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,B,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,D,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,B,A,"### ANSWER
+A"
+law,B,D,"### ANSWER  
+D"
+law,B,C,"### ANSWER
+C"
+law,A,C,"### ANSWER
+C"
+law,A,C,"### ANSWER
+C"
+computer_science,B,B,"### ANSWER
+B"
+computer_science,C,D,"### ANSWER
+D"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,B,"### ANSWER
+B"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,C,A,"### ANSWER
+A"
+marketing,D,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+marketing,D,B,"### ANSWER
+B"
+marketing,B,B,"### ANSWER
+B"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+interior_architecture_and_design,D,A,"### ANSWER
+A"
+interior_architecture_and_design,A,D,"### ANSWER
+D"
+interior_architecture_and_design,B,D,"### ANSWER
+D"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,,[EMPTY_RESPONSE]
+refrigerating_machinery,C,D,"### ANSWER
+D"
+taxation,C,B,"### ANSWER
+B"
+taxation,D,D,"### ANSWER
+D"
+taxation,A,B,"### ANSWER
+B"
+taxation,A,A,"### ANSWER
+A"
+geomatics,A,A,"### ANSWER
+A"
+geomatics,B,C,"### ANSWER
+C"
+geomatics,D,C,"### ANSWER
+C"
+geomatics,D,B,"### ANSWER
+B"
+industrial_engineer,B,A,"### ANSWER
+A"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,B,C,"### ANSWER
+C"
+industrial_engineer,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,C,"### ANSWER
+C"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+political_science_and_sociology,A,A,"### ANSWER  
+A"
+political_science_and_sociology,A,D,"### ANSWER
+D"
+political_science_and_sociology,A,B,"### ANSWER
+B"
+fashion,C,D,"### ANSWER
+D"
+fashion,D,C,"### ANSWER
+C"
+fashion,D,D,"### ANSWER
+D"
+fashion,D,A,"### ANSWER
+A"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,A,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,C,C,"### ANSWER  
+C"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,D,B,"### ANSWER
+B"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,C,A,"### ANSWER
+A"
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,B,A,"### ANSWER  
+A"
+social_welfare,B,B,"### ANSWER
+B"
+marketing,A,A,"### ANSWER
+A"
+marketing,C,A,"### ANSWER
+A"
+marketing,D,C,"### ANSWER
+C"
+marketing,B,B,"### ANSWER
+B"
+taxation,B,B,"### ANSWER  
+B"
+taxation,D,C,"### ANSWER  
+C"
+taxation,C,D,"### ANSWER
+D"
+taxation,C,A,"### ANSWER  
+A"
+law,C,B,"### ANSWER
+B"
+law,B,A,"### ANSWER
+A"
+law,A,D,"### ANSWER  
+D"
+law,C,D,"### ANSWER  
+D"
+refrigerating_machinery,B,C,"### ANSWER
+C"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+political_science_and_sociology,C,B,"### ANSWER
+B"
+political_science_and_sociology,C,C,"### ANSWER  
+C"
+political_science_and_sociology,D,A,"### ANSWER
+A"
+political_science_and_sociology,B,B,"### ANSWER
+B"
+industrial_engineer,B,A,"### ANSWER
+A"
+industrial_engineer,C,D,"### ANSWER
+D"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,B,B,"### ANSWER  
+B"
+chemistry,D,D,"### ANSWER
+D"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,B,A,"### ANSWER  
+A"
+chemistry,C,C,"### ANSWER
+C"
+fashion,D,D,"### ANSWER
+D"
+fashion,C,A,"### ANSWER
+A"
+fashion,A,D,"### ANSWER
+D"
+fashion,D,A,"### ANSWER
+A"
+railway_and_automotive_engineering,D,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,D,"### ANSWER
+D"
+biology,B,D,"### ANSWER
+D"
+biology,D,D,"### ANSWER
+D"
+geomatics,D,C,"### ANSWER
+C"
+geomatics,D,B,"### ANSWER
+B"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,C,C,"### ANSWER
+C"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER
+D"
+marketing,C,A,"### ANSWER
+A"
+marketing,C,B,"### ANSWER
+B"
+marketing,C,C,"### ANSWER
+C"
+marketing,A,B,"### ANSWER
+B"
+industrial_engineer,C,B,"### ANSWER
+B"
+industrial_engineer,C,B,"### ANSWER
+B"
+industrial_engineer,B,C,"### ANSWER
+C"
+industrial_engineer,B,A,"### ANSWER
+A"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,C,B,"### ANSWER
+B"
+computer_science,B,,[EMPTY_RESPONSE]
+computer_science,C,D,"### ANSWER
+D"
+taxation,B,A,"### ANSWER  
+A"
+taxation,C,D,"### ANSWER  
+D"
+taxation,B,D,"### ANSWER  
+D"
+taxation,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+law,B,D,"### ANSWER  
+D"
+law,D,C,"### ANSWER
+C"
+law,B,C,"### ANSWER  
+C"
+law,C,C,"### ANSWER
+C"
+political_science_and_sociology,B,A,"### ANSWER
+A"
+political_science_and_sociology,C,C,"### ANSWER
+C"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+biology,B,A,"### ANSWER
+A"
+biology,A,A,"### ANSWER
+A"
+biology,C,B,"### ANSWER
+B"
+biology,A,C,"### ANSWER
+C"
+social_welfare,B,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER  
+D"
+social_welfare,C,B,"### ANSWER  
+B"
+chemistry,A,A,"### ANSWER
+A"
+chemistry,D,A,"### ANSWER
+A"
+chemistry,C,C,"### ANSWER
+C"
+chemistry,C,C,"### ANSWER
+C"
+computer_science,D,D,"### ANSWER
+D"
+computer_science,B,B,"### ANSWER
+B"
+ecology,A,B,"### ANSWER
+B"
+ecology,C,B,"### ANSWER
+B"
+interior_architecture_and_design,B,A,"### ANSWER
+A"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,A,"### ANSWER
+A"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,B,B,"### ANSWER  
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,,[EMPTY_RESPONSE]
+telecommunications_and_wireless_technology,A,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,B,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,D,"### ANSWER
+D"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER  
+D"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,C,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER
+D"
+marketing,C,B,"### ANSWER  
+B"
+marketing,D,B,"### ANSWER  
+B"
+marketing,C,C,"### ANSWER
+C"
+marketing,C,C,"### ANSWER
+C"
+law,A,B,"### ANSWER
+B"
+law,A,B,"### ANSWER
+B"
+law,C,D,"### ANSWER
+D"
+law,C,B,"### ANSWER  
+B"
+geomatics,B,C,"### ANSWER
+C"
+geomatics,A,B,"### ANSWER
+B"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,C,B,"### ANSWER
+B"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+interior_architecture_and_design,B,C,"### ANSWER
+C"
+interior_architecture_and_design,B,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+refrigerating_machinery,D,A,"### ANSWER
+A"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+biology,B,D,"### ANSWER
+D"
+biology,B,C,"### ANSWER
+C"
+biology,B,C,"### ANSWER
+C"
+biology,C,B,"### ANSWER
+B"
+ecology,C,B,"### ANSWER
+B"
+ecology,B,A,"### ANSWER
+A"
+ecology,C,A,"### ANSWER
+A"
+ecology,B,C,"### ANSWER
+C"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,B,B,"### ANSWER
+B"
+marketing,B,B,"### ANSWER
+B"
+marketing,A,B,"### ANSWER
+B"
+marketing,D,D,"### ANSWER
+D"
+marketing,A,D,"### ANSWER
+D"
+political_science_and_sociology,C,A,"### ANSWER
+A"
+political_science_and_sociology,D,C,"### ANSWER  
+C"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+political_science_and_sociology,C,C,"### ANSWER  
+C"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+geomatics,C,A,"### ANSWER
+A"
+geomatics,B,D,"### ANSWER
+D"
+geomatics,C,B,"### ANSWER
+B"
+geomatics,A,B,"### ANSWER  
+B"
+chemistry,C,B,"### ANSWER
+B"
+chemistry,C,D,"### ANSWER  
+D"
+chemistry,D,C,"### ANSWER
+C"
+chemistry,B,B,"### ANSWER
+B"
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER
+D"
+law,B,B,"### ANSWER
+B"
+law,C,C,"### ANSWER
+C"
+law,D,B,"### ANSWER
+B"
+law,D,D,"### ANSWER
+D"
+marketing,D,D,"### ANSWER
+D"
+marketing,A,A,"### ANSWER
+A"
+marketing,A,C,"### ANSWER
+C"
+marketing,B,B,"### ANSWER
+B"
+biology,D,C,"### ANSWER
+C"
+biology,A,B,"### ANSWER
+B"
+biology,C,C,"### ANSWER
+C"
+biology,D,D,"### ANSWER
+D"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,D,B,"### ANSWER
+B"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,B,B,"### ANSWER
+B"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,D,B,"### ANSWER
+B"
+interior_architecture_and_design,C,A,"### ANSWER  
+A"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+refrigerating_machinery,B,D,"### ANSWER
+D"
+refrigerating_machinery,D,A,"### ANSWER
+A"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,D,"### ANSWER  
+D"
+ecology,B,D,"### ANSWER  
+D"
+ecology,B,A,"### ANSWER
+A"
+ecology,B,B,"### ANSWER
+B"
+ecology,C,D,"### ANSWER  
+D"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+political_science_and_sociology,C,C,"### ANSWER
+C"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+political_science_and_sociology,D,C,"### ANSWER
+C"
+marketing,A,A,"### ANSWER
+A"
+marketing,B,C,"### ANSWER
+C"
+marketing,D,B,"### ANSWER
+B"
+marketing,C,C,"### ANSWER
+C"
+nondestructive_testing,C,B,"### ANSWER
+B"
+nondestructive_testing,D,A,"### ANSWER
+A"
+nondestructive_testing,B,D,"### ANSWER
+D"
+nondestructive_testing,B,D,"### ANSWER  
+D"
+law,A,D,"### ANSWER
+D"
+law,D,C,"### ANSWER
+C"
+law,B,C,"### ANSWER
+C"
+law,A,B,"### ANSWER  
+B"
+social_welfare,B,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,C,D,"### ANSWER
+D"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,B,A,"### ANSWER
+A"
+interior_architecture_and_design,B,C,"### ANSWER
+C"
+interior_architecture_and_design,A,D,"### ANSWER  
+D"
+interior_architecture_and_design,C,C,"### ANSWER
+C"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+biology,A,D,"### ANSWER
+D"
+biology,C,D,"### ANSWER  
+D"
+biology,C,B,"### ANSWER
+B"
+biology,A,A,"### ANSWER
+A"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,D,A,"A
+
+### ANSWER
+A"
+civil_engineering,C,B,"### ANSWER
+B"
+civil_engineering,C,D,"### ANSWER
+D"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,D,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,D,"### ANSWER  
+D"
+telecommunications_and_wireless_technology,C,D,"### ANSWER  
+D"
+machine_design_and_manufacturing,D,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,B,A,"### ANSWER
+A"
+ecology,D,B,"### ANSWER
+B"
+ecology,B,D,"### ANSWER
+D"
+ecology,A,D,"### ANSWER
+D"
+ecology,D,D,"### ANSWER
+D"
+political_science_and_sociology,B,D,"### ANSWER
+D"
+political_science_and_sociology,D,B,"### ANSWER
+B"
+political_science_and_sociology,A,D,"### ANSWER  
+D"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+nondestructive_testing,D,C,"### ANSWER
+C"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,A,C,"### ANSWER
+C"
+refrigerating_machinery,C,B,"### ANSWER
+B"
+refrigerating_machinery,A,B,"### ANSWER
+B"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,B,D,"### ANSWER
+D"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+biology,D,B,"### ANSWER
+B"
+biology,A,D,"### ANSWER
+D"
+biology,C,B,"### ANSWER
+B"
+biology,D,D,"### ANSWER  
+D"
+social_welfare,A,D,"### ANSWER
+D"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,C,C,"### ANSWER
+C"
+marketing,C,C,"### ANSWER
+C"
+marketing,D,A,"### ANSWER
+A"
+marketing,D,C,"### ANSWER
+C"
+marketing,D,B,"### ANSWER
+B"
+law,B,C,"### ANSWER
+C"
+law,B,C,"### ANSWER
+C"
+law,C,B,"### ANSWER  
+B"
+law,A,B,"### ANSWER  
+B"
+machine_design_and_manufacturing,B,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,B,A,"### ANSWER
+A"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+maritime_engineering,B,D,"### ANSWER
+D"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,D,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,D,D,"### ANSWER  
+D"
+telecommunications_and_wireless_technology,D,B,"### ANSWER
+B"
+interior_architecture_and_design,B,D,"### ANSWER
+D"
+interior_architecture_and_design,D,D,"### ANSWER
+D"
+interior_architecture_and_design,D,C,"### ANSWER  
+C"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+ecology,B,D,"### ANSWER  
+D"
+ecology,B,D,"### ANSWER
+D"
+ecology,C,C,"### ANSWER
+C"
+ecology,D,B,"### ANSWER
+B"
+political_science_and_sociology,B,C,"### ANSWER
+C"
+political_science_and_sociology,D,A,"### ANSWER  
+A"
+political_science_and_sociology,A,A,"### ANSWER
+A"
+political_science_and_sociology,B,A,"### ANSWER
+A"
+law,B,A,"### ANSWER  
+A"
+law,B,B,"### ANSWER
+B"
+law,C,C,"### ANSWER
+C"
+law,C,B,"### ANSWER  
+B"
+math,D,D,"### ANSWER
+D"
+math,C,C,"### ANSWER
+C"
+math,B,B,"### ANSWER
+B"
+math,C,B,"B
+
+### ANSWER
+B"
+biology,D,A,"### ANSWER
+A"
+biology,D,C,"### ANSWER
+C"
+biology,C,A,"### ANSWER
+A"
+biology,D,A,"### ANSWER
+A"
+marketing,B,B,"### ANSWER
+B"
+marketing,D,D,"### ANSWER  
+D"
+marketing,B,B,"### ANSWER
+B"
+marketing,A,D,"### ANSWER
+D"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,B,A,"### ANSWER
+A"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,A,A,"### ANSWER
+A"
+civil_engineering,C,D,"### ANSWER  
+D"
+civil_engineering,C,C,"### ANSWER
+C"
+civil_engineering,D,B,"### ANSWER
+B"
+civil_engineering,C,B,"### ANSWER
+B"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,B,D,"### ANSWER
+D"
+nondestructive_testing,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+interior_architecture_and_design,C,B,"### ANSWER
+B"
+interior_architecture_and_design,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,D,,[EMPTY_RESPONSE]
+geomatics,B,A,"### ANSWER
+A"
+geomatics,B,D,"### ANSWER
+D"
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,A,B,"### ANSWER
+B"
+social_welfare,C,C,"### ANSWER
+C"
+political_science_and_sociology,A,B,"### ANSWER
+B"
+political_science_and_sociology,B,C,"### ANSWER
+C"
+political_science_and_sociology,C,A,"### ANSWER
+A"
+political_science_and_sociology,C,D,"### ANSWER
+D"
+biology,B,B,"### ANSWER
+B"
+biology,A,A,"### ANSWER
+A"
+biology,A,A,"### ANSWER
+A"
+biology,A,A,"### ANSWER
+A"
+refrigerating_machinery,A,D,"### ANSWER
+D"
+refrigerating_machinery,B,C,"### ANSWER
+C"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,D,B,"### ANSWER
+B"
+marketing,A,B,"### ANSWER
+B"
+marketing,D,C,"### ANSWER
+C"
+marketing,C,A,"### ANSWER
+A"
+marketing,A,C,"### ANSWER
+C"
+math,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+math,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,B,"### ANSWER
+B"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+public_safety,C,D,"### ANSWER
+D"
+public_safety,C,A,"### ANSWER
+A"
+public_safety,C,B,"### ANSWER
+B"
+public_safety,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,D,"### ANSWER  
+D"
+telecommunications_and_wireless_technology,D,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,B,D,"### ANSWER
+D"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,D,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,D,A,"### ANSWER
+A"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,D,D,"### ANSWER
+D"
+law,A,B,"### ANSWER
+B"
+law,D,B,"### ANSWER  
+B"
+law,C,A,"### ANSWER
+A"
+law,B,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,D,"### ANSWER  
+D"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,D,D,"### ANSWER
+D"
+math,C,C,"### ANSWER
+C"
+math,D,D,"### ANSWER
+D"
+nondestructive_testing,A,A,"### ANSWER
+A"
+nondestructive_testing,B,A,"### ANSWER
+A"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,D,B,"### ANSWER
+B"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,C,A,"### ANSWER
+A"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+geomatics,C,D,"### ANSWER
+D"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,C,A,"### ANSWER
+A"
+geomatics,B,C,"### ANSWER
+C"
+political_science_and_sociology,B,B,"### ANSWER
+B"
+patent,D,A,"### ANSWER
+A"
+patent,B,C,"### ANSWER
+C"
+patent,C,D,"### ANSWER  
+D"
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,C,D,"### ANSWER
+D"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,A,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+math,A,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+math,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+marketing,A,A,"### ANSWER
+A"
+marketing,A,B,"### ANSWER
+B"
+marketing,B,B,"### ANSWER
+B"
+biology,D,D,"### ANSWER
+D"
+biology,B,B,"### ANSWER
+B"
+biology,C,C,"### ANSWER
+C"
+biology,D,C,"### ANSWER
+C"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,D,D,"### ANSWER  
+D"
+civil_engineering,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,A,"### ANSWER
+A"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,C,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+nondestructive_testing,B,A,"### ANSWER
+A"
+nondestructive_testing,C,B,"### ANSWER
+B"
+nondestructive_testing,C,C,"### ANSWER
+C"
+nondestructive_testing,A,A,"### ANSWER
+A"
+refrigerating_machinery,D,B,"### ANSWER
+B"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,D,A,"### ANSWER
+A"
+law,B,B,"### ANSWER
+B"
+law,B,C,"### ANSWER
+C"
+law,D,B,"### ANSWER  
+B"
+law,A,D,"### ANSWER
+D"
+geomatics,B,D,"### ANSWER
+D"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,A,A,"### ANSWER
+A"
+geomatics,D,D,"### ANSWER
+D"
+patent,C,A,"### ANSWER
+A"
+patent,D,D,"### ANSWER  
+D"
+patent,C,B,"### ANSWER  
+B"
+patent,C,D,"### ANSWER  
+D"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,A,A,"### ANSWER
+A"
+public_safety,B,B,"### ANSWER  
+B"
+public_safety,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,A,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+biology,B,B,"### ANSWER
+B"
+biology,C,C,"### ANSWER
+C"
+biology,D,C,"### ANSWER
+C"
+biology,A,D,"### ANSWER
+D"
+social_welfare,B,D,"### ANSWER  
+D"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,D,B,"### ANSWER
+B"
+social_welfare,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,D,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,A,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,D,B,"### ANSWER  
+B"
+civil_engineering,C,D,"### ANSWER
+D"
+civil_engineering,B,D,"### ANSWER  
+D"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,B,C,"### ANSWER
+C"
+maritime_engineering,A,D,"### ANSWER
+D"
+maritime_engineering,C,D,"### ANSWER
+D"
+maritime_engineering,D,D,"### ANSWER
+D"
+maritime_engineering,C,,[EMPTY_RESPONSE]
+aviation_engineering_and_maintenance,A,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+math,A,A,"### ANSWER
+A"
+math,D,B,"### ANSWER
+B"
+math,A,A,"### ANSWER
+A"
+math,A,A,"### ANSWER
+A"
+biology,D,C,"### ANSWER
+C"
+biology,B,B,"### ANSWER
+B"
+biology,B,B,"### ANSWER
+B"
+biology,D,D,"### ANSWER  
+D"
+refrigerating_machinery,D,A,"### ANSWER
+A"
+refrigerating_machinery,C,A,"### ANSWER
+A"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,D,"### ANSWER
+D"
+public_safety,B,D,"### ANSWER  
+D"
+public_safety,A,C,"### ANSWER
+C"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,D,C,"### ANSWER
+C"
+law,A,C,"### ANSWER
+C"
+law,B,B,"### ANSWER  
+B"
+law,C,C,"### ANSWER
+C"
+law,B,B,"### ANSWER
+B"
+construction,D,B,"### ANSWER
+B"
+construction,D,B,"### ANSWER
+B"
+construction,C,C,"### ANSWER
+C"
+construction,D,D,"### ANSWER
+D"
+geomatics,D,A,"### ANSWER
+A"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,C,A,"### ANSWER
+A"
+electronics_engineering,B,C,"### ANSWER
+C"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,D,B,"### ANSWER
+B"
+social_welfare,B,A,"### ANSWER
+A"
+social_welfare,A,A,"### ANSWER
+A"
+agricultural_sciences,B,B,"### ANSWER  
+B"
+agricultural_sciences,A,C,"### ANSWER
+C"
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,C,A,"### ANSWER  
+A"
+biology,D,D,"### ANSWER
+D"
+biology,C,A,"### ANSWER
+A"
+biology,D,D,"### ANSWER
+D"
+biology,D,D,"### ANSWER
+D"
+nondestructive_testing,B,D,"### ANSWER  
+D"
+nondestructive_testing,A,A,"### ANSWER
+A"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+marketing,C,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+marketing,C,D,"### ANSWER  
+D"
+marketing,A,A,"### ANSWER
+A"
+maritime_engineering,A,B,"### ANSWER
+B"
+maritime_engineering,C,B,"### ANSWER
+B"
+maritime_engineering,B,B,"### ANSWER
+B"
+maritime_engineering,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER  
+D"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,B,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,C,B,"### ANSWER
+B"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,A,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,B,"### ANSWER
+B"
+machine_design_and_manufacturing,A,B,"### ANSWER
+B"
+patent,B,D,"### ANSWER
+D"
+patent,C,A,"### ANSWER
+A"
+patent,C,D,"### ANSWER
+D"
+patent,B,D,"### ANSWER  
+D"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,B,"### ANSWER  
+B"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,A,B,"### ANSWER
+B"
+construction,B,B,"### ANSWER
+B"
+construction,C,C,"### ANSWER
+C"
+construction,C,C,"### ANSWER
+C"
+construction,B,C,"### ANSWER
+C"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,B,A,"### ANSWER
+A"
+social_welfare,B,B,"### ANSWER  
+B"
+refrigerating_machinery,C,B,"### ANSWER
+B"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,A,D,"### ANSWER
+D"
+biology,C,B,"### ANSWER
+B"
+biology,C,A,"### ANSWER
+A"
+biology,B,B,"### ANSWER
+B"
+biology,B,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+math,D,D,"### ANSWER
+D"
+math,A,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,D,B,"### ANSWER
+B"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+construction,C,C,"### ANSWER
+C"
+construction,B,B,"### ANSWER
+B"
+construction,C,D,"### ANSWER
+D"
+construction,D,B,"### ANSWER
+B"
+maritime_engineering,A,C,"### ANSWER
+C"
+maritime_engineering,C,C,"### ANSWER
+C"
+maritime_engineering,A,A,"### ANSWER
+A"
+maritime_engineering,D,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,B,D,"### ANSWER  
+D"
+agricultural_sciences,A,A,"### ANSWER  
+A"
+telecommunications_and_wireless_technology,A,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,C,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+marketing,B,B,"### ANSWER  
+B"
+marketing,D,D,"### ANSWER
+D"
+marketing,C,C,"### ANSWER
+C"
+marketing,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+biology,D,D,"### ANSWER
+D"
+biology,A,A,"### ANSWER
+A"
+biology,C,C,"### ANSWER
+C"
+biology,C,A,"### ANSWER
+A"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,A,C,"### ANSWER
+C
+
+**Reasoning:** 머시닝센터에서 공작물을 자동으로 교환하는 장치는 **ATC(자동 공구 교환기)**가 일반적으로 공구를 교환하는 역할을 하지만, 일부 문맥에서 공작물 교환을 의미할 수 있습니다. 그러나 정확히 공작물 교환을 담당하는 장치는 **ATC(자동 공작물 교환기)**로 인식되는 경우가 있으며, 선택지 중에서 **C: ATC**가 가장 적절합니다. 다른 옵션(APCs, APT, ABS)은 해당 기능과 직접적 연관이 적습니다."
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,A,A,"### ANSWER
+A"
+geomatics,A,D,"### ANSWER
+D"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,A,A,"### ANSWER
+A"
+patent,B,B,"### ANSWER  
+B"
+patent,D,D,"### ANSWER  
+D"
+patent,B,C,"### ANSWER  
+C"
+patent,C,C,"### ANSWER
+C"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,C,D,"### ANSWER
+D"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,A,B,"### ANSWER
+B"
+marketing,D,D,"### ANSWER
+D"
+marketing,B,C,"### ANSWER
+C"
+marketing,C,D,"### ANSWER
+D"
+mechanical_engineering,B,C,"### ANSWER
+C"
+nondestructive_testing,C,C,"### ANSWER
+C"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,B,D,"### ANSWER  
+D"
+nondestructive_testing,B,A,"### ANSWER
+A"
+electronics_engineering,C,B,"### ANSWER
+B"
+electronics_engineering,C,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,,[EMPTY_RESPONSE]
+construction,B,D,"### ANSWER
+D"
+construction,D,D,"### ANSWER
+D"
+construction,B,B,"### ANSWER
+B"
+construction,B,B,"### ANSWER
+B"
+public_safety,A,A,"### ANSWER
+A"
+public_safety,C,C,"### ANSWER
+C"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,A,"### ANSWER
+A"
+biology,A,A,"### ANSWER
+A"
+biology,B,B,"### ANSWER
+B"
+biology,A,D,"### ANSWER
+D"
+biology,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,D,D,"### ANSWER  
+D"
+machine_design_and_manufacturing,D,B,"### ANSWER
+B"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,C,B,"### ANSWER
+B"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,D,B,"### ANSWER
+B"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,C,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+agricultural_sciences,D,D,"### ANSWER  
+D"
+agricultural_sciences,C,A,"### ANSWER
+A"
+agricultural_sciences,B,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER  
+D"
+public_safety,C,C,"### ANSWER
+C"
+public_safety,C,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,D,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,C,"### ANSWER
+C"
+refrigerating_machinery,C,D,"### ANSWER
+D"
+refrigerating_machinery,D,B,"### ANSWER
+B"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+materials_engineering,A,C,"### ANSWER
+C"
+materials_engineering,B,A,"### ANSWER
+A"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,A,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,A,"### ANSWER
+A"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,B,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,A,,[EMPTY_RESPONSE]
+math,A,A,"### ANSWER
+A"
+math,B,B,"### ANSWER
+B"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,D,C,"### ANSWER
+C"
+geomatics,D,B,"### ANSWER
+B"
+geomatics,D,B,"### ANSWER
+B"
+fashion,B,A,"### ANSWER
+A"
+fashion,B,B,"### ANSWER
+B"
+fashion,C,D,"### ANSWER
+D"
+fashion,B,C,"### ANSWER
+C"
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,B,D,"### ANSWER
+D"
+construction,D,C,"### ANSWER
+C"
+construction,C,C,"### ANSWER
+C"
+construction,A,B,"### ANSWER
+B"
+construction,D,D,"### ANSWER
+D"
+biology,A,B,"### ANSWER
+B"
+biology,A,C,"### ANSWER
+C"
+biology,D,D,"### ANSWER
+D"
+biology,C,C,"### ANSWER
+C"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+refrigerating_machinery,B,B,"### ANSWER
+B"
+refrigerating_machinery,B,C,"### ANSWER
+C"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,C,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,C,A,"### ANSWER
+A"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,A,C,"### ANSWER
+C"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,B,B,"### ANSWER
+B"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,D,D,"### ANSWER
+D"
+materials_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,B,A,"### ANSWER
+A"
+nondestructive_testing,C,B,"### ANSWER
+B"
+nondestructive_testing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+fashion,B,C,"### ANSWER
+C"
+fashion,C,C,"### ANSWER
+C"
+fashion,D,B,"### ANSWER
+B"
+fashion,D,B,"### ANSWER
+B"
+refrigerating_machinery,B,C,"### ANSWER
+C"
+refrigerating_machinery,C,D,"### ANSWER
+D"
+refrigerating_machinery,D,D,"### ANSWER
+D"
+refrigerating_machinery,C,C,"### ANSWER
+C"
+taxation,D,C,"### ANSWER
+C"
+taxation,C,D,"### ANSWER  
+D"
+taxation,C,B,"### ANSWER  
+B"
+taxation,D,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,C,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,C,A,"### ANSWER
+A"
+biology,B,C,"### ANSWER
+C"
+biology,D,D,"### ANSWER
+D"
+biology,B,B,"### ANSWER
+B"
+biology,A,D,"### ANSWER
+D"
+construction,C,C,"### ANSWER
+C"
+construction,B,A,"### ANSWER  
+A"
+construction,D,D,"### ANSWER
+D"
+construction,D,C,"### ANSWER
+C"
+geomatics,D,A,"### ANSWER
+A"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,C,B,"### ANSWER
+B"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,C,B,"### ANSWER
+B"
+nondestructive_testing,C,D,"### ANSWER
+D"
+nondestructive_testing,D,A,"### ANSWER
+A"
+nondestructive_testing,D,C,"### ANSWER
+C"
+nondestructive_testing,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+math,B,D,"### ANSWER
+D"
+math,B,B,"### ANSWER
+B"
+math,B,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,D,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,,[EMPTY_RESPONSE]
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,D,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER
+D"
+biology,D,A,"### ANSWER  
+A"
+biology,D,C,"### ANSWER
+C"
+biology,A,A,"### ANSWER
+A"
+biology,A,D,"### ANSWER
+D"
+fashion,D,B,"### ANSWER
+B"
+fashion,C,D,"### ANSWER
+D"
+fashion,C,B,"### ANSWER
+B"
+fashion,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,A,A,"### ANSWER
+A"
+refrigerating_machinery,D,A,"### ANSWER
+A"
+education,A,A,"### ANSWER
+A"
+education,D,B,"### ANSWER
+B"
+education,B,D,"### ANSWER  
+D"
+mechanical_engineering,A,A,"### ANSWER
+A"
+mechanical_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,A,A,"### ANSWER
+A"
+mechanical_engineering,D,A,"### ANSWER
+A"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,D,C,"### ANSWER
+C"
+materials_engineering,D,D,"### ANSWER
+D"
+materials_engineering,C,C,"### ANSWER
+C"
+construction,C,D,"### ANSWER
+D"
+construction,D,D,"### ANSWER  
+D"
+construction,D,B,"### ANSWER
+B"
+construction,C,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,A,"### ANSWER
+A"
+machine_design_and_manufacturing,A,B,"### ANSWER  
+B"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+taxation,B,D,"### ANSWER
+D"
+taxation,B,A,"### ANSWER  
+A"
+taxation,A,B,"### ANSWER
+B"
+taxation,A,C,"### ANSWER
+C"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,C,A,"### ANSWER
+A"
+geomatics,D,D,"### ANSWER
+D"
+biology,A,A,"### ANSWER
+A"
+biology,A,A,"### ANSWER
+A"
+biology,C,D,"### ANSWER  
+D"
+biology,D,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,D,"### ANSWER
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+fashion,B,B,"### ANSWER
+B"
+fashion,C,D,"### ANSWER
+D"
+fashion,B,C,"### ANSWER
+C"
+fashion,B,D,"### ANSWER
+D"
+nondestructive_testing,D,C,"### ANSWER
+C"
+nondestructive_testing,D,A,"### ANSWER
+A"
+nondestructive_testing,B,D,"### ANSWER  
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+public_safety,D,C,"### ANSWER
+C"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,B,C,"### ANSWER
+C"
+construction,B,B,"### ANSWER
+B"
+construction,C,D,"### ANSWER  
+D"
+construction,D,D,"### ANSWER
+D"
+construction,C,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,B,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER  
+D"
+materials_engineering,A,C,"### ANSWER
+C"
+materials_engineering,B,A,"### ANSWER
+A"
+materials_engineering,B,A,"### ANSWER  
+A"
+materials_engineering,A,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+math,A,B,"### ANSWER
+B"
+math,A,A,"### ANSWER
+A"
+math,A,A,"### ANSWER
+A"
+biology,C,A,"### ANSWER
+A"
+biology,D,B,"### ANSWER
+B"
+biology,A,A,"### ANSWER
+A"
+biology,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,C,C,"C
+### ANSWER
+C"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+taxation,D,B,"### ANSWER
+B"
+taxation,C,B,"### ANSWER
+B"
+taxation,A,C,"### ANSWER
+C"
+taxation,C,C,"### ANSWER
+C"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,C,D,"### ANSWER
+D"
+nondestructive_testing,B,A,"### ANSWER
+A"
+nondestructive_testing,D,D,"### ANSWER
+D"
+education,A,C,"### ANSWER
+C"
+education,C,C,"### ANSWER
+C"
+education,C,B,"### ANSWER
+B"
+education,D,D,"### ANSWER
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,C,"### ANSWER
+C"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,C,A,"### ANSWER
+A"
+fashion,A,D,"### ANSWER
+D"
+fashion,D,C,"### ANSWER
+C"
+fashion,D,C,"### ANSWER
+C"
+fashion,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,D,D,"### ANSWER
+D"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,D,B,"### ANSWER
+B"
+materials_engineering,C,C,"### ANSWER
+C"
+agricultural_sciences,A,C,"### ANSWER
+C"
+agricultural_sciences,C,D,"### ANSWER
+D"
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,B,C,"### ANSWER
+C"
+construction,B,C,"### ANSWER
+C"
+construction,D,B,"### ANSWER
+B"
+construction,B,D,"### ANSWER
+D"
+construction,B,A,"### ANSWER
+A"
+taxation,D,D,"### ANSWER  
+D"
+taxation,B,C,"### ANSWER
+C"
+taxation,D,C,"### ANSWER
+C"
+taxation,A,D,"### ANSWER  
+D"
+nondestructive_testing,A,D,"### ANSWER
+D"
+nondestructive_testing,D,D,"### ANSWER  
+D"
+nondestructive_testing,D,A,"### ANSWER
+A"
+nondestructive_testing,A,B,"### ANSWER
+B"
+biology,D,D,"### ANSWER  
+D"
+biology,A,A,"### ANSWER
+A"
+biology,B,C,"### ANSWER
+C"
+biology,B,B,"### ANSWER
+B"
+geomatics,C,B,"### ANSWER
+B"
+geomatics,D,C,"### ANSWER
+C"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,B,B,"### ANSWER
+B"
+fashion,B,B,"### ANSWER
+B"
+fashion,B,C,"### ANSWER
+C"
+fashion,A,A,"### ANSWER  
+A"
+fashion,D,D,"### ANSWER
+D"
+mechanical_engineering,D,B,"### ANSWER
+B"
+mechanical_engineering,C,C,"### ANSWER
+C"
+mechanical_engineering,D,D,"### ANSWER  
+D"
+mechanical_engineering,C,B,"### ANSWER
+B"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,B,C,"### ANSWER
+C"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,B,C,"### ANSWER
+C"
+education,C,C,"### ANSWER
+C"
+education,B,D,"### ANSWER
+D"
+education,B,C,"### ANSWER
+C"
+education,A,D,"### ANSWER
+D"
+taxation,A,B,"### ANSWER
+B"
+taxation,C,D,"### ANSWER  
+D"
+taxation,A,D,"### ANSWER
+D"
+taxation,A,D,"### ANSWER  
+D"
+fashion,A,D,"### ANSWER
+D"
+fashion,D,C,"### ANSWER
+C"
+fashion,A,C,"### ANSWER
+C"
+fashion,D,B,"### ANSWER
+B"
+geomatics,D,D,"### ANSWER  
+D"
+geomatics,B,B,"### ANSWER  
+B"
+geomatics,C,B,"### ANSWER
+B"
+geomatics,D,D,"### ANSWER
+D"
+math,A,,[EMPTY_RESPONSE]
+math,A,A,"### ANSWER
+A"
+math,D,D,"### ANSWER
+D"
+math,D,D,"### ANSWER
+D"
+construction,B,B,"### ANSWER
+B"
+construction,B,B,"### ANSWER  
+B"
+construction,D,A,"### ANSWER
+A"
+construction,D,B,"### ANSWER
+B"
+materials_engineering,D,D,"### ANSWER
+D"
+materials_engineering,A,C,"### ANSWER
+C"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,D,D,"### ANSWER
+D"
+mechanical_engineering,B,C,"### ANSWER
+C"
+mechanical_engineering,B,D,"### ANSWER  
+D"
+mechanical_engineering,D,A,"### ANSWER
+A"
+mechanical_engineering,D,D,"### ANSWER
+D"
+biology,A,B,"### ANSWER
+B"
+biology,C,A,"### ANSWER
+A"
+biology,B,B,"### ANSWER
+B"
+biology,D,A,"### ANSWER
+A"
+nondestructive_testing,A,A,"### ANSWER
+A"
+nondestructive_testing,D,C,"### ANSWER
+C"
+nondestructive_testing,D,C,"### ANSWER
+C"
+nondestructive_testing,B,C,"### ANSWER  
+C"
+ecology,D,C,"### ANSWER
+C"
+ecology,B,A,"### ANSWER
+A"
+ecology,B,B,"### ANSWER
+B"
+ecology,D,B,"### ANSWER
+B"
+math,D,D,"### ANSWER
+D"
+math,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,B,B,"### ANSWER
+B"
+fashion,C,B,"### ANSWER
+B"
+fashion,D,D,"### ANSWER
+D"
+fashion,B,B,"### ANSWER
+B"
+fashion,C,A,"### ANSWER
+A"
+taxation,B,C,"### ANSWER
+C"
+taxation,C,C,"### ANSWER
+C"
+taxation,C,A,"### ANSWER
+A"
+taxation,A,D,"### ANSWER
+D"
+construction,D,D,"### ANSWER
+D"
+construction,B,D,"### ANSWER
+D"
+construction,C,A,"### ANSWER
+A"
+construction,C,B,"### ANSWER
+B"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,D,C,"### ANSWER
+C"
+materials_engineering,D,C,"### ANSWER
+C"
+materials_engineering,B,D,"### ANSWER  
+D"
+mechanical_engineering,B,B,"### ANSWER
+B"
+mechanical_engineering,D,A,"### ANSWER
+A"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,A,B,"### ANSWER
+B"
+nondestructive_testing,C,A,"### ANSWER
+A"
+nondestructive_testing,D,A,"### ANSWER
+A"
+biology,C,D,"### ANSWER
+D"
+biology,B,B,"### ANSWER
+B"
+biology,A,B,"### ANSWER
+B"
+biology,B,B,"### ANSWER  
+B"
+geomatics,B,B,"B
+
+### ANSWER
+B"
+geomatics,C,A,"### ANSWER
+A"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,B,A,"### ANSWER
+A"
+biology,D,D,"### ANSWER
+D"
+biology,A,A,"### ANSWER
+A"
+biology,B,C,"### ANSWER
+C"
+biology,D,D,"### ANSWER
+D"
+taxation,D,A,"### ANSWER
+A"
+taxation,D,D,"### ANSWER  
+D"
+taxation,C,D,"### ANSWER
+D"
+taxation,A,A,"### ANSWER  
+A"
+construction,B,C,"### ANSWER
+C"
+construction,B,A,"### ANSWER
+A"
+construction,A,B,"### ANSWER
+B"
+construction,C,D,"### ANSWER
+D"
+fashion,C,D,"### ANSWER
+D"
+fashion,A,D,"### ANSWER
+D"
+fashion,A,B,"### ANSWER
+B"
+fashion,B,A,"### ANSWER
+A"
+materials_engineering,A,A,"### ANSWER
+A"
+materials_engineering,D,C,"### ANSWER
+C"
+materials_engineering,B,A,"### ANSWER
+A"
+materials_engineering,C,B,"### ANSWER
+B"
+math,C,B,"### ANSWER
+B"
+math,C,B,"### ANSWER
+B"
+math,B,B,"### ANSWER
+B"
+math,C,D,"### ANSWER
+D"
+biology,D,D,"### ANSWER
+D"
+biology,B,B,"### ANSWER
+B"
+biology,B,C,"### ANSWER
+C"
+biology,A,D,"### ANSWER
+D"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,C,A,"### ANSWER
+A"
+nondestructive_testing,A,C,"### ANSWER
+C"
+nondestructive_testing,D,C,"### ANSWER
+C"
+taxation,C,D,"### ANSWER
+D"
+taxation,C,B,"### ANSWER  
+B"
+taxation,B,D,"### ANSWER  
+D"
+taxation,D,C,"### ANSWER
+C"
+fashion,A,B,"### ANSWER
+B"
+fashion,C,C,"### ANSWER
+C"
+fashion,A,C,"### ANSWER
+C"
+fashion,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,C,D,"### ANSWER
+D"
+geomatics,D,D,"### ANSWER
+D"
+geomatics,A,B,"### ANSWER
+B"
+construction,B,D,"### ANSWER
+D"
+construction,B,B,"### ANSWER
+B"
+construction,C,B,"### ANSWER
+B"
+construction,B,B,"### ANSWER
+B"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,C,A,"### ANSWER
+A"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,D,D,"### ANSWER
+D"
+taxation,B,C,"### ANSWER
+C"
+taxation,A,C,"### ANSWER
+C"
+taxation,B,B,"### ANSWER  
+B"
+taxation,B,A,"### ANSWER
+A"
+fashion,A,C,"### ANSWER
+C"
+fashion,D,C,"### ANSWER
+C"
+fashion,D,C,"### ANSWER
+C"
+fashion,C,A,"### ANSWER  
+A"
+biology,D,D,"### ANSWER  
+D"
+biology,D,C,"### ANSWER
+C"
+public_safety,C,D,"### ANSWER
+D"
+public_safety,D,C,"### ANSWER
+C"
+civil_engineering,C,D,"### ANSWER  
+D"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,B,"### ANSWER
+B"
+civil_engineering,B,B,"### ANSWER
+B"
+taxation,D,D,"### ANSWER  
+D"
+taxation,C,C,"### ANSWER
+C"
+taxation,B,B,"### ANSWER  
+B"
+taxation,B,D,"### ANSWER  
+D"
+materials_engineering,A,D,"### ANSWER
+D"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,B,C,"### ANSWER
+C"
+materials_engineering,D,D,"### ANSWER
+D"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,D,B,"### ANSWER
+B"
+public_safety,D,A,"### ANSWER
+A"
+public_safety,B,D,"### ANSWER
+D"
+fashion,D,D,"### ANSWER
+D"
+psychology,A,D,"### ANSWER  
+D"
+psychology,D,C,"### ANSWER
+C"
+psychology,A,A,"### ANSWER
+A"
+construction,D,B,"### ANSWER  
+B"
+construction,C,D,"### ANSWER  
+D"
+construction,D,D,"### ANSWER
+D"
+construction,D,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+math,D,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,C,,[EMPTY_RESPONSE]
+materials_engineering,A,A,"### ANSWER  
+A"
+materials_engineering,A,D,"### ANSWER
+D"
+materials_engineering,C,B,"### ANSWER
+B"
+materials_engineering,B,D,"### ANSWER
+D"
+geomatics,D,C,"### ANSWER
+C"
+geomatics,D,,[EMPTY_RESPONSE]
+geomatics,B,C,"### ANSWER  
+C"
+geomatics,C,A,"### ANSWER  
+A"
+economics,D,C,"### ANSWER
+C"
+economics,B,B,"### ANSWER
+B"
+economics,D,D,"### ANSWER
+D"
+economics,B,C,"### ANSWER
+C"
+taxation,A,B,"### ANSWER
+B"
+taxation,B,A,"### ANSWER  
+A"
+taxation,D,D,"### ANSWER  
+D"
+taxation,D,D,"### ANSWER
+D"
+math,C,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+math,B,B,"### ANSWER
+B"
+math,D,D,"### ANSWER
+D"
+public_safety,D,C,"### ANSWER
+C"
+public_safety,A,B,"### ANSWER
+B"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,B,B,"### ANSWER
+B"
+civil_engineering,C,C,"### ANSWER
+C"
+civil_engineering,B,D,"### ANSWER
+D"
+civil_engineering,D,B,"### ANSWER
+B"
+civil_engineering,D,C,"### ANSWER
+C"
+economics,C,C,"### ANSWER  
+C"
+economics,D,D,"### ANSWER  
+D"
+economics,D,C,"### ANSWER
+C"
+economics,A,A,"### ANSWER
+A"
+materials_engineering,A,D,"### ANSWER
+D"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,D,A,"### ANSWER
+A"
+math,D,D,"### ANSWER
+D"
+math,A,A,"### ANSWER
+A"
+math,B,B,"### ANSWER
+B"
+math,D,D,"### ANSWER
+D"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,A,D,"### ANSWER
+D"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,C,C,"### ANSWER
+C"
+psychology,B,C,"### ANSWER
+C"
+psychology,A,A,"### ANSWER  
+A"
+psychology,B,D,"### ANSWER
+D"
+psychology,B,B,"### ANSWER
+B"
+geomatics,B,B,"### ANSWER
+B"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,B,D,"### ANSWER  
+D"
+geomatics,B,B,"### ANSWER
+B"
+taxation,D,D,"### ANSWER
+D"
+taxation,A,A,"### ANSWER
+A"
+taxation,A,C,"### ANSWER
+C"
+taxation,C,C,"### ANSWER
+C"
+materials_engineering,D,D,"### ANSWER
+D"
+materials_engineering,D,D,"### ANSWER
+D"
+materials_engineering,B,A,"### ANSWER
+A"
+materials_engineering,D,D,"### ANSWER
+D"
+psychology,B,A,"### ANSWER  
+A"
+psychology,A,B,"### ANSWER  
+B"
+psychology,C,B,"### ANSWER
+B"
+psychology,A,D,"### ANSWER
+D"
+social_welfare,D,C,"### ANSWER
+C"
+social_welfare,A,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,D,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,A,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+math,B,B,"### ANSWER
+B"
+public_safety,B,C,"### ANSWER
+C"
+public_safety,B,C,"### ANSWER
+C"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,B,"### ANSWER
+B"
+civil_engineering,D,D,"### ANSWER  
+D"
+civil_engineering,D,B,"### ANSWER
+B"
+economics,C,D,"### ANSWER
+D"
+economics,A,D,"### ANSWER
+D"
+economics,C,A,"### ANSWER  
+A"
+economics,B,D,"### ANSWER
+D"
+geomatics,C,C,"### ANSWER
+C"
+geomatics,C,C,"### ANSWER
+C"
+management,D,A,"### ANSWER
+A"
+management,B,B,"### ANSWER
+B"
+math,D,D,"### ANSWER
+D"
+math,A,A,"### ANSWER
+A"
+math,B,B,"### ANSWER
+B"
+math,C,C,"### ANSWER
+C"
+taxation,C,B,"### ANSWER  
+B"
+taxation,C,D,"### ANSWER  
+D"
+taxation,C,B,"### ANSWER
+B"
+taxation,B,C,"### ANSWER
+C"
+patent,B,D,"### ANSWER  
+D"
+patent,B,C,"### ANSWER
+C"
+patent,C,D,"### ANSWER
+D"
+patent,B,D,"### ANSWER  
+D"
+psychology,B,C,"### ANSWER
+C"
+psychology,B,D,"### ANSWER
+D"
+psychology,D,B,"### ANSWER
+B"
+psychology,B,D,"### ANSWER
+D"
+social_welfare,D,A,"### ANSWER
+A"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,B,C,"### ANSWER
+C"
+social_welfare,D,D,"### ANSWER
+D"
+economics,C,D,"### ANSWER
+D"
+economics,B,C,"### ANSWER
+C"
+economics,C,C,"### ANSWER
+C"
+economics,D,B,"### ANSWER  
+B"
+management,A,D,"### ANSWER
+D"
+management,A,A,"### ANSWER
+A"
+management,C,C,"### ANSWER
+C"
+management,A,C,"### ANSWER
+C"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,D,C,"### ANSWER
+C"
+materials_engineering,B,B,"### ANSWER
+B"
+patent,B,B,"### ANSWER  
+B"
+patent,B,B,"### ANSWER
+B"
+patent,B,D,"### ANSWER  
+D"
+patent,C,D,"### ANSWER
+D"
+math,A,A,"### ANSWER
+A"
+math,D,D,"### ANSWER
+D"
+math,A,A,"### ANSWER
+A"
+math,A,A,"### ANSWER
+A"
+management,B,B,"### ANSWER
+B"
+management,D,D,"### ANSWER
+D"
+management,B,B,"### ANSWER
+B"
+management,B,B,"### ANSWER  
+B"
+psychology,B,B,"### ANSWER
+B"
+psychology,C,C,"### ANSWER
+C"
+psychology,C,D,"### ANSWER
+D"
+psychology,D,D,"### ANSWER
+D"
+materials_engineering,A,B,"### ANSWER
+B"
+materials_engineering,B,C,"### ANSWER
+C"
+materials_engineering,B,C,"### ANSWER
+C"
+materials_engineering,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,A,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,D,"### ANSWER
+D"
+math,A,A,"### ANSWER
+A"
+math,C,C,"### ANSWER
+C"
+math,A,A,"### ANSWER
+A"
+math,B,B,"### ANSWER
+B"
+patent,B,B,"### ANSWER
+B"
+patent,C,C,"### ANSWER
+C"
+patent,A,C,"### ANSWER
+C"
+patent,A,B,"### ANSWER
+B"
+materials_engineering,C,D,"### ANSWER
+D"
+materials_engineering,C,A,"### ANSWER
+A"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,D,"### ANSWER
+D"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+management,B,B,"### ANSWER
+B"
+management,A,B,"### ANSWER
+B"
+management,A,D,"### ANSWER
+D"
+management,A,B,"### ANSWER
+B"
+psychology,C,B,"### ANSWER
+B"
+psychology,B,A,"### ANSWER
+A"
+psychology,A,A,"### ANSWER
+A"
+psychology,B,D,"### ANSWER  
+D"
+aviation_engineering_and_maintenance,D,D,"### ANSWER  
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+economics,A,B,"### ANSWER
+B"
+economics,A,A,"### ANSWER
+A"
+economics,A,,[EMPTY_RESPONSE]
+economics,A,B,"### ANSWER  
+B"
+public_safety,B,B,"### ANSWER
+B"
+public_safety,C,D,"### ANSWER
+D"
+public_safety,C,C,"### ANSWER
+C"
+public_safety,D,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,A,,[EMPTY_RESPONSE]
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,B,B,"### ANSWER
+B"
+patent,A,A,"### ANSWER
+A"
+patent,C,B,"### ANSWER  
+B"
+patent,A,D,"### ANSWER  
+D"
+patent,A,C,"### ANSWER
+C"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,B,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,A,A,"### ANSWER
+A"
+aviation_engineering_and_maintenance,D,A,"### ANSWER
+A"
+materials_engineering,B,C,"### ANSWER
+C"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,A,A,"### ANSWER
+A"
+materials_engineering,D,D,"### ANSWER
+D"
+economics,C,C,"### ANSWER
+C"
+economics,D,B,"### ANSWER
+B"
+economics,A,C,"### ANSWER
+C"
+economics,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,D,A,"### ANSWER
+A"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+math,C,C,"### ANSWER
+C"
+math,D,D,"### ANSWER
+D"
+math,C,C,"### ANSWER
+C"
+math,D,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,A,A,"### ANSWER
+A"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,B,B,"### ANSWER
+B"
+psychology,B,C,"### ANSWER
+C"
+psychology,D,A,"### ANSWER
+A"
+psychology,B,B,"### ANSWER
+B"
+psychology,A,B,"### ANSWER
+B"
+public_safety,A,B,"### ANSWER
+B"
+public_safety,D,D,"### ANSWER
+D"
+public_safety,C,A,"### ANSWER
+A"
+public_safety,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+management,B,C,"### ANSWER
+C"
+management,D,A,"### ANSWER  
+A"
+management,D,C,"### ANSWER
+C"
+management,A,A,"### ANSWER
+A"
+electronics_engineering,B,D,"### ANSWER
+D"
+electronics_engineering,C,,[EMPTY_RESPONSE]
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,C,C,"### ANSWER
+C"
+machine_design_and_manufacturing,B,C,"### ANSWER
+C"
+machine_design_and_manufacturing,D,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+psychology,C,A,"### ANSWER
+A"
+psychology,C,B,"### ANSWER
+B"
+psychology,D,A,"### ANSWER
+A"
+psychology,B,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,B,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,B,D,"### ANSWER
+D"
+social_welfare,D,D,"### ANSWER
+D"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+patent,A,A,"### ANSWER  
+A"
+patent,A,D,"### ANSWER
+D"
+patent,A,C,"### ANSWER
+C"
+patent,A,C,"### ANSWER  
+C"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,A,C,"### ANSWER
+C"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,D,B,"### ANSWER
+B"
+aviation_engineering_and_maintenance,C,D,"### ANSWER
+D"
+aviation_engineering_and_maintenance,D,D,"### ANSWER
+D"
+agricultural_sciences,A,D,"### ANSWER  
+D"
+agricultural_sciences,B,D,"### ANSWER
+D"
+agricultural_sciences,B,A,"### ANSWER  
+A"
+agricultural_sciences,C,C,"### ANSWER  
+C"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,B,"### ANSWER
+B"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,B,D,"### ANSWER
+D"
+management,A,B,"### ANSWER
+B"
+management,D,B,"### ANSWER
+B"
+management,B,C,"### ANSWER
+C"
+management,C,A,"### ANSWER
+A"
+accounting,B,B,"### ANSWER
+B"
+accounting,A,A,"### ANSWER
+A"
+accounting,A,A,"### ANSWER
+A"
+accounting,B,D,"### ANSWER
+D"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,C,C,"### ANSWER
+C"
+social_welfare,B,B,"### ANSWER
+B"
+social_welfare,C,B,"### ANSWER  
+B"
+psychology,A,C,"### ANSWER
+C"
+psychology,D,D,"### ANSWER
+D"
+psychology,D,D,"### ANSWER
+D"
+psychology,D,C,"### ANSWER
+C"
+telecommunications_and_wireless_technology,D,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,D,"### ANSWER  
+D"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+patent,A,B,"### ANSWER
+B"
+patent,A,B,"### ANSWER
+B"
+patent,A,C,"### ANSWER
+C"
+patent,A,B,"### ANSWER
+B"
+management,C,D,"### ANSWER  
+D"
+management,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,B,C,"### ANSWER
+C"
+education,B,A,"### ANSWER
+A"
+education,A,A,"### ANSWER
+A"
+education,D,D,"### ANSWER  
+D"
+education,B,B,"### ANSWER
+B"
+ecology,C,C,"### ANSWER
+C"
+ecology,B,D,"### ANSWER
+D"
+ecology,D,D,"### ANSWER
+D"
+ecology,A,C,"### ANSWER
+C"
+electronics_engineering,A,A,"### ANSWER
+A"
+electronics_engineering,B,B,"### ANSWER  
+B"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+nondestructive_testing,B,B,"### ANSWER
+B"
+nondestructive_testing,D,C,"### ANSWER
+C"
+nondestructive_testing,A,A,"### ANSWER
+A"
+nondestructive_testing,C,B,"### ANSWER
+B"
+economics,A,A,"### ANSWER  
+A"
+economics,D,B,"### ANSWER
+B"
+economics,A,A,"### ANSWER
+A"
+economics,B,D,"### ANSWER  
+D"
+psychology,D,A,"### ANSWER
+A"
+psychology,A,A,"### ANSWER
+A"
+psychology,A,A,"### ANSWER
+A"
+psychology,D,D,"### ANSWER  
+D"
+telecommunications_and_wireless_technology,B,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,D,B,"### ANSWER
+B"
+telecommunications_and_wireless_technology,C,D,"### ANSWER
+D"
+telecommunications_and_wireless_technology,C,B,"### ANSWER
+B"
+patent,B,C,"### ANSWER
+C"
+patent,B,B,"### ANSWER  
+B"
+patent,D,C,"### ANSWER
+C"
+patent,C,C,"### ANSWER
+C"
+criminal_law,A,D,"### ANSWER
+D"
+criminal_law,A,D,"### ANSWER
+D"
+criminal_law,B,D,"### ANSWER
+D"
+criminal_law,A,,[EMPTY_RESPONSE]
+accounting,B,C,"### ANSWER
+C"
+accounting,D,D,"### ANSWER
+D"
+accounting,A,C,"### ANSWER
+C"
+accounting,A,A,"### ANSWER
+A"
+education,B,B,"### ANSWER
+B"
+education,D,D,"### ANSWER
+D"
+education,B,C,"### ANSWER
+C"
+education,C,C,"### ANSWER
+C"
+real_estate,D,C,"### ANSWER
+C"
+real_estate,B,D,"### ANSWER  
+D"
+real_estate,A,B,"### ANSWER  
+B"
+real_estate,D,D,"### ANSWER
+D"
+materials_engineering,B,A,"### ANSWER
+A"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,B,A,"### ANSWER
+A"
+materials_engineering,A,A,"### ANSWER  
+A"
+telecommunications_and_wireless_technology,D,A,"### ANSWER
+A"
+telecommunications_and_wireless_technology,B,B,"### ANSWER
+B"
+food_processing,C,B,"### ANSWER
+B"
+food_processing,D,D,"### ANSWER  
+D"
+agricultural_sciences,D,B,"### ANSWER
+B"
+agricultural_sciences,A,C,"### ANSWER
+C"
+agricultural_sciences,D,D,"### ANSWER
+D"
+agricultural_sciences,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+machine_design_and_manufacturing,D,B,"### ANSWER
+B"
+machine_design_and_manufacturing,C,D,"### ANSWER
+D"
+nondestructive_testing,A,A,"### ANSWER  
+A"
+nondestructive_testing,C,A,"### ANSWER
+A"
+nondestructive_testing,D,A,"### ANSWER
+A"
+nondestructive_testing,D,D,"### ANSWER
+D"
+ecology,C,B,"### ANSWER
+B"
+ecology,B,C,"### ANSWER
+C"
+ecology,B,C,"### ANSWER
+C"
+ecology,D,C,"### ANSWER
+C"
+accounting,A,C,"### ANSWER  
+C"
+accounting,B,B,"### ANSWER
+B"
+accounting,A,A,"### ANSWER
+A"
+accounting,D,B,"### ANSWER  
+B"
+psychology,C,C,"### ANSWER
+C"
+psychology,B,D,"### ANSWER  
+D"
+electronics_engineering,C,C,"### ANSWER  
+C"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,C,"### ANSWER
+C"
+food_processing,C,C,"### ANSWER
+C"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,B,C,"### ANSWER
+C"
+food_processing,B,D,"### ANSWER  
+D"
+criminal_law,D,C,"### ANSWER
+C"
+criminal_law,A,D,"### ANSWER  
+D"
+criminal_law,D,B,"### ANSWER  
+B"
+criminal_law,B,C,"### ANSWER
+C"
+real_estate,C,C,"### ANSWER  
+C"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,C,D,"### ANSWER  
+D"
+real_estate,A,A,"### ANSWER
+A"
+economics,A,D,"### ANSWER  
+D"
+economics,A,A,"### ANSWER
+A"
+economics,A,A,"### ANSWER
+A"
+economics,A,D,"### ANSWER  
+D"
+nondestructive_testing,D,D,"### ANSWER
+D"
+nondestructive_testing,A,A,"### ANSWER
+A"
+patent,C,C,"### ANSWER
+C"
+patent,C,D,"### ANSWER  
+D"
+patent,C,D,"### ANSWER  
+D"
+patent,D,A,"### ANSWER  
+A"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,D,"### ANSWER
+D"
+electronics_engineering,B,C,"### ANSWER
+C"
+electronics_engineering,C,C,"### ANSWER
+C"
+education,C,A,"### ANSWER
+A"
+education,B,D,"### ANSWER
+D"
+education,B,B,"### ANSWER
+B"
+education,B,B,"### ANSWER
+B"
+ecology,B,D,"### ANSWER
+D"
+ecology,B,D,"### ANSWER
+D"
+ecology,C,A,"### ANSWER
+A"
+ecology,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,B,B,"### ANSWER
+B"
+machine_design_and_manufacturing,A,A,"### ANSWER
+A"
+machine_design_and_manufacturing,D,D,"### ANSWER
+D"
+machine_design_and_manufacturing,D,C,"### ANSWER
+C"
+materials_engineering,B,D,"### ANSWER
+D"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,A,A,"### ANSWER
+A"
+materials_engineering,B,C,"### ANSWER
+C"
+agricultural_sciences,B,B,"### ANSWER
+B"
+agricultural_sciences,A,A,"### ANSWER
+A"
+agricultural_sciences,C,B,"### ANSWER
+B"
+agricultural_sciences,B,C,"### ANSWER
+C"
+patent,A,C,"### ANSWER
+C"
+patent,A,C,"### ANSWER  
+C"
+patent,A,B,"### ANSWER
+B"
+patent,A,D,"### ANSWER  
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,B,B,"### ANSWER
+B"
+chemical_engineering,D,A,"### ANSWER
+A"
+accounting,A,A,"### ANSWER
+A"
+accounting,B,C,"### ANSWER
+C"
+accounting,D,B,"### ANSWER
+B"
+accounting,B,B,"### ANSWER  
+B"
+agricultural_sciences,C,C,"### ANSWER
+C"
+agricultural_sciences,B,D,"### ANSWER
+D"
+ecology,C,D,"### ANSWER
+D"
+ecology,B,C,"### ANSWER
+C"
+ecology,B,C,"### ANSWER
+C"
+ecology,D,D,"### ANSWER
+D"
+economics,B,B,"### ANSWER
+B"
+economics,B,B,"### ANSWER
+B"
+economics,D,B,"### ANSWER
+B"
+economics,B,C,"### ANSWER
+C"
+industrial_engineer,B,C,"### ANSWER
+C"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,B,B,"### ANSWER  
+B"
+industrial_engineer,A,A,"### ANSWER
+A"
+food_processing,B,B,"### ANSWER
+B"
+food_processing,B,C,"### ANSWER
+C"
+food_processing,B,C,"### ANSWER
+C"
+food_processing,D,B,"### ANSWER  
+B"
+criminal_law,D,B,"### ANSWER
+B"
+criminal_law,A,B,"### ANSWER
+B"
+criminal_law,B,C,"### ANSWER
+C"
+criminal_law,A,B,"### ANSWER  
+B"
+real_estate,D,D,"### ANSWER
+D"
+real_estate,C,B,"### ANSWER
+B"
+real_estate,C,C,"### ANSWER
+C"
+real_estate,D,C,"### ANSWER
+C"
+ecology,B,B,"### ANSWER
+B"
+ecology,B,B,"### ANSWER
+B"
+ecology,C,C,"### ANSWER
+C"
+ecology,B,B,"### ANSWER
+B"
+materials_engineering,A,B,"### ANSWER
+B"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,A,A,"### ANSWER
+A"
+accounting,D,B,"### ANSWER
+B"
+accounting,C,C,"### ANSWER
+C"
+accounting,B,B,"### ANSWER  
+B"
+accounting,A,A,"### ANSWER
+A"
+food_processing,A,A,"### ANSWER
+A"
+food_processing,A,B,"### ANSWER
+B"
+industrial_engineer,C,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+electronics_engineering,C,A,"### ANSWER
+A"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,C,B,"### ANSWER
+B"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,D,B,"### ANSWER
+B"
+real_estate,D,D,"### ANSWER
+D"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,D,C,"### ANSWER
+C"
+real_estate,B,B,"### ANSWER
+B"
+economics,A,B,"### ANSWER
+B"
+economics,D,C,"### ANSWER
+C"
+economics,B,B,"### ANSWER  
+B"
+economics,D,A,"### ANSWER
+A"
+criminal_law,B,C,"### ANSWER
+C"
+criminal_law,B,D,"### ANSWER  
+D"
+criminal_law,C,C,"### ANSWER
+C"
+criminal_law,D,D,"### ANSWER
+D"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,C,C,"### ANSWER
+C"
+electronics_engineering,B,A,"### ANSWER
+A"
+real_estate,D,D,"### ANSWER  
+D"
+real_estate,C,C,"### ANSWER
+C"
+electrical_engineering,D,A,"### ANSWER  
+A"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,D,D,"### ANSWER  
+D"
+electrical_engineering,D,D,"### ANSWER
+D"
+ecology,D,A,"### ANSWER  
+A"
+ecology,A,C,"### ANSWER  
+C"
+ecology,B,D,"### ANSWER
+D"
+ecology,B,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,D,D,"### ANSWER
+D"
+industrial_engineer,B,B,"### ANSWER
+B"
+materials_engineering,B,B,"### ANSWER
+B"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,D,D,"### ANSWER
+D"
+materials_engineering,D,B,"### ANSWER
+B"
+economics,C,D,"### ANSWER
+D"
+economics,D,B,"### ANSWER
+B"
+ecology,C,A,"### ANSWER
+A"
+ecology,D,B,"### ANSWER  
+B"
+ecology,D,A,"### ANSWER
+A"
+ecology,C,C,"### ANSWER
+C"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER  
+B"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,B,A,"### ANSWER
+A"
+industrial_engineer,B,D,"### ANSWER
+D"
+accounting,D,D,"### ANSWER
+D"
+accounting,D,D,"### ANSWER
+D"
+accounting,D,B,"### ANSWER  
+B"
+accounting,C,C,"### ANSWER
+C"
+materials_engineering,C,D,"### ANSWER
+D"
+materials_engineering,C,D,"### ANSWER  
+D"
+materials_engineering,C,D,"### ANSWER
+D"
+materials_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,D,D,"### ANSWER
+D"
+electrical_engineering,C,B,"### ANSWER
+B"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+ecology,D,B,"### ANSWER
+B"
+ecology,B,C,"### ANSWER
+C"
+ecology,D,C,"### ANSWER  
+C"
+ecology,B,C,"### ANSWER
+C"
+materials_engineering,C,C,"### ANSWER
+C"
+materials_engineering,C,D,"### ANSWER
+D"
+materials_engineering,D,B,"### ANSWER
+B"
+materials_engineering,A,D,"### ANSWER
+D"
+railway_and_automotive_engineering,A,A,"### ANSWER
+A"
+railway_and_automotive_engineering,B,C,"### ANSWER
+C"
+railway_and_automotive_engineering,D,D,"### ANSWER  
+D"
+railway_and_automotive_engineering,B,A,"### ANSWER
+A"
+electrical_engineering,C,C,"### ANSWER
+C"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,A,B,"### ANSWER
+B"
+industrial_engineer,C,D,"### ANSWER
+D"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+civil_engineering,B,C,"### ANSWER
+C"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,C,C,"### ANSWER
+C"
+railway_and_automotive_engineering,B,C,"### ANSWER
+C"
+civil_engineering,A,D,"### ANSWER
+D"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,B,B,"### ANSWER  
+B"
+accounting,A,D,"### ANSWER
+D"
+accounting,C,B,"### ANSWER
+B"
+accounting,A,,[EMPTY_RESPONSE]
+accounting,C,,[EMPTY_RESPONSE]
+taxation,B,B,"### ANSWER  
+B"
+taxation,D,D,"### ANSWER
+D"
+taxation,B,D,"### ANSWER  
+D"
+environmental_science,C,C,"### ANSWER
+C"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,B,B,"### ANSWER
+B"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,D,B,"### ANSWER
+B"
+accounting,C,D,"### ANSWER  
+D"
+accounting,A,D,"### ANSWER  
+D"
+civil_engineering,C,B,"### ANSWER
+B"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,A,D,"### ANSWER
+D"
+civil_engineering,B,,[EMPTY_RESPONSE]
+industrial_engineer,B,C,"### ANSWER  
+C"
+industrial_engineer,B,C,"### ANSWER
+C"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,C,B,"### ANSWER
+B"
+environmental_science,D,C,"### ANSWER
+C"
+environmental_science,C,B,"### ANSWER  
+B"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,D,D,"### ANSWER
+D"
+industrial_engineer,C,B,"### ANSWER
+B"
+industrial_engineer,D,A,"### ANSWER
+A"
+industrial_engineer,D,D,"### ANSWER
+D"
+industrial_engineer,D,C,"### ANSWER
+C"
+industrial_engineer,C,C,"### ANSWER
+C"
+industrial_engineer,D,D,"### ANSWER
+D"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,B,D,"### ANSWER
+D"
+civil_engineering,B,B,"### ANSWER
+B"
+environmental_science,C,D,"### ANSWER  
+D"
+environmental_science,D,C,"### ANSWER
+C"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,C,D,"### ANSWER
+D"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,B,D,"### ANSWER
+D"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,A,D,"### ANSWER  
+D"
+civil_engineering,B,C,"### ANSWER
+C"
+civil_engineering,C,B,"### ANSWER
+B"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,D,D,"### ANSWER  
+D"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,B,D,"### ANSWER
+D"
+chemical_engineering,D,D,"### ANSWER
+D"
+chemical_engineering,A,D,"### ANSWER
+D"
+civil_engineering,D,,[EMPTY_RESPONSE]
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,C,C,"### ANSWER
+C"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,D,B,"### ANSWER
+B"
+civil_engineering,B,D,"### ANSWER
+D"
+electronics_engineering,D,A,"### ANSWER
+A"
+electronics_engineering,A,A,"### ANSWER
+A"
+electronics_engineering,D,D,"### ANSWER
+D"
+electronics_engineering,B,B,"### ANSWER
+B"
+criminal_law,A,D,"### ANSWER
+D"
+criminal_law,B,D,"### ANSWER
+D"
+criminal_law,B,A,"### ANSWER
+A"
+criminal_law,C,B,"### ANSWER
+B"
+civil_engineering,D,A,"### ANSWER
+A"
+civil_engineering,C,D,"### ANSWER  
+D"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,B,B,"### ANSWER
+B"
+criminal_law,A,C,"### ANSWER
+C"
+criminal_law,D,B,"### ANSWER
+B"
+criminal_law,B,A,"### ANSWER
+A"
+criminal_law,A,D,"### ANSWER  
+D"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,C,B,"### ANSWER
+B"
+civil_engineering,B,D,"### ANSWER  
+D"
+ecology,D,D,"### ANSWER
+D"
+ecology,B,A,"### ANSWER
+A"
+ecology,A,B,"### ANSWER
+B"
+ecology,B,B,"### ANSWER
+B"
+criminal_law,D,B,"### ANSWER
+B"
+criminal_law,B,D,"### ANSWER  
+D"
+criminal_law,D,C,"### ANSWER
+C"
+criminal_law,B,D,"### ANSWER  
+D"
+electrical_engineering,C,B,"### ANSWER
+B"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,B,C,"### ANSWER
+C"
+civil_engineering,B,A,"### ANSWER
+A"
+civil_engineering,B,D,"### ANSWER
+D"
+ecology,B,C,"### ANSWER
+C"
+ecology,C,C,"### ANSWER
+C"
+ecology,D,B,"### ANSWER
+B"
+ecology,D,B,"### ANSWER
+B"
+criminal_law,A,D,"### ANSWER
+D"
+criminal_law,C,D,"### ANSWER
+D"
+criminal_law,B,A,"### ANSWER  
+A"
+criminal_law,B,C,"### ANSWER
+C"
+criminal_law,A,B,"### ANSWER
+B"
+criminal_law,C,D,"### ANSWER
+D"
+criminal_law,B,D,"### ANSWER  
+D"
+criminal_law,C,B,"### ANSWER
+B"
+electrical_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,C,B,"### ANSWER
+B"
+electrical_engineering,D,D,"### ANSWER  
+D"
+electrical_engineering,C,D,"### ANSWER
+D"
+civil_engineering,B,B,"### ANSWER
+B"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,D,A,"### ANSWER
+A"
+civil_engineering,D,C,"### ANSWER
+C"
+ecology,B,C,"### ANSWER
+C"
+ecology,B,D,"### ANSWER
+D"
+ecology,D,D,"### ANSWER  
+D"
+ecology,C,D,"### ANSWER
+D"
+criminal_law,D,D,"### ANSWER
+D"
+criminal_law,D,D,"### ANSWER
+D"
+criminal_law,B,D,"### ANSWER
+D"
+criminal_law,D,A,"### ANSWER
+A"
+ecology,C,A,"### ANSWER
+A"
+ecology,B,A,"### ANSWER
+A"
+ecology,C,C,"### ANSWER
+C"
+ecology,D,B,"### ANSWER
+B"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,D,B,"### ANSWER
+B"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,D,B,"### ANSWER
+B"
+electrical_engineering,D,C,"### ANSWER
+C"
+electrical_engineering,A,B,"### ANSWER
+B"
+electrical_engineering,B,D,"### ANSWER
+D"
+electrical_engineering,B,D,"### ANSWER
+D"
+ecology,B,D,"### ANSWER
+D"
+ecology,B,B,"### ANSWER
+B"
+ecology,B,A,"### ANSWER
+A"
+ecology,B,A,"### ANSWER  
+A"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,C,D,"### ANSWER  
+D"
+civil_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,C,D,"### ANSWER
+D"
+electrical_engineering,B,C,"### ANSWER
+C"
+electrical_engineering,D,A,"### ANSWER
+A"
+criminal_law,D,A,"### ANSWER
+A"
+criminal_law,D,C,"### ANSWER
+C"
+criminal_law,D,D,"### ANSWER
+D"
+criminal_law,B,C,"### ANSWER
+C"
+environmental_science,B,C,"### ANSWER  
+C"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,B,B,"### ANSWER
+B"
+electrical_engineering,B,B,"### ANSWER
+B"
+electrical_engineering,D,B,"### ANSWER
+B"
+ecology,B,B,"### ANSWER
+B"
+ecology,B,C,"### ANSWER
+C"
+ecology,B,D,"### ANSWER
+D"
+ecology,B,C,"### ANSWER
+C"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,B,D,"### ANSWER  
+D"
+environmental_science,C,B,"### ANSWER
+B"
+environmental_science,B,D,"### ANSWER
+D"
+criminal_law,A,C,"### ANSWER
+C"
+criminal_law,D,C,"### ANSWER
+C"
+criminal_law,B,A,"### ANSWER
+A"
+criminal_law,B,B,"### ANSWER
+B"
+ecology,A,B,"### ANSWER
+B"
+ecology,C,C,"### ANSWER
+C"
+ecology,B,B,"### ANSWER
+B"
+ecology,B,B,"### ANSWER
+B"
+environmental_science,C,D,"### ANSWER  
+D"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,B,B,"### ANSWER
+B"
+environmental_science,D,D,"### ANSWER
+D"
+criminal_law,A,C,"### ANSWER  
+C"
+criminal_law,B,A,"### ANSWER
+A"
+criminal_law,A,A,"### ANSWER
+A"
+criminal_law,D,D,"### ANSWER
+D"
+environmental_science,C,B,"### ANSWER
+B"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,B,C,"### ANSWER
+C"
+ecology,D,C,"### ANSWER
+C"
+ecology,D,C,"### ANSWER
+C"
+ecology,D,B,"### ANSWER
+B"
+ecology,B,B,"### ANSWER
+B"
+criminal_law,B,C,"### ANSWER
+C"
+criminal_law,A,D,"### ANSWER  
+D"
+criminal_law,D,C,"### ANSWER  
+C"
+criminal_law,A,D,"### ANSWER  
+D"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,B,B,"### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,B,A,"### ANSWER
+A"
+criminal_law,B,C,"### ANSWER
+C"
+criminal_law,B,D,"### ANSWER
+D"
+criminal_law,D,B,"### ANSWER
+B"
+criminal_law,A,,[EMPTY_RESPONSE]
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,B,"### ANSWER
+B"
+electronics_engineering,B,,[EMPTY_RESPONSE]
+electronics_engineering,C,C,"### ANSWER
+C"
+criminal_law,A,D,"### ANSWER  
+D"
+criminal_law,B,B,"### ANSWER
+B"
+criminal_law,B,A,"### ANSWER
+A"
+criminal_law,B,C,"### ANSWER
+C"
+criminal_law,D,C,"### ANSWER  
+C"
+criminal_law,D,D,"### ANSWER
+D"
+criminal_law,A,D,"### ANSWER
+D"
+criminal_law,D,B,"### ANSWER
+B"
+criminal_law,C,D,"### ANSWER  
+D"
+criminal_law,C,B,"### ANSWER
+B"
+criminal_law,A,B,"### ANSWER
+B"
+criminal_law,B,D,"### ANSWER  
+D"
+civil_engineering,B,,[EMPTY_RESPONSE]
+civil_engineering,B,D,"### ANSWER  
+D"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,C,B,"### ANSWER
+B"
+civil_engineering,C,C,"### ANSWER
+C"
+civil_engineering,C,C,"### ANSWER
+C"
+civil_engineering,D,D,"### ANSWER
+D"
+civil_engineering,D,C,"### ANSWER
+C"
+civil_engineering,C,B,"### ANSWER
+B"
+civil_engineering,B,A,"### ANSWER  
+A"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,A,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,B,B,"### ANSWER
+B"
+ecology,D,B,"### ANSWER
+B"
+ecology,C,A,"### ANSWER
+A"
+ecology,B,D,"### ANSWER
+D"
+ecology,D,B,"### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,B,C,"### ANSWER
+C"
+environmental_science,C,D,"### ANSWER  
+D"
+environmental_science,B,C,"### ANSWER
+C"
+energy_management,C,D,"### ANSWER
+D"
+energy_management,A,C,"### ANSWER
+C"
+energy_management,C,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+ecology,C,C,"### ANSWER
+C"
+ecology,D,B,"### ANSWER
+B"
+ecology,C,B,"### ANSWER
+B"
+ecology,C,B,"### ANSWER
+B"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,D,B,"### ANSWER
+B"
+environmental_science,B,D,"### ANSWER
+D"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,D,"### ANSWER
+D"
+ecology,B,B,"### ANSWER
+B"
+ecology,B,A,"### ANSWER
+A"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,C,A,"### ANSWER
+A"
+energy_management,D,C,"### ANSWER
+C"
+energy_management,D,D,"### ANSWER
+D"
+energy_management,B,B,"### ANSWER
+B"
+electronics_engineering,A,A,"### ANSWER
+A"
+electronics_engineering,D,B,"### ANSWER
+B"
+korean_history,C,A,"### ANSWER
+A"
+korean_history,A,C,"### ANSWER
+C"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,D,C,"### ANSWER
+C"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,A,B,"### ANSWER
+B"
+energy_management,B,C,"### ANSWER
+C"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,B,B,"### ANSWER
+B"
+energy_management,D,,[EMPTY_RESPONSE]
+energy_management,C,C,"### ANSWER
+C"
+criminal_law,B,D,"### ANSWER  
+D"
+criminal_law,C,C,"### ANSWER
+C"
+criminal_law,C,C,"### ANSWER  
+C"
+criminal_law,C,C,"### ANSWER
+C"
+criminal_law,B,C,"### ANSWER  
+C"
+criminal_law,D,C,"### ANSWER
+C"
+criminal_law,C,D,"### ANSWER  
+D"
+criminal_law,D,B,"### ANSWER
+B"
+energy_management,A,A,"### ANSWER
+A"
+energy_management,A,B,"### ANSWER
+B"
+energy_management,A,B,"### ANSWER
+B"
+energy_management,B,B,"### ANSWER
+B"
+criminal_law,C,D,"### ANSWER  
+D"
+criminal_law,A,C,"### ANSWER
+C"
+criminal_law,C,B,"### ANSWER
+B"
+criminal_law,B,C,"### ANSWER  
+C"
+criminal_law,C,C,"### ANSWER
+C"
+criminal_law,D,D,"### ANSWER
+D"
+criminal_law,C,C,"### ANSWER
+C"
+criminal_law,C,A,"### ANSWER
+A"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,D,D,"### ANSWER  
+D"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,D,D,"### ANSWER
+D"
+environmental_science,C,C,"### ANSWER
+C"
+environmental_science,D,B,"### ANSWER
+B"
+environmental_science,D,A,"### ANSWER
+A"
+environmental_science,B,B,"### ANSWER
+B"
+environmental_science,B,C,"### ANSWER  
+C"
+environmental_science,C,C,"### ANSWER  
+C"
+environmental_science,C,C,"### ANSWER
+C"
+korean_history,C,C,"### ANSWER
+C"
+korean_history,C,B,"### ANSWER
+B"
+korean_history,B,C,"### ANSWER
+C"
+korean_history,C,A,"### ANSWER
+A"
+korean_history,B,D,"### ANSWER
+D"
+korean_history,A,A,"### ANSWER
+A"
+korean_history,C,D,"### ANSWER
+D"
+korean_history,A,D,"### ANSWER
+D"
+korean_history,B,D,"### ANSWER
+D"
+korean_history,D,C,"### ANSWER
+C"
+korean_history,C,C,"### ANSWER
+C"
+korean_history,B,B,"### ANSWER  
+B"
+energy_management,C,C,"### ANSWER
+C"
+energy_management,A,A,"### ANSWER
+A"
+korean_history,B,A,"### ANSWER
+A"
+korean_history,C,D,"### ANSWER
+D"
+korean_history,A,D,"### ANSWER
+D"
+korean_history,C,C,"### ANSWER
+C"
+criminal_law,A,A,"### ANSWER
+A"
+criminal_law,B,B,"### ANSWER
+B"
+criminal_law,A,D,"### ANSWER  
+D"
+criminal_law,C,D,"### ANSWER  
+D"
+korean_history,C,D,"### ANSWER  
+D"
+korean_history,B,C,"### ANSWER
+C"
+korean_history,A,,[EMPTY_RESPONSE]
+korean_history,A,B,"### ANSWER  
+B"
+criminal_law,A,B,"### ANSWER
+B"
+criminal_law,C,D,"### ANSWER  
+D"
+criminal_law,A,D,"### ANSWER  
+D"
+criminal_law,D,C,"### ANSWER  
+C"
+korean_history,A,C,"### ANSWER
+C"
+korean_history,A,D,"### ANSWER
+D"
+korean_history,D,D,"### ANSWER
+D"
+korean_history,D,A,"### ANSWER
+A"
+korean_history,D,C,"### ANSWER
+C"
+korean_history,C,B,"### ANSWER
+B"
+korean_history,B,C,"### ANSWER
+C"
+korean_history,B,,[EMPTY_RESPONSE]
+korean_history,A,D,"### ANSWER
+D"
+korean_history,C,C,"### ANSWER
+C"
+korean_history,C,B,"### ANSWER
+B"
+korean_history,B,B,"### ANSWER
+B"
+environmental_science,C,D,"### ANSWER
+D"
+environmental_science,B,B,"### ANSWER
+B"
+korean_history,D,C,"### ANSWER
+C"
+korean_history,B,D,"### ANSWER
+D"
+korean_history,A,,[EMPTY_RESPONSE]
+korean_history,D,C,"### ANSWER
+C"
+korean_history,C,,[EMPTY_RESPONSE]
+korean_history,C,D,"### ANSWER
+D"
+korean_history,C,B,"### ANSWER
+B"
+korean_history,C,D,"### ANSWER
+D"
+korean_history,D,B,"### ANSWER  
+B"
+korean_history,C,C,"### ANSWER
+C"
+criminal_law,A,A,"### ANSWER
+A"
+criminal_law,B,D,"### ANSWER
+D"
+criminal_law,B,B,"### ANSWER
+B"
+criminal_law,D,D,"### ANSWER  
+D"
+information_technology,D,C,"### ANSWER
+C"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,A,A,"### ANSWER
+A"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,B,D,"### ANSWER
+D"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,B,B,"### ANSWER
+B"
+information_technology,D,B,"### ANSWER
+B"
+information_technology,A,D,"### ANSWER
+D"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,C,C,"### ANSWER
+C"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,D,"### ANSWER
+D"
+information_technology,D,B,"### ANSWER
+B"
+information_technology,C,C,"### ANSWER
+C"

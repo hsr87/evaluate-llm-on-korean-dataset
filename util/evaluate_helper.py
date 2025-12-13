@@ -144,7 +144,8 @@ def evaluate(csv_path, dataset="CLIcK", subset=None, verbose=False):
     if verbose:
         print("Overall Accuracy:", overall_acc)
         print(category_acc)
-        print(supercategory_acc)
+        if supercategory_acc is not None:
+            print(supercategory_acc)
 
     return overall_acc, category_acc, supercategory_acc
 

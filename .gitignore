@@ -19,5 +19,6 @@ CLIcK/
 .env_*
 .vscode/
 uv.lock
+env-dev/*
 
 verify_omni_math.py
