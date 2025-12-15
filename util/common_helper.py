@@ -123,7 +123,7 @@ def get_llm_client(
         reasoning_enabled = os.getenv("REASONING_ENABLED", "false").lower() == "true"
 
         # GPT-5.1 계열 모델들 (reasoning_effort 지원)
-        if model_name in ["gpt-5.1", "gpt-5.1-chat", "gpt-5.1(medium)"]:
+        if model_name in ["gpt-5.1", "gpt-5.1-chat", "gpt-5.1(medium)","gpt-5.2","gpt-5.2(medium)"]:
             model_kwargs = {}
             if reasoning_enabled and reasoning_effort:
                 model_kwargs["reasoning_effort"] = reasoning_effort
@@ -132,7 +132,7 @@ def get_llm_client(
                 azure_deployment=model_name,
                 openai_api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
                 max_retries=max_retries,
-                model_kwargs=model_kwargs,
+                **model_kwargs,
             )
         # GPT-5 계열 모델들 (gpt-5-chat 추가)
         elif model_name in ["gpt-5-mini", "gpt-5-nano", "gpt-5-chat"]:
