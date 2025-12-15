@@ -69,7 +69,7 @@ def main():
     """메인 실행 함수"""
     parser = argparse.ArgumentParser()
     parser.add_argument("--is_debug", type=str2bool, default=True)
-    parser.add_argument("--num_debug_samples", type=int, default=5)
+    parser.add_argument("--num_debug_samples", type=int, default=20)
     parser.add_argument("--model_provider", type=str, default="azureopenai")
     parser.add_argument("--hf_model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.2")
     parser.add_argument("--batch_size", type=int, default=10)

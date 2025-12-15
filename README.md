@@ -481,8 +481,11 @@ Run individual benchmarks directly:
 ```bash
 # Example: CLIcK benchmark
 uv run python benchmarks/click_main.py \
-    --model_provider azureopenai \
-    --batch_size 10 \
+    --model_provider bedrock \
+    --batch_size 4 \
+    --is_debug true \
+    --num_debug_samples 20 \
+    --num_workers 5 \
     --max_tokens 512 \
     --temperature 0.01
 
