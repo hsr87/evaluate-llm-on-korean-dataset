@@ -172,7 +172,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 #### Proprietary models
 
-| category              |   GPT-5.2(medium) |   GPT-5.2 |   Nova 2.0 Lite |   GPT-5.1(medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
+| category              |   GPT-5.2(medium) |   GPT-5.2 |   Nova 2 Lite(medium) |   GPT-5.1(medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------------|------------------:|----------:|----------------:|------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | General Knowledge     |             89.2  |     81.82 |           53.98 |             90.34 |     75.57 |          71.59 |        69.28 |        82.39 |        72.16 |     75.57 |          52.27 |          43.18 |    77.27 |         53.41 |         66.48 |           40.91 |
 | History               |             98.94 |     94.15 |           75    |             96.62 |     91.07 |          91.77 |        89.86 |        91.14 |        85.96 |     93.62 |          89.89 |          64.89 |    92.02 |         84.57 |         78.72 |           30.32 |
