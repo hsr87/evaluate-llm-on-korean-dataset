@@ -477,7 +477,7 @@ AZURE_AI_INFERENCE_ENDPOINT=<YOUR_ENDPOINT>
 AZURE_AI_DEPLOYMENT_NAME=Phi-4
 ```
 
-#### AWS Bedrock
+#### Amazon Bedrock
 ```ini
 BEDROCK_MODEL_ID=us.amazon.nova-2-lite-v1:0
 AWS_REGION=us-west-2
@@ -512,12 +512,12 @@ Run the interactive script that guides you through the evaluation process:
 ```
 
 The script will ask you to:
-1. Select dataset (CLIcK, HAE-RAE, KMMLU, KMMLU-HARD, HRM8K, KoBALT, KorMedMCQA)
-2. Choose debug mode (y/n)
-3. Set batch size (default: 10)
-4. Set max tokens (default: 1500)
-5. Set temperature (default: 0.01)
-6. Set number of workers (default: 4)
+1. Select dataset (`CLIcK`, `HAE-RAE`, `KMMLU`, `KMMLU-HARD`, `HRM8K`, `KoBALT`, `KorMedMCQA`)
+2. Choose debug mode (`y/n`)
+3. Set batch size (default: `10`)
+4. Set max tokens (default: `1500`)
+5. Set temperature (default: `0.01`)
+6. Set number of workers (default: `4`)
 
 #### Manual Mode
 Run individual benchmarks directly:
@@ -568,6 +568,9 @@ Evaluation results are saved in:
 - `./evals/` - Aggregated evaluation metrics
 
 ## 📚 References
+
+<details>
+<summary>Expand...</summary>
 
 ```bibtex
 @misc{kim2024click,
@@ -629,3 +632,4 @@ Evaluation results are saved in:
       url={https://arxiv.org/abs/2403.01469}, 
 }
 ```
+</details>
