@@ -10,10 +10,49 @@ import pandas as pd
 
 
 def convert_to_pascal_case(category):
-    # KMMLU 카테고리는 이미 올바른 형식이므로 변환하지 않음
-    if "-" in category:
+    # 카테고리 이름 정규화 (대소문자, 공백, 하이픈 처리)
+    if pd.isna(category):
         return category
-    return "-".join(word.capitalize() if word != "and" else "and" for word in category.split("_"))
+    
+    # 문자열로 변환하고 공백 제거
+    category = str(category).strip()
+    
+    # 이미 올바른 형식인지 확인 (하이픈으로 구분된 Pascal Case)
+    if "-" in category and category.replace("-", "").replace("and", "").isalpha():
+        # 각 단어의 첫 글자를 대문자로, 나머지는 소문자로
+        words = category.split("-")
+        normalized_words = []
+        for word in words:
+            if word.lower() == "and":
+                normalized_words.append("and")
+            else:
+                normalized_words.append(word.capitalize())
+        return "-".join(normalized_words)
+    
+    # 언더스코어로 구분된 경우 하이픈으로 변환
+    if "_" in category:
+        words = category.split("_")
+        normalized_words = []
+        for word in words:
+            if word.lower() == "and":
+                normalized_words.append("and")
+            else:
+                normalized_words.append(word.capitalize())
+        return "-".join(normalized_words)
+    
+    # 공백으로 구분된 경우 하이픈으로 변환
+    if " " in category:
+        words = category.split()
+        normalized_words = []
+        for word in words:
+            if word.lower() == "and":
+                normalized_words.append("and")
+            else:
+                normalized_words.append(word.capitalize())
+        return "-".join(normalized_words)
+    
+    # 단일 단어인 경우 첫 글자만 대문자로
+    return category.capitalize()
 
 
 def extract_single_alphabet_answer(row):
