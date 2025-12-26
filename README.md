@@ -1,6 +1,6 @@
 # Korean language proficiency evaluation for LLM/SLM models using KMMLU, CLIcK, HAE-RAE, HRM8K, KoBALT, and KorMedMCQA dataset
 
-## Overview
+## 📋 Overview
 
 With the continuous emergence of various LLM/SLM models, there is a need for robust evaluation datasets for non-English languages such as Korean. KMMLU (Korean Massive Multi-task Language Understanding), CLIcK (Cultural and Linguistic Intelligence in Korean), HAE_RAE_BENCH 1.0, HRM8K, KoBALT, and KorMedMCQA fill this gap by providing rich, well-categorized datasets that focus on cultural, linguistic, mathematical reasoning, advanced linguistic phenomena, and medical knowledge, enabling detailed evaluation of Korean language models. This code performs benchmarking on these datasets with minimal time and effort.
 
@@ -39,8 +39,35 @@ KorMedMCQA is a Korean Medical Multiple-Choice Question Answering benchmark deri
 
 - [Paper](https://arxiv.org/abs/2403.01469), [Hugging Face](https://huggingface.co/datasets/sean0042/KorMedMCQA)
 
+## 🆕 What's New
 
-## Implementation
+- Dec 26, 2025: Added **Radar Chart Visualization** for Korean LLM evaluation results with interactive charts showing performance by category/supercategory.
+
+- Dec 15, 2025: Added **GPT-5.2** GPT-5.2 (medium) achieved the highest KMMLU-Hard score with 74.63% accuracy (0-shot).
+
+- Dec 6, 2025: Added **HRM8K, KoBALT, and KorMedMCQA** benchmark datasets. Added **AWS Nova 2.0 Lite** (launched at re:Invent 2025) KMMLU benchmark results. Notably, Nova 2.0 Lite, despite being a lightweight model, outperforms GPT-4.1 on KMMLU with 67.02% accuracy (0-shot) compared to GPT-4.1's 65.49%.
+
+- Nov 21, 2025: Added **GPT-5.1, GPT-5.1-chat** benchmark results. GPT-5.1 now supports reasoning_effort="none", while other 5.x models introduce a new "minimal" setting, transforming GPT-5.1 into a flexible spectrum rather than a single fixed-intelligence model. In our benchmark, GPT-5.1 (medium) achieved the highest KMMLU score with 83.65% accuracy (0-shot), whereas GPT-5.1 with the default none setting recorded a score that was approximately 20 percentage points lower, at 62.14% (0-shot).
+
+- Aug 11, 2025: Added **GPT-5** family benchmark results. What is very impressive is the KMMLU score (0-shot 78.53% accuracy) and KMMLU-Hard score of GPT-5-mini (0-shot 61.68% accuracy). For KMMLU-Hard, many open-source models struggle to even surpass 30% accuracy.
+
+- Apr 17, 2025: Added **GPT-4.1** family benchmark results. GPT-4.1-mini is an improvement over GPT-4o-mini and is closer to GPT-4o. GPT-4.1 outperforms GPT-4o.
+
+- Feb 28, 2025: Added **Phi-4-mini-instruct** benchmark results.
+
+- Feb 2, 2025: Added **Phi-4** benchmark results / Added Azure AI Foundry deployment options. Phi-4 outperforms Phi-3.5-MoE in some metrics, such as CLIcK and KMMLU.
+
+- Aug 29, 2024: Added 5-shot experiments for **KMMLU** and **KMMLU-HARD** benchmark datasets. For Llama-3.1-8B-Instruct, adding an example with 5-shot does not give a proper answer based on Korean language. The results may vary depending on the experimental environment, but it seems that an appropriate system prompt is needed. (Please note that we did not use any system prompt.)
+
+- Aug 25, 2024: Added experimental results for **KMMLU** and **KMMLU-HARD** benchmark datasets. Added **Phi-3-mini-128K-instruct (June version)** benchmark results.
+
+- Aug 22, 2024: Added **Phi-3-5-mini-instruct** and **Phi-3.5-MoE-instruct** benchmark results. Phi-3.5 is Microsoft's latest open source model that has begun to properly support multiple languages, and its Korean performance has been greatly improved, as shown in the benchmark results below.
+
+- Aug 22, 2024: Added **Llama-3-1-8B-instruct** benchmark results. Of course, fine-tuned Llama-3.1 with Korean dataset may perform better, but we only compared it with the vanilla model.
+
+- Aug 9, 2024: Added Azure OpenAI **GPT-3.5-turbo (2023-06-13)**, **GPT-4-turbo (2024-04-09)**, **GPT-4o (2024-05-13)**, and **GPT-4o-mini (2024-07-18)** benchmark results.
+
+## ⚙️ Implementation
 
 The code skeleton is based on https://github.com/corca-ai/evaluating-gpt-4o-on-CLIcK, but significant improvements have been made:
 
@@ -51,30 +78,33 @@ The code skeleton is based on https://github.com/corca-ai/evaluating-gpt-4o-on-C
 - **Adaptive prompts**: Reasoning-aware system prompts with configurable effort levels (none/minimal/low/medium/high)
 - **Comprehensive logging**: Debug mode with detailed request/response logging for troubleshooting 
 
-## Results
-🔥 Dec 15, 2025: Added **GPT-5.2** GPT-5.2 (medium) achieved the highest KMMLU-Hard score with 74.63% accuracy (0-shot).
+## 📊 Visualization
 
-🔥 Dec 6, 2025: Added **HRM8K, KoBALT, and KorMedMCQA** benchmark datasets. Added **AWS Nova 2.0 Lite** (launched at re:Invent 2025) KMMLU benchmark results. Notably, Nova 2.0 Lite, despite being a lightweight model, outperforms GPT-4.1 on KMMLU with 67.02% accuracy (0-shot) compared to GPT-4.1's 65.49%.
+### Radar Chart Generator
 
-🔥 Nov 21, 2025: Added **GPT-5.1, GPT-5.1-chat** benchmark results. GPT-5.1 now supports reasoning_effort="none", while other 5.x models introduce a new "minimal" setting, transforming GPT-5.1 into a flexible spectrum rather than a single fixed-intelligence model. In our benchmark, GPT-5.1 (medium) achieved the highest KMMLU score with 83.65% accuracy (0-shot), whereas GPT-5.1 with the default none setting recorded a score that was approximately 20 percentage points lower, at 62.14% (0-shot).
+```bash
+# Creating a radar chart
+uv run python -c "
+from utils.radar_chart_generator import RadarChartGenerator
+generator = RadarChartGenerator()
+generator.generate_all_charts(['CLIcK', 'KMMLU', 'HAERAE'], top_n=10)
+"
 
-🔥 Aug 11, 2025: Added **GPT-5** family benchmark results. What is very impressive is the KMMLU score (0-shot 78.53% accuracy) and KMMLU-Hard score of GPT-5-mini (0-shot 61.68% accuracy). For KMMLU-Hard, many open-source models struggle to even surpass 30% accuracy.
+# Or use a juputer notebook
+jupyter notebook radar_chart_visualization.ipynb
+```
 
-🔥 Apr 17, 2025: Added **GPT-4.1** family benchmark results. GPT-4.1-mini is an improvement over GPT-4o-mini and is closer to GPT-4o. GPT-4.1 outperforms GPT-4o.
+### Radar Charts
 
-🔥 Feb 28, 2025: Added **Phi-4-mini-instruct** benchmark results.
+| CLIcK Performance by Category | HAERAE Performance by Supercategory |
+|:---:|:---:|
+| <img src="./charts/CLIcK_radar_chart.png" width="650"> | <img src="./charts/HAERAE_radar_chart.png" width="650">  |
 
-🔥 Feb 2, 2025: Added **Phi-4** benchmark results / Added Azure AI Foundry deployment options. Phi-4 outperforms Phi-3.5-MoE in some metrics, such as CLIcK and KMMLU.
+| KMMLU Performance by Category | KMMLU-Hard Performance by Category |
+|:---:|:---:|
+| <img src="./charts/KMMLU_radar_chart.png" width="650"> | <img src="./charts/KMMLU-HARD_radar_chart.png" width="650"> |
 
-🔥 Aug 29, 2024: Added 5-shot experiments for **KMMLU** and **KMMLU-HARD** benchmark datasets. For Llama-3.1-8B-Instruct, adding an example with 5-shot does not give a proper answer based on Korean language. The results may vary depending on the experimental environment, but it seems that an appropriate system prompt is needed. (Please note that we did not use any system prompt.)
-
-🔥 Aug 25, 2024: Added experimental results for **KMMLU** and **KMMLU-HARD** benchmark datasets. Added **Phi-3-mini-128K-instruct (June version)** benchmark results.
-
-🔥 Aug 22, 2024: Added **Phi-3-5-mini-instruct** and **Phi-3.5-MoE-instruct** benchmark results. Phi-3.5 is Microsoft's latest open source model that has begun to properly support multiple languages, and its Korean performance has been greatly improved, as shown in the benchmark results below.
-
-🔥 Aug 22, 2024: Added **Llama-3-1-8B-instruct** benchmark results. Of course, fine-tuned Llama-3.1 with Korean dataset may perform better, but we only compared it with the vanilla model.
-
-🔥 Aug 9, 2024: Added Azure OpenAI **GPT-3.5-turbo (2023-06-13)**, **GPT-4-turbo (2024-04-09)**, **GPT-4o (2024-05-13)**, and **GPT-4o-mini (2024-07-18)** benchmark results.
+## 📈 Results
 
 ### Notes
 The numbers in the table below are the average accuracy (%). For Azure OpenAI models, a few questions are filtered out due to the content filtering feature, but this only happens between 1-5 samples in the entire dataset, so the impact is not significant. 
@@ -100,19 +130,19 @@ The prompt is the same as the CLIcK paper prompt. The experimental results may v
 
 Since most of them are ChatCompletion or instruction fine-tuned models, the variation may be large compared to the results of other group's experiments. However, our experimental results show that the trend follows similarly under the same experimental conditions. (e.g., GPT-4o: 70.57/GPT-4o-mini: 60.31 in Experimental Condition 1; GPT-4o: 67.76/GPT-4o-mini: 57.53 in Experimental Condition 2).
 
+### Model Version
+<details>
+<summary>Click to view model versions</summary>
+
 - GPT-5.2 (medium): 2025-12-11 model version (reasoning_effort="medium")
 - GPT-5.2: 2025-12-11 model version (reasoning_effort="none" as default)
-
 - Nova 2.0 Lite: us.amazon.nova-2-lite-v1:0 model (reasoning mode: medium)
-
 - GPT-5.1 (medium): 2025-11-13 model version (reasoning_effort="medium")
 - GPT-5.1: 2025-11-13 model version (reasoning_effort="none" as default)
 - GPT-5.1-chat: 2025-11-13 model version 
-
 - GPT-5-chat: 2025-08-08 model version 
 - GPT-5-mini: 2025-08-08 model version (reasoning_effort="medium" as default)
 - GPT-5-nano: 2025-08-08 model version (reasoning_effort="medium" as default)
-
 - GPT-4.1: 2025-04-14 model version
 - GPT-4.1-mini: 2025-04-14 model version
 - GPT-4.1-nano: 2025-04-14 model version
@@ -121,16 +151,23 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 - GPT-4-turbo: 2024-04-09 model version
 - GPT-3.5-turbo: 2023-06-13 model version
 
+</details>
 
 ### CLIcK
-#### Accuracy by supercategory
+
+#### Proprietary models
+
+##### Accuracy by supercategory
 | supercategory   |   GPT-5.2(medium) |   GPT-5.2 |   Nova 2 Pro - Preview(medium) |   Nova 2 Lite(medium) |   GPT-5.1(medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------|------------------:|----------:|-------------------------------:|----------------------:|------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | Culture         |             89.95 |     83.72 |                          71.82 |                 66.02 |             89.96 |     82.93 |          79.3  |        82.96 |        81.51 |        72.78 |     81.65 |          72.81 |          62.47 |    81.89 |         70.95 |         73.61 |           53.38 |
 | Language        |             92.92 |     80.77 |                          75.69 |                 69.69 |             89.45 |     76.27 |          74.76 |        75.71 |        83.8  |        70.24 |     78.31 |          70.62 |          58.62 |    77.54 |         63.54 |         71.23 |           46    |
 | **Overall**     |             90.92 |     82.75 |                          73.08 |                 67.22 |             89.81 |     81    |          77.97 |        80.84 |        82.17 |        72.05 |     80.55 |          72.09 |          61.21 |    80.46 |         68.5  |         72.82 |           50.98 |
 
-#### Accuracy by category
+<details>
+<summary>Click to view Accuracy by category</summary>
+
+##### Accuracy by category
 | supercategory   | category    |   GPT-5.2(medium) |   GPT-5.2 |   Nova 2 Pro - Preview(medium) |   Nova 2 Lite(medium) |   GPT-5.1(medium) |   GPT-5.1 |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------|:------------|------------------:|----------:|-------------------------------:|----------------------:|------------------:|----------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | Culture         | Economy     |             94.92 |     94.92 |                          88.14 |                 88.14 |             96.61 |     81.36 |          94.92 |        91.53 |        89.83 |        88.14 |     94.92 |          84.75 |          86.44 |    94.92 |         83.05 |         89.83 |           64.41 |
@@ -144,6 +181,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | Language        | Functional  |             94.4  |     90.4  |                          81.6  |                 74.4  |             92.86 |     78.57 |          85.71 |        85.71 |        92.86 |        78.57 |     87.2  |          73.6  |          53.6  |    84.8  |         64.8  |         80    |           40    |
 | Language        | Grammar     |             87.92 |     62.5  |                          58.33 |                 47.5  |             84.05 |     57.76 |          55.17 |        58.62 |        73.71 |        56.9  |     60    |          50    |          40.42 |    57.08 |         42.5  |         47.5  |           30    |
 | Language        | Textual     |             96.49 |     91.93 |                          87.72 |                 86.32 |             93.68 |     91.23 |          90.18 |        89.12 |        91.58 |        80.7  |     89.82 |          86.67 |          76.14 |    91.58 |         80.7  |         87.37 |           62.11 |
+</details>
 
 #### Open-Source models
 ##### Accuracy by supercategory
@@ -152,6 +190,9 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | Culture         |          60.28 |                 43.05 |   57.84 |                   43.77 |                  58.44 |                           29.74 |                   51.15 |
 | Language        |          39.17 |                 42.31 |   61.85 |                   41.38 |                  52.31 |                           27.85 |                   40.92 |
 | **Overall**     |          53.26 |                 42.81 |   59.15 |                   42.99 |                  56.44 |                           29.12 |                   47.82 |
+
+<details>
+<summary>Click to view Accuracy by category</summary>
 
 ##### Accuracy by category
 | supercategory   | category    | gpt-oss-120b   |   Phi-4-mini-instruct |   Phi-4 |   Phi-3.5-mini-instruct |   Phi-3.5-MoE-instruct |   Phi-3-mini-128k-instruct-June |   Llama-3.1-8B-Instruct |
@@ -167,6 +208,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | Language        | Functional  | 57.14          |                 42.4  |   66.4  |                   37.6  |                  48    |                           24    |                   32.8  |
 | Language        | Grammar     | 16.38          |                 28.33 |   40    |                   27.5  |                  29.58 |                           23.33 |                   22.92 |
 | Language        | Textual     | 56.84          |                 54.04 |   78.25 |                   54.74 |                  73.33 |                           33.33 |                   59.65 |
+</details>
 
 ### HAE_RAE_BENCH 1.0
 
@@ -206,6 +248,8 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | STEM            |     73.16 |           70.9  |     66.62 |             86.18 |          64.04 |        67.27 |        79.32 |        73.33 |     66.56 |          61.17 |          50.78 |    65.16 |         54.74 |         60.84 |           42.24 |
 | **Overall**     |     71.54 |           67.02 |     65.9  |             83.73 |          63.11 |        65.92 |        76.47 |        69.28 |     65.49 |          59.26 |          48.57 |    64.26 |         52.63 |         58.75 |           40.3  |
 
+<details>
+<summary>Click to view Accuracy by category</summary>
 
 ##### Accuracy by category
 | supercategory   | category                                   |   GPT-5.2 |   Nova 2.0 Lite |   GPT-5.1 |   GPT-5.1(medium) |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
@@ -255,6 +299,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | STEM            | Materials-Engineering                      |     80.95 |           66.9  |     74.33 |             87.77 |          71.65 |        73.47 |        78.18 |        70.6  |     72.4  |          64.6  |          47.9  |    69.4  |         52.1  |         64.55 |           39.69 |
 | STEM            | Math                                       |     36.33 |           82.67 |     30    |             93    |          26.67 |        32.67 |        91.33 |        89    |     32    |          35.33 |          28.33 |    32.67 |         30    |         28.67 |           26.33 |
 | STEM            | Mechanical-Engineering                     |     72.1  |           70.1  |     60.1  |             86.98 |          59.08 |        61.63 |        80.21 |        73.06 |     61.1  |          55.1  |          44.1  |    60    |         46.9  |         54.7  |           34.2  |
+</details>
 
 #### Open-Source models
 
@@ -269,7 +314,8 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 
 ### KMMLU-HARD (0-shot)
 
-#### Accuracy by supercategory
+#### Proprietary models
+##### Accuracy by supercategory
 | supercategory   |   GPT-5.2(medium) |   GPT-5.2 |   Nova 2 Pro - Preview(medium) |   Nova 2 Lite(medium) |   GPT-5.1 |   GPT-5.1(medium) |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------|------------------:|----------:|-------------------------------:|----------------------:|----------:|------------------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | Applied Science |             76.94 |     50.76 |                          59.08 |                 53.91 |     39.32 |             74.24 |          36.87 |        38.97 |        64.7  |        54.96 |     39.08 |          34.92 |          23.75 |    37.12 |         22.25 |         29.17 |           21.07 |
@@ -278,7 +324,10 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | STEM            |             80.42 |     52.11 |                          63.82 |                 56.18 |     43.33 |             77.88 |          41.6  |        41.98 |        67.48 |        60.37 |     44.45 |          36.55 |          25.64 |    39.82 |         26.36 |         32.18 |           20.91 |
 | **Overall**     |             74.63 |     51.1  |                          54.07 |                 48.2  |     43.9  |             72.76 |          40.83 |        42.12 |        60.61 |        51.72 |     42.79 |          35.6  |          24.34 |    39.62 |         24.56 |         30.56 |           20.97 |
 
-#### Accuracy by category
+<details>
+<summary>Click to view Accuracy by category</summary>
+
+##### Accuracy by category
 | supercategory   | category                                   |   GPT-5.2(medium) |   GPT-5.2 |   Nova 2 Pro - Preview(medium) |   Nova 2 Lite(medium) |   GPT-5.1 |   GPT-5.1(medium) |   GPT-5.1-chat |   GPT-5-chat |   GPT-5-mini |   GPT-5-nano |   GPT-4.1 |   GPT-4.1-mini |   GPT-4.1-nano |   GPT-4o |   GPT-4o-mini |   GPT-4-turbo |   GPT-3.5-turbo |
 |:----------------|:-------------------------------------------|------------------:|----------:|-------------------------------:|----------------------:|----------:|------------------:|---------------:|-------------:|-------------:|-------------:|----------:|---------------:|---------------:|---------:|--------------:|--------------:|----------------:|
 | Applied Science | Aviation-Engineering-and-Maintenance       |             81    |     57    |                          63    |                 52    |     41    |             77    |          43    |        37    |        69    |        57    |     39    |          40    |          22    |    45    |         25    |         32    |           25    |
@@ -326,6 +375,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | STEM            | Materials-Engineering                      |             80.21 |     60.42 |                          64    |                 46    |     54    |             76    |          48.89 |        50    |        65    |        53.33 |     50    |          32    |          28    |    43    |         25    |         33    |           24    |
 | STEM            | Math                                       |             92    |     25    |                          89    |                 86    |     26    |             94    |          31    |        22    |        92    |        91    |     26    |          22    |          25    |    23    |         26    |         22    |           22    |
 | STEM            | Mechanical-Engineering                     |             87    |     57    |                          70    |                 57    |     39    |             79    |          37    |        37    |        75    |        66    |     41    |          36    |          32    |    37    |         22    |         36    |           22    |
+</details>
 
 #### Open-Source models
 
@@ -337,9 +387,7 @@ Since most of them are ChatCompletion or instruction fine-tuned models, the vari
 | STEM            |                 22.25 |   24.25 |                  28.18 |                   24.36 |                           26.91 |                   24.64 |
 | **Overall**     |                 25.27 |   24.24 |                  25.34 |                   24    |                           25.68 |                   24.03 |
 
-### [Detailed results for each category](DETAILED_RESULTS.md)
-
-## Quick Start
+## 🚀 Quick Start
 
 ### GitHub Codespace
 Please start a new project by connecting to Codespace Project. The environment required for hands-on is automatically configured through devcontainer, so you only need to run a Jupyter notebook.
@@ -519,7 +567,7 @@ Evaluation results are saved in:
 - `./results/` - Detailed CSV results for each model and dataset
 - `./evals/` - Aggregated evaluation metrics
 
-## References
+## 📚 References
 
 ```bibtex
 @misc{kim2024click,
